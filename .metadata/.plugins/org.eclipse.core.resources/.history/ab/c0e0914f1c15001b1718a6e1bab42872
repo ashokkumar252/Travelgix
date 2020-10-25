@@ -1,0 +1,191 @@
+package travlogix;
+import utility.Constant;
+import java.io.IOException;
+import java.sql.Driver;
+import java.util.ArrayList;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+import travlogix.Wrappermethods;
+import atu.testng.reports.listeners.ATUReportsListener;
+import atu.testng.reports.listeners.ConfigurationListener;
+import atu.testng.reports.listeners.MethodListener;
+@Listeners({ ATUReportsListener.class, ConfigurationListener.class, MethodListener.class })
+public class Vatsetup
+{
+
+	static {
+
+		// System.setProperty("atu.reporter.config",
+		// "C:\\ATUReports\\atu.properties");
+		System.setProperty("atu.reporter.config", utility.Constant.ATUREPORTS);
+
+	}
+
+	Wrappermethods wm;
+
+	@BeforeTest
+	public void instantiation() {
+		wm = new Wrappermethods();
+
+	}
+
+	@BeforeMethod
+	public void browesrnstatiation()
+
+	{
+
+		wm.launchbrowser("chrome", utility.Constant.TRAVELOGIXURL);
+
+	}
+
+	@Test(dataProvider = "dp")
+	public void logincheckK(String Username, String Password, String Leftsidemenu,String Code,
+			String Description,String Type,String Typeindex,String Category,String Catindexxegoryindex,
+			String Glcodee,String Glcodeeindexx,String VGtcmHsnCode,String Hsntype,
+			String Hsntypeindex,String VGtcmHsnDescription,String ActfromDate1,
+			String ActfromDate2,String ActfromDate3,String ActtoDate1,String ActtoDate2,
+			String ActtoDate3,String Statuslistboxindex) throws Exception
+
+	{
+
+		Thread.sleep(2000);
+
+		// wm.sendtextbyid("", );
+		wm.sendtextbyid("LoginCode", Username);
+		Thread.sleep(200);
+		wm.sendtextbyid("Password", Password);
+		Thread.sleep(200);
+		wm.clickbyxpath("//input[@value='Login']");
+        Thread.sleep(900);
+
+		// screnn===========================================================
+		wm.sendtextbyid("input-items", Leftsidemenu);
+		Thread.sleep(500);
+		wm.clickbyid("modTRS001");
+		Thread.sleep(500);
+		wm.clickbyid("pgmMVS001");
+		wm.sleep();
+
+		wm.clickbyid("btnMainAdd");
+		Thread.sleep(500);
+		
+		 wm.sendtextbycssselecotrwithoutclear("#Code", Code);
+		 
+		 wm.sendtextbycssselecotrwithoutclear("#Description", Description);
+		 
+		// enter the typee
+			wm.sendtextbyxvalue("//input[@aria-owns='VGtcmTypeName_listbox']", Type);
+			Thread.sleep(200);
+			wm.Listandenter("//*[@id='VGtcmTypeName_listbox']/li", Typeindex);
+			Thread.sleep(200);
+			
+			// enter the typee
+						wm.sendtextbyxvalue("//input[@aria-owns='VGtcmCategoryName_listbox']",Category);
+						Thread.sleep(200);
+						wm.Listandenter("//*[@id='VGtcmCategoryName_listbox']/li",Catindexxegoryindex);
+						Thread.sleep(200);
+						
+		/*
+						// enter the typee
+						wm.sendtextbyxvalue("//input[@aria-owns='VGtcmCategoryName_listbox']",Category);
+						Thread.sleep(200);
+						wm.Listandenter("//*[@id='VGtcmCategoryName_listbox']/li",Catindexxegoryindex);
+						Thread.sleep(200);
+		*/				
+
+						// enter the GLcodee
+						wm.sendtextbyxvalue("//input[@aria-owns='VGtcmGlKey_listbox']",Glcodee);
+						Thread.sleep(200);
+						wm.Listandenter("//*[@id='VGtcmGlKey_listbox']/li",Glcodeeindexx);
+						Thread.sleep(200);
+						
+					//Eter the hsncode
+					wm.sendtextbycssselecotrwithoutclear("#VGtcmHsnCode", VGtcmHsnCode);
+			
+
+					//HSN typee
+					wm.sendtextbyxvalue("//input[@aria-owns='VGtcmHsnTypeName_listbox']",Hsntype);
+					Thread.sleep(200);
+					wm.Listandenter("//*[@id='VGtcmHsnTypeName_listbox']/li",Hsntypeindex);
+					Thread.sleep(200);
+					
+					//Hsn descriptions
+					wm.sendtextbycssselecotrwithoutclear("#VGtcmHsnDescription",VGtcmHsnDescription);
+		
+			//Date
+wm.sendtextbycssselecotr("#ActiveFrom", "" + ActfromDate1 + "-" + ActfromDate2+ "-" + ActfromDate3);
+		
+wm.sendtextbycssselecotr("#ActiveTo", "" + ActtoDate1 + "-" + ActtoDate2 + "-" + ActtoDate3);
+					
+					
+//HSN typee
+
+wm.clickbyxpath("//span[@aria-owns='Status_listbox']");
+Thread.sleep(200);
+wm.Listandenter("//*[@id='Status_listbox']/li",Statuslistboxindex);
+Thread.sleep(200);
+
+
+//etering the vatsetup
+
+wm.Listandenter("//span[@class='k-icon k-i-add']", "0");
+Thread.sleep(300);
+
+
+//enterthe producttype
+
+wm.sendtextbyxvalue("//input[@aria-owns='VtvsProductType_listbox']",Producttype);
+Thread.sleep(200);
+wm.Listandenter("//*[@id='VtvsProductType_listbox']/li",Producttypeindex);
+Thread.sleep(200);
+
+//Servicetype
+
+wm.sendtextbyxvalue("//input[@aria-owns='VtvsInterDomestic_listbox']",Servicetype);
+Thread.sleep(200);
+wm.Listandenter("//*[@id='VtvsInterDomestic_listbox']/li",Servicetypeindex);
+Thread.sleep(200);
+
+//Packageornormal
+
+wm.sendtextbyxvalue("//input[@aria-owns='VtvsPackageNormal_listbox']",Packagenormal);
+Thread.sleep(200);
+wm.Listandenter("//*[@id='VtvsPackageNormal_listbox']/li",Packagenormalindex);
+Thread.sleep(200);
+
+//Classtype
+
+wm.sendtextbyxvalue("//input[@aria-owns='VtvsPackageNormal_listbox']",Packagenormal);
+Thread.sleep(200);
+wm.Listandenter("//*[@id='VtvsPackageNormal_listbox']/li",Packagenormalindex);
+Thread.sleep(200);
+
+
+
+
+
+
+		 
+		
+		wm.sleep();
+	}
+
+	@AfterMethod
+	public void close()
+
+	{
+		wm.close();
+
+	}
+
+	@DataProvider(name = "dp")
+	public Object[][] dp() throws IOException {
+
+		return Wrappermethods.getSheet("Vatsetup", "Vatsetup");
+
+	}
+}

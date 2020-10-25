@@ -1,0 +1,206 @@
+package shipogix;
+import utility.Constant;
+import java.io.IOException;
+import java.sql.Driver;
+import java.util.ArrayList;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+import shipogix.Wrappermethods;
+import atu.testng.reports.listeners.ATUReportsListener;
+import atu.testng.reports.listeners.ConfigurationListener;
+import atu.testng.reports.listeners.MethodListener;
+
+//import pack.Wrappermethods;
+@Listeners({ ATUReportsListener.class, ConfigurationListener.class, MethodListener.class })
+public class Scenario137 
+{
+
+	static {
+
+		System.setProperty("atu.reporter.config", "C:\\ATUReports\\atu.properties");
+	}
+
+	Wrappermethods wm;
+
+	@BeforeTest
+	public void instantiation() {
+		wm = new Wrappermethods();
+
+	}
+
+	@BeforeMethod
+	public void browesrnstatiation()
+
+	{
+
+		wm.launchbrowser("chrome", "http://webuat.infodynamic.net:8086/shiplogix/shiplogix/");
+
+		// wm.launchbrowser("", utility.Constant.URL);
+
+	}
+
+	@Test(dataProvider = "dp")
+	public void logincheckK(String Username, String Password, String Leftsidemenuname,
+			String Documenttype,String Documenttypeindex,String StatusIndex,String Supplierindex,
+			String Salesactivityindex,String Supplierref,String Docdate,String Docdate1,String Docdate2	,
+			String Duedate,String Duedate1,String Duedate2,String Supplydate,String Supplydate1,
+			String Supplydate2,String Currency,String Currencyindex,String Narration,String LPONumber,String LPONumberindex,
+			String Gridindex) throws Exception
+
+	{
+
+		Thread.sleep(2000);
+
+		// wm.sendtextbyid("", );
+		wm.sendtextbyid("LoginCode", Username);
+		Thread.sleep(200);
+		wm.sendtextbyid("Password", Password);
+		Thread.sleep(200);
+		wm.clickbyxpath("//input[@value='Login']");
+
+		wm.sleep();
+		wm.sleep();
+        
+		// landing to home page
+
+		wm.sendtextbyid("input-items", Leftsidemenuname);
+
+		Thread.sleep(900);
+		wm.clickbyid("modVoyageAccounting");
+		Thread.sleep(900);
+		wm.clickbyid("pgmPAYINV001");
+		wm.sleep();
+		wm.sleep();
+		wm.sleep();
+
+		wm.clickbyid("btnMainAdd");
+
+		wm.sleep();
+		wm.sleep();
+		
+		//selecting the document type
+		
+		wm.clickbyxpath("//span[@aria-owns='DocumentType_listbox']");
+		Thread.sleep(900);
+		wm.sendtextbyxvalue("//input[@aria-owns='DocumentType_listbox']", Documenttype);
+		Thread.sleep(900);
+		wm.Listandenter("//*[@id='DocumentType_listbox']/li", Documenttypeindex);
+		Thread.sleep(900);
+		  
+		//selecting the status
+		
+		wm.clickbyxpath("//span[@aria-owns='StatusName_listbox']");
+		Thread.sleep(900);
+		wm.Listandenter("//*[@id='StatusName_listbox']/li", StatusIndex);
+		Thread.sleep(900);
+		
+		//selecting the supplier
+		
+		wm.clickbyxpath("//span[@aria-owns='Supplier_listbox']");
+		Thread.sleep(900);
+		wm.Listandenter("//*[@id='Supplier_listbox']/li", Supplierindex);
+		Thread.sleep(900);
+		
+		
+		//selecting the sales activity
+		wm.clickbyxpath("//span[@aria-owns='SaleActivityKey_listbox']");
+		Thread.sleep(900);
+		wm.Listandenter("//*[@id='SaleActivityKey_listbox']/li", Salesactivityindex);
+		Thread.sleep(900);
+		
+
+		wm.sendtextbyxvalue("//input[@id='SupplierRef']", Supplierref);
+		Thread.sleep(900);
+		
+		//date
+		wm.stabbyxpath("//input[@id='SupplierRef']");
+		Thread.sleep(900);
+		wm.sendtextbycssselecotrwithoutclear("#DocDate",""+Docdate+"-"+Docdate1+"-"+Docdate2);
+		
+
+		
+		//Duedate
+		
+		wm.stabbyxpath("//*[@id='DocDate']");
+		Thread.sleep(900);
+		wm.sendtextbycssselecotrwithoutclear("#DueDate",""+Duedate+"-"+Duedate1+"-"+Duedate2);
+		
+		
+		
+		//Suplyate
+		
+		wm.stabbyxpath("//*[@id='lpoID']/div/div[4]/div[3]/div/span[1]");
+		Thread.sleep(900);
+		wm.sendtextbycssselecotrwithoutclear("#SupplyDate",""+Supplydate+"-"+Supplydate1+"-"+Supplydate2);
+		Thread.sleep(900);
+		
+		//selected the currency
+		
+		wm.sendtextbyxvalue("//input[@aria-owns='CurrencyName_listbox']", Currency);
+		Thread.sleep(900);
+		wm.Listandenter("//*[@id='CurrencyName_listbox']/li", Currencyindex);
+		Thread.sleep(900);
+		
+		//send theNarration text
+		
+		wm.sendtextbyxvalue("//textarea[@name='Narration']", Narration);
+		
+        Thread.sleep(900);
+		wm.clickbyxpath("//label[@for='InvoiceType_L']");
+		Thread.sleep(900);
+		
+		wm.findelementandsendtextbyxvalue("//input[@aria-describedby='LPONumber_taglist']", LPONumber);
+		Thread.sleep(900);
+		wm.keyboardarrowdown("//input[@aria-describedby='LPONumber_taglist']");
+		Thread.sleep(900);
+		wm.Enterbyxpath("//input[@aria-describedby='LPONumber_taglist']");
+		wm.sleep();	
+        wm.clickbyxpath("//button[@onclick='GetChargeDetails();']");
+		Thread.sleep(80000);		
+		
+		wm.scrolldownbyxpath("//button[@onclick='GetChargeDetails();']");
+		
+		Thread.sleep(900);
+         
+		wm.Listandenter("//input[@id='Selected']", Gridindex);
+		Thread.sleep(20000);
+		
+		wm.clickbyid("btnMainSave");
+		
+		wm.sleep();
+		
+		
+        wm.sleep();
+        wm.sleep();
+        
+        wm.capturetextfrommsgbox("//span[@id='diaInfoMessage']", "Payable created Successfully");
+        Thread.sleep(900);
+        
+        wm.Listandenter("//span[contains(text(),'OK')]", "0");
+        wm.Listandenter("//span[contains(text(),'OK')]", "1");
+        wm.Listandenter("//span[contains(text(),'OK')]", "2");
+        wm.Listandenter("//span[contains(text(),'OK')]", "3");
+        
+        wm.sleep();
+        
+	}
+
+	@AfterMethod
+	public void close()
+
+	{
+		wm.close();
+
+	}
+
+	@DataProvider(name = "dp")
+	public Object[][] dp() throws IOException {
+
+		return Wrappermethods.getSheet("ship1", "Hthirtyseven");
+
+	}
+}

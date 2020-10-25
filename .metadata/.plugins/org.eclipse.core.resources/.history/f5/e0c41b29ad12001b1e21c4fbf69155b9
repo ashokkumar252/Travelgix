@@ -1,0 +1,9 @@
+package travlogixnegativescenarios;
+
+import org.testng.annotations.Test;
+
+public class Miscrulenegativescenarios {
+  @Test
+  public void f() {
+  }
+}
