@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
     <line>
       <![CDATA[STEP1]]>
@@ -148,24 +148,321 @@
     <line>
       <![CDATA[STEP49]]>
     </line>
+    <line>
+      <![CDATA[STEP50]]>
+    </line>
+    <line>
+      <![CDATA[STEP51]]>
+    </line>
+    <line>
+      <![CDATA[STEP52]]>
+    </line>
+    <line>
+      <![CDATA[STEP53]]>
+    </line>
+    <line>
+      <![CDATA[STEP54]]>
+    </line>
+    <line>
+      <![CDATA[STEP55]]>
+    </line>
+    <line>
+      <![CDATA[STEP56]]>
+    </line>
+    <line>
+      <![CDATA[STEP57]]>
+    </line>
+    <line>
+      <![CDATA[STEP58]]>
+    </line>
+    <line>
+      <![CDATA[STEP59]]>
+    </line>
+    <line>
+      <![CDATA[STEP60]]>
+    </line>
+    <line>
+      <![CDATA[STEP61]]>
+    </line>
+    <line>
+      <![CDATA[STEP62]]>
+    </line>
+    <line>
+      <![CDATA[STEP63]]>
+    </line>
+    <line>
+      <![CDATA[STEP64]]>
+    </line>
+    <line>
+      <![CDATA[STEP65]]>
+    </line>
+    <line>
+      <![CDATA[STEP66]]>
+    </line>
+    <line>
+      <![CDATA[STEP67]]>
+    </line>
+    <line>
+      <![CDATA[STEP68]]>
+    </line>
+    <line>
+      <![CDATA[STEP69]]>
+    </line>
+    <line>
+      <![CDATA[STEP70]]>
+    </line>
+    <line>
+      <![CDATA[STEP71]]>
+    </line>
+    <line>
+      <![CDATA[STEP72]]>
+    </line>
+    <line>
+      <![CDATA[STEP73]]>
+    </line>
+    <line>
+      <![CDATA[STEP74]]>
+    </line>
+    <line>
+      <![CDATA[STEP75]]>
+    </line>
+    <line>
+      <![CDATA[STEP76]]>
+    </line>
+    <line>
+      <![CDATA[STEP77]]>
+    </line>
+    <line>
+      <![CDATA[STEP78]]>
+    </line>
+    <line>
+      <![CDATA[STEP79]]>
+    </line>
+    <line>
+      <![CDATA[STEP80]]>
+    </line>
+    <line>
+      <![CDATA[STEP81]]>
+    </line>
+    <line>
+      <![CDATA[STEP82]]>
+    </line>
+    <line>
+      <![CDATA[STEP83]]>
+    </line>
+    <line>
+      <![CDATA[STEP84]]>
+    </line>
+    <line>
+      <![CDATA[STEP85]]>
+    </line>
+    <line>
+      <![CDATA[STEP86]]>
+    </line>
+    <line>
+      <![CDATA[STEP87]]>
+    </line>
+    <line>
+      <![CDATA[STEP88]]>
+    </line>
+    <line>
+      <![CDATA[STEP89]]>
+    </line>
+    <line>
+      <![CDATA[STEP90]]>
+    </line>
+    <line>
+      <![CDATA[STEP91]]>
+    </line>
+    <line>
+      <![CDATA[STEP92]]>
+    </line>
+    <line>
+      <![CDATA[STEP93]]>
+    </line>
+    <line>
+      <![CDATA[STEP94]]>
+    </line>
+    <line>
+      <![CDATA[STEP95]]>
+    </line>
+    <line>
+      <![CDATA[STEP96]]>
+    </line>
+    <line>
+      <![CDATA[STEP97]]>
+    </line>
+    <line>
+      <![CDATA[STEP98]]>
+    </line>
+    <line>
+      <![CDATA[STEP99]]>
+    </line>
+    <line>
+      <![CDATA[STEP100]]>
+    </line>
+    <line>
+      <![CDATA[STEP101]]>
+    </line>
+    <line>
+      <![CDATA[STEP102]]>
+    </line>
+    <line>
+      <![CDATA[STEP103]]>
+    </line>
+    <line>
+      <![CDATA[STEP104]]>
+    </line>
+    <line>
+      <![CDATA[STEP105]]>
+    </line>
+    <line>
+      <![CDATA[STEP106]]>
+    </line>
+    <line>
+      <![CDATA[STEP107]]>
+    </line>
+    <line>
+      <![CDATA[STEP108]]>
+    </line>
+    <line>
+      <![CDATA[STEP109]]>
+    </line>
+    <line>
+      <![CDATA[STEP110]]>
+    </line>
+    <line>
+      <![CDATA[STEP111]]>
+    </line>
+    <line>
+      <![CDATA[STEP112]]>
+    </line>
+    <line>
+      <![CDATA[STEP113]]>
+    </line>
+    <line>
+      <![CDATA[STEP114]]>
+    </line>
+    <line>
+      <![CDATA[STEP115]]>
+    </line>
+    <line>
+      <![CDATA[STEP116]]>
+    </line>
+    <line>
+      <![CDATA[STEP117]]>
+    </line>
+    <line>
+      <![CDATA[STEP118]]>
+    </line>
+    <line>
+      <![CDATA[STEP119]]>
+    </line>
+    <line>
+      <![CDATA[STEP120]]>
+    </line>
+    <line>
+      <![CDATA[STEP121]]>
+    </line>
+    <line>
+      <![CDATA[STEP122]]>
+    </line>
+    <line>
+      <![CDATA[STEP123]]>
+    </line>
+    <line>
+      <![CDATA[STEP124]]>
+    </line>
+    <line>
+      <![CDATA[STEP125]]>
+    </line>
+    <line>
+      <![CDATA[STEP126]]>
+    </line>
+    <line>
+      <![CDATA[STEP127]]>
+    </line>
+    <line>
+      <![CDATA[STEP128]]>
+    </line>
+    <line>
+      <![CDATA[STEP129]]>
+    </line>
+    <line>
+      <![CDATA[STEP130]]>
+    </line>
+    <line>
+      <![CDATA[STEP131]]>
+    </line>
+    <line>
+      <![CDATA[STEP132]]>
+    </line>
+    <line>
+      <![CDATA[STEP133]]>
+    </line>
+    <line>
+      <![CDATA[STEP134]]>
+    </line>
+    <line>
+      <![CDATA[STEP135]]>
+    </line>
+    <line>
+      <![CDATA[STEP136]]>
+    </line>
+    <line>
+      <![CDATA[STEP137]]>
+    </line>
+    <line>
+      <![CDATA[STEP138]]>
+    </line>
+    <line>
+      <![CDATA[STEP139]]>
+    </line>
+    <line>
+      <![CDATA[STEP140]]>
+    </line>
+    <line>
+      <![CDATA[STEP141]]>
+    </line>
+    <line>
+      <![CDATA[STEP142]]>
+    </line>
+    <line>
+      <![CDATA[STEP143]]>
+    </line>
+    <line>
+      <![CDATA[STEP144]]>
+    </line>
+    <line>
+      <![CDATA[STEP145]]>
+    </line>
+    <line>
+      <![CDATA[STEP146]]>
+    </line>
+    <line>
+      <![CDATA[STEP147]]>
+    </line>
+    <line>
+      <![CDATA[STEP148]]>
+    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="447891" started-at="2020-10-24T17:19:33Z" finished-at="2020-10-24T17:27:01Z">
+  <suite name="Default suite" duration-ms="508680" started-at="2020-10-27T19:28:00Z" finished-at="2020-10-27T19:36:29Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="447891" started-at="2020-10-24T17:19:33Z" finished-at="2020-10-24T17:27:01Z">
-      <class name="travlogix.Airline">
-        <test-method status="PASS" signature="instantiation()[pri:0, instance:travlogix.Airline@15530b9]" name="instantiation" is-config="true" duration-ms="230" started-at="2020-10-24T22:49:33Z" finished-at="2020-10-24T22:49:33Z">
+    <test name="Default test" duration-ms="508680" started-at="2020-10-27T19:28:00Z" finished-at="2020-10-27T19:36:29Z">
+      <class name="travlogixnegativescenarios.Vatsetupnegativescenarios">
+        <test-method status="PASS" signature="instantiation()[pri:0, instance:travlogixnegativescenarios.Vatsetupnegativescenarios@15530b9]" name="instantiation" is-config="true" duration-ms="153" started-at="2020-10-28T00:58:00Z" finished-at="2020-10-28T00:58:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- instantiation -->
-        <test-method status="PASS" signature="browesrnstatiation()[pri:0, instance:travlogix.Airline@15530b9]" name="browesrnstatiation" is-config="true" duration-ms="11898" started-at="2020-10-24T22:49:36Z" finished-at="2020-10-24T22:49:48Z">
+        <test-method status="PASS" signature="browesrnstatiation()[pri:0, instance:travlogixnegativescenarios.Vatsetupnegativescenarios@15530b9]" name="browesrnstatiation" is-config="true" duration-ms="13134" started-at="2020-10-28T00:58:03Z" finished-at="2020-10-28T00:58:16Z">
           <reporter-output>
             <line>
               <![CDATA[STEP1]]>
             </line>
           </reporter-output>
         </test-method> <!-- browesrnstatiation -->
-        <test-method status="FAIL" signature="logincheckK(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:travlogix.Airline@15530b9]" name="logincheckK" duration-ms="432819" started-at="2020-10-24T22:49:48Z" data-provider="dp" finished-at="2020-10-24T22:57:00Z">
+        <test-method status="PASS" signature="logincheckK(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:travlogixnegativescenarios.Vatsetupnegativescenarios@15530b9]" name="logincheckK" duration-ms="490759" started-at="2020-10-28T00:58:16Z" data-provider="dp" finished-at="2020-10-28T01:06:27Z">
           <params>
             <param index="0">
               <value>
@@ -179,107 +476,107 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[Airline]]>
+                <![CDATA[VAT Setup]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[T177]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="4">
               <value>
-                <![CDATA[Thai]]>
+                <![CDATA[EV]]>
               </value>
             </param>
             <param index="5">
               <value>
-                <![CDATA[TH]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="6">
               <value>
-                <![CDATA[24]]>
+                <![CDATA[Bank]]>
               </value>
             </param>
             <param index="7">
               <value>
-                <![CDATA[Oct]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="8">
               <value>
-                <![CDATA[2020]]>
+                <![CDATA[COPIERS S]]>
               </value>
             </param>
             <param index="9">
               <value>
-                <![CDATA[30]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="10">
               <value>
-                <![CDATA[Oct]]>
+                <![CDATA[Goods]]>
               </value>
             </param>
             <param index="11">
               <value>
-                <![CDATA[2020]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="12">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[Air]]>
               </value>
             </param>
             <param index="13">
               <value>
-                <![CDATA[Both]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="14">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[Domestic]]>
               </value>
             </param>
             <param index="15">
               <value>
-                <![CDATA[GSA]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="16">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[Normal]]>
               </value>
             </param>
             <param index="17">
               <value>
-                <![CDATA[Commissionable]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="18">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[F-First Class]]>
               </value>
             </param>
             <param index="19">
               <value>
-                <![CDATA[Home]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="20">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[All]]>
               </value>
             </param>
             <param index="21">
               <value>
-                <![CDATA[UAE]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="22">
               <value>
-                <![CDATA[Dubai]]>
+                <![CDATA[TAMIL NADU]]>
               </value>
             </param>
             <param index="23">
@@ -289,57 +586,57 @@
             </param>
             <param index="24">
               <value>
-                <![CDATA[IND]]>
+                <![CDATA[InputTax]]>
               </value>
             </param>
             <param index="25">
               <value>
-                <![CDATA[0909909009]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="26">
               <value>
-                <![CDATA[0909909009]]>
+                <![CDATA[On Cancellation Charge]]>
               </value>
             </param>
             <param index="27">
               <value>
-                <![CDATA[0909909009]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="28">
               <value>
-                <![CDATA[ask@gmail.com]]>
+                <![CDATA[Included]]>
               </value>
             </param>
             <param index="29">
               <value>
-                <![CDATA[24]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="30">
               <value>
-                <![CDATA[OCT]]>
+                <![CDATA[DEDUCTION FROM SUPPLIER]]>
               </value>
             </param>
             <param index="31">
               <value>
-                <![CDATA[2020]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="32">
               <value>
-                <![CDATA[24]]>
+                <![CDATA[Agent Cancel Charges - Comp1]]>
               </value>
             </param>
             <param index="33">
               <value>
-                <![CDATA[OCT]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="34">
               <value>
-                <![CDATA[2020]]>
+                <![CDATA[888 9999 666]]>
               </value>
             </param>
             <param index="35">
@@ -349,77 +646,77 @@
             </param>
             <param index="36">
               <value>
-                <![CDATA[OneWay]]>
+                <![CDATA[Exempt]]>
               </value>
             </param>
             <param index="37">
               <value>
-                <![CDATA[1]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="38">
               <value>
-                <![CDATA[Abu Dhabi International Airport]]>
+                <![CDATA[Air]]>
               </value>
             </param>
             <param index="39">
               <value>
-                <![CDATA[1]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="40">
               <value>
-                <![CDATA[BANGALORE, INDIA]]>
+                <![CDATA[Domestic]]>
               </value>
             </param>
             <param index="41">
               <value>
-                <![CDATA[2]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="42">
               <value>
-                <![CDATA[GSA Commission]]>
+                <![CDATA[Normal]]>
               </value>
             </param>
             <param index="43">
               <value>
-                <![CDATA[1]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="44">
               <value>
-                <![CDATA[5]]>
+                <![CDATA[Economy]]>
               </value>
             </param>
             <param index="45">
               <value>
-                <![CDATA[24]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="46">
               <value>
-                <![CDATA[OCT]]>
+                <![CDATA[NotRegistered]]>
               </value>
             </param>
             <param index="47">
               <value>
-                <![CDATA[2020]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="48">
               <value>
-                <![CDATA[24]]>
+                <![CDATA[TAMILNADU]]>
               </value>
             </param>
             <param index="49">
               <value>
-                <![CDATA[OCT]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="50">
               <value>
-                <![CDATA[2020]]>
+                <![CDATA[InputTax]]>
               </value>
             </param>
             <param index="51">
@@ -429,7 +726,7 @@
             </param>
             <param index="52">
               <value>
-                <![CDATA[Adult]]>
+                <![CDATA[On Commission]]>
               </value>
             </param>
             <param index="53">
@@ -439,7 +736,7 @@
             </param>
             <param index="54">
               <value>
-                <![CDATA[Business]]>
+                <![CDATA[Included]]>
               </value>
             </param>
             <param index="55">
@@ -449,7 +746,7 @@
             </param>
             <param index="56">
               <value>
-                <![CDATA[Abu Dhabi International Airport]]>
+                <![CDATA[DEDUCTION FROM SUPPLIER]]>
               </value>
             </param>
             <param index="57">
@@ -459,7 +756,7 @@
             </param>
             <param index="58">
               <value>
-                <![CDATA[BANGALORE, INDIA]]>
+                <![CDATA[Discounts - Comp1]]>
               </value>
             </param>
             <param index="59">
@@ -467,221 +764,7 @@
                 <![CDATA[0]]>
               </value>
             </param>
-            <param index="60">
-              <value>
-                <![CDATA[Charge01001]]>
-              </value>
-            </param>
-            <param index="61">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="62">
-              <value>
-                <![CDATA[ACCC]]>
-              </value>
-            </param>
-            <param index="63">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="64">
-              <value>
-                <![CDATA[3]]>
-              </value>
-            </param>
-            <param index="65">
-              <value>
-                <![CDATA[24]]>
-              </value>
-            </param>
-            <param index="66">
-              <value>
-                <![CDATA[OCT]]>
-              </value>
-            </param>
-            <param index="67">
-              <value>
-                <![CDATA[2020]]>
-              </value>
-            </param>
-            <param index="68">
-              <value>
-                <![CDATA[24]]>
-              </value>
-            </param>
-            <param index="69">
-              <value>
-                <![CDATA[OCT]]>
-              </value>
-            </param>
-            <param index="70">
-              <value>
-                <![CDATA[2020]]>
-              </value>
-            </param>
-            <param index="71">
-              <value>
-                <![CDATA[24]]>
-              </value>
-            </param>
-            <param index="72">
-              <value>
-                <![CDATA[OCT]]>
-              </value>
-            </param>
-            <param index="73">
-              <value>
-                <![CDATA[2020]]>
-              </value>
-            </param>
-            <param index="74">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="75">
-              <value>
-                <![CDATA[Class 2]]>
-              </value>
-            </param>
-            <param index="76">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="77">
-              <value>
-                <![CDATA[Business]]>
-              </value>
-            </param>
-            <param index="78">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="79">
-              <value>
-                <![CDATA[24]]>
-              </value>
-            </param>
-            <param index="80">
-              <value>
-                <![CDATA[OCT]]>
-              </value>
-            </param>
-            <param index="81">
-              <value>
-                <![CDATA[2020]]>
-              </value>
-            </param>
-            <param index="82">
-              <value>
-                <![CDATA[24]]>
-              </value>
-            </param>
-            <param index="83">
-              <value>
-                <![CDATA[OCT]]>
-              </value>
-            </param>
-            <param index="84">
-              <value>
-                <![CDATA[2020]]>
-              </value>
-            </param>
-            <param index="85">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="86">
-              <value>
-                <![CDATA[Airarabi]]>
-              </value>
-            </param>
-            <param index="87">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="88">
-              <value>
-                <![CDATA[Non GSA]]>
-              </value>
-            </param>
-            <param index="89">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="90">
-              <value>
-                <![CDATA[24]]>
-              </value>
-            </param>
-            <param index="91">
-              <value>
-                <![CDATA[OCT]]>
-              </value>
-            </param>
-            <param index="92">
-              <value>
-                <![CDATA[2020]]>
-              </value>
-            </param>
-            <param index="93">
-              <value>
-                <![CDATA[24]]>
-              </value>
-            </param>
-            <param index="94">
-              <value>
-                <![CDATA[OCT]]>
-              </value>
-            </param>
-            <param index="95">
-              <value>
-                <![CDATA[2020]]>
-              </value>
-            </param>
-            <param index="96">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
           </params>
-          <exception class="atu.testng.reports.exceptions.ATUReporterStepFailedException">
-            <full-stacktrace>
-              <![CDATA[[ATU Custom Reporter Step Failed Exception]
-	at atu.testng.reports.listeners.ATUReportsListener.onTestSuccess(Unknown Source)
-	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1720)
-	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1699)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:703)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:756)
-	at org.testng.TestRunner.run(TestRunner.java:610)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
-	at org.testng.TestNG.runSuites(TestNG.java:1133)
-	at org.testng.TestNG.run(TestNG.java:1104)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-]]>
-            </full-stacktrace>
-          </exception> <!-- atu.testng.reports.exceptions.ATUReporterStepFailedException -->
           <reporter-output>
             <line>
               <![CDATA[STEP2]]>
@@ -827,13 +910,310 @@
             <line>
               <![CDATA[STEP49]]>
             </line>
+            <line>
+              <![CDATA[STEP50]]>
+            </line>
+            <line>
+              <![CDATA[STEP51]]>
+            </line>
+            <line>
+              <![CDATA[STEP52]]>
+            </line>
+            <line>
+              <![CDATA[STEP53]]>
+            </line>
+            <line>
+              <![CDATA[STEP54]]>
+            </line>
+            <line>
+              <![CDATA[STEP55]]>
+            </line>
+            <line>
+              <![CDATA[STEP56]]>
+            </line>
+            <line>
+              <![CDATA[STEP57]]>
+            </line>
+            <line>
+              <![CDATA[STEP58]]>
+            </line>
+            <line>
+              <![CDATA[STEP59]]>
+            </line>
+            <line>
+              <![CDATA[STEP60]]>
+            </line>
+            <line>
+              <![CDATA[STEP61]]>
+            </line>
+            <line>
+              <![CDATA[STEP62]]>
+            </line>
+            <line>
+              <![CDATA[STEP63]]>
+            </line>
+            <line>
+              <![CDATA[STEP64]]>
+            </line>
+            <line>
+              <![CDATA[STEP65]]>
+            </line>
+            <line>
+              <![CDATA[STEP66]]>
+            </line>
+            <line>
+              <![CDATA[STEP67]]>
+            </line>
+            <line>
+              <![CDATA[STEP68]]>
+            </line>
+            <line>
+              <![CDATA[STEP69]]>
+            </line>
+            <line>
+              <![CDATA[STEP70]]>
+            </line>
+            <line>
+              <![CDATA[STEP71]]>
+            </line>
+            <line>
+              <![CDATA[STEP72]]>
+            </line>
+            <line>
+              <![CDATA[STEP73]]>
+            </line>
+            <line>
+              <![CDATA[STEP74]]>
+            </line>
+            <line>
+              <![CDATA[STEP75]]>
+            </line>
+            <line>
+              <![CDATA[STEP76]]>
+            </line>
+            <line>
+              <![CDATA[STEP77]]>
+            </line>
+            <line>
+              <![CDATA[STEP78]]>
+            </line>
+            <line>
+              <![CDATA[STEP79]]>
+            </line>
+            <line>
+              <![CDATA[STEP80]]>
+            </line>
+            <line>
+              <![CDATA[STEP81]]>
+            </line>
+            <line>
+              <![CDATA[STEP82]]>
+            </line>
+            <line>
+              <![CDATA[STEP83]]>
+            </line>
+            <line>
+              <![CDATA[STEP84]]>
+            </line>
+            <line>
+              <![CDATA[STEP85]]>
+            </line>
+            <line>
+              <![CDATA[STEP86]]>
+            </line>
+            <line>
+              <![CDATA[STEP87]]>
+            </line>
+            <line>
+              <![CDATA[STEP88]]>
+            </line>
+            <line>
+              <![CDATA[STEP89]]>
+            </line>
+            <line>
+              <![CDATA[STEP90]]>
+            </line>
+            <line>
+              <![CDATA[STEP91]]>
+            </line>
+            <line>
+              <![CDATA[STEP92]]>
+            </line>
+            <line>
+              <![CDATA[STEP93]]>
+            </line>
+            <line>
+              <![CDATA[STEP94]]>
+            </line>
+            <line>
+              <![CDATA[STEP95]]>
+            </line>
+            <line>
+              <![CDATA[STEP96]]>
+            </line>
+            <line>
+              <![CDATA[STEP97]]>
+            </line>
+            <line>
+              <![CDATA[STEP98]]>
+            </line>
+            <line>
+              <![CDATA[STEP99]]>
+            </line>
+            <line>
+              <![CDATA[STEP100]]>
+            </line>
+            <line>
+              <![CDATA[STEP101]]>
+            </line>
+            <line>
+              <![CDATA[STEP102]]>
+            </line>
+            <line>
+              <![CDATA[STEP103]]>
+            </line>
+            <line>
+              <![CDATA[STEP104]]>
+            </line>
+            <line>
+              <![CDATA[STEP105]]>
+            </line>
+            <line>
+              <![CDATA[STEP106]]>
+            </line>
+            <line>
+              <![CDATA[STEP107]]>
+            </line>
+            <line>
+              <![CDATA[STEP108]]>
+            </line>
+            <line>
+              <![CDATA[STEP109]]>
+            </line>
+            <line>
+              <![CDATA[STEP110]]>
+            </line>
+            <line>
+              <![CDATA[STEP111]]>
+            </line>
+            <line>
+              <![CDATA[STEP112]]>
+            </line>
+            <line>
+              <![CDATA[STEP113]]>
+            </line>
+            <line>
+              <![CDATA[STEP114]]>
+            </line>
+            <line>
+              <![CDATA[STEP115]]>
+            </line>
+            <line>
+              <![CDATA[STEP116]]>
+            </line>
+            <line>
+              <![CDATA[STEP117]]>
+            </line>
+            <line>
+              <![CDATA[STEP118]]>
+            </line>
+            <line>
+              <![CDATA[STEP119]]>
+            </line>
+            <line>
+              <![CDATA[STEP120]]>
+            </line>
+            <line>
+              <![CDATA[STEP121]]>
+            </line>
+            <line>
+              <![CDATA[STEP122]]>
+            </line>
+            <line>
+              <![CDATA[STEP123]]>
+            </line>
+            <line>
+              <![CDATA[STEP124]]>
+            </line>
+            <line>
+              <![CDATA[STEP125]]>
+            </line>
+            <line>
+              <![CDATA[STEP126]]>
+            </line>
+            <line>
+              <![CDATA[STEP127]]>
+            </line>
+            <line>
+              <![CDATA[STEP128]]>
+            </line>
+            <line>
+              <![CDATA[STEP129]]>
+            </line>
+            <line>
+              <![CDATA[STEP130]]>
+            </line>
+            <line>
+              <![CDATA[STEP131]]>
+            </line>
+            <line>
+              <![CDATA[STEP132]]>
+            </line>
+            <line>
+              <![CDATA[STEP133]]>
+            </line>
+            <line>
+              <![CDATA[STEP134]]>
+            </line>
+            <line>
+              <![CDATA[STEP135]]>
+            </line>
+            <line>
+              <![CDATA[STEP136]]>
+            </line>
+            <line>
+              <![CDATA[STEP137]]>
+            </line>
+            <line>
+              <![CDATA[STEP138]]>
+            </line>
+            <line>
+              <![CDATA[STEP139]]>
+            </line>
+            <line>
+              <![CDATA[STEP140]]>
+            </line>
+            <line>
+              <![CDATA[STEP141]]>
+            </line>
+            <line>
+              <![CDATA[STEP142]]>
+            </line>
+            <line>
+              <![CDATA[STEP143]]>
+            </line>
+            <line>
+              <![CDATA[STEP144]]>
+            </line>
+            <line>
+              <![CDATA[STEP145]]>
+            </line>
+            <line>
+              <![CDATA[STEP146]]>
+            </line>
+            <line>
+              <![CDATA[STEP147]]>
+            </line>
+            <line>
+              <![CDATA[STEP148]]>
+            </line>
           </reporter-output>
         </test-method> <!-- logincheckK -->
-        <test-method status="PASS" signature="close()[pri:0, instance:travlogix.Airline@15530b9]" name="close" is-config="true" duration-ms="478" started-at="2020-10-24T22:57:00Z" finished-at="2020-10-24T22:57:01Z">
+        <test-method status="PASS" signature="close()[pri:0, instance:travlogixnegativescenarios.Vatsetupnegativescenarios@15530b9]" name="close" is-config="true" duration-ms="2195" started-at="2020-10-28T01:06:27Z" finished-at="2020-10-28T01:06:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
-      </class> <!-- travlogix.Airline -->
+      </class> <!-- travlogixnegativescenarios.Vatsetupnegativescenarios -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

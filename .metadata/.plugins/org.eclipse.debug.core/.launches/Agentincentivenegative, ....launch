@@ -17,10 +17,12 @@
 <listEntry value="travlogixnegativescenarios.Carscrulepagenegativescenarios"/>
 <listEntry value="travlogixnegativescenarios.Hotelmasternegativescenarios"/>
 <listEntry value="travlogixnegativescenarios.Airscrulenegative"/>
+<listEntry value="travlogixnegativescenarios.Authorizationnegativescenarios"/>
 <listEntry value="travlogixnegativescenarios.Executivenegativescenarios"/>
 <listEntry value="travlogixnegativescenarios.Airservicechargenegative"/>
 <listEntry value="travlogixnegativescenarios.Travelclassnegativescenarios"/>
 <listEntry value="travlogixnegativescenarios.Agentincentivenegative"/>
+<listEntry value="travlogixnegativescenarios.Accountsetupnegativescenarios"/>
 </listAttribute>
 <listAttribute key="org.testng.eclipse.METHOD_TEST_LIST"/>
 <listAttribute key="org.testng.eclipse.PACKAGE_TEST_LIST"/>

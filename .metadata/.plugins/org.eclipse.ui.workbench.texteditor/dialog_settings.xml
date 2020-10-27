@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="date" key="selection"/>
+		<item value="Statelistboxindexx" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="true" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="date"/>
-			<item value="ActiveFrom1"/>
-			<item value="City"/>
-			<item value="ValueFrom"/>
-			<item value="Category"/>
-			<item value="Productname"/>
-			<item value="Useruser"/>
-			<item value="discount"/>
+			<item value="Statelistboxindexx"/>
+			<item value="VEtvsSupplierVatStatuslistboxindex"/>
+			<item value="VEtvsSupplierVatStatus_listbox "/>
+			<item value="Statelistboxindexx "/>
+			<item value="validations data is not avilable VEtvsSupplierVatStatus_listbox field"/>
+			<item value="VAT setup"/>
+			<item value="validations is avilable VtvsProduct"/>
+			<item value="validations is avilable VtvsProductType_input field"/>
 		</list>
 		<list key="replacehistory">
 			<item value="click"/>
