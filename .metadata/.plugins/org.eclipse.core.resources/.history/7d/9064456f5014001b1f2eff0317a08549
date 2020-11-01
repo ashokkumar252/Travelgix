@@ -1,9 +1,0 @@
-package travlogix;
-
-import org.testng.annotations.Test;
-
-public class Authorization {
-  @Test
-  public void f() {
-  }
-}

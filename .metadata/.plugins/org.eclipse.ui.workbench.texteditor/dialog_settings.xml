@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="Statelistboxindexx" key="selection"/>
+		<item value="dktClientReference" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="true" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="Statelistboxindexx"/>
-			<item value="VEtvsSupplierVatStatuslistboxindex"/>
-			<item value="VEtvsSupplierVatStatus_listbox "/>
-			<item value="Statelistboxindexx "/>
-			<item value="validations data is not avilable VEtvsSupplierVatStatus_listbox field"/>
-			<item value="VAT setup"/>
-			<item value="validations is avilable VtvsProduct"/>
-			<item value="validations is avilable VtvsProductType_input field"/>
+			<item value="dktClientReference"/>
+			<item value="dktClientReference&#x09;dktTransactionReference"/>
+			<item value="lead"/>
+			<item value="User unable to selected the Status_listbox when service is avilabe in the docket"/>
+			<item value="getAttribute"/>
+			<item value="attribu"/>
+			<item value="atti"/>
+			<item value="comp"/>
 		</list>
 		<list key="replacehistory">
 			<item value="click"/>

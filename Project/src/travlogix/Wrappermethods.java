@@ -5150,9 +5150,70 @@ System.out.println("Element not present");
 																		
 //===================================================================================================================
 
+//delete thedefault valuesin the textbox
+
+									public void Deletedefaultvaluesinthetextbox(String xpt1) 
+									{
+																		
+										WebElement toClear = driver.findElementByXPath(xpt1);
+										toClear.sendKeys(Keys.CONTROL + "a");
+										toClear.sendKeys(Keys.DELETE);
+
+									
+									}
+
+
+			
+									
 									
 //=============================================================================================================================
-	//=========================================================================================
+
+	//
+
+									public void Verifythealertpopupmessagesusincontainsusinggetattribute(String xpath,String Verifymessages,
+											String Positivemessage,String Negativemessages)
+									{
+
+										try 
+										{
+											Thread.sleep(1000);
+											String  gtxt = driver.findElementByXPath(xpath).getAttribute("value");										
+											//System.out.println(gtxt);
+
+											String gtxt1=gtxt.toString();
+											String gtxt2 =Verifymessages.toString();
+											
+											System.out.println(gtxt1);
+											System.out.println(gtxt2);
+										
+											if (gtxt2.contains(gtxt1))													
+
+//											{
+											ATUReports.add(Positivemessage, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+										  
+										else
+											ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+												
+											
+											} 
+										catch (NoSuchElementException e) {
+
+											//ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+										} catch (WebDriverException e) {
+											//ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+										} catch (Exception e) {
+											// TODO Auto-generated catch block
+											e.printStackTrace();
+										} 
+										finally {
+											takeSnap();
+										}
+									}
+
+									
+									
+									
+//=========================================================================================
 
 	public void scrolldown(String id) {
 		try {
