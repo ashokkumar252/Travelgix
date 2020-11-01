@@ -1,9 +1,0 @@
-package travlogixnegativescenarios;
-
-import org.testng.annotations.Test;
-
-public class Agentincentive {
-  @Test
-  public void f() {
-  }
-}
