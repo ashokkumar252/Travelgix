@@ -1,0 +1,219 @@
+//WASTA login screen
+package travlogixnegativescenarios;
+import utility.Constant;
+import java.io.IOException;
+import java.sql.Driver;
+import java.util.ArrayList;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+import travlogix.Wrappermethods;
+import atu.testng.reports.listeners.ATUReportsListener;
+import atu.testng.reports.listeners.ConfigurationListener;
+import atu.testng.reports.listeners.MethodListener;
+@Listeners({ ATUReportsListener.class, ConfigurationListener.class, MethodListener.class })
+public class Agentincentivenegative
+{
+
+	static {
+
+		// System.setProperty("atu.reporter.config",
+		// "C:\\ATUReports\\atu.properties");
+		System.setProperty("atu.reporter.config", utility.Constant.ATUREPORTS);
+
+	}
+
+	Wrappermethods wm;
+
+	@BeforeTest
+	public void instantiation() {
+		wm = new Wrappermethods();
+
+	}
+
+	@BeforeMethod
+	public void browesrnstatiation()
+
+	{
+
+		wm.launchbrowser("chrome", utility.Constant.TRAVELOGIXURL);
+
+	}
+
+	@Test(dataProvider = "dp")
+	public void logincheckK(String Username, String Password, String Leftsidemenu) throws Exception
+
+	{
+
+		Thread.sleep(2000);
+
+		// wm.sendtextbyid("", );
+		wm.sendtextbyid("LoginCode", Username);
+		Thread.sleep(200);
+		wm.sendtextbyid("Password", Password);
+		Thread.sleep(200);
+		wm.clickbyxpath("//input[@value='Login']");
+		wm.sleep();
+
+		// ====================Creating  agentincentives as negative scenarios
+		
+		// screnn===========================================================
+		wm.sendtextbyid("input-items", Leftsidemenu);
+		Thread.sleep(500);
+		wm.clickbyid("modMAS001");
+		Thread.sleep(500);
+		wm.clickbyid("pgmBR001");
+		wm.sleep();
+
+//		1.Agent incentive	Clicking the save button without changes
+
+		wm.clickbyid("btnMainSave");
+		wm.sleep();
+
+		wm.Verifythealertpopupmessages("//span[@id='dialogWarning']", 
+				"Agent Incentive Changes not be found.",
+				"Agent Incentive Changes not be found. , System showing validation messages correctly ",
+				"System save the record without changes ,  System showing validation messages not correctly ");
+		Thread.sleep(500);
+
+		wm.Listandenterquick("//span[contains(text(),'OK')]", "0");
+		wm.Listandenterquick("//span[contains(text(),'OK')]", "1");
+		wm.Listandenterquick("//span[contains(text(),'OK')]", "2");
+		wm.Listandenterquick("//span[contains(text(),'OK')]", "3");
+
+		// 2 Branch Master Bramch Group : Clicking the Add button and click the
+		// grid level save button Proper validation should be displayed
+
+		wm.clickbyid("btnMainAdd");
+		Thread.sleep(200);
+		
+//2	Agent incentive	Verify the Audit log Popup opening
+
+		wm.Listandenter("//a[@class='k-button k-button-icontext k-grid-cLog']", "0");
+		Thread.sleep(300);
+		wm.Verifythealertpopupmessagesusincontains("//span[@id='AuditLog_wnd_title']", "Audit Log",
+				"When clicking the audit log icon system displays the auditlog popup",
+				"When clicking the audit log icon system displays the auditlog popup");
+		Thread.sleep(200);
+
+		wm.Listandenterquick("//span[@class='k-icon k-i-close']", "0");
+		wm.Listandenterquick("//span[@class='k-icon k-i-close']", "1");
+		wm.Listandenterquick("//span[@class='k-icon k-i-close']", "2");
+		wm.Listandenterquick("//span[@class='k-icon k-i-close']", "3");
+		Thread.sleep(200);
+
+//2	Agent incentive	Verify the UI field validations
+
+wm.clickbyid("btnMainAdd");
+Thread.sleep(200);
+wm.Clearbyxpath("//input[@aria-owns='AtaiEffectiveDate_dateview']");
+Thread.sleep(50);
+wm.Clearbyxpath("//input[@aria-owns='AStatus_listbox']");
+Thread.sleep(50);
+wm.Clearbyxpath("//input[@aria-owns='AtaiValueType_listbox']");
+Thread.sleep(50);
+wm.clickbyxpath("//span[@class='k-icon k-i-check']");
+Thread.sleep(200);
+
+
+// 3	Agent incentive	Verify the UI field validations	All mandatory fields
+
+//Code Field 
+wm.Mousemoveover("//input[@name='Code']");
+Thread.sleep(100);
+wm.Listnegativescearios(utility.Constant.Travelogixuitooltipvalidation, Commonindex,
+		"Pass :  validations is avilable Code  field" + "",
+		"Fail:  validations is not avilable Code field" + "");
+Thread.sleep(200);
+
+//agentname
+wm.Mousemoveover("//input[@name='Description']");
+Thread.sleep(100);
+wm.Listnegativescearios(utility.Constant.Travelogixuitooltipvalidation, Commonindex,
+		"Pass :  validations is avilable in agent name  field" + "",
+		"Fail:  validations is not avilable in agent name field" + "");
+Thread.sleep(200);
+
+
+//address
+wm.Mousemoveover("//input[@name='AtaiAddress']");
+Thread.sleep(100);
+wm.Listnegativescearios(utility.Constant.Travelogixuitooltipvalidation, Commonindex,
+		"Pass :  validations is AtaiAddress field" + "",
+		"Fail:  validations is not AtaiAddress field" + "");
+Thread.sleep(200);
+
+
+//Agentincentive typee
+wm.Mousemoveover("//input[@name='AtaiType_input']");
+Thread.sleep(100);
+wm.Listnegativescearios(utility.Constant.Travelogixuitooltipvalidation, Commonindex,
+		"Pass :  validations is avilable AtaiType_input  Agent incentive type  field" + "",
+		"Fail:  validations is not avilable AtaiType_input Agent incentive type   field" + "");
+Thread.sleep(200);
+
+
+//agent status
+wm.Mousemoveover("//input[@name='AStatus_input']");
+Thread.sleep(100);
+wm.Listnegativescearios(utility.Constant.Travelogixuitooltipvalidation, Commonindex,
+		"Pass :  validations is avilable in AStatus_input  field" + "",
+		"Fail:  validations is not avilable in AStatus_input field" + "");
+Thread.sleep(200);
+
+
+//valuetypee
+wm.Mousemoveover("//input[@name='AtaiValueType_input']");
+Thread.sleep(100);
+wm.Listnegativescearios(utility.Constant.Travelogixuitooltipvalidation, Commonindex,
+		"Pass :  validations is avilable AtaiValueType_input  field" + "",
+		"Fail:  validations is not avilable AtaiValueType_input field" + "");
+Thread.sleep(200);
+wm.clickbyxpath(" //span[@class='k-icon k-i-cancel']");
+Thread.sleep(900);
+wm.clickbyid("btnMainAdd");
+Thread.sleep(900);
+
+
+//4	Agent incentive	Newly Created customer newly created customer should reflected in the customer field
+
+wm.sendtextbyxvalue("//input[@aria-owns='AtaiCmsKey_listbox']",Customername);
+Thread.sleep(200);
+wm.Listnegativescearios("//*[@id='AtaiCmsKey_listbox']/li", Customernameindex,
+		"Pass :   Newly created value reflected in Customername field " + "",
+		"Fail:   Newly created value not reflected in Customername field  " + "");
+Thread.sleep(200);
+
+//5	Agent incentive	Newly created agent incentive type reflected in Agent incentive type field
+wm.sendtextbyxvalue("//input[@aria-owns='AtaiType_listbox']",Agentinentive);
+Thread.sleep(200);
+wm.Listnegativescearios("//*[@id='AtaiType_listbox']/li", Agentinentiveindex,
+		"Pass :   Newly created value reflected in Customername field " + "",
+		"Fail:   Newly created value not reflected in Customername field  " + "");
+Thread.sleep(200);
+
+
+
+
+		
+		wm.sleep();
+	}
+
+	@AfterMethod
+	public void close()
+
+	{
+		wm.close();
+
+	}
+
+	@DataProvider(name = "dp")
+	public Object[][] dp() throws IOException {
+
+		return Wrappermethods.getSheet("Branchmasternegativescenarios", "Branchmasternegativescenarios");
+
+	}
+}

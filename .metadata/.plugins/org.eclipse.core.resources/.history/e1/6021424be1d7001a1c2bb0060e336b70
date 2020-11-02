@@ -1,0 +1,98 @@
+//WASTA login screen
+package demo;
+import utility.Constant;
+import java.io.IOException;
+import java.sql.Driver;
+import java.util.ArrayList;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+import shipogix.Wrappermethods;
+import atu.testng.reports.listeners.ATUReportsListener;
+import atu.testng.reports.listeners.ConfigurationListener;
+import atu.testng.reports.listeners.MethodListener;
+
+//import pack.Wrappermethods;
+@Listeners({ ATUReportsListener.class, ConfigurationListener.class, MethodListener.class })
+public class demo1
+{
+
+	static {
+
+		System.setProperty("atu.reporter.config", "C:\\ATUReports\\atu.properties");
+	}
+
+	Wrappermethods wm;
+
+	@BeforeTest
+	public void instantiation() {
+		wm = new Wrappermethods();
+
+	}
+
+	@BeforeMethod
+	public void browesrnstatiation()
+
+	{
+
+		wm.launchbrowser("chrome", "https://webuat.infodynamic.net/TravelTraining/");
+
+	}
+
+	@Test(dataProvider = "dp")
+	public void logincheckK(String username,String password,String codevalue,String country) throws Exception
+
+	{
+
+		Thread.sleep(2000);
+
+		//star to write the coding.......
+       wm.sendtextbyxvalue("//input[@id='LoginCode']", username);
+       
+       wm.sendtextbyxvalue("//input[@id='Password']", password);
+       
+       wm.sleep();
+       wm.sleep();
+       wm.sleep();
+       
+       wm.clickbyxpath("//input[@id='btnLoginButton']");
+       
+       wm.clickbyid("modMAS001");
+       
+       wm.clickbyid("pgmCR001");
+       
+       wm.clickbyid("btnMainAdd");
+       
+       wm.sendtextbyid("Code", codevalue);
+
+       
+       wm.sendtextbyxvalue("//input[@aria-owns='currencyCountryName_listbox']", country);
+      /* wm.keyboardarrowdownonetime("//input[@aria-owns='currencyCountryName_listbox']");
+       wm.Enterbyxpath("//input[@aria-owns='currencyCountryName_listbox']");      
+      */ 
+       
+       
+       
+       wm.Listandenter("//*[@id='currencyCountryName_listbox]", "2");
+       
+        
+	}
+
+	@AfterMethod
+	public void close()
+
+	{
+		wm.close();
+
+	}
+
+	@DataProvider(name = "dp")
+	public Object[][] dp() throws IOException {
+
+		return Wrappermethods.getSheet("ship1", "demo");
+
+	}
+}

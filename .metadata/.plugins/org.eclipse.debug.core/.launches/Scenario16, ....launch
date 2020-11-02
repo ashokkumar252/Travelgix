@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.testng.eclipse.launchconfig">
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="org.testng.remote.RemoteTestNG"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="Project"/>
+<mapAttribute key="org.testng.eclipse.ALL_CLASS_METHODS"/>
+<listAttribute key="org.testng.eclipse.CLASS_TEST_LIST">
+<listEntry value="shipogix.Scenario10"/>
+<listEntry value="shipogix.Scenario11"/>
+<listEntry value="shipogix.Scenario13"/>
+<listEntry value="shipogix.Scenario3"/>
+<listEntry value="shipogix.Scenario14"/>
+<listEntry value="shipogix.Wrappermethods"/>
+<listEntry value="shipogix.Scenario1"/>
+<listEntry value="shipogix.Scenario12"/>
+<listEntry value="shipogix.Scenario2"/>
+<listEntry value="shipogix.Scenario6"/>
+<listEntry value="shipogix.Scenario17"/>
+<listEntry value="shipogix.Scenario7"/>
+<listEntry value="shipogix.Scenario4"/>
+<listEntry value="shipogix.Scenario15"/>
+<listEntry value="shipogix.Scenario5"/>
+<listEntry value="shipogix.Scenario16"/>
+<listEntry value="shipogix.Scenario9"/>
+<listEntry value="shipogix.Scenario18"/>
+<listEntry value="shipogix.Scenario8"/>
+</listAttribute>
+<listAttribute key="org.testng.eclipse.METHOD_TEST_LIST"/>
+<listAttribute key="org.testng.eclipse.PACKAGE_TEST_LIST"/>
+<stringAttribute key="org.testng.eclipse.PRE_DEFINED_LISTENERS" value=""/>
+<intAttribute key="org.testng.eclipse.TYPE" value="1"/>
+</launchConfiguration>
