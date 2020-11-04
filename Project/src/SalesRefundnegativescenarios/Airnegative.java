@@ -52,7 +52,15 @@ public class Airnegative {
 			String Salesbracnh, String Salesbracnhindex, String Customer, String Customerindex, String Leadpaxnamee,
 			String BSPAirlines, String NonBspairlines,String BSPandNONBSPAirlines,String PayableagentAirline
 			,String PayableagentAirlineindex,String Duplicateticketnumbevalidations,
-			String BSPlnkedpayableagent,String Bookingexecutive,String Salesexecutive) throws Exception
+			String BSPlnkedpayableagent,String Bookingexecutive,String Salesexecutive,
+			String Bookingexecutiveinactivedata,String SupplierPCC,String AatdTicketNumber,
+			String Fromsector,String Fromsectorindex,String Tosector,String Tosectorindex,String Publishedfare,
+			String Sellingfare,String IncentiveCRC,String Companycurrency,String Lodgecard,String Processtype,
+			String Processtypeindex,String AtfdIncentivePaid,String Aatcode,String Aatcodeindex,
+			String AatAmount,String Namee,String Nameeindex,String AtscBaseAmount,String AtfdCommPercent1,
+			String AtfdCommPercent2,String AtfdDiscPercent1,String Agentincetive,String Agentincetiveindexx,
+			String Modeindex,String Selectedbranch,String TravelStatusDN,String Agentincentive,
+			String Fopcustomer) throws Exception
 
 	{
 
@@ -512,21 +520,490 @@ Thread.sleep(500);
 wm.Listnegativescearios("//*[@id='AatdSalesExecutiveName_listbox']/li", Commonindex, 
 		"Newly created AatdSalesExecutiveName_listbox reflected in Sales Executive  field  "  +  "", 
 		"Newly created AatdSalesExecutiveName_listbox not reflected in Sales  Executive  field "  + "");
-Thread.sleep(500);
+Thread.sleep(300);
 
 //27	Air 	PNR field	PNR field mandatory validation checking
 
-wm.clickbyid("btnMainSave");
-Thread.sleep(200);
+wm.doubleclickusingxpath("//*[@id='btnairsave']");
+
+Thread.sleep(500);
 
 wm.Mousemoveover("//input[@name='AatdPnrNumber']");
 Thread.sleep(200);
 wm.Listnegativescearios(utility.Constant.Travelogixuitooltipvalidation, Commonindex,
-		"Pass : PNR validaiton is avilable in the PNR  field" + "",
-		"Fail : PNR validaiton is not avilable in the PNR  field" + "");
+		"27 Pass : PNR validaiton is avilable in the PNR  field" + "",
+		"27 Fail : PNR validaiton is not avilable in the PNR  field" + "");
 Thread.sleep(200);
 
 
+//24	Air 	Booking executive chekcing inactive data reflected
+
+
+//wm.sendtextbyxvalue("//input[@aria-owns='AirBookingExecutieveName_listbox']", BSPlnkedpayableagent);
+wm.sendtextbyxvalue("//input[@aria-owns='AirBookingExecutieveName_listbox']", Bookingexecutiveinactivedata);
+Thread.sleep(100);
+wm.keyboardarrowdown("//input[@aria-owns='AirBookingExecutieveName_listbox']");
+Thread.sleep(100);
+wm.Enterbyxpath("//input[@aria-owns='AirBookingExecutieveName_listbox']");
+Thread.sleep(300);
+
+wm.Verifythealertpopupmessagesnotequal("//input[@aria-owns='AirBookingExecutieveName_listbox']",
+		Bookingexecutiveinactivedata, "24 25 26 inactive data not showing in AirBookingExecutieveName_listbox", 
+		"24 25 26  inactive data  showing in AirBookingExecutieveName_listbox");
+/*
+wm.Verifythealertpopupmessagesusincontainsusinggetattribute("//input[@aria-owns='AirBookingExecutieveName_listbox']"
+		, Bookingexecutiveinactivedata, 
+		"24,25,26) Pass :  inactive datas is not reflected in AirBookingExecutieveName_listbox", 
+		"24,25,26) Fail:  inactive datas is  reflected in AirBookingExecutieveName_listbox");
+*/Thread.sleep(300);
+
+//30	Other details	Booking pcc field	Bussinee partner -supplier - pcc details shoulg get displayedd
+
+
+/*wm.clickbyxpath("//span[@aria-owns='AatdIssuingPcc_listbox']");
+Thread.sleep(200);
+wm.clickbyxpath("//span[contains(text(),'SupplierPCC')]");
+Thread.sleep(200);
+
+//wm.selectbyValuexp("//span[@aria-owns='AatdIssuingPcc_listbox']",PCC);
+//Thread.sleep(200);
+wm.Verifythealertpopupmessagesusincontainsusinggetattribute("//span[@aria-owns='AatdIssuingPcc_listbox']"
+		,SupplierPCC, "30)Pass :  Bussinee partner -supplier - pcc details get reflected", 
+		"30)Fail:  Bussinee partner -supplier - pcc details get reflected");
+
+*/
+//Sector details : 
+
+wm.sendtextbycssselecotrwithoutclear("#AatdTicketNumber", AatdTicketNumber);
+Thread.sleep(200);
+wm.stabbyxpath("//input[@name='AtfdReasonCode']");
+Thread.sleep(600);
+
+wm.Listandenter("//span[@class='k-icon k-i-add']", "0");
+Thread.sleep(300);
+
+//31	Sector details	From secot	User able to select the sector detailss
+// from sector
+wm.sendtextbyxvalue("//input[@aria-owns='AasegOriginKeyCode_listbox']", Fromsector);
+Thread.sleep(100);
+wm.Listnegativescearios("//*[@id='AasegOriginKeyCode_listbox']/li", Fromsectorindex, 
+		"User able to select the from sector details successfully", 
+		"User not able to select the from sector details successfully");
+
+//wm.Listandenter("//*[@id='AasegOriginKeyCode_listbox']/li", Fromsectorindex);
+Thread.sleep(200);
+
+
+//32	Sector details	to sector	User able to select the sector detailss
+//Tosector
+wm.sendtextbyxvalue("//input[@aria-owns='AasegDestinationKeyCode_listbox']", Tosector);
+Thread.sleep(100);
+wm.Listnegativescearios("//*[@id='AasegDestinationKeyCode_listbox']/li", Tosectorindex, 
+		"User able to select the to sector details successfully", 
+		"User not able to select the to sector details successfully");
+
+//wm.Listandenter("//*[@id='AasegDestinationKeyCode_listbox']/li", Tosectorindex);
+Thread.sleep(200);
+
+//33	Sector details	Airline 	sync fromheader
+wm.Verifythealertpopupmessagesusincontainsusinggetattribute("//input[@aria-owns='AasegAirlineKey_listbox']"
+		,PayableagentAirline, "33)Pass :  Airline detials sync from header to Sector", 
+		"33)Fail:  Airline detials not sync from header to Sector");
+
+
+//34 : no feasability
+
+
+//35	Sector details	tickectnumber	Sync fromheader
+wm.Verifythealertpopupmessagesusincontainsusinggetattribute("//input[@name='AasegTicketNumber']"
+		,AatdTicketNumber, "33)Pass :  AatdTicketNumber detials sync from header tickect field ", 
+		"33)Fail:  AatdTicketNumber detials not sync from header tickect field ");
+
+//36 need to testin positive flow
+
+
+//36	Sector details	Conjuction functionaity	After selecting four secotrs , 
+//fifth sectors have new tickect has been generated 
+/*
+wm.clickbyxpath("//span[@class='k-icon k-i-check']");
+Thread.sleep(600);
+
+//sector 2
+wm.Listandenter("//span[@class='k-icon k-i-add']", "0");
+Thread.sleep(200);
+
+wm.sendtextbyxvalue("//input[@aria-owns='AasegDestinationKeyCode_listbox']", Tosector1);
+Thread.sleep(100);
+wm.Listnegativescearios("//*[@id='AasegDestinationKeyCode_listbox']/li", Tosectorindex, 
+		"User able to select the to sector details successfully", 
+		"User not able to select the to sector details successfully");
+Thread.sleep(200);
+wm.clickbyxpath("//span[@class='k-icon k-i-check']");
+Thread.sleep(600);
+
+//sector 3
+wm.Listandenter("//span[@class='k-icon k-i-add']", "0");
+Thread.sleep(100);
+
+wm.sendtextbyxvalue("//input[@aria-owns='AasegDestinationKeyCode_listbox']", Tosector2);
+Thread.sleep(100);
+wm.Listnegativescearios("//*[@id='AasegDestinationKeyCode_listbox']/li", Tosectorindex, 
+		"User able to select the to sector details successfully", 
+		"User not able to select the to sector details successfully");
+Thread.sleep(200);
+
+wm.clickbyxpath("//span[@class='k-icon k-i-check']");
+Thread.sleep(600);
+
+//sector 4
+wm.Listandenter("//span[@class='k-icon k-i-add']", "0");
+Thread.sleep(200);
+
+
+
+wm.sendtextbyxvalue("//input[@aria-owns='AasegDestinationKeyCode_listbox']", Tosector3);
+Thread.sleep(100);
+wm.Listnegativescearios("//*[@id='AasegDestinationKeyCode_listbox']/li", Tosectorindex, 
+		"User able to select the to sector details successfully", 
+		"User not able to select the to sector details successfully");
+Thread.sleep(200);
+
+
+wm.clickbyxpath("//span[@class='k-icon k-i-check']");
+Thread.sleep(600);
+
+
+//sector 5
+wm.Listandenter("//span[@class='k-icon k-i-add']", "0");
+Thread.sleep(200);
+wm.clickbyxpath("//span[@class='k-icon k-i-check']");
+Thread.sleep(600);
+
+wm.Verifythealertpopupmessagesusincontainsusinggetattributenegative("/html/body/div[46]/div[2]/div[1]/div[1]/div[5]/div/div[2]/div/div/div/div/div[4]/table/tbody/tr[5]/td[3]"
+		,AatdTicketNumber, "36)Fail :  Conjuction functionaity not created successfully ", 
+		"36)Pass:  Conjuction functionaity created successfully");
+
+*/
+
+//Need to enter the Fare details
+
+
+wm.Listandenter("//span[@class='k-icon k-i-check']", "0");
+Thread.sleep(500);
+
+wm.clickbyxpath("//*[@id='divAirsectordtls']/div/div[1]/div[1]/a/i");
+Thread.sleep(500);
+
+//37	Fare details	Currency	Company curreny should get reflected
+
+wm.sendtextbyxvalue("//input[@aria-owns='AtfdTransCurrency_listbox']", Companycurrency);
+Thread.sleep(200);
+wm.Listnegativescearios("//*[@id='AtfdTransCurrency_listbox']/li", Commonindex,
+		"Pass : Newly created curreny reflected in currenyfield" + "",
+		"Fail : Newly created curreny not reflected in currenyfield" + "");
+Thread.sleep(200);
+
+// 39	Fare details	Lodge card dropdowns	Lodge card sttuas =yes , shuld reflected , otherwise is no
+
+wm.sendtextbyxvalue("//input[@aria-owns='AtfdOwnLodgeCardName_listbox']", Lodgecard);
+Thread.sleep(200);
+wm.Listnegativescearios("//*[@id='AtfdOwnLodgeCardName_listbox']/li", Commonindex,
+		"Pass : Newly created AtfdOwnLodgeCardName_listbox reflected in Lodge field" + "",
+		"Fail : Newly created AtfdOwnLodgeCardName_listbox not reflected in Lodge field" + "");
+Thread.sleep(200);
+
+//40	Fare details	published fare	published fare - selling fare =income received 
+//41	Fare details	Selling fare 	
+
+
+
+// Faredetails==============================================================
+
+wm.sendtextbyxvalue("//input[@aria-owns='AtfdProcessTypeKey_listbox']", Processtype);
+Thread.sleep(100);
+wm.Listandenter("//*[@id='AtfdProcessTypeKey_listbox']/li", Processtypeindex);
+Thread.sleep(200);
+// publishedfare
+wm.sendtextbycssselecotrwithoutclear("#AtfdBaseFare", "" + Publishedfare);
+Thread.sleep(200);
+
+wm.stabbyxpath("//input[@name='AtfdBaseFare']");
+Thread.sleep(4000);	
+// sellngfare
+
+wm.Deletedefaultvaluesinthetextbox("//input[@name='AtfdDealFare']");
+
+//wm.Clearbyxpath("//input[@name='AtfdDealFare']");
+
+//wm.sendtextbycssselecotr("#AtfdDealFare", "" +"0");
+Thread.sleep(500);
+wm.sendtextbycssselecotr("#AtfdDealFare", Sellingfare);
+//wm.sendtextbycssselecotr("", txt);
+
+Thread.sleep(600);
+wm.clickbyxpath("//input[@name='AFAirlineIncentiveReceived']");
+Thread.sleep(1000);
+
+
+//case 40 ,4111
+//Fare details	Lodge card dropdowns	Lodge card sttuas =yes , shuld reflected , otherwise is no
+//Fare details	published fare	published fare - selling fare =income received 
+//Fare details	Selling fare 	
+
+wm.comparetwovaluesandsubract("//input[@name='AtfdBaseFare']", "//input[@name='AtfdDealFare']", 
+		"//input[@name='AFAirlineIncentiveReceived']",
+		"40 41 Pass : Amount calclation done successfully for published  fare - selling fare =income received ",
+		"40 41 Fail : Amount calclation done wrongly  for published  fare - selling fare =income received");
+Thread.sleep(200);
+
+
+//42	Fare details	ORC paid	Should not be grater than incentive receivedd
+
+wm.comparetwovaluesandsubract("//input[@name='AtfdBaseFare']", "//input[@name='AtfdDealFare']", 
+		"//input[@name='AFAirlineIncentiveReceived']",
+		"40 41 Pass : Amount calclation done successfully for published  fare - selling fare =income received ",
+		"40 41 Fail : Amount calclation done wrongly  for published  fare - selling fare =income received");
+Thread.sleep(200);
+
+//incentive received ORCpaid
+
+wm.sendtextbyxvalue("//input[@name='AtfdIncentivePaid']",""+AtfdIncentivePaid);
+Thread.sleep(200);
+wm.Mousemoveover("//input[@name='AtfdIncentivePaid']");
+Thread.sleep(50);
+wm.Listnegativescearios(utility.Constant.Travelogixuitooltipvalidation, Commonindex,
+		"Pass : AtfdIncentivePaid validaiton is avilable in the AtfdIncentivePaid field" ,
+		"Fail : AtfdIncentivePaid validaiton is not avilable in the AtfdIncentivePaid field" );
+Thread.sleep(200);
+
+
+//=========================================================================================
+
+//Chekcing tax modulee
+
+// 43	Tax	Total tax amount	selected tax amount should reflected 
+
+wm.stabbyxpath("//input[@name='ESF_INPVAT']");
+Thread.sleep(500);
+
+wm.Listandenter("//span[@class='k-icon k-i-add']", "1");
+Thread.sleep(500);
+
+// Tosector
+wm.sendtextbyxvalue("//input[@aria-owns='AatCode_listbox']", Aatcode);
+Thread.sleep(100);
+wm.Listandenter("//*[@id='AatCode_listbox']/li", Aatcodeindex);
+Thread.sleep(200);
+
+wm.sendtextbycssselecotrwithoutclear("#AatAmount", "" + AatAmount);
+Thread.sleep(200);
+wm.clickbyxpath("//span[@class='k-icon k-i-check']");
+Thread.sleep(200);
+
+
+
+wm.Listandenter("//span[@class='k-icon k-i-add']", "2");
+Thread.sleep(500);
+
+// AtscServiceChargeId_listbox
+
+wm.sendtextbyxvalue("//input[@aria-owns='AtscServiceChargeId_listbox']", Namee);
+Thread.sleep(100);
+wm.Listandenter("//*[@id='AtscServiceChargeId_listbox']/li", Nameeindex);
+Thread.sleep(200);
+
+// enter thefee
+wm.sendtextbycssselecotrwithoutclear("#AtscBaseAmount", "" + AtscBaseAmount);
+Thread.sleep(200);
+
+wm.stabbyxpath("//input[@name='AtscDisc']"); // tab actin from discount
+												// field
+Thread.sleep(200);
+// tab action ffrom pagination screen
+wm.stabbyxpath("//*[@id='AirServiceFeeDetailGrid']/div[5]/span[1]/span/span/span[2]/span");
+Thread.sleep(200);
+
+wm.Listandenter("//span[@class='k-icon k-i-check']", "0");
+
+Thread.sleep(200);
+
+wm.stabbyxpath("//*[@id='div_Air_Header_Details']/div[7]/div/div[1]/div[1]/a/i");
+
+Thread.sleep(500);
+
+//checking the TAX totlaamount
+
+wm.comparetwovalues1to1("//input[@name='TaxTotal']","//input[@name='TotalTaxAmount']", 
+		"43 tax Pass Added tax reflcted in total amount grid ", "43 Tax : Fail Added tax not reflcted in total amount grid ");
+Thread.sleep(200);
+
+
+//checking the vat
+wm.comparetwovalues1to1("//input[@name='AirServiceFeeTotal']","//input[@name='TotalServiceFee']", 
+		"43 VAT Pass Added VAT reflcted in total amount grid ", "43 VAT : Fail Added VAT not reflcted in total amount grid ");
+Thread.sleep(200);
+
+
+
+// Enter the commission amunt
+
+wm.sendtextbycssselecotrwithoutclear("#AtfdCommPercent1", "" + AtfdCommPercent1);
+Thread.sleep(50);
+
+wm.sendtextbycssselecotrwithoutclear("#AtfdCommPercent2", "" + AtfdCommPercent2);
+Thread.sleep(50);
+
+wm.sendtextbycssselecotrwithoutclear("#AtfdDiscPercent1", "" + AtfdDiscPercent1);
+Thread.sleep(600);
+
+
+//Compare the cimmission values : 
+
+wm.comparetwovalues2to1("//input[@name='AtfdCommAmount1']", "//input[@name='AtfdCommAmount2']", 
+		"//input[@name='salestotcommm']"
+		, "44 Pass: Cmmmission amount caluclaiton mathes successfully"
+		, "44 Fail : Cmmmission amount caluclaiton not mathes successfully");
+Thread.sleep(1200);
+
+//compare the discount values
+
+wm.comparetwovalues1to1("//input[@name='AtfdDiscAmount1']", 
+		"//input[@name='TotalDiscount']"
+		, "45 Pass: Disocunt calcualtion done successfully", 
+		" 45 Fail : Disocunt calcualtion not done successfully");
+Thread.sleep(600);
+
+
+//46	Commission	Agent account	Agent incetive detials should get reflected
+
+wm.sendtextbyxvalue("//input[@aria-owns='AAtscPaybackParnerDesc_listbox']", Agentincentive);
+Thread.sleep(200);
+wm.Listnegativescearios("//*[@id='AAtscPaybackParnerDesc_listbox']/li", "0",
+		"46 Pass :   Active Agentincentive get displayed in the drop down " ,
+		"46 Fail:   In Active Agentincentive get displayed in the drop down " );
+
+Thread.sleep(500);
+
+
+wm.stabbyxpath("//input[@name='AtfdDiscAmount1']");
+Thread.sleep(200);
+
+wm.clickbyxpath("//*[@id='div_Air_Header_Details']/div[7]/div/div[1]/div[1]/a/i");
+Thread.sleep(600);
+
+
+
+
+// agent incentivee
+
+wm.sendtextbyxvalue("//input[@aria-owns='AAtscPaybackParnerDesc_listbox']", Agentincetive);
+Thread.sleep(900);
+wm.Listandenter("//*[@id='AAtscPaybackParnerDesc_listbox']/li", Agentincetiveindexx);
+Thread.sleep(500);
+
+//Enter the FOPwindows
+
+wm.Listandenter("//span[@class='k-icon k-i-add']", "3");
+Thread.sleep(200);
+
+//wm.Listandenter("//*[contains(text(),'Yes')]", "0");
+Thread.sleep(2000);
+
+//47	FOP	FOP Validaion 	Validation is based on : bussineess partner screen  , customer creidt limit
+
+wm.sendtextbyxvalue("//input[@aria-owns='fbpcode_listbox']", Fopcustomer);
+Thread.sleep(4000);
+/*wm.keyboardarrowdown("//input[@aria-owns='fbpcode_listbox']");
+Thread.sleep(1000);
+wm.enterbyxpath("", "//input[@aria-owns='fbpcode_listbox']");
+Thread.sleep(600);
+*/
+wm.Listnegativescearios("//*[@id='fbpcode_listbox']/li", "1",
+		"46 Pass :   Selected the given customer in the drop down " ,
+		"46 Fail:   Not Selected the given customer in the drop down " );
+Thread.sleep(2000);
+wm.Listnegativescearios("//button[@id='ConformationYes']", "0",
+		"47 48 Pass :FOP validation is avilable" ,
+		"47 48 Fail:FOP validation is not avilable" );
+Thread.sleep(900);
+wm.clickbyxpath("//span[@class='k-icon k-i-cancel']");
+Thread.sleep(2000);
+
+wm.Listandenter("//span[@class='k-icon k-i-add']", "3");
+Thread.sleep(1000);
+
+
+//49	FOP	Total FOP amount and net collections	Amount calculation should match ..then 
+// only allowed to save the data succesfully
+
+//selecte the cash options
+wm.clickbyxpath("//span[@aria-owns='MiscFOPModeKey_listbox']");		
+//wm.sendtextbyxvalue("//input[@aria-owns='AAtscPaybackParnerDesc_listbox']", Agentincetive);
+Thread.sleep(200);
+wm.Listandenter("//*[@id='MiscFOPModeKey_listbox']/li", Modeindex);
+Thread.sleep(1200);
+
+//selected the branch
+
+wm.clickbyxpath("//*[@id='FOPPaymentDetails']/div[1]/div/div/span[1]/span/span[2]/span");
+
+//wm.clickbyxpath("//*[@aria-owns='fbbranch_listbox']");		
+//wm.sendtextbyxvalue("//input[@aria-owns='AAtscPaybackParnerDesc_listbox']", Agentincetive);
+Thread.sleep(900);
+wm.Listandenter("//*[@id='fbbranch_listbox']/li",Selectedbranch);
+Thread.sleep(300);
+
+wm.clickbyxpath("//span[@class='k-icon k-i-check']");
+Thread.sleep(900);
+
+wm.comparetwovalues1to1("//*[@id='AirFOPDetailGrid_active_cell']"
+		, "//input[@name='Amt_NetCollection']", 
+		"49 Pass: FOP and total amount matches successfully"
+		, "49 Fail: FOP and total amount matches successfully");
+
+
+//udid details
+		wm.clickbyxpath("//*[@id='testData']/i");
+		Thread.sleep(900);
+
+		
+
+//		wm.clickbyxpath("//*[@id='acc110']/i");
+//	Thread.sleep(300);
+		
+		wm.stabbyxpath("//*[@id='acc110']/i");
+		Thread.sleep(600);
+		
+		
+		wm.sendtextbycssselecotrwithoutclear("#Travel_Status_DN", ""+TravelStatusDN);
+		Thread.sleep(600);
+		
+		
+//clicking the savebuttons
+		wm.clickbyxpath("//button[@id='btnairsave']");
+		wm.sleep();
+		
+		//wm.clickbyid("btnMainSave");
+		wm.sleep();
+		wm.sleep();
+		
+		wm.sendtextbycssselecotrwithoutclear("#AatdTicketNumber", "" + AatdTicketNumber);
+		Thread.sleep(300);
+		wm.clickbyxpath("//button[@id='btnairsave']");
+		Thread.sleep(500);
+		
+		wm.Mousemoveover("//input[@onchange='onairTicketChange(this)']");
+		Thread.sleep(200);
+		wm.Listnegativescearios(utility.Constant.Travelogixuitooltipvalidation, "0",
+				"Pass : Sales Refund Air Tickect created successfuly" + "",
+				"Fail:  Sales Refund Air Tickect not created successfuly " + "");
+	
+		
+
+
+
+//============================================================================================================
+		
 		wm.sleep();
 		Thread.sleep(500);
 

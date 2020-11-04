@@ -5215,6 +5215,254 @@ System.out.println("Element not present");
 									
 //=========================================================================================
 
+									public void Verifythealertpopupmessagesusincontainsusinggetattributenegative(String xpath,String Verifymessages,
+											String Positivemessage,String Negativemessages)
+									{
+
+										try 
+										{
+											Thread.sleep(1000);
+											String  gtxt = driver.findElementByXPath(xpath).getAttribute("value");										
+											//System.out.println(gtxt);
+
+											String gtxt1=gtxt.toString();
+											String gtxt2 =Verifymessages.toString();
+											
+											System.out.println(gtxt1);
+											System.out.println(gtxt2);
+										
+											if (gtxt2.contains(gtxt1))													
+
+//											{
+											ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+										  
+										else
+											ATUReports.add(Positivemessage, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+												
+											
+											} 
+										catch (NoSuchElementException e) {
+
+											//ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+										} catch (WebDriverException e) {
+											//ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+										} catch (Exception e) {
+											// TODO Auto-generated catch block
+											e.printStackTrace();
+										} 
+										finally {
+											takeSnap();
+										}
+									}
+
+									
+//=========================================================================================================================
+									
+
+									public void Verifythealertpopupmessagesnotequal(String xpath,String Verifymessages,
+											String Positivemessage,String Negativemessages)
+									{
+
+										try 
+										{
+											Thread.sleep(1000);
+											String  gtxt = driver.findElementByXPath(xpath).getAttribute("value");										
+											//System.out.println(gtxt);
+
+											String gtxt1=gtxt.toString();
+											String gtxt2 =Verifymessages.toString();
+											
+											System.out.println(gtxt1);
+											System.out.println(gtxt2);
+										
+											//if (gtxt2.contains(gtxt1))		
+												if (gtxt2!=	gtxt1)	
+
+//											{
+											ATUReports.add(Positivemessage, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+										  
+										else
+											ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+												
+											
+											} 
+										catch (NoSuchElementException e) {
+
+											//ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+										} catch (WebDriverException e) {
+											//ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+										} catch (Exception e) {
+											// TODO Auto-generated catch block
+											e.printStackTrace();
+										} 
+										finally {
+											takeSnap();
+										}
+									}
+
+//=========================================================================================================================
+									
+									public void comparetwovaluesandsubract(String xpath1,String xpath2,String xpath3,String Positivemessages,
+											String Negativemessages) throws InterruptedException
+								    {
+								    try 
+								    {
+
+								    WebElement elt1 = driver.findElement(By.xpath(xpath1));
+									WebElement elt2 = driver.findElement(By.xpath(xpath2));
+									WebElement elt3 = driver.findElement(By.xpath(xpath3));
+
+								    Thread.sleep(500);
+
+								    Double d1 = new Double(elt1.getAttribute("value").trim());
+									Double d2 = new Double(elt2.getAttribute("value").trim());
+									Double d3 = new Double(elt3.getAttribute("value").trim());
+
+								    Thread.sleep(500);
+								    System.out.print("\n the value of d1 is" + d1);
+								    System.out.print("\n the value of d2 is" + d2);
+								    System.out.print("\n the value of d3 is" + d3);
+
+									Double d4 = d1-d2;
+									System.out.print("the value of d is" + d4);
+
+									System.out.print("the string value of d is" + d4.toString());
+
+									//int d5 =  d4.compareTo(d3);
+
+									
+								   // if(d3.equals(d4))
+
+									    if(d3.equals(d4))
+								    {
+								    ATUReports.add(Positivemessages, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+								    }
+								    else
+								    {
+								    ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+									    	
+								    }
+								    }
+									catch (NoSuchElementException e)
+									{
+
+								    ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+								    } catch (Exception e) {
+								    System.out.println("error");
+								    } finally {
+								    takeSnap();
+								    }
+
+								    }       
+
+
+//===================================================================================================
+									
+									
+									public void comparetwovalues1to1(String xpath1,String xpath2,String Positivemessages,
+											String Negativemessages) throws InterruptedException
+								    {
+								    try 
+								    {
+
+								    WebElement elt1 = driver.findElement(By.xpath(xpath1));
+									WebElement elt2 = driver.findElement(By.xpath(xpath2));
+									
+
+								    Thread.sleep(500);
+
+								    Double d6 = new Double(elt1.getAttribute("value").trim());
+									Double d7 = new Double(elt2.getAttribute("value").trim());
+									
+
+								    Thread.sleep(500);
+								    System.out.print("\n the value of d1 is" + d6);
+								    System.out.print("\n the value of d2 is" + d7);
+								   
+									    if(d6.equals(d7))
+								    {
+								    ATUReports.add(Positivemessages, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+								    }
+								    else
+								    {
+								    ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+									    	
+								    }
+								    }
+									catch (NoSuchElementException e)
+									{
+
+								    ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+								    } catch (Exception e) {
+								    System.out.println("error");
+								    } finally {
+								    takeSnap();
+								    }
+
+								    }       
+
+
+
+//==========================================================================================================
+//compare two to one
+									
+									public void comparetwovalues2to1(String xpath1,String xpath2,String xpath3,
+											String Positivemessages,String Negativemessages) throws InterruptedException
+								    {
+								    try 
+								    {
+
+								    WebElement elt1 = driver.findElement(By.xpath(xpath1));
+									WebElement elt2 = driver.findElement(By.xpath(xpath2));
+									WebElement elt3 = driver.findElement(By.xpath(xpath2));
+									
+
+								    Thread.sleep(500);
+
+								    Double d1 = new Double(elt1.getAttribute("value").trim()); //commiosn 1
+									Double d2 = new Double(elt2.getAttribute("value").trim());  //commison2
+									Double d3 = new Double(elt3.getAttribute("value").trim()); //total amount of commision
+									
+									Double d4 = d1 +d2;
+									
+									
+
+								    Thread.sleep(500);
+								    System.out.print("\n the value of d1 is" + d1);
+								    System.out.print("\n the value of d2 is" + d2);
+								    System.out.print("\n the value of d1 is" + d3);
+								    System.out.print("\n the value of d2 is" + d4);								   
+									if(d4.equals(d3))
+								    {
+								    ATUReports.add(Positivemessages, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+								    }
+								    else
+								    {
+								    ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+									    	
+								    }
+								    }
+									catch (NoSuchElementException e)
+									{
+
+								    ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+								    } catch (Exception e) {
+								    System.out.println("error");
+								    } finally {
+								    takeSnap();
+								    }
+
+								    }       
+
+
+
+									
+									
+//==============================================================================================================
+									
+									
+									
+//====================================================================================================
 	public void scrolldown(String id) {
 		try {
 			int y = driver.findElementById(id).getLocation().getY();
