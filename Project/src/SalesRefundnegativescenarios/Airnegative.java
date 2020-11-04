@@ -765,6 +765,9 @@ wm.comparetwovaluesandsubract("//input[@name='AtfdBaseFare']", "//input[@name='A
 		"40 41 Fail : Amount calclation done wrongly  for published  fare - selling fare =income received");
 Thread.sleep(200);
 
+
+
+//====================================================================================================
 //incentive received ORCpaid
 
 wm.sendtextbyxvalue("//input[@name='AtfdIncentivePaid']",""+AtfdIncentivePaid);
@@ -775,6 +778,36 @@ wm.Listnegativescearios(utility.Constant.Travelogixuitooltipvalidation, Commonin
 		"Pass : AtfdIncentivePaid validaiton is avilable in the AtfdIncentivePaid field" ,
 		"Fail : AtfdIncentivePaid validaiton is not avilable in the AtfdIncentivePaid field" );
 Thread.sleep(200);
+
+
+
+//==============================================================================================
+
+
+//====================================================================================================
+
+//secondtime
+
+//publishedfare
+wm.sendtextbycssselecotrwithoutclear("#AtfdBaseFare", "" + Publishedfare);
+Thread.sleep(200);
+
+wm.stabbyxpath("//input[@name='AtfdBaseFare']");
+Thread.sleep(4000);	
+//sellngfare
+
+wm.Deletedefaultvaluesinthetextbox("//input[@name='AtfdDealFare']");
+
+//wm.Clearbyxpath("//input[@name='AtfdDealFare']");
+
+//wm.sendtextbycssselecotr("#AtfdDealFare", "" +"0");
+Thread.sleep(500);
+wm.sendtextbycssselecotr("#AtfdDealFare", Sellingfare);
+//wm.sendtextbycssselecotr("", txt);
+
+Thread.sleep(600);
+wm.clickbyxpath("//input[@name='AFAirlineIncentiveReceived']");
+Thread.sleep(1000);
 
 
 //=========================================================================================
@@ -912,16 +945,20 @@ Thread.sleep(2000);
 //47	FOP	FOP Validaion 	Validation is based on : bussineess partner screen  , customer creidt limit
 
 wm.sendtextbyxvalue("//input[@aria-owns='fbpcode_listbox']", Fopcustomer);
-Thread.sleep(4000);
-/*wm.keyboardarrowdown("//input[@aria-owns='fbpcode_listbox']");
-Thread.sleep(1000);
-wm.enterbyxpath("", "//input[@aria-owns='fbpcode_listbox']");
-Thread.sleep(600);
-*/
-wm.Listnegativescearios("//*[@id='fbpcode_listbox']/li", "1",
+Thread.sleep(3000);
+wm.keyboardarrowdownonetime("//input[@aria-owns='fbpcode_listbox']");
+
+//wm.keyboardarrowdown("//input[@aria-owns='fbpcode_listbox']");
+Thread.sleep(200);
+wm.Enterbyxpath("//input[@aria-owns='fbpcode_listbox']");
+
+//wm.enterbyxpath("", "//input[@aria-owns='fbpcode_listbox']");
+Thread.sleep(2000);
+
+/*wm.Listnegativescearios("//*[@id='fbpcode_listbox']/li", "0",
 		"46 Pass :   Selected the given customer in the drop down " ,
 		"46 Fail:   Not Selected the given customer in the drop down " );
-Thread.sleep(2000);
+*/Thread.sleep(2000);
 wm.Listnegativescearios("//button[@id='ConformationYes']", "0",
 		"47 48 Pass :FOP validation is avilable" ,
 		"47 48 Fail:FOP validation is not avilable" );
@@ -950,13 +987,21 @@ wm.clickbyxpath("//*[@id='FOPPaymentDetails']/div[1]/div/div/span[1]/span/span[2
 //wm.clickbyxpath("//*[@aria-owns='fbbranch_listbox']");		
 //wm.sendtextbyxvalue("//input[@aria-owns='AAtscPaybackParnerDesc_listbox']", Agentincetive);
 Thread.sleep(900);
-wm.Listandenter("//*[@id='fbbranch_listbox']/li",Selectedbranch);
+wm.Listandenter("//*[@id='fbbranch_listbox']/li","0");
+wm.Listandenter("//*[@id='fbbranch_listbox']/li","1");
+
 Thread.sleep(300);
 
 wm.clickbyxpath("//span[@class='k-icon k-i-check']");
-Thread.sleep(900);
+Thread.sleep(500);
 
-wm.comparetwovalues1to1("//*[@id='AirFOPDetailGrid_active_cell']"
+wm.stabbyxpath("//*[@id='AirFOPDetailGrid']/div[5]/span[1]/span/span/span[2]/span");
+wm.clickbyxpath("//*[@id='AirFOPDetailGrid']/div[5]/span[1]/span/span/span[2]/span");
+wm.clickbyxpath("//*[@id='AirFOPDetailGrid']/div[5]/span[1]/span/span/span[2]/span");
+
+Thread.sleep(400);
+
+wm.comparetwovalues1to1("//input[@name='AirFopAmount']"
 		, "//input[@name='Amt_NetCollection']", 
 		"49 Pass: FOP and total amount matches successfully"
 		, "49 Fail: FOP and total amount matches successfully");

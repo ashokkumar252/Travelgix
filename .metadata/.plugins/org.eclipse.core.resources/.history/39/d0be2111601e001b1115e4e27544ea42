@@ -1,0 +1,9 @@
+package SalesRefundPositivecases;
+
+import org.testng.annotations.Test;
+
+public class Hotelpositive {
+  @Test
+  public void f() {
+  }
+}

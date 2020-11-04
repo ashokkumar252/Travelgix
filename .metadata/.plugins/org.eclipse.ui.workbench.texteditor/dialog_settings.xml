@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="Fopcustomer" key="selection"/>
+		<item value="c" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="true" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="Fopcustomer"/>
-			<item value="Agentincentive"/>
-			<item value="fop"/>
+			<item value="common"/>
+			<item value="date"/>
+			<item value="Hotelname"/>
+			<item value="text()"/>
 			<item value="contains"/>
-			<item value="containe"/>
-			<item value="!=&apos;0&apos;"/>
-			<item value="comparetwo"/>
-			<item value="Aatcode"/>
+			<item value="co"/>
+			<item value="contain"/>
+			<item value="text"/>
 		</list>
 		<list key="replacehistory">
 			<item value="click"/>

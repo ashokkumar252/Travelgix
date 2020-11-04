@@ -5376,8 +5376,8 @@ System.out.println("Element not present");
 									
 
 								    Thread.sleep(500);
-								    System.out.print("\n the value of d1 is" + d6);
-								    System.out.print("\n the value of d2 is" + d7);
+								    System.out.print("\n the value of d6 is" + d6);
+								    System.out.print("\n the value of d7 is" + d7);
 								   
 									    if(d6.equals(d7))
 								    {

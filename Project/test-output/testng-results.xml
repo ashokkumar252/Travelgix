@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
     <line>
       <![CDATA[STEP1]]>
@@ -94,318 +94,24 @@
     <line>
       <![CDATA[STEP31]]>
     </line>
-    <line>
-      <![CDATA[STEP32]]>
-    </line>
-    <line>
-      <![CDATA[STEP33]]>
-    </line>
-    <line>
-      <![CDATA[STEP34]]>
-    </line>
-    <line>
-      <![CDATA[STEP35]]>
-    </line>
-    <line>
-      <![CDATA[STEP36]]>
-    </line>
-    <line>
-      <![CDATA[STEP37]]>
-    </line>
-    <line>
-      <![CDATA[STEP38]]>
-    </line>
-    <line>
-      <![CDATA[STEP39]]>
-    </line>
-    <line>
-      <![CDATA[STEP40]]>
-    </line>
-    <line>
-      <![CDATA[STEP41]]>
-    </line>
-    <line>
-      <![CDATA[STEP42]]>
-    </line>
-    <line>
-      <![CDATA[STEP43]]>
-    </line>
-    <line>
-      <![CDATA[STEP44]]>
-    </line>
-    <line>
-      <![CDATA[STEP45]]>
-    </line>
-    <line>
-      <![CDATA[STEP46]]>
-    </line>
-    <line>
-      <![CDATA[STEP47]]>
-    </line>
-    <line>
-      <![CDATA[STEP48]]>
-    </line>
-    <line>
-      <![CDATA[STEP49]]>
-    </line>
-    <line>
-      <![CDATA[STEP50]]>
-    </line>
-    <line>
-      <![CDATA[STEP51]]>
-    </line>
-    <line>
-      <![CDATA[STEP52]]>
-    </line>
-    <line>
-      <![CDATA[STEP53]]>
-    </line>
-    <line>
-      <![CDATA[STEP54]]>
-    </line>
-    <line>
-      <![CDATA[STEP55]]>
-    </line>
-    <line>
-      <![CDATA[STEP56]]>
-    </line>
-    <line>
-      <![CDATA[STEP57]]>
-    </line>
-    <line>
-      <![CDATA[STEP58]]>
-    </line>
-    <line>
-      <![CDATA[STEP59]]>
-    </line>
-    <line>
-      <![CDATA[STEP60]]>
-    </line>
-    <line>
-      <![CDATA[STEP61]]>
-    </line>
-    <line>
-      <![CDATA[STEP62]]>
-    </line>
-    <line>
-      <![CDATA[STEP63]]>
-    </line>
-    <line>
-      <![CDATA[STEP64]]>
-    </line>
-    <line>
-      <![CDATA[STEP65]]>
-    </line>
-    <line>
-      <![CDATA[STEP66]]>
-    </line>
-    <line>
-      <![CDATA[STEP67]]>
-    </line>
-    <line>
-      <![CDATA[STEP68]]>
-    </line>
-    <line>
-      <![CDATA[STEP69]]>
-    </line>
-    <line>
-      <![CDATA[STEP70]]>
-    </line>
-    <line>
-      <![CDATA[STEP71]]>
-    </line>
-    <line>
-      <![CDATA[STEP72]]>
-    </line>
-    <line>
-      <![CDATA[STEP73]]>
-    </line>
-    <line>
-      <![CDATA[STEP74]]>
-    </line>
-    <line>
-      <![CDATA[STEP75]]>
-    </line>
-    <line>
-      <![CDATA[STEP76]]>
-    </line>
-    <line>
-      <![CDATA[STEP77]]>
-    </line>
-    <line>
-      <![CDATA[STEP78]]>
-    </line>
-    <line>
-      <![CDATA[STEP79]]>
-    </line>
-    <line>
-      <![CDATA[STEP80]]>
-    </line>
-    <line>
-      <![CDATA[STEP81]]>
-    </line>
-    <line>
-      <![CDATA[STEP82]]>
-    </line>
-    <line>
-      <![CDATA[STEP83]]>
-    </line>
-    <line>
-      <![CDATA[STEP84]]>
-    </line>
-    <line>
-      <![CDATA[STEP85]]>
-    </line>
-    <line>
-      <![CDATA[STEP86]]>
-    </line>
-    <line>
-      <![CDATA[STEP87]]>
-    </line>
-    <line>
-      <![CDATA[STEP88]]>
-    </line>
-    <line>
-      <![CDATA[STEP89]]>
-    </line>
-    <line>
-      <![CDATA[STEP90]]>
-    </line>
-    <line>
-      <![CDATA[STEP91]]>
-    </line>
-    <line>
-      <![CDATA[STEP92]]>
-    </line>
-    <line>
-      <![CDATA[STEP93]]>
-    </line>
-    <line>
-      <![CDATA[STEP94]]>
-    </line>
-    <line>
-      <![CDATA[STEP95]]>
-    </line>
-    <line>
-      <![CDATA[STEP96]]>
-    </line>
-    <line>
-      <![CDATA[STEP97]]>
-    </line>
-    <line>
-      <![CDATA[STEP98]]>
-    </line>
-    <line>
-      <![CDATA[STEP99]]>
-    </line>
-    <line>
-      <![CDATA[STEP100]]>
-    </line>
-    <line>
-      <![CDATA[STEP101]]>
-    </line>
-    <line>
-      <![CDATA[STEP102]]>
-    </line>
-    <line>
-      <![CDATA[STEP103]]>
-    </line>
-    <line>
-      <![CDATA[STEP104]]>
-    </line>
-    <line>
-      <![CDATA[STEP105]]>
-    </line>
-    <line>
-      <![CDATA[STEP106]]>
-    </line>
-    <line>
-      <![CDATA[STEP107]]>
-    </line>
-    <line>
-      <![CDATA[STEP108]]>
-    </line>
-    <line>
-      <![CDATA[STEP109]]>
-    </line>
-    <line>
-      <![CDATA[STEP110]]>
-    </line>
-    <line>
-      <![CDATA[STEP111]]>
-    </line>
-    <line>
-      <![CDATA[STEP112]]>
-    </line>
-    <line>
-      <![CDATA[STEP113]]>
-    </line>
-    <line>
-      <![CDATA[STEP114]]>
-    </line>
-    <line>
-      <![CDATA[STEP115]]>
-    </line>
-    <line>
-      <![CDATA[STEP116]]>
-    </line>
-    <line>
-      <![CDATA[STEP117]]>
-    </line>
-    <line>
-      <![CDATA[STEP118]]>
-    </line>
-    <line>
-      <![CDATA[STEP119]]>
-    </line>
-    <line>
-      <![CDATA[STEP120]]>
-    </line>
-    <line>
-      <![CDATA[STEP121]]>
-    </line>
-    <line>
-      <![CDATA[STEP122]]>
-    </line>
-    <line>
-      <![CDATA[STEP123]]>
-    </line>
-    <line>
-      <![CDATA[STEP124]]>
-    </line>
-    <line>
-      <![CDATA[STEP125]]>
-    </line>
-    <line>
-      <![CDATA[STEP126]]>
-    </line>
-    <line>
-      <![CDATA[STEP127]]>
-    </line>
-    <line>
-      <![CDATA[STEP128]]>
-    </line>
-    <line>
-      <![CDATA[STEP129]]>
-    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="796360" started-at="2020-11-04T04:28:04Z" finished-at="2020-11-04T04:41:21Z">
+  <suite name="Default suite" duration-ms="238999" started-at="2020-11-04T17:26:35Z" finished-at="2020-11-04T17:30:34Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="796360" started-at="2020-11-04T04:28:04Z" finished-at="2020-11-04T04:41:21Z">
-      <class name="SalesRefundnegativescenarios.Airnegative">
-        <test-method status="PASS" signature="instantiation()[pri:0, instance:SalesRefundnegativescenarios.Airnegative@15530b9]" name="instantiation" is-config="true" duration-ms="243" started-at="2020-11-04T09:58:04Z" finished-at="2020-11-04T09:58:05Z">
+    <test name="Default test" duration-ms="238999" started-at="2020-11-04T17:26:35Z" finished-at="2020-11-04T17:30:34Z">
+      <class name="SalesRefundPositivecases.Hotelpositive">
+        <test-method status="PASS" signature="instantiation()[pri:0, instance:SalesRefundPositivecases.Hotelpositive@15530b9]" name="instantiation" is-config="true" duration-ms="212" started-at="2020-11-04T22:56:35Z" finished-at="2020-11-04T22:56:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- instantiation -->
-        <test-method status="PASS" signature="browesrnstatiation()[pri:0, instance:SalesRefundnegativescenarios.Airnegative@15530b9]" name="browesrnstatiation" is-config="true" duration-ms="11950" started-at="2020-11-04T09:58:07Z" finished-at="2020-11-04T09:58:19Z">
+        <test-method status="PASS" signature="browesrnstatiation()[pri:0, instance:SalesRefundPositivecases.Hotelpositive@15530b9]" name="browesrnstatiation" is-config="true" duration-ms="17777" started-at="2020-11-04T22:56:38Z" finished-at="2020-11-04T22:56:56Z">
           <reporter-output>
             <line>
               <![CDATA[STEP1]]>
             </line>
           </reporter-output>
         </test-method> <!-- browesrnstatiation -->
-        <test-method status="FAIL" signature="logincheckK(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:SalesRefundnegativescenarios.Airnegative@15530b9]" name="logincheckK" duration-ms="781521" started-at="2020-11-04T09:58:19Z" data-provider="dp" finished-at="2020-11-04T10:11:20Z">
+        <test-method status="PASS" signature="logincheckK(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:SalesRefundPositivecases.Hotelpositive@15530b9]" name="logincheckK" duration-ms="216213" started-at="2020-11-04T22:56:56Z" data-provider="dp" finished-at="2020-11-04T23:00:32Z">
           <params>
             <param index="0">
               <value>
@@ -424,370 +130,205 @@
             </param>
             <param index="3">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[28]]>
               </value>
             </param>
             <param index="4">
               <value>
-                <![CDATA[9210291201]]>
+                <![CDATA[OCT]]>
               </value>
             </param>
             <param index="5">
               <value>
-                <![CDATA[8888885252]]>
+                <![CDATA[2020]]>
               </value>
             </param>
             <param index="6">
               <value>
-                <![CDATA[9210291203]]>
+                <![CDATA[OUTBOUND DOCKET]]>
               </value>
             </param>
             <param index="7">
               <value>
-                <![CDATA[INBOUND DOCKET]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="8">
               <value>
-                <![CDATA[OUTBOUND DOCKET]]>
+                <![CDATA[AEBR01]]>
               </value>
             </param>
             <param index="9">
               <value>
-                <![CDATA[OBEB2C]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="10">
               <value>
-                <![CDATA[AEBRN05 - Fujairah Branch]]>
+                <![CDATA[jordan]]>
               </value>
             </param>
             <param index="11">
               <value>
-                <![CDATA[DBA TRAVELS_KUWAIT]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="12">
               <value>
-                <![CDATA[C0004]]>
+                <![CDATA[testt]]>
               </value>
             </param>
             <param index="13">
               <value>
-                <![CDATA[9210291201]]>
+                <![CDATA[testt]]>
               </value>
             </param>
             <param index="14">
               <value>
-                <![CDATA[Test]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="15">
               <value>
-                <![CDATA[Test]]>
+                <![CDATA[AE - BPS - Comp1]]>
               </value>
             </param>
             <param index="16">
               <value>
-                <![CDATA[INBOUND DOCKET]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="17">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[1]]>
               </value>
             </param>
             <param index="18">
               <value>
-                <![CDATA[AEBR01 - AE Branch 01 - Dubai]]>
+                <![CDATA[1]]>
               </value>
             </param>
             <param index="19">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[CU101 - Mr. Company 1 User 01]]>
               </value>
             </param>
             <param index="20">
               <value>
-                <![CDATA[jordan]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="21">
               <value>
-                <![CDATA[1]]>
+                <![CDATA[BRANCH - Ms. Comp 2 Branch  B]]>
               </value>
             </param>
             <param index="22">
               <value>
-                <![CDATA[TESTT]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="23">
               <value>
-                <![CDATA[6E]]>
+                <![CDATA[25]]>
               </value>
             </param>
             <param index="24">
               <value>
-                <![CDATA[AIR INDIA EXPRESS]]>
+                <![CDATA[OCT]]>
               </value>
             </param>
             <param index="25">
               <value>
-                <![CDATA[T17]]>
+                <![CDATA[2020]]>
               </value>
             </param>
             <param index="26">
               <value>
-                <![CDATA[EMIRATES AIRLINE - COMP1]]>
+                <![CDATA[Dubai]]>
               </value>
             </param>
             <param index="27">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[1 Hotel South Beach]]>
               </value>
             </param>
             <param index="28">
               <value>
-                <![CDATA[9210291202]]>
+                <![CDATA[M hotel chain]]>
               </value>
             </param>
             <param index="29">
               <value>
-                <![CDATA[AE - Supplier]]>
+                <![CDATA[12HOT]]>
               </value>
             </param>
             <param index="30">
               <value>
-                <![CDATA[BRANCH - Ms. Comp 2 Branch  B]]>
+                <![CDATA[single]]>
               </value>
             </param>
             <param index="31">
               <value>
-                <![CDATA[CUS101 - ABDUL JAVID]]>
+                <![CDATA[Full Board]]>
               </value>
             </param>
             <param index="32">
               <value>
-                <![CDATA[BU121 - Ms.Comp1 Branch 2 User 1]]>
+                <![CDATA[1]]>
               </value>
             </param>
             <param index="33">
               <value>
-                <![CDATA[pcc 5444]]>
+                <![CDATA[Nov]]>
               </value>
             </param>
             <param index="34">
               <value>
-                <![CDATA[9029093334]]>
+                <![CDATA[2020]]>
               </value>
             </param>
             <param index="35">
               <value>
-                <![CDATA[AUH]]>
+                <![CDATA['4]]>
               </value>
             </param>
             <param index="36">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[Nov]]>
               </value>
             </param>
             <param index="37">
               <value>
-                <![CDATA[BLR]]>
+                <![CDATA[2020]]>
               </value>
             </param>
             <param index="38">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[1]]>
               </value>
             </param>
             <param index="39">
               <value>
-                <![CDATA[1000]]>
+                <![CDATA[HGFLF]]>
               </value>
             </param>
             <param index="40">
               <value>
-                <![CDATA[800]]>
+                <![CDATA[REDFG]]>
               </value>
             </param>
             <param index="41">
-              <value is-null="true"/>
+              <value>
+                <![CDATA[Hotlbookings]]>
+              </value>
             </param>
             <param index="42">
               <value>
-                <![CDATA[AEDName]]>
-              </value>
-            </param>
-            <param index="43">
-              <value>
-                <![CDATA[HDFC Card]]>
-              </value>
-            </param>
-            <param index="44">
-              <value>
-                <![CDATA[Normal]]>
-              </value>
-            </param>
-            <param index="45">
-              <value>
                 <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="46">
-              <value>
-                <![CDATA[1000]]>
-              </value>
-            </param>
-            <param index="47">
-              <value>
-                <![CDATA[32IGST]]>
-              </value>
-            </param>
-            <param index="48">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="49">
-              <value>
-                <![CDATA[10]]>
-              </value>
-            </param>
-            <param index="50">
-              <value>
-                <![CDATA[ARSRV01]]>
-              </value>
-            </param>
-            <param index="51">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="52">
-              <value>
-                <![CDATA[4]]>
-              </value>
-            </param>
-            <param index="53">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-            <param index="54">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-            <param index="55">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-            <param index="56">
-              <value>
-                <![CDATA[MR. FIXED AGENT 02]]>
-              </value>
-            </param>
-            <param index="57">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="58">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-            <param index="59">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-            <param index="60">
-              <value>
-                <![CDATA[TEST]]>
-              </value>
-            </param>
-            <param index="61">
-              <value>
-                <![CDATA[MR. FIXED AGENT 02]]>
-              </value>
-            </param>
-            <param index="62">
-              <value>
-                <![CDATA[KWC668_1 -  Glaxo Saudi Arabia Ltd -FAC_1]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[chrome not reachable
-  (Session info: chrome=86.0.4240.111)
-  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:05:20.749Z'
-System info: host: 'PRABHA', ip: '192.168.186.1', os.name: 'Windows 8.1', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_211'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.37.544315 (730aa6a5fdba15..., userDataDir: C:\Users\ASHOKP~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 86.0.4240.111, webStorageEnabled: true}
-Session ID: 2bd69445056e493f32ca5afb5c13df1d]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: chrome not reachable
-  (Session info: chrome=86.0.4240.111)
-  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:05:20.749Z'
-System info: host: 'PRABHA', ip: '192.168.186.1', os.name: 'Windows 8.1', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_211'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.37.544315 (730aa6a5fdba15..., userDataDir: C:\Users\ASHOKP~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 86.0.4240.111, webStorageEnabled: true}
-Session ID: 2bd69445056e493f32ca5afb5c13df1d
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:605)
-	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:294)
-	at travlogix.Wrappermethods.takeSnap(Wrappermethods.java:877)
-	at travlogix.Wrappermethods.Listandenter(Wrappermethods.java:2898)
-	at SalesRefundnegativescenarios.Airnegative.logincheckK(Airnegative.java:953)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:756)
-	at org.testng.TestRunner.run(TestRunner.java:610)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
-	at org.testng.TestNG.runSuites(TestNG.java:1133)
-	at org.testng.TestNG.run(TestNG.java:1104)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
             <line>
               <![CDATA[STEP2]]>
@@ -879,375 +420,13 @@ Session ID: 2bd69445056e493f32ca5afb5c13df1d
             <line>
               <![CDATA[STEP31]]>
             </line>
-            <line>
-              <![CDATA[STEP32]]>
-            </line>
-            <line>
-              <![CDATA[STEP33]]>
-            </line>
-            <line>
-              <![CDATA[STEP34]]>
-            </line>
-            <line>
-              <![CDATA[STEP35]]>
-            </line>
-            <line>
-              <![CDATA[STEP36]]>
-            </line>
-            <line>
-              <![CDATA[STEP37]]>
-            </line>
-            <line>
-              <![CDATA[STEP38]]>
-            </line>
-            <line>
-              <![CDATA[STEP39]]>
-            </line>
-            <line>
-              <![CDATA[STEP40]]>
-            </line>
-            <line>
-              <![CDATA[STEP41]]>
-            </line>
-            <line>
-              <![CDATA[STEP42]]>
-            </line>
-            <line>
-              <![CDATA[STEP43]]>
-            </line>
-            <line>
-              <![CDATA[STEP44]]>
-            </line>
-            <line>
-              <![CDATA[STEP45]]>
-            </line>
-            <line>
-              <![CDATA[STEP46]]>
-            </line>
-            <line>
-              <![CDATA[STEP47]]>
-            </line>
-            <line>
-              <![CDATA[STEP48]]>
-            </line>
-            <line>
-              <![CDATA[STEP49]]>
-            </line>
-            <line>
-              <![CDATA[STEP50]]>
-            </line>
-            <line>
-              <![CDATA[STEP51]]>
-            </line>
-            <line>
-              <![CDATA[STEP52]]>
-            </line>
-            <line>
-              <![CDATA[STEP53]]>
-            </line>
-            <line>
-              <![CDATA[STEP54]]>
-            </line>
-            <line>
-              <![CDATA[STEP55]]>
-            </line>
-            <line>
-              <![CDATA[STEP56]]>
-            </line>
-            <line>
-              <![CDATA[STEP57]]>
-            </line>
-            <line>
-              <![CDATA[STEP58]]>
-            </line>
-            <line>
-              <![CDATA[STEP59]]>
-            </line>
-            <line>
-              <![CDATA[STEP60]]>
-            </line>
-            <line>
-              <![CDATA[STEP61]]>
-            </line>
-            <line>
-              <![CDATA[STEP62]]>
-            </line>
-            <line>
-              <![CDATA[STEP63]]>
-            </line>
-            <line>
-              <![CDATA[STEP64]]>
-            </line>
-            <line>
-              <![CDATA[STEP65]]>
-            </line>
-            <line>
-              <![CDATA[STEP66]]>
-            </line>
-            <line>
-              <![CDATA[STEP67]]>
-            </line>
-            <line>
-              <![CDATA[STEP68]]>
-            </line>
-            <line>
-              <![CDATA[STEP69]]>
-            </line>
-            <line>
-              <![CDATA[STEP70]]>
-            </line>
-            <line>
-              <![CDATA[STEP71]]>
-            </line>
-            <line>
-              <![CDATA[STEP72]]>
-            </line>
-            <line>
-              <![CDATA[STEP73]]>
-            </line>
-            <line>
-              <![CDATA[STEP74]]>
-            </line>
-            <line>
-              <![CDATA[STEP75]]>
-            </line>
-            <line>
-              <![CDATA[STEP76]]>
-            </line>
-            <line>
-              <![CDATA[STEP77]]>
-            </line>
-            <line>
-              <![CDATA[STEP78]]>
-            </line>
-            <line>
-              <![CDATA[STEP79]]>
-            </line>
-            <line>
-              <![CDATA[STEP80]]>
-            </line>
-            <line>
-              <![CDATA[STEP81]]>
-            </line>
-            <line>
-              <![CDATA[STEP82]]>
-            </line>
-            <line>
-              <![CDATA[STEP83]]>
-            </line>
-            <line>
-              <![CDATA[STEP84]]>
-            </line>
-            <line>
-              <![CDATA[STEP85]]>
-            </line>
-            <line>
-              <![CDATA[STEP86]]>
-            </line>
-            <line>
-              <![CDATA[STEP87]]>
-            </line>
-            <line>
-              <![CDATA[STEP88]]>
-            </line>
-            <line>
-              <![CDATA[STEP89]]>
-            </line>
-            <line>
-              <![CDATA[STEP90]]>
-            </line>
-            <line>
-              <![CDATA[STEP91]]>
-            </line>
-            <line>
-              <![CDATA[STEP92]]>
-            </line>
-            <line>
-              <![CDATA[STEP93]]>
-            </line>
-            <line>
-              <![CDATA[STEP94]]>
-            </line>
-            <line>
-              <![CDATA[STEP95]]>
-            </line>
-            <line>
-              <![CDATA[STEP96]]>
-            </line>
-            <line>
-              <![CDATA[STEP97]]>
-            </line>
-            <line>
-              <![CDATA[STEP98]]>
-            </line>
-            <line>
-              <![CDATA[STEP99]]>
-            </line>
-            <line>
-              <![CDATA[STEP100]]>
-            </line>
-            <line>
-              <![CDATA[STEP101]]>
-            </line>
-            <line>
-              <![CDATA[STEP102]]>
-            </line>
-            <line>
-              <![CDATA[STEP103]]>
-            </line>
-            <line>
-              <![CDATA[STEP104]]>
-            </line>
-            <line>
-              <![CDATA[STEP105]]>
-            </line>
-            <line>
-              <![CDATA[STEP106]]>
-            </line>
-            <line>
-              <![CDATA[STEP107]]>
-            </line>
-            <line>
-              <![CDATA[STEP108]]>
-            </line>
-            <line>
-              <![CDATA[STEP109]]>
-            </line>
-            <line>
-              <![CDATA[STEP110]]>
-            </line>
-            <line>
-              <![CDATA[STEP111]]>
-            </line>
-            <line>
-              <![CDATA[STEP112]]>
-            </line>
-            <line>
-              <![CDATA[STEP113]]>
-            </line>
-            <line>
-              <![CDATA[STEP114]]>
-            </line>
-            <line>
-              <![CDATA[STEP115]]>
-            </line>
-            <line>
-              <![CDATA[STEP116]]>
-            </line>
-            <line>
-              <![CDATA[STEP117]]>
-            </line>
-            <line>
-              <![CDATA[STEP118]]>
-            </line>
-            <line>
-              <![CDATA[STEP119]]>
-            </line>
-            <line>
-              <![CDATA[STEP120]]>
-            </line>
-            <line>
-              <![CDATA[STEP121]]>
-            </line>
-            <line>
-              <![CDATA[STEP122]]>
-            </line>
-            <line>
-              <![CDATA[STEP123]]>
-            </line>
-            <line>
-              <![CDATA[STEP124]]>
-            </line>
-            <line>
-              <![CDATA[STEP125]]>
-            </line>
-            <line>
-              <![CDATA[STEP126]]>
-            </line>
-            <line>
-              <![CDATA[STEP127]]>
-            </line>
-            <line>
-              <![CDATA[STEP128]]>
-            </line>
-            <line>
-              <![CDATA[STEP129]]>
-            </line>
           </reporter-output>
         </test-method> <!-- logincheckK -->
-        <test-method status="FAIL" signature="close()[pri:0, instance:SalesRefundnegativescenarios.Airnegative@15530b9]" name="close" is-config="true" duration-ms="0" started-at="2020-11-04T10:11:20Z" finished-at="2020-11-04T10:11:20Z">
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[chrome not reachable
-  (Session info: chrome=86.0.4240.111)
-  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:05:20.749Z'
-System info: host: 'PRABHA', ip: '192.168.186.1', os.name: 'Windows 8.1', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_211'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.37.544315 (730aa6a5fdba15..., userDataDir: C:\Users\ASHOKP~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 86.0.4240.111, webStorageEnabled: true}
-Session ID: 2bd69445056e493f32ca5afb5c13df1d]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: chrome not reachable
-  (Session info: chrome=86.0.4240.111)
-  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:05:20.749Z'
-System info: host: 'PRABHA', ip: '192.168.186.1', os.name: 'Windows 8.1', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_211'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.37.544315 (730aa6a5fdba15..., userDataDir: C:\Users\ASHOKP~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 86.0.4240.111, webStorageEnabled: true}
-Session ID: 2bd69445056e493f32ca5afb5c13df1d
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
-	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:605)
-	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:438)
-	at travlogix.Wrappermethods.close(Wrappermethods.java:809)
-	at SalesRefundnegativescenarios.Airnegative.close(Airnegative.java:1017)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:217)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:712)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:756)
-	at org.testng.TestRunner.run(TestRunner.java:610)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
-	at org.testng.TestNG.runSuites(TestNG.java:1133)
-	at org.testng.TestNG.run(TestNG.java:1104)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+        <test-method status="PASS" signature="close()[pri:0, instance:SalesRefundPositivecases.Hotelpositive@15530b9]" name="close" is-config="true" duration-ms="2246" started-at="2020-11-04T23:00:32Z" finished-at="2020-11-04T23:00:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
-      </class> <!-- SalesRefundnegativescenarios.Airnegative -->
+      </class> <!-- SalesRefundPositivecases.Hotelpositive -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
