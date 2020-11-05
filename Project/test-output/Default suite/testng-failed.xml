@@ -5,8 +5,10 @@
     <classes>
       <class name="SalesRefundPositivecases.Hotelpositive">
         <methods>
+          <include name="browesrnstatiation"/>
           <include name="instantiation"/>
-          <include name="logincheckK"/>
+          <include name="close"/>
+          <include name="logincheckK" invocation-numbers="0"/>
         </methods>
       </class> <!-- SalesRefundPositivecases.Hotelpositive -->
     </classes>

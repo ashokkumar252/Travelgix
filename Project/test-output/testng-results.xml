@@ -94,24 +94,135 @@
     <line>
       <![CDATA[STEP31]]>
     </line>
+    <line>
+      <![CDATA[STEP32]]>
+    </line>
+    <line>
+      <![CDATA[STEP33]]>
+    </line>
+    <line>
+      <![CDATA[STEP34]]>
+    </line>
+    <line>
+      <![CDATA[STEP35]]>
+    </line>
+    <line>
+      <![CDATA[STEP36]]>
+    </line>
+    <line>
+      <![CDATA[STEP37]]>
+    </line>
+    <line>
+      <![CDATA[STEP38]]>
+    </line>
+    <line>
+      <![CDATA[STEP39]]>
+    </line>
+    <line>
+      <![CDATA[STEP40]]>
+    </line>
+    <line>
+      <![CDATA[STEP41]]>
+    </line>
+    <line>
+      <![CDATA[STEP42]]>
+    </line>
+    <line>
+      <![CDATA[STEP43]]>
+    </line>
+    <line>
+      <![CDATA[STEP44]]>
+    </line>
+    <line>
+      <![CDATA[STEP45]]>
+    </line>
+    <line>
+      <![CDATA[STEP46]]>
+    </line>
+    <line>
+      <![CDATA[STEP47]]>
+    </line>
+    <line>
+      <![CDATA[STEP48]]>
+    </line>
+    <line>
+      <![CDATA[STEP49]]>
+    </line>
+    <line>
+      <![CDATA[STEP50]]>
+    </line>
+    <line>
+      <![CDATA[STEP51]]>
+    </line>
+    <line>
+      <![CDATA[STEP52]]>
+    </line>
+    <line>
+      <![CDATA[STEP53]]>
+    </line>
+    <line>
+      <![CDATA[STEP54]]>
+    </line>
+    <line>
+      <![CDATA[STEP55]]>
+    </line>
+    <line>
+      <![CDATA[STEP56]]>
+    </line>
+    <line>
+      <![CDATA[STEP57]]>
+    </line>
+    <line>
+      <![CDATA[STEP58]]>
+    </line>
+    <line>
+      <![CDATA[STEP59]]>
+    </line>
+    <line>
+      <![CDATA[STEP60]]>
+    </line>
+    <line>
+      <![CDATA[STEP61]]>
+    </line>
+    <line>
+      <![CDATA[STEP62]]>
+    </line>
+    <line>
+      <![CDATA[STEP63]]>
+    </line>
+    <line>
+      <![CDATA[STEP64]]>
+    </line>
+    <line>
+      <![CDATA[STEP65]]>
+    </line>
+    <line>
+      <![CDATA[STEP66]]>
+    </line>
+    <line>
+      <![CDATA[STEP67]]>
+    </line>
+    <line>
+      <![CDATA[STEP68]]>
+    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="238999" started-at="2020-11-04T17:26:35Z" finished-at="2020-11-04T17:30:34Z">
+  <suite name="Default suite" duration-ms="455450" started-at="2020-11-05T18:19:30Z" finished-at="2020-11-05T18:27:05Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="238999" started-at="2020-11-04T17:26:35Z" finished-at="2020-11-04T17:30:34Z">
-      <class name="SalesRefundPositivecases.Hotelpositive">
-        <test-method status="PASS" signature="instantiation()[pri:0, instance:SalesRefundPositivecases.Hotelpositive@15530b9]" name="instantiation" is-config="true" duration-ms="212" started-at="2020-11-04T22:56:35Z" finished-at="2020-11-04T22:56:35Z">
+    <test name="Default test" duration-ms="455450" started-at="2020-11-05T18:19:30Z" finished-at="2020-11-05T18:27:05Z">
+      <class name="SalesRefundPositivecases.Hotelpositivecash">
+        <test-method status="PASS" signature="instantiation()[pri:0, instance:SalesRefundPositivecases.Hotelpositivecash@15530b9]" name="instantiation" is-config="true" duration-ms="127" started-at="2020-11-05T23:49:30Z" finished-at="2020-11-05T23:49:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- instantiation -->
-        <test-method status="PASS" signature="browesrnstatiation()[pri:0, instance:SalesRefundPositivecases.Hotelpositive@15530b9]" name="browesrnstatiation" is-config="true" duration-ms="17777" started-at="2020-11-04T22:56:38Z" finished-at="2020-11-04T22:56:56Z">
+        <test-method status="PASS" signature="browesrnstatiation()[pri:0, instance:SalesRefundPositivecases.Hotelpositivecash@15530b9]" name="browesrnstatiation" is-config="true" duration-ms="12501" started-at="2020-11-05T23:49:33Z" finished-at="2020-11-05T23:49:45Z">
           <reporter-output>
             <line>
               <![CDATA[STEP1]]>
             </line>
           </reporter-output>
         </test-method> <!-- browesrnstatiation -->
-        <test-method status="PASS" signature="logincheckK(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:SalesRefundPositivecases.Hotelpositive@15530b9]" name="logincheckK" duration-ms="216213" started-at="2020-11-04T22:56:56Z" data-provider="dp" finished-at="2020-11-04T23:00:32Z">
+        <test-method status="PASS" signature="logincheckK(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:SalesRefundPositivecases.Hotelpositivecash@15530b9]" name="logincheckK" duration-ms="437383" started-at="2020-11-05T23:49:45Z" data-provider="dp" finished-at="2020-11-05T23:57:02Z">
           <params>
             <param index="0">
               <value>
@@ -165,7 +276,7 @@
             </param>
             <param index="10">
               <value>
-                <![CDATA[jordan]]>
+                <![CDATA[AE - CRYSTAL TRADING - EXMPT]]>
               </value>
             </param>
             <param index="11">
@@ -175,12 +286,12 @@
             </param>
             <param index="12">
               <value>
-                <![CDATA[testt]]>
+                <![CDATA[Hotelbookings]]>
               </value>
             </param>
             <param index="13">
               <value>
-                <![CDATA[testt]]>
+                <![CDATA[Hotelbookings]]>
               </value>
             </param>
             <param index="14">
@@ -290,7 +401,7 @@
             </param>
             <param index="35">
               <value>
-                <![CDATA['4]]>
+                <![CDATA[04]]>
               </value>
             </param>
             <param index="36">
@@ -310,12 +421,12 @@
             </param>
             <param index="39">
               <value>
-                <![CDATA[HGFLF]]>
+                <![CDATA[QWERS]]>
               </value>
             </param>
             <param index="40">
               <value>
-                <![CDATA[REDFG]]>
+                <![CDATA[QWERS]]>
               </value>
             </param>
             <param index="41">
@@ -326,6 +437,176 @@
             <param index="42">
               <value>
                 <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="43">
+              <value>
+                <![CDATA[Normal]]>
+              </value>
+            </param>
+            <param index="44">
+              <value>
+                <![CDATA[AED]]>
+              </value>
+            </param>
+            <param index="45">
+              <value>
+                <![CDATA[100]]>
+              </value>
+            </param>
+            <param index="46">
+              <value>
+                <![CDATA[100]]>
+              </value>
+            </param>
+            <param index="47">
+              <value>
+                <![CDATA[HDFC Card]]>
+              </value>
+            </param>
+            <param index="48">
+              <value>
+                <![CDATA[ASF]]>
+              </value>
+            </param>
+            <param index="49">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="50">
+              <value>
+                <![CDATA[HTL001]]>
+              </value>
+            </param>
+            <param index="51">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="52">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="53">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="54">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="55">
+              <value>
+                <![CDATA[1000]]>
+              </value>
+            </param>
+            <param index="56">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="57">
+              <value>
+                <![CDATA[EDFRG]]>
+              </value>
+            </param>
+            <param index="58">
+              <value>
+                <![CDATA[EDFRG]]>
+              </value>
+            </param>
+            <param index="59">
+              <value>
+                <![CDATA[EDFRG]]>
+              </value>
+            </param>
+            <param index="60">
+              <value>
+                <![CDATA[28]]>
+              </value>
+            </param>
+            <param index="61">
+              <value>
+                <![CDATA[Oct]]>
+              </value>
+            </param>
+            <param index="62">
+              <value>
+                <![CDATA[2020]]>
+              </value>
+            </param>
+            <param index="63">
+              <value>
+                <![CDATA[pcc 5444]]>
+              </value>
+            </param>
+            <param index="64">
+              <value>
+                <![CDATA[pcc 5444]]>
+              </value>
+            </param>
+            <param index="65">
+              <value>
+                <![CDATA[Agent001]]>
+              </value>
+            </param>
+            <param index="66">
+              <value>
+                <![CDATA[910292039]]>
+              </value>
+            </param>
+            <param index="67">
+              <value>
+                <![CDATA[TESTT]]>
+              </value>
+            </param>
+            <param index="68">
+              <value>
+                <![CDATA[TESTT]]>
+              </value>
+            </param>
+            <param index="69">
+              <value>
+                <![CDATA[Pass]]>
+              </value>
+            </param>
+            <param index="70">
+              <value>
+                <![CDATA[QWERS]]>
+              </value>
+            </param>
+            <param index="71">
+              <value>
+                <![CDATA[QWERS]]>
+              </value>
+            </param>
+            <param index="72">
+              <value>
+                <![CDATA[QWERS]]>
+              </value>
+            </param>
+            <param index="73">
+              <value>
+                <![CDATA[QWERS]]>
+              </value>
+            </param>
+            <param index="74">
+              <value>
+                <![CDATA[QWERS]]>
+              </value>
+            </param>
+            <param index="75">
+              <value>
+                <![CDATA[QWERS]]>
+              </value>
+            </param>
+            <param index="76">
+              <value>
+                <![CDATA[AE Branch 01 - Dubai]]>
               </value>
             </param>
           </params>
@@ -420,13 +701,124 @@
             <line>
               <![CDATA[STEP31]]>
             </line>
+            <line>
+              <![CDATA[STEP32]]>
+            </line>
+            <line>
+              <![CDATA[STEP33]]>
+            </line>
+            <line>
+              <![CDATA[STEP34]]>
+            </line>
+            <line>
+              <![CDATA[STEP35]]>
+            </line>
+            <line>
+              <![CDATA[STEP36]]>
+            </line>
+            <line>
+              <![CDATA[STEP37]]>
+            </line>
+            <line>
+              <![CDATA[STEP38]]>
+            </line>
+            <line>
+              <![CDATA[STEP39]]>
+            </line>
+            <line>
+              <![CDATA[STEP40]]>
+            </line>
+            <line>
+              <![CDATA[STEP41]]>
+            </line>
+            <line>
+              <![CDATA[STEP42]]>
+            </line>
+            <line>
+              <![CDATA[STEP43]]>
+            </line>
+            <line>
+              <![CDATA[STEP44]]>
+            </line>
+            <line>
+              <![CDATA[STEP45]]>
+            </line>
+            <line>
+              <![CDATA[STEP46]]>
+            </line>
+            <line>
+              <![CDATA[STEP47]]>
+            </line>
+            <line>
+              <![CDATA[STEP48]]>
+            </line>
+            <line>
+              <![CDATA[STEP49]]>
+            </line>
+            <line>
+              <![CDATA[STEP50]]>
+            </line>
+            <line>
+              <![CDATA[STEP51]]>
+            </line>
+            <line>
+              <![CDATA[STEP52]]>
+            </line>
+            <line>
+              <![CDATA[STEP53]]>
+            </line>
+            <line>
+              <![CDATA[STEP54]]>
+            </line>
+            <line>
+              <![CDATA[STEP55]]>
+            </line>
+            <line>
+              <![CDATA[STEP56]]>
+            </line>
+            <line>
+              <![CDATA[STEP57]]>
+            </line>
+            <line>
+              <![CDATA[STEP58]]>
+            </line>
+            <line>
+              <![CDATA[STEP59]]>
+            </line>
+            <line>
+              <![CDATA[STEP60]]>
+            </line>
+            <line>
+              <![CDATA[STEP61]]>
+            </line>
+            <line>
+              <![CDATA[STEP62]]>
+            </line>
+            <line>
+              <![CDATA[STEP63]]>
+            </line>
+            <line>
+              <![CDATA[STEP64]]>
+            </line>
+            <line>
+              <![CDATA[STEP65]]>
+            </line>
+            <line>
+              <![CDATA[STEP66]]>
+            </line>
+            <line>
+              <![CDATA[STEP67]]>
+            </line>
+            <line>
+              <![CDATA[STEP68]]>
+            </line>
           </reporter-output>
         </test-method> <!-- logincheckK -->
-        <test-method status="PASS" signature="close()[pri:0, instance:SalesRefundPositivecases.Hotelpositive@15530b9]" name="close" is-config="true" duration-ms="2246" started-at="2020-11-04T23:00:32Z" finished-at="2020-11-04T23:00:34Z">
+        <test-method status="PASS" signature="close()[pri:0, instance:SalesRefundPositivecases.Hotelpositivecash@15530b9]" name="close" is-config="true" duration-ms="2753" started-at="2020-11-05T23:57:02Z" finished-at="2020-11-05T23:57:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
-      </class> <!-- SalesRefundPositivecases.Hotelpositive -->
+      </class> <!-- SalesRefundPositivecases.Hotelpositivecash -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

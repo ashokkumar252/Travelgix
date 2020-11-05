@@ -5455,8 +5455,29 @@ System.out.println("Element not present");
 								    }       
 
 
-
+//============================================================================================================
 									
+									public void findelementandsendtextbycss(String Css, String txt) {
+										try {
+											
+										if (driver.findElementByCssSelector(Css).isDisplayed())
+								                 {
+											driver.findElementByCssSelector(Css).clear();
+											driver.findElementByCssSelector(Css).sendKeys(txt);
+											
+
+											ATUReports.add(" User Entered the text as " + txt, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+											}
+										} catch (NoSuchElementException e) {
+
+											ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+										} catch (WebDriverException e) {
+											ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+										} finally {
+											takeSnap();
+										}
+									}
+
 									
 //==============================================================================================================
 									
