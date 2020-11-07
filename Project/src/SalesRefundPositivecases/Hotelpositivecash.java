@@ -230,7 +230,7 @@ public class Hotelpositivecash
 		wm.sendtextbyxvalue("//input[@aria-owns='hoteltfdTransCurrency_listbox']", Currency);
 		Thread.sleep(50);
 		wm.Listandenter("//*[@id='hoteltfdTransCurrency_listbox']/li", Commonindex);
-		Thread.sleep(200);
+		Thread.sleep(50);
 
 		// roomrate
 

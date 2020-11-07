@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="" key="selection"/>
+		<item value="Servicecharge" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="true" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="Servicecharge"/>
+			<item value="delete"/>
+			<item value="Processtype"/>
+			<item value="hdfc"/>
+			<item value="fare"/>
+			<item value="date"/>
+			<item value="common"/>
 			<item value="//span[@aria-owns=&apos;fbbranch_listbox&apos;]"/>
-			<item value="Customerdetails"/>
-			<item value="F"/>
-			<item value="FOP"/>
-			<item value="findElementByCssSelector"/>
-			<item value="CheckOut"/>
-			<item value="checkout"/>
-			<item value="Agentincentive"/>
 		</list>
 		<list key="replacehistory">
 			<item value="click"/>
