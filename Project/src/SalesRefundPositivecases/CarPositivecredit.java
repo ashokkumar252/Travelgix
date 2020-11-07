@@ -57,9 +57,12 @@ public class CarPositivecredit {
 			String CcvdPickupTime1, String CcvdPickupTime2, String CcvdPickupTime3, String CcvdDropoffTime1,
 			String CcvdDropoffTime2, String CcvdDropoffTime3, String CcvdNotNoOfCars, String CcvdBookingReference,
 			String CcvdConfirmationNumber, String Remarks, String Processtype, String Currency, String CtfdCarRate,
-			String CtfdBaseFare, String Lodgecard,String AatAmount,String CscBaseAmount,String Servicecharge,
-			String CtfdCommPercent1,String CtfdCommPercent2,String CtfdDiscPercent1,String Agentincentive
+			String CtfdBaseFare, String Lodgecard, String AatAmount, String CscBaseAmount, String Servicecharge,
+			String CtfdCommPercent1, String CtfdCommPercent2, String CtfdDiscPercent1, String Agentincentive,
 
+			String ProjectNumberAP, String DepartmentAP, String MajorClassAP, String TravelStatusAP,
+			String TotalSavingCodeAP, String GroupTravelIndicatorAP, String TourCodeAP, String EndorsementRestrictAP,
+			String FareCalculationAreaAP, String IntlSalesIndicatorAP, String Customerdetails
 
 	) throws Exception
 
@@ -215,11 +218,15 @@ public class CarPositivecredit {
 		// pickupateandtimee
 
 		wm.sendtextbycssselecotr("#CcvdPickupTime",
-				"" + CcvdPickupTime1 + "-" + CcvdPickupTime2 + "-" + CcvdPickupTime3);
+				"" + CcvdPickupTime1 + "-" + CcvdPickupTime2 + "-" + CcvdPickupTime3 + " " + "00:00");
+		// wm.sendtextbycssselecotrwithoutclear("#CcvdPickupTime", "00:00");
+
 		Thread.sleep(50);
 
 		wm.sendtextbycssselecotr("#CcvdDropoffTime",
-				"" + CcvdDropoffTime1 + "-" + CcvdDropoffTime2 + "-" + CcvdDropoffTime3);
+				"" + CcvdDropoffTime1 + "-" + CcvdDropoffTime2 + "-" + CcvdDropoffTime3 + " " + "00:00");
+		// wm.sendtextbycssselecotrwithoutclear("#CcvdDropoffTime", "00:00");
+
 		Thread.sleep(50);
 		// no of unites
 		wm.sendtextbycssselecotrwithoutclear("#CcvdNotNoOfCars", CcvdNotNoOfCars);
@@ -296,57 +303,112 @@ public class CarPositivecredit {
 		wm.Listandenter("//*[@id='AatCode_listbox']/li", Commonindex);
 		Thread.sleep(200);
 
-		wm.sendtextbycssselecotrwithoutclear("#AatAmount", ""+AatAmount);
+		wm.sendtextbycssselecotrwithoutclear("#AatAmount", "" + AatAmount);
 		Thread.sleep(200);
 		wm.clickbyxpath("//span[@class='k-icon k-i-check']");
 		Thread.sleep(200);
 
-// enter the details in service fee
+		// enter the details in service fee
 
 		wm.Listandenter("//span[@class='k-icon k-i-add']", "1");
 		Thread.sleep(500);
 
-//servicecarge
+		// servicecarge
 		wm.sendtextbyxvalue("//input[@aria-owns='CscServiceChargeId_listbox']", Servicecharge);
-		
-	//	wm.clickbyxpath("//span[@aria-owns='CscServiceChargeId_listbox']");
-		Thread.sleep(50);
+
+		// wm.clickbyxpath("//span[@aria-owns='CscServiceChargeId_listbox']");
+		Thread.sleep(200);
 		wm.Listandenter("//*[@id='CscServiceChargeId_listbox']/li", Commonindex);
+		Thread.sleep(500);
+		wm.stabbyxpath("//input[@aria-owns='CscServiceChargeId_listbox']");
 		Thread.sleep(200);
-		wm.sendtextbycssselecotrwithoutclear("#CscBaseAmount", ""+CscBaseAmount);
+
+		wm.sendtextbycssselecotr("#CscBaseAmount", "" + CscBaseAmount);
 		Thread.sleep(200);
-	
+
 		wm.clickbyxpath("//span[@class='k-icon k-i-check']");
 		Thread.sleep(200);
 
-wm.clickbyxpath("//*[@id='div_Car_Header_Details']/div[4]/div/div[1]/div[1]/a/i");
+		wm.clickbyxpath("//*[@id='div_Car_Header_Details']/div[4]/div/div[1]/div[1]/a/i");
 
-//Enter the commissiondetals
+		// Enter the commissiondetals
 
-wm.sendtextbycssselecotrwithoutclear("#CtfdCommPercent1", CtfdCommPercent1);
-wm.sendtextbycssselecotrwithoutclear("#CtfdCommPercent2", CtfdCommPercent2);
-wm.sendtextbycssselecotrwithoutclear("#CtfdDiscPercent1", CtfdDiscPercent1);
-Thread.sleep(500);
-wm.clickbyxpath("//*[@id='div_Car_Header_Details']/div[5]/div/div[1]/div[1]/a/i");
+		Thread.sleep(200);
 
+		wm.sendtextbycssselecotr("#CtfdCommPercent1", ""+CtfdCommPercent1);
+		wm.sendtextbycssselecotr("#CtfdCommPercent2", ""+CtfdCommPercent2);
+		wm.sendtextbycssselecotr("#CtfdDiscPercent1", ""+CtfdDiscPercent1);
+		Thread.sleep(500);
+		wm.clickbyxpath("//*[@id='div_Car_Header_Details']/div[5]/div/div[1]/div[1]/a/i");
 
-//Enter the agent incetives
+		// Enter the agent incetives
 
+		// Agent incentivee
 
-// Agent incentivee
+		wm.sendtextbyxvalue("//input[@aria-owns='CtscPaybackParnerName_listbox']", Agentincentive);
+		Thread.sleep(100);
+		wm.Listandenter("//*[@id='CtscPaybackParnerName_listbox']/li", Commonindex);
+		Thread.sleep(500);
 
-wm.sendtextbyxvalue("//input[@aria-owns='CtscPaybackParnerName_listbox']", Agentincentive);
-Thread.sleep(100);
-wm.Listandenter("//*[@id='CtscPaybackParnerName_listbox']/li", Commonindex);
-Thread.sleep(200);
+		wm.clickbyxpath("//*[@id='AgentIncentiveDiv']/div/div[1]/div[1]/a/i");
+		Thread.sleep(500);
 
-		
-wm.clickbyxpath("//*[@id='AgentIncentiveDiv']/div/div[1]/div[1]/a/i");
+		// select the fop window
 
-wm.clickbyxpath("//*[@id='testData']/i");
-		wm.sleep();
+		wm.Listandenter("//span[@class='k-icon k-i-add']", "2");
+		Thread.sleep(500);
 
-		Thread.sleep(300);
+		wm.findbyelementbyxpathandclick("//button[@id='ConformationYes']");
+		Thread.sleep(900);
+
+		wm.clickbyxpath("//span[@class='k-icon k-i-check']");
+		Thread.sleep(900);
+		wm.clickbyxpath("//*[@id='testData']/i");
+		Thread.sleep(500);
+
+		wm.clickbyxpath("//button[@id='btncarsave']");
+
+		Thread.sleep(500);
+
+		/*
+		 * wm.findbyelementbyxpathandclick("//button[@id='ConformationYes']");
+		 * Thread.sleep(900);
+		 */
+
+		// ======================================================================
+
+		// Enter the udid details
+
+		wm.findelementandsendtextbycss("#Project_Number_AP", ProjectNumberAP);
+		Thread.sleep(50);
+		wm.findelementandsendtextbycss("#Department_AP", DepartmentAP);
+		Thread.sleep(50);
+		wm.findelementandsendtextbycss("#Major_Class_AP", MajorClassAP);
+		Thread.sleep(50);
+
+		wm.findelementandsendtextbycss("#Travel_Status_AP", TravelStatusAP);
+		Thread.sleep(50);
+		wm.findelementandsendtextbycss("#Total_Saving_Code_AP", TotalSavingCodeAP);
+		Thread.sleep(50);
+		wm.findelementandsendtextbycss("#Group_Travel_Indicator_AP", GroupTravelIndicatorAP);
+		Thread.sleep(50);
+		wm.findelementandsendtextbycss("#Tour_Code_AP", TourCodeAP);
+		Thread.sleep(50);
+		wm.findelementandsendtextbycss("#Endorsement_Restrict_AP", EndorsementRestrictAP);
+		Thread.sleep(50);
+		wm.findelementandsendtextbycss("#Fare_Calculation_Area_AP", FareCalculationAreaAP);
+		Thread.sleep(200);
+		wm.clickbyxpath("//span[@aria-owns='Booking_Type_AP_listbox']");
+		Thread.sleep(200);
+		wm.Listandenter("//*[@id='Booking_Type_AP_listbox']/li", Commonindex);
+		Thread.sleep(200);
+
+		wm.findelementandsendtextbycss("#Intl_Sales_Indicator_AP", IntlSalesIndicatorAP);
+		Thread.sleep(200);
+		wm.findbyelementbyxpathandclick("//button[@id='btncarsave']");
+		Thread.sleep(50);
+
+		Thread.sleep(16000);
 
 	}
 

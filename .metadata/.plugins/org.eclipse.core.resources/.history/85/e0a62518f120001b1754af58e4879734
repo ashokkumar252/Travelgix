@@ -1,0 +1,9 @@
+package SalesRefundPositivecases;
+
+import org.testng.annotations.Test;
+
+public class CarPositivecash {
+  @Test
+  public void f() {
+  }
+}
