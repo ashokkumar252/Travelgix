@@ -78,8 +78,8 @@ public class Airservicechargenegative
 		wm.clickbyid("btnMainSave");
 		wm.sleep();
 
-		wm.Verifythealertpopupmessages("//span[@id='diaInfoMessage']", 
-				"AIR Service Charge Saved/Updated Successfully",
+		wm.Verifythealertpopupmessagesusincontains("//span[@id='diaInfoMessage']", 
+				"changes",
 				"without doing changes clicking the save button , System showing validation messages correctly ",
 				"without doing changes clicking the save button ,  System showing validation messages not correctly ");
 		Thread.sleep(300);
@@ -297,11 +297,10 @@ public class Airservicechargenegative
 	
 	wm.sendtextbyxvalue("//input[@aria-owns='AascdServChgId_listbox']",inactiveservicechargerulename);
 	Thread.sleep(300);
-	wm.Listnegativescearios("//*[@id='AascdServChgId_listbox']/li", Commonindex,
-			"Inactive records are not showing in service rule name field",
-			"Inactive records are showing in service rule name field");
+	wm.Listnegativesceariosnegativecaseschecking("//*[@id='AascdServChgId_listbox']/li", Commonindex,
+			"Inactive records are  showing in service rule name field",
+			"Inactive records are not showing in service rule name field");
 	Thread.sleep(500);
-	
 	
 	
 	//13	Air Service charge	Verify the duplicate record creations

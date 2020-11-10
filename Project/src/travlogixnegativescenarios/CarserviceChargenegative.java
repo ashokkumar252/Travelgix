@@ -76,7 +76,8 @@ public class CarserviceChargenegative
 		wm.clickbyid("btnMainSave");
 		wm.sleep();
 
-		wm.Verifythealertpopupmessages("//span[@id='diaInfoMessage']", "CAR Service Charge Saved/Updated Successfully",
+		wm.Verifythealertpopupmessagesusincontains("//span[@id='diaInfoMessage']", 
+				"without",
 				"without doing changes clicking the save button , System showing validation messages correctly ",
 				"without doing changes clicking the save button ,  System showing validation messages not correctly ");
 		Thread.sleep(300);
@@ -260,8 +261,8 @@ public class CarserviceChargenegative
 		
 //11	Car Service charge page	Verify the inactive rules in  Car  service charge
 		wm.sendtextbyxvalue("//input[@aria-owns='CcscdCarServChgId_listbox']",inactiveservicechargerulename);
-		Thread.sleep(300);
-		wm.Listnegativescearios("//*[@id='CcscdCarServChgId_listbox']/li", Commonindex,
+		Thread.sleep(500);
+		wm.Listnegativesceariosnegativecaseschecking("//*[@id='CcscdCarServChgId_listbox']/li", Commonindex,
 				"Inactive records are not showing in service rule name field",
 				"Inactive records are showing in service rule name field");
 		Thread.sleep(500);

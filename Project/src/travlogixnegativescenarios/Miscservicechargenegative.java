@@ -76,10 +76,10 @@ public class Miscservicechargenegative
 		wm.clickbyid("btnMainSave");
 		wm.sleep();
 
-		wm.Verifythealertpopupmessages("//span[@id='diaInfoMessage']", 
-				"MISC Service Charge Saved/Updated Successfully",
-				"without doing changes clicking the save button , System showing validation messages correctly ",
-				"without doing changes clicking the save button ,  System showing validation messages not correctly ");
+		wm.Verifythealertpopupmessagesusincontains("//span[@id='diaInfoMessage']", 
+				"without",
+				"without doing changes clicking the save button , System showing validation messages not correctly ",
+				"without doing changes clicking the save button ,  System showing validation messages correctly ");
 		Thread.sleep(300);
 
 		wm.Listandenterquick("//span[contains(text(),'OK')]", "0");
@@ -272,8 +272,8 @@ public class Miscservicechargenegative
 		wm.sendtextbyxvalue("//input[@aria-owns='misRuleKey_listbox']",inactiveservicechargerulename);
 		Thread.sleep(300);
 		wm.Listnegativesceariosnegativecaseschecking("//*[@id='misRuleKey_listbox']/li", Commonindex,
-				"Inactive records are not showing in misc service charge  name field",
-				"Inactive records are showing in misc service charge  name field");
+				"Inactive records are showing in misc service charge  name field",
+				"Inactive records are not showing in misc service charge  name field");
 		Thread.sleep(600);
 		
 //11	Misc  Service charge page	Verify the duplicate code creations

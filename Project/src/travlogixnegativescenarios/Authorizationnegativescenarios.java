@@ -76,7 +76,7 @@ public class Authorizationnegativescenarios
 		Thread.sleep(900);
 
 		wm.Verifythealertpopupmessagesusincontains("//span[@id='diaWarningMessage']", 
-				"Changes not be found.",
+				"Changes",
 				"Authorization : System showing validation messages correctly ",
 				"Authorization :  System showing validation messages not correctly ");
 		Thread.sleep(500);

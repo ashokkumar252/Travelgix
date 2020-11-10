@@ -1,5 +1,4 @@
 package SalesRefundPositivecases;
-
 import utility.Constant;
 import java.io.IOException;
 import java.sql.Driver;
@@ -194,8 +193,26 @@ public class Misccash {
 		
 		//unit
 	wm.sendtextbycssselecotr("#MiscRateUnits", ""+MiscRateUnits);
-
-	wm.sendtextbycssselecotr("#MiscRateServiceRate", ""+MiscRateServiceRate);
+	Thread.sleep(200);
+	
+	wm.stabbyxpath("//input[@name='MiscRateUnits']");
+	Thread.sleep(100);
+	
+	/*
+	wm.clickbyxpath("//input[@name='MiscRateServiceRate']");
+    Thread.sleep(90);
+    wm.Clearbyxpath("//input[@name='MiscRateServiceRate']");
+	Thread.sleep(90);*/
+	
+	wm.Selectallbyxpath("//input[@name='MiscRateServiceRate']");
+	Thread.sleep(90);
+	
+	//wm.sendtextbyxvalue("//input[@name='MiscRateServiceRate']",""+MiscRateServiceRate);
+	
+	wm.sendtextbycssselecotrwithoutclear("#MiscRateServiceRate", ""+MiscRateServiceRate);
+	Thread.sleep(100);
+	wm.stabbyxpath("//input[@name='MiscRateServiceRate']");
+	Thread.sleep(200);
 	
 	//Lodgecardd
 	
@@ -248,10 +265,18 @@ Thread.sleep(200);
 
 //enterthe commissionamount
 
+wm.Selectallbyxpath("//input[@name='MiscRateCommPercent1']");
+wm.sendtextbycssselecotrwithoutclear("#MiscRateCommPercent1", "" + MiscRateCommPercent1);
+Thread.sleep(50);
 
-wm.sendtextbycssselecotr("#MiscRateCommPercent1", "" + MiscRateCommPercent1);
-wm.sendtextbycssselecotr("#MiscRateCommPercent2", "" + MiscRateCommPercent2);
-wm.sendtextbycssselecotr("#MiscRateDiscPercent1", "" + MiscRateDiscPercent1);
+wm.Selectallbyxpath("//input[@name='MiscRateCommPercent2']");
+wm.sendtextbycssselecotrwithoutclear("#MiscRateCommPercent2", "" + MiscRateCommPercent2);
+Thread.sleep(50);
+
+
+wm.Selectallbyxpath("//input[@name='MiscRateDiscPercent1']");
+wm.sendtextbycssselecotrwithoutclear("#MiscRateDiscPercent1", "" + MiscRateDiscPercent1);
+
 
 Thread.sleep(200);
 
@@ -300,7 +325,7 @@ Thread.sleep(900);
 wm.clickbyxpath("//*[@id='testData']/i");
 Thread.sleep(500);
 
-wm.clickbyxpath("//button[@id='btncarsave']");
+wm.clickbyxpath("//button[@id='btnmiscsave']");
 
 Thread.sleep(500);
 
@@ -334,10 +359,13 @@ Thread.sleep(200);
 
 wm.findelementandsendtextbycss("#Intl_Sales_Indicator_AP", IntlSalesIndicatorAP);
 Thread.sleep(200);
-wm.findbyelementbyxpathandclick("//button[@id='btncarsave']");
-Thread.sleep(50);
+wm.findbyelementbyxpathandclick("//button[@id='btnmiscsave']");
+
 
 Thread.sleep(16000);
+
+wm.Listnegativescearios("//input[@name='MiscConfirmationNumber']", "0", 
+		"MISC Created Successfully", "MISC Not Created Successfully");
 
 		wm.sleep();
 

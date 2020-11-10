@@ -5163,9 +5163,53 @@ System.out.println("Element not present");
 									}
 
 
-			
+//==================================================================================================================
+									
+//select all by xapth
+									
+									public void Selectallbyxpath(String xpt1) 
+									{
+																		
+										WebElement toClear = driver.findElementByXPath(xpt1);
+										toClear.sendKeys(Keys.CONTROL + "a");
+																
+									}
+									
+//===================================================================================================
+									
+//select all by CSs
+									
+									public void Selectallbycsspath(String Css1) 
+									{
+																		
+										WebElement toClear = driver.findElementByCssSelector(Css1);
+										toClear.sendKeys(Keys.CONTROL + "a");
+																
+									}
 									
 									
+	//==========================================================================================
+
+		public void Checktextcount(String xpt1,String Positivemessage,String negativemessage) 
+									{
+									
+									 String  gtxt = driver.findElementByXPath(xpt1).getText();	
+									final int tick = gtxt.length();
+									if(tick>10)
+									{
+										ATUReports.add(Positivemessage, LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+									}
+									else
+									{
+										ATUReports.add(negativemessage, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+											
+										
+										} 
+								
+									}
+
+									
+
 //=============================================================================================================================
 
 	//
@@ -5433,6 +5477,61 @@ System.out.println("Element not present");
 								    System.out.print("\n the value of d1 is" + d3);
 								    System.out.print("\n the value of d2 is" + d4);								   
 									if(d4.equals(d3))
+								    {
+								    ATUReports.add(Positivemessages, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+								    }
+								    else
+								    {
+								    ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+									    	
+								    }
+								    }
+									catch (NoSuchElementException e)
+									{
+
+								    ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+								    } catch (Exception e) {
+								    System.out.println("error");
+								    } finally {
+								    takeSnap();
+								    }
+
+								    }       
+
+//================================================================================================
+	//Net payable amount
+									
+									public void comparetwovaluesadd2sub1(String xpath1,String xpath2,String xpath3,String xpath4,
+											String Positivemessages,String Negativemessages) throws InterruptedException
+								    {
+								    try 
+								    {
+
+								    WebElement elt11 = driver.findElement(By.xpath(xpath1));
+									WebElement elt12 = driver.findElement(By.xpath(xpath2));
+									WebElement elt13 = driver.findElement(By.xpath(xpath3));
+									WebElement elt14 = driver.findElement(By.xpath(xpath4));
+									
+
+								    Thread.sleep(500);
+
+								    Double d11 = new Double(elt11.getAttribute("value").trim()); //seeling fare
+									Double d12 = new Double(elt12.getAttribute("value").trim());  //total tax
+									Double d13 = new Double(elt13.getAttribute("value").trim()); //commissionamount
+									Double d14 = new Double(elt14.getAttribute("value").trim()); //totalpayable
+									
+									Double d15 = d11 +d12-d13;
+									
+									
+
+								    Thread.sleep(500);
+								    System.out.print("\n the value of d11 is" + d11);//seeling fare
+								    System.out.print("\n the value of d12 is" + d12); //
+								    System.out.print("\n the value of d13 is" + d13);
+								    System.out.print("\n the value of d14 is" + d14);	
+									System.out.print("\n the value of d15 is" + d15);	
+									
+									if(d15.equals(d14))
 								    {
 								    ATUReports.add(Positivemessages, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 								    }

@@ -78,7 +78,8 @@ public class Airscrulenegative
 		wm.clickbyid("btnMainSave");
 		wm.sleep();
 
-		wm.Verifythealertpopupmessages("//span[@id='diaInfoMessage']", "Air Service Charge Rule Master Saved/Updated Successfully",
+		wm.Verifythealertpopupmessagesusincontains("//span[@id='diaInfoMessage']",
+				"changes",
 				"without doing changes clicking the save button , System showing validation messages correctly ",
 				"without doing changes clicking the save button ,  System showing validation messages not correctly ");
 		Thread.sleep(300);

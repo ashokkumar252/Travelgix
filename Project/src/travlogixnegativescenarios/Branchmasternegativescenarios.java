@@ -96,7 +96,8 @@ public class Branchmasternegativescenarios {
 
 		wm.clickbyid("btnMainSave");
 		Thread.sleep(300);
-		wm.Verifythealertpopupmessagesusincontains("//span[@id='diaWarningMessage']", "Please select complete",
+		wm.Verifythealertpopupmessagesusincontains("//span[@id='diaWarningMessage']", 
+				"Please select complete",
 				"Without enter the details and click save button in the grid level  , System showing validation messages correctly ",
 				"Without enter the details and click save button in the grid level ,  System showing validation messages not correctly ");
 		Thread.sleep(200);

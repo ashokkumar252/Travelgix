@@ -78,8 +78,8 @@ public class Miscrulenegativescenarios
 		wm.clickbyid("btnMainSave");
 		wm.sleep();
 
-		wm.Verifythealertpopupmessages("//span[@id='diaInfoMessage']",
-				"MIS Service Charge Rule Master Saved/Updated Successfully",
+		wm.Verifythealertpopupmessagesusincontains("//span[@id='diaInfoMessage']",
+				"without doing changes",
 				"without doing changes clicking the save button , System showing validation messages correctly ",
 				"without doing changes clicking the save button ,  System showing validation messages not correctly ");
 		Thread.sleep(300);
@@ -239,9 +239,10 @@ public class Miscrulenegativescenarios
 		Thread.sleep(300);
 		wm.sendtextbyxvalue("//input[@aria-owns='mimscrServiceType_listbox']",inactiveServicetype);
 		Thread.sleep(300);
-		wm.Listnegativesceariosnegativecaseschecking("//*[@id='mimscrServiceType_listbox']/li", Commonindex,
-				"inactive mimscrServiceType_listbox is not avilable in mimscrServiceType_listbox field in misc ",
-				"inactive mimscrServiceType_listbox  is avilable in mimscrServiceType_listbox filed in misc ");
+		wm.Listnegativesceariosnegativecaseschecking("//*[@id='mimscrServiceType_listbox']/li",
+				Commonindex,
+				"inactive mimscrServiceType_listbox is  avilable in mimscrServiceType_listbox field in misc ",
+				"inactive mimscrServiceType_listbox  is not avilable in mimscrServiceType_listbox filed in misc ");
 		Thread.sleep(500);
 
 		// 5 Misc Service charge rule page Newly created service Category master
@@ -252,8 +253,8 @@ public class Miscrulenegativescenarios
 		wm.sendtextbyxvalue("//input[@aria-owns='miserviceCatName_listbox']", inactiveServicecategroy);
 		Thread.sleep(300);
 		wm.Listnegativesceariosnegativecaseschecking("//*[@id='miserviceCatName_listbox']/li", Commonindex,
-				"inactive  miserviceCatName_listbox is not avilable in miserviceCatName_listbox",
-				"inactive miserviceCatName_listbox  is avilable in miserviceCatName_listbox");
+				"inactive  miserviceCatName_listbox is  avilable in miserviceCatName_listbox",
+				"inactive miserviceCatName_listbox  is not avilable in miserviceCatName_listbox");
 		Thread.sleep(500);
 
 		// 6 Misc Service charge rule page Newly created Charge master refleced
@@ -263,8 +264,8 @@ public class Miscrulenegativescenarios
 		wm.sendtextbyxvalue("//input[@aria-owns='michargeName_listbox']", inactiveChargenamemaster);
 		Thread.sleep(300);
 		wm.Listnegativesceariosnegativecaseschecking("//*[@id='michargeName_listbox']/li", Commonindex,
-				"inactive michargeName_listbox is not avilable in misc michargeName_listbox",
-				"inactive michargeName_listbox  is  avilable in misc michargeName_listbox");
+				"inactive michargeName_listbox is  avilable in misc michargeName_listbox",
+				"inactive michargeName_listbox  is not  avilable in misc michargeName_listbox");
 		Thread.sleep(500);
 
 		// 7 Misc Service charge rule page Newly created country master refleced
@@ -274,8 +275,8 @@ public class Miscrulenegativescenarios
 		wm.sendtextbyxvalue("//input[@aria-owns='micountryName_listbox']", inactiveCountry);
 		Thread.sleep(300);
 		wm.Listnegativesceariosnegativecaseschecking("//*[@id='micountryName_listbox']/li", Commonindex,
-				"inactive micountryName_listbox is not avilable in msic service charge rulepage",
-				"inactive micountryName_listbox  is  avilable in misc  service charge rulepage");
+				"inactive micountryName_listbox is  avilable in msic service charge rulepage",
+				"inactive micountryName_listbox  is not  avilable in misc  service charge rulepage");
 		Thread.sleep(500);
 
 		// 8 Misc Service charge rule page Newly created City master refleced in
@@ -285,8 +286,8 @@ public class Miscrulenegativescenarios
 		wm.sendtextbyxvalue("//input[@aria-owns='micityName_listbox']", inactiveCityy);
 		Thread.sleep(300);
 		wm.Listnegativesceariosnegativecaseschecking("//*[@id='micityName_listbox']/li", Commonindex,
-				"inactive  micityName_listbox is not avilable in misc service charge rulepage",
-				"inactive micityName_listbox  is avilable in misc service charge rulepage");
+				"inactive  micityName_listbox is  avilable in misc service charge rulepage",
+				"inactive micityName_listbox  is not avilable in misc service charge rulepage");
 		Thread.sleep(500);
 
 		wm.sleep();

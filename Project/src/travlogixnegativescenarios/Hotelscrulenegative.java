@@ -80,8 +80,8 @@ public class Hotelscrulenegative
 		wm.clickbyid("btnMainSave");
 		wm.sleep();
 
-		wm.Verifythealertpopupmessages("//span[@id='diaInfoMessage']",
-				"Hotel Service Charge Rule Master Saved/Updated Successfully",
+		wm.Verifythealertpopupmessagesusincontains("//span[@id='diaInfoMessage']",
+				"Without",
 				"without doing changes clicking the save button , System showing validation messages correctly ",
 				"without doing changes clicking the save button ,  System showing validation messages not correctly ");
 		Thread.sleep(300);
