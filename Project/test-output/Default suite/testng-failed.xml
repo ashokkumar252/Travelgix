@@ -3,14 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="SalesrefundAir.Airdomesticnegative">
+      <class name="travlogix.BusinessPartnersupplier">
         <methods>
-          <include name="logincheckK"/>
-          <include name="instantiation"/>
           <include name="close"/>
+          <include name="instantiation"/>
           <include name="browesrnstatiation"/>
+          <include name="logincheckK" invocation-numbers="0"/>
         </methods>
-      </class> <!-- SalesrefundAir.Airdomesticnegative -->
+      </class> <!-- travlogix.BusinessPartnersupplier -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
