@@ -1071,7 +1071,7 @@ Thread.sleep(400);
 wm.comparetwovalues1to1("//input[@name='AirFopAmount']"
 		, "//input[@name='Amt_NetCollection']", 
 		"49 Pass: FOP and total amount matches successfully"
-		, "49 Fail: FOP and total amount matches successfully");
+		, "49 Fail: FOP and total amount not matches successfully");
 
 
 //udid details

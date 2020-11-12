@@ -1,6 +1,4 @@
-//WASTA login screen
 package travlogix;
-
 import utility.Constant;
 import java.io.IOException;
 import java.sql.Driver;
@@ -15,7 +13,6 @@ import travlogix.Wrappermethods;
 import atu.testng.reports.listeners.ATUReportsListener;
 import atu.testng.reports.listeners.ConfigurationListener;
 import atu.testng.reports.listeners.MethodListener;
-
 //import pack.Wrappermethods;
 @Listeners({ ATUReportsListener.class, ConfigurationListener.class, MethodListener.class })
 public class BusinessPartner {
@@ -423,7 +420,7 @@ public class BusinessPartner {
 		Thread.sleep(600);
 
 		wm.clickbyxpath("//a[@id='acc410']");
-		Thread.sleep(600);
+		Thread.sleep(900);
 
 		// ============Credit
 		// limitdetails============================================================================================================
@@ -481,7 +478,7 @@ public class BusinessPartner {
 		// Udidmode
 
 		wm.sendtextbyxvalue("//input[@aria-owns='pdisModeKey_listbox']", Udidmode);
-		Thread.sleep(600);
+		Thread.sleep(2000);
 		wm.Listandenter("//*[@id='pdisModeKey_listbox']/li", Udidmodeindex);
 		Thread.sleep(600);
 
@@ -669,6 +666,12 @@ public class BusinessPartner {
 		wm.sleep();
 		wm.sleep();
 		
+		wm.Listandenterquick("//span[contains(text(),'OK')]", "0");
+		wm.Listandenterquick("//span[contains(text(),'OK')]", "1");
+		wm.Listandenterquick("//span[contains(text(),'OK')]", "2");
+		wm.Listandenterquick("//span[contains(text(),'OK')]", "3");
+
+
 
 	//    wm.capturetextfrommsgbox("//span[@id='diaWarningMessage']", " Bussiness partner Record created successfully ");
 

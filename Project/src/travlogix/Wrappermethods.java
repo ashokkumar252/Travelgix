@@ -5554,6 +5554,68 @@ System.out.println("Element not present");
 								    }       
 
 
+//====================================================================================================
+									
+									
+									public void multipleandcompare(String xpath1,String xpath2,
+											String xpath3,String xpath4,
+											String Positivemessages,
+											String Negativemessages) throws InterruptedException
+								    {
+								    try 
+								    {
+
+								    WebElement R1 = driver.findElement(By.xpath(xpath1)); //no of days
+									WebElement R2 = driver.findElement(By.xpath(xpath2)); //no of units
+									WebElement R3 = driver.findElement(By.xpath(xpath3)); //car rate
+									WebElement R4 = driver.findElement(By.xpath(xpath4));  //totalratee
+									
+
+								    Thread.sleep(500);
+
+								    Double d20 = new Double(R1.getAttribute("value").trim());
+									Double d21 = new Double(R2.getAttribute("value").trim());
+									Double d22 = new Double(R3.getAttribute("value").trim());
+									
+									Double d23 = new Double(R4.getAttribute("value").trim());
+									
+									Double d24=d20*d21*d22;
+									
+									
+									
+									
+
+									
+								    Thread.sleep(500);
+								    System.out.print("\n the value of d6 is" + d20);
+								    System.out.print("\n the value of d7 is" + d21);
+								    System.out.print("\n the value of d7 is" + d22);
+								    
+								   
+									    if(d23.equals(d24))
+								    {
+								    ATUReports.add(Positivemessages, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+								    }
+								    else
+								    {
+								    ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+									    	
+								    }
+								    }
+									catch (NoSuchElementException e)
+									{
+
+								    ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+								    } catch (Exception e) {
+								    System.out.println("error");
+								    } finally {
+								    takeSnap();
+								    }
+
+								    }       
+									
+									
+
 //============================================================================================================
 									
 									public void findelementandsendtextbycss(String Css, String txt) {
