@@ -1,9 +1,0 @@
-package SalesrefundAir;
-
-import org.testng.annotations.Test;
-
-public class Airdomesticnegative {
-  @Test
-  public void f() {
-  }
-}

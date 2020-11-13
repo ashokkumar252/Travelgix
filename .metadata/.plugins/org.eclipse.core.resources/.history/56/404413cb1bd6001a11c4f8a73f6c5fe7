@@ -1,9 +1,0 @@
-package shipogix;
-
-import org.testng.annotations.Test;
-
-public class Scenario142 {
-  @Test
-  public void f() {
-  }
-}
