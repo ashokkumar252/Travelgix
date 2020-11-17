@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="Test(failed)">
+    <classes>
+      <class name="travlogix.BusinessPartner">
+        <methods>
+          <include name="close"/>
+          <include name="logincheckK" invocation-numbers="0"/>
+          <include name="instantiation"/>
+          <include name="browesrnstatiation"/>
+        </methods>
+      </class> <!-- travlogix.BusinessPartner -->
+      <class name="travlogix.AirServiceChargeRule">
+        <methods>
+          <include name="browesrnstatiation"/>
+          <include name="instantiation"/>
+          <include name="close"/>
+        </methods>
+      </class> <!-- travlogix.AirServiceChargeRule -->
+      <class name="travlogix.Carmaster">
+        <methods>
+          <include name="browesrnstatiation"/>
+          <include name="instantiation"/>
+          <include name="close"/>
+        </methods>
+      </class> <!-- travlogix.Carmaster -->
+      <class name="travlogix.CreditCardMaster">
+        <methods>
+          <include name="instantiation"/>
+          <include name="close"/>
+          <include name="browesrnstatiation"/>
+        </methods>
+      </class> <!-- travlogix.CreditCardMaster -->
+      <class name="travlogix.Executivemaster">
+        <methods>
+          <include name="browesrnstatiation"/>
+          <include name="logincheckK"/>
+          <include name="instantiation"/>
+          <include name="close"/>
+        </methods>
+      </class> <!-- travlogix.Executivemaster -->
+      <class name="travlogix.HotelMaster">
+        <methods>
+          <include name="instantiation"/>
+          <include name="close"/>
+          <include name="browesrnstatiation"/>
+        </methods>
+      </class> <!-- travlogix.HotelMaster -->
+      <class name="travlogix.Authorization">
+        <methods>
+          <include name="close"/>
+          <include name="instantiation"/>
+          <include name="browesrnstatiation"/>
+        </methods>
+      </class> <!-- travlogix.Authorization -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.testng.eclipse.launchconfig">
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="org.testng.remote.RemoteTestNG"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="Project"/>
+<mapAttribute key="org.testng.eclipse.ALL_CLASS_METHODS"/>
+<listAttribute key="org.testng.eclipse.CLASS_TEST_LIST">
+<listEntry value="travlogixnegativescenarios.Hotelservicechargenegative"/>
+<listEntry value="travlogixnegativescenarios.Carmasternegativescenarios"/>
+<listEntry value="travlogixnegativescenarios.CarserviceChargenegative"/>
+<listEntry value="travlogixnegativescenarios.Airlinemasternegativvescenarios"/>
+<listEntry value="travlogixnegativescenarios.Hotelscrulenegative"/>
+<listEntry value="travlogixnegativescenarios.Taxnegativescenarios"/>
+<listEntry value="travlogixnegativescenarios.Branchmasternegativescenarios"/>
+<listEntry value="travlogixnegativescenarios.Creditcardmasternegativescenarios"/>
+<listEntry value="travlogixnegativescenarios.Miscservicechargenegative"/>
+<listEntry value="travlogixnegativescenarios.Vatsetupnegativescenarios"/>
+<listEntry value="travlogixnegativescenarios.Miscrulenegativescenarios"/>
+<listEntry value="travlogixnegativescenarios.Carscrulepagenegativescenarios"/>
+<listEntry value="travlogixnegativescenarios.Hotelmasternegativescenarios"/>
+<listEntry value="travlogixnegativescenarios.Airscrulenegative"/>
+<listEntry value="travlogixnegativescenarios.Authorizationnegativescenarios"/>
+<listEntry value="travlogixnegativescenarios.Executivenegativescenarios"/>
+<listEntry value="travlogixnegativescenarios.Airservicechargenegative"/>
+<listEntry value="travlogixnegativescenarios.Travelclassnegativescenarios"/>
+<listEntry value="travlogixnegativescenarios.Agentincentivenegative"/>
+<listEntry value="travlogixnegativescenarios.Accountsetupnegativescenarios"/>
+</listAttribute>
+<listAttribute key="org.testng.eclipse.METHOD_TEST_LIST"/>
+<listAttribute key="org.testng.eclipse.PACKAGE_TEST_LIST"/>
+<stringAttribute key="org.testng.eclipse.PRE_DEFINED_LISTENERS" value=""/>
+<intAttribute key="org.testng.eclipse.TYPE" value="1"/>
+</launchConfiguration>
