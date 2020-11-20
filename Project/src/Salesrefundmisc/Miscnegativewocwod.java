@@ -41,7 +41,7 @@ public class Miscnegativewocwod
 	}
 
 	@Test(dataProvider = "dp")
-	public void logincheckK(String Username, String Password, String Leftsidemenu, String Commonindex,
+	public void Miscnegativewocwod(String Username, String Password, String Leftsidemenu, String Commonindex,
 			String Documenttypee, String Customer, String dktLeadPaxName, String Salesbranch, String Servicetype,
 			String Payableagent, String Bookingexecutive, String Salesexecutive, String InboundOutbound,
 			String MiscConfirmationNumber,String MiscServiceDate1,
@@ -56,6 +56,7 @@ public class Miscnegativewocwod
 		// wm.sendtextbyid("", );
 		wm.sendtextbyid("LoginCode", Username);
 		Thread.sleep(50);
+		wm.stab("LoginCode");
 		wm.sendtextbyid("Password", Password);
 		Thread.sleep(50);
 		wm.clickbyxpath("//input[@value='Login']");

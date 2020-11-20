@@ -42,7 +42,7 @@ public class Hotelcopytickect
 	}
 
 	@Test(dataProvider = "dp")
-	public void logincheckK(String Username, String Password, String Leftsidemenu, String ActiveFrom1,
+	public void Hotelcopytickect(String Username, String Password, String Leftsidemenu, String ActiveFrom1,
 			String ActiveFrom2, String ActiveFrom3, String Docktype, String Docktypeindex, String Salesbracnh,
 			String Salesbracnhindex, String Customer, String Customerindex, String Leadpaxnamee,
 			String dktClientReference, String Tickectstatusindex,
@@ -70,6 +70,8 @@ public class Hotelcopytickect
 		// wm.sendtextbyid("", );
 		wm.sendtextbyid("LoginCode", Username);
 		Thread.sleep(50);
+		wm.stab("LoginCode");
+		
 		wm.sendtextbyid("Password", Password);
 		Thread.sleep(50);
 		wm.clickbyxpath("//input[@value='Login']");
@@ -154,131 +156,240 @@ public class Hotelcopytickect
         wm.clickbyxpath("//button[@id='ConformationYes']");
 	    wm.sleep();
 
+	    //payableagent
+	    wm.Verifythealertpopupmessagesusincontainsusinggetattribute("//input[@aria-owns='hotelProviderKey_listbox']"
+	    		, Payableagent, "Payableagent details retrived successfuly", "Payableagent details not retrived successfuly");
 	    
-	    wm.Verifythealertpopupmessagesusincontainsusinggetattribute("//input[@aria-owns='hotelProviderKey_listbox']", Payableagent, 
-	    		"Payableagent details retrived successfuly", "Payableagent details not retrived successfuly");
-	    
-		wm.sendtextbyxvalue("//input[@aria-owns='hotelProviderKey_listbox']", Payableagent);
-		Thread.sleep(200);
-		wm.Listandenter("//*[@id='hotelProviderKey_listbox']/li", Payableagentindex);
-		Thread.sleep(200);
-
-		// adut
-		wm.sendtextbycssselecotr("#hotelAdult", "" + hotelAdult);
 		Thread.sleep(90);
 
-		// child
-		wm.sendtextbycssselecotr("#hotelChild", "" + hotelChild);
-		Thread.sleep(80);
+		// Adult
+		
+		wm.Verifythealertpopupmessagesusincontainsusinggetattribute("//input[@name='hotelAdult']"
+				, hotelAdult, 
+	    		"hotelAdult details retrived successfuly", "hotelAdult details not retrived successfuly");
 
+		Thread.sleep(90);
+
+
+		// child
+/*		wm.sendtextbycssselecotr("#hotelChild", "" + hotelChild);
+		Thread.sleep(80);
+*/
+
+		wm.Verifythealertpopupmessagesusincontainsusinggetattribute("//input[@name='hotelChild']"
+				, hotelChild, 
+	    		"hotelChild details retrived successfuly", "hotelChild details not retrived successfuly");
+	    
+
+		Thread.sleep(90);
+		
+		
 		// booking executivee
-		wm.sendtextbyxvalue("//input[@aria-owns='hotelBookingUserName_listbox']", Bookingexecutive);
-		Thread.sleep(200);
-		wm.Listandenter("//*[@id='hotelBookingUserName_listbox']/li", Bookingexecutiveindexx);
-		Thread.sleep(200);
+		
+wm.Verifythealertpopupmessagesusincontainsusinggetattribute("//input[@aria-owns='hotelBookingUserName_listbox']"
+				, Bookingexecutive, 
+	    		"Bookingexecutive details retrived successfuly", "Bookingexecutive details not retrived successfuly");
+	    
+
+
+Thread.sleep(90);
 
 		// sales executivee
-		wm.sendtextbyxvalue("//input[@aria-owns='hotelSalesExecutiveName_listbox']", Salesexecutive);
-		Thread.sleep(200);
-		wm.Listandenter("//*[@id='hotelSalesExecutiveName_listbox']/li", Salesexecutiveindexx);
-		Thread.sleep(200);
+
+wm.Verifythealertpopupmessagesusincontainsusinggetattribute("//input[@aria-owns='hotelSalesExecutiveName_listbox']"
+				, Salesexecutive, 
+	    		"Salesexecutive details retrived successfuly", "Salesexecutive details not retrived successfuly");
+	    
+Thread.sleep(300);
+
+//Open the servicedetails header 
+
+wm.clickbyxpath("//*[@id='div_Hotel_Header_Details']/div[2]/div/div[1]/div[1]/a");
+Thread.sleep(900);
+
 
 		// date selections
 
-		wm.sendtextbycssselecotr("#hoteltktDate", "" + hoteltktDate1 + "-" + hoteltktDate2 + "-" + hoteltktDate3);
+//		wm.sendtextbycssselecotr("#hoteltktDate", "" + hoteltktDate1 + "-" + hoteltktDate2 + "-" + hoteltktDate3);
 
 		// Enter the Service detailss
 
-		wm.sendtextbyxvalue("//input[@aria-owns='hotelCityName_listbox']", Hotelcity);
+	/*	wm.sendtextbyxvalue("//input[@aria-owns='hotelCityName_listbox']", Hotelcity);
 		Thread.sleep(50);
 		wm.Listandenter("//*[@id='hotelCityName_listbox']/li", Commonindex);
 		Thread.sleep(200);
+	*/	
 
+wm.Verifythealertpopupmessagesusincontainsusinggetattribute("//input[@aria-owns='hotelCityName_listbox']"
+				, Hotelcity, 
+	    		"Hotelcity details retrived successfuly", "Hotelcity details not retrived successfuly");
+
+Thread.sleep(90);
 		// ente the hotelame
-		wm.sendtextbyxvalue("//input[@aria-owns='hotelHotelName_listbox']", Hotelname);
+		/*wm.sendtextbyxvalue("//input[@aria-owns='hotelHotelName_listbox']", Hotelname);
 		Thread.sleep(50);
 		wm.Listandenter("//*[@id='hotelHotelName_listbox']/li", Commonindex);
 		Thread.sleep(200);
+*/
+
+wm.Verifythealertpopupmessagesusincontainsusinggetattribute("//input[@aria-owns='hotelHotelName_listbox']"
+				, Hotelname, 
+	    		"Hotelname details retrived successfuly", "Hotelname details not retrived successfuly");
+
+Thread.sleep(90);
 
 		// enter the hotelchainn
-		wm.sendtextbyxvalue("//input[@aria-owns='hotelHotelChainKey_listbox']", Hotelchain);
+	/*	wm.sendtextbyxvalue("//input[@aria-owns='hotelHotelChainKey_listbox']", Hotelchain);
 		Thread.sleep(50);
 		wm.Listandenter("//*[@id='hotelHotelChainKey_listbox']/li", Commonindex);
 		Thread.sleep(200);
+*/
+wm.Verifythealertpopupmessagesusincontainsusinggetattribute("//input[@aria-owns='hotelHotelChainKey_listbox']"
+				, Hotelchain, 
+	    		"Hotelchain details retrived successfuly", "Hotelchain details not retrived successfuly");
+		
+
+Thread.sleep(90);
+		
 		// ente tthe hotelpropertycode
-		wm.sendtextbycssselecotrwithoutclear("#hotelHotelPropertyCode", hotelHotelPropertyCode);
+		/*wm.sendtextbycssselecotrwithoutclear("#hotelHotelPropertyCode", hotelHotelPropertyCode);
 		Thread.sleep(200);
+*/
+		wm.Verifythealertpopupmessagesusincontainsusinggetattribute("//input[@name='hotelHotelPropertyCode']"
+				, hotelHotelPropertyCode, 
+	    		"hotelHotelPropertyCode details retrived successfuly", "hotelHotelPropertyCode details not retrived successfuly");
 
+
+Thread.sleep(90);
 		// roomtypee
-
+/*
 		wm.sendtextbyxvalue("//input[@aria-owns='hotelRoomTypeKey_listbox']", Roomtypee);
 		Thread.sleep(50);
 		wm.Listandenter("//*[@id='hotelRoomTypeKey_listbox']/li", Commonindex);
 		Thread.sleep(200);
+*/
+		wm.Verifythealertpopupmessagesusincontainsusinggetattribute("//input[@aria-owns='hotelRoomTypeKey_listbox']"
+				, Roomtypee, 
+	    		"Roomtypee details retrived successfuly", "Roomtypee details not retrived successfuly");
 
+Thread.sleep(90);
+		
+		
 		// enter the roombaseics
-		wm.sendtextbyxvalue("//input[@aria-owns='hotelRoombasisCode_listbox']", Roombasics);
+	/*	wm.sendtextbyxvalue("//input[@aria-owns='hotelRoombasisCode_listbox']", Roombasics);
 		Thread.sleep(50);
 		wm.Listandenter("//*[@id='hotelRoombasisCode_listbox']/li", Commonindex);
 		Thread.sleep(200);
+*/
+		wm.Verifythealertpopupmessagesusincontainsusinggetattribute("//input[@aria-owns='hotelRoombasisCode_listbox']"
+				, Roombasics, 
+	    		"Roombasics details retrived successfuly", "Roombasics details not retrived successfuly");
 
+Thread.sleep(90);
+		
 		//// chekc in date
 
-		wm.sendtextbycssselecotr("#hotelCheckIn", "" + hotelCheckIn1 + "-" + hotelCheckIn2 + "-" + hotelCheckIn3);
+/*		wm.sendtextbycssselecotr("#hotelCheckIn", "" + hotelCheckIn1 + "-" + hotelCheckIn2 + "-" + hotelCheckIn3);
 		Thread.sleep(50);
 
-		// check out datee
+*/		// check out datee
 
-		wm.sendtextbycssselecotr("#hotelCheckOut", "" + hotelCheckOut1 + "-" + hotelCheckOut2 + "-" + hotelCheckOut3);
+/*		wm.sendtextbycssselecotr("#hotelCheckOut", "" + hotelCheckOut1 + "-" + hotelCheckOut2 + "-" + hotelCheckOut3);
 		Thread.sleep(50);
-
+*/
 		// no of unites
+/*
 		wm.sendtextbycssselecotrwithoutclear("#hotelNoOfRooms", "" + hotelNoOfRooms);
 		Thread.sleep(50);
+*/
+wm.Verifythealertpopupmessagesusincontainsusinggetattribute("//input[@name='hotelNoOfRooms']"
+				, hotelNoOfRooms, 
+	    		"hotelNoOfRooms details retrived successfuly", "hotelNoOfRooms details not retrived successfuly");
 
-		wm.sendtextbycssselecotrwithoutclear("#hotelConfirmationNumber", "" + hotelConfirmationNumber);
+Thread.sleep(90);
+		/*wm.sendtextbycssselecotrwithoutclear("#hotelConfirmationNumber", "" + hotelConfirmationNumber);
 		Thread.sleep(50);
+*/
 
+wm.Verifythealertpopupmessagesusincontainsusinggetattribute("//input[@name='hotelConfirmationNumber']"
+				, hotelConfirmationNumber, 
+	    		"hotelConfirmationNumber details retrived successfuly", "hotelConfirmationNumber details not retrived successfuly");
+
+Thread.sleep(90);
+
+		
 		// bboing reference
-		wm.sendtextbycssselecotrwithoutclear("#hotelBookingReference", "" + hotelBookingReference);
+	/*	wm.sendtextbycssselecotrwithoutclear("#hotelBookingReference", "" + hotelBookingReference);
 		Thread.sleep(50);
+*/
 
-		wm.sendtextbycssselecotrwithoutclear("#Remarks", "" + Remarks);
+wm.Verifythealertpopupmessagesusincontainsusinggetattribute("//input[@name='hotelBookingReference']"
+				, hotelBookingReference, 
+	    		"hotelBookingReference details retrived successfuly", "hotelBookingReference details not retrived successfuly");
+
+Thread.sleep(90);
+
+
+		
+/*		wm.sendtextbycssselecotrwithoutclear("#Remarks", "" + Remarks);
 		Thread.sleep(50);
-
+*/
 		// enter the Fare details
 
 		wm.clickbyxpath("//*[@id='div_Hotel_Header_Details']/div[2]/div/div[1]/div[1]/a");
 
-		Thread.sleep(900);
+		Thread.sleep(600);
 
+		wm.clickbyxpath("//*[@id='div_Hotel_Header_Details']/div[3]/div/div[1]/div[1]/a/i");
+
+		Thread.sleep(600);
+		
+		
 		// procee typee
-		wm.sendtextbyxvalue("//input[@aria-owns='hoteltfdProcessTypeKey_listbox']", Processtype);
+/*		wm.sendtextbyxvalue("//input[@aria-owns='hoteltfdProcessTypeKey_listbox']", Processtype);
 		Thread.sleep(50);
 		wm.Listandenter("//*[@id='hoteltfdProcessTypeKey_listbox']/li", Commonindex);
 		Thread.sleep(200);
+*/
+
+wm.Verifythealertpopupmessagesusincontainsusinggetattribute("//input[@aria-owns='hoteltfdProcessTypeKey_listbox']"
+				, Processtype, 
+	    		"Processtype details retrived successfuly", "Processtype details not retrived successfuly");
+
+
 
 		// Currency
-		wm.sendtextbyxvalue("//input[@aria-owns='hoteltfdTransCurrency_listbox']", Currency);
+		/*wm.sendtextbyxvalue("//input[@aria-owns='hoteltfdTransCurrency_listbox']", Currency);
 		Thread.sleep(50);
 		wm.Listandenter("//*[@id='hoteltfdTransCurrency_listbox']/li", Commonindex);
 		Thread.sleep(200);
+*/
+
+wm.Verifythealertpopupmessagesusincontainsusinggetattribute("//input[@aria-owns='hoteltfdTransCurrency_listbox']"
+				, Currency,"Currency details retrived successfuly", "Currency details not retrived successfuly");
+
 
 		// roomrate
 
-		wm.Clearbyxpath("//input[@name='hvd_room_rate']");
+/*		wm.Clearbyxpath("//input[@name='hvd_room_rate']");
 		Thread.sleep(50);
 
 		wm.sendtextbycssselecotr("#hvd_room_rate", "" + hvdroomrate);
 		Thread.sleep(200);
 		wm.sendtextbycssselecotr("#hoteltfdBaseFare", "" + hoteltfdBaseFare);
 		Thread.sleep(200);
-
+*/
 		// logigcard
 		wm.sendtextbyxvalue("//input[@aria-owns='HtfdOwnLodgeCardKey_listbox']", Lodgecard);
 		Thread.sleep(50);
 		wm.Listandenter("//*[@id='HtfdOwnLodgeCardKey_listbox']/li", Commonindex);
 		Thread.sleep(200);
+		
+wm.Verifythealertpopupmessagesusincontainsusinggetattribute("//input[@aria-owns='HtfdOwnLodgeCardKey_listbox']",
+		Lodgecard,"Lodgecard details retrived successfuly", "Lodgecard details not retrived successfuly");
+
+
+		/*
 
 		// enter the tzzx detailss
 
@@ -423,7 +534,7 @@ public class Hotelcopytickect
 		Thread.sleep(50);
 
 		wm.sleep();
-		Thread.sleep(300);
+*/		Thread.sleep(300);
 
 	}
 

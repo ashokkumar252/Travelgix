@@ -41,7 +41,7 @@ public class Miscnegative {
 	}
 
 	@Test(dataProvider = "dp")
-	public void logincheckK(String Username, String Password, String Leftsidemenu, String Commonindex,
+	public void Miscnegative(String Username, String Password, String Leftsidemenu, String Commonindex,
 			String Documenttypee, String Customer, String dktLeadPaxName, String Salesbranch, String Servicetype,
 			String Payableagent, String Bookingexecutive, String Salesexecutive, String InboundOutbound,
 			String MiscConfirmationNumber,String MiscServiceDate1,
@@ -56,6 +56,7 @@ public class Miscnegative {
 		// wm.sendtextbyid("", );
 		wm.sendtextbyid("LoginCode", Username);
 		Thread.sleep(50);
+		wm.stab("LoginCode");
 		wm.sendtextbyid("Password", Password);
 		Thread.sleep(50);
 		wm.clickbyxpath("//input[@value='Login']");
@@ -434,7 +435,7 @@ wm.comparetwovalues1to1("//input[@name='AirFopAmount']"
 Thread.sleep(200);
 
 wm.Netcollections("//input[@name='MiscRateDealFare']", "//input[@name='TotalTaxAmount']",
-		"//input[@name='TotalServiceFee']", "//input[@name='TotalDiscount']", " //input[@name='CO_OUTVAT']", 
+		"//input[@name='TotalServiceFee']", "//input[@name='TotalDiscount']", " //input[@name='TotOutputVat']", 
 		"//input[@name='Amt_NetCollection']", "Net calclaiton done correectly", "Net calclaiton not done correectly");
 
 

@@ -44,7 +44,7 @@ public class Airpositive {
 	}
 
 	@Test(dataProvider = "dp")
-	public void logincheckK(String Username, String Password, String Leftsidemenu, String ActiveFrom1,
+	public void Airpositive(String Username, String Password, String Leftsidemenu, String ActiveFrom1,
 			String ActiveFrom2, String ActiveFrom3, String Docktype, String Docktypeindex, String Salesbracnh,
 			String Salesbracnhindex, String Customer, String Customerindex, String Leadpaxnamee,
 			String dktClientReference, String Tickectstatusindex, String Airline, String Airlineindex,
@@ -64,7 +64,8 @@ public class Airpositive {
 			String Currency, String Currecnyindex, String AtfdBaseFare, String AtfdDealFare, String Aatcode,
 			String Aatcodeindex, String AatAmount, String Namee, String Nameeindex, String AtscBaseAmount,
 			String AtfdCommPercent1, String AtfdCommPercent2, String Agentincetive, String Agentincetiveindexx,
-			String AtfdDiscPercent1,String Modeindex,String Selectedbranch,String TravelStatusDN) throws Exception
+			String AtfdDiscPercent1,String Modeindex,String Selectedbranch,String TravelStatusDN,
+			String Class,String issuemode) throws Exception
 
 	{
 
@@ -73,6 +74,7 @@ public class Airpositive {
 		// wm.sendtextbyid("", );
 		wm.sendtextbyid("LoginCode", Username);
 		Thread.sleep(50);
+		wm.stab("LoginCode");
 		wm.sendtextbyid("Password", Password);
 		Thread.sleep(50);
 		wm.clickbyxpath("//input[@value='Login']");

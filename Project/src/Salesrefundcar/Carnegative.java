@@ -42,7 +42,7 @@ public class Carnegative {
 	}
 
 	@Test(dataProvider = "dp")
-	public void logincheckK(String Username, String Password, String Leftsidemenu, String Commonindex,
+	public void Carnegative(String Username, String Password, String Leftsidemenu, String Commonindex,
 			String Documenttypee, String Customer, String dktLeadPaxName, String invalidate1, String invalidate2,
 			String invalidate3, String hotelDate1, String hotelDate2, String hotelDate3, String Salesbranch,
 			String Payableagent, String Servicetypee,
@@ -61,6 +61,8 @@ public class Carnegative {
 		// wm.sendtextbyid("", );
 		wm.sendtextbyid("LoginCode", Username);
 		Thread.sleep(50);
+		wm.stab("LoginCode");
+		
 		wm.sendtextbyid("Password", Password);
 		Thread.sleep(50);
 		wm.clickbyxpath("//input[@value='Login']");
@@ -574,6 +576,18 @@ wm.comparetwovalues1to1("//input[@name='AirFopAmount']"
 		, "//input[@name='Amt_NetCollection']", 
 		"Pass: FOP and total amount matches successfully"
 		, " Fail: FOP and total amount not matches successfully");
+
+Thread.sleep(200);
+
+wm.Netcollections("//input[@name='CtfdBaseFare']", "//input[@name='TotalTaxAmount']",
+		"//input[@name='TotalServiceFee']", "//input[@name='TotalDiscount']", " //input[@name='TotOutputVat']", 
+		"//input[@name='Amt_NetCollection']", "Net calclaiton done correectly", "Net calclaiton not done correectly");
+
+
+wm.Publishedfare("//input[@name='CtfdBaseFare']", "//input[@name='TotalTaxAmount']", "//input[@name='salestotcommm']"
+		,"//input[@name='TotInputVat']", "//input[@name='Amt_NetPayable']", "Net payable Calclated successfuly", 
+		"Net payable not Calclated successfuly");
+
 
 
 		

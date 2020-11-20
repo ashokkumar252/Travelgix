@@ -1,0 +1,9 @@
+package Copytickectverifications;
+
+import org.testng.annotations.Test;
+
+public class Misccopytickect {
+  @Test
+  public void f() {
+  }
+}

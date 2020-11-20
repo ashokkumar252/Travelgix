@@ -44,7 +44,7 @@ public class Airnegative {
 	}
 
 	@Test(dataProvider = "dp")
-	public void logincheckK(String Username, String Password, String Leftsidemenu, String Commonindex,
+	public void Airnegative(String Username, String Password, String Leftsidemenu, String Commonindex,
 			String Notcollectedtick, String Partiallycollectedtick, String Collectedtickects, String Docketinbound,
 			String Docketoutbound, String Salesbranchinactivedata, String Afterselesalesbranchcodereflected,
 			String Acticecustomer, String Inactivecustomer, String Verifydocketinactivestatus,
@@ -72,6 +72,7 @@ public class Airnegative {
 		// wm.sendtextbyid("", );
 		wm.sendtextbyid("LoginCode", Username);
 		Thread.sleep(50);
+		wm.stab("LoginCode");
 		wm.sendtextbyid("Password", Password);
 		Thread.sleep(50);
 		wm.clickbyxpath("//input[@value='Login']");

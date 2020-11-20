@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="Double" key="selection"/>
+		<item value="CarPositivecredit" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="true" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="double"/>
-			<item value="commiss"/>
-			<item value="commi"/>
-			<item value="contain"/>
-			<item value="split"/>
-			<item value="Verifythealertpopupmessagesusincontainsusinggetattribute"/>
-			<item value="pop"/>
-			<item value="OwnLodgeCardKey_listbox"/>
+			<item value="CarPositivecredit"/>
+			<item value="Carcopytickect"/>
+			<item value="MiscConfirmationNumber "/>
+			<item value="Payableagent not retrived successfuly"/>
+			<item value="//*[@id=&quot;IdSAMiscDynamicServiceDetailsDiv&quot;]/div/div/div[1]/div[1]/a/i"/>
+			<item value="Miscvouchernumber"/>
+			<item value="vouch"/>
+			<item value="TravelStatusDN"/>
 		</list>
 		<list key="replacehistory">
 			<item value="click"/>

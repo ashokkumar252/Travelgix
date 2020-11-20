@@ -3,14 +3,54 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="Copytickectverifications.Hotelcopytickect">
+      <class name="SalesRefundPositivecases.CarPositivecredit">
+        <methods>
+          <include name="logincheckK"/>
+          <include name="instantiation"/>
+        </methods>
+      </class> <!-- SalesRefundPositivecases.CarPositivecredit -->
+      <class name="SalesRefundPositivecases.CarPositivecash">
         <methods>
           <include name="browesrnstatiation"/>
-          <include name="logincheckK" invocation-numbers="0"/>
           <include name="instantiation"/>
           <include name="close"/>
         </methods>
-      </class> <!-- Copytickectverifications.Hotelcopytickect -->
+      </class> <!-- SalesRefundPositivecases.CarPositivecash -->
+      <class name="SalesRefundPositivecases.Misccredit">
+        <methods>
+          <include name="instantiation"/>
+          <include name="close"/>
+          <include name="browesrnstatiation"/>
+        </methods>
+      </class> <!-- SalesRefundPositivecases.Misccredit -->
+      <class name="SalesRefundPositivecases.Hotelpositivecash">
+        <methods>
+          <include name="instantiation"/>
+          <include name="close"/>
+          <include name="browesrnstatiation"/>
+        </methods>
+      </class> <!-- SalesRefundPositivecases.Hotelpositivecash -->
+      <class name="SalesRefundPositivecases.Airpositive">
+        <methods>
+          <include name="logincheckK"/>
+          <include name="instantiation"/>
+        </methods>
+      </class> <!-- SalesRefundPositivecases.Airpositive -->
+      <class name="SalesRefundPositivecases.Hotelpositive">
+        <methods>
+          <include name="browesrnstatiation"/>
+          <include name="instantiation"/>
+          <include name="close"/>
+          <include name="logincheckK"/>
+        </methods>
+      </class> <!-- SalesRefundPositivecases.Hotelpositive -->
+      <class name="SalesRefundPositivecases.Misccash">
+        <methods>
+          <include name="browesrnstatiation"/>
+          <include name="close"/>
+          <include name="instantiation"/>
+        </methods>
+      </class> <!-- SalesRefundPositivecases.Misccash -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

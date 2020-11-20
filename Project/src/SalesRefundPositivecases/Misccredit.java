@@ -58,9 +58,7 @@ public class Misccredit {
 			
 			String ProjectNumberAP,String DepartmentAP,String MajorClassAP,String TravelStatusAP,
 			String TotalSavingCodeAP,String GroupTravelIndicatorAP,String TourCodeAP,String EndorsementRestrictAP,
-			String FareCalculationAreaAP,String IntlSalesIndicatorAP
-
-			
+			String FareCalculationAreaAP,String IntlSalesIndicatorAP,String Miscvouchernumber	
 ) throws Exception
 
 	{
@@ -70,6 +68,7 @@ public class Misccredit {
 		// wm.sendtextbyid("", );
 		wm.sendtextbyid("LoginCode", Username);
 		Thread.sleep(50);
+		wm.stab("LoginCode");
 		wm.sendtextbyid("Password", Password);
 		Thread.sleep(50);
 		wm.clickbyxpath("//input[@value='Login']");
