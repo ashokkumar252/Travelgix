@@ -1,5 +1,4 @@
 package SalesRefundnegativescenarios;
-
 import utility.Constant;
 import java.io.IOException;
 import java.sql.Driver;
@@ -14,7 +13,6 @@ import travlogix.Wrappermethods;
 import atu.testng.reports.listeners.ATUReportsListener;
 import atu.testng.reports.listeners.ConfigurationListener;
 import atu.testng.reports.listeners.MethodListener;
-
 @Listeners({ ATUReportsListener.class, ConfigurationListener.class, MethodListener.class })
 public class Airnegative {
 

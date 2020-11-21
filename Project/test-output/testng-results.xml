@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="3" ignored="0" total="7" passed="4">
+<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
     <line>
       <![CDATA[STEP1]]>
@@ -217,689 +217,24 @@
     <line>
       <![CDATA[STEP72]]>
     </line>
-    <line>
-      <![CDATA[STEP73]]>
-    </line>
-    <line>
-      <![CDATA[STEP74]]>
-    </line>
-    <line>
-      <![CDATA[STEP75]]>
-    </line>
-    <line>
-      <![CDATA[STEP76]]>
-    </line>
-    <line>
-      <![CDATA[STEP77]]>
-    </line>
-    <line>
-      <![CDATA[STEP78]]>
-    </line>
-    <line>
-      <![CDATA[STEP79]]>
-    </line>
-    <line>
-      <![CDATA[STEP80]]>
-    </line>
-    <line>
-      <![CDATA[STEP81]]>
-    </line>
-    <line>
-      <![CDATA[STEP82]]>
-    </line>
-    <line>
-      <![CDATA[STEP83]]>
-    </line>
-    <line>
-      <![CDATA[STEP84]]>
-    </line>
-    <line>
-      <![CDATA[STEP85]]>
-    </line>
-    <line>
-      <![CDATA[STEP86]]>
-    </line>
-    <line>
-      <![CDATA[STEP87]]>
-    </line>
-    <line>
-      <![CDATA[STEP88]]>
-    </line>
-    <line>
-      <![CDATA[STEP89]]>
-    </line>
-    <line>
-      <![CDATA[STEP90]]>
-    </line>
-    <line>
-      <![CDATA[STEP91]]>
-    </line>
-    <line>
-      <![CDATA[STEP92]]>
-    </line>
-    <line>
-      <![CDATA[STEP93]]>
-    </line>
-    <line>
-      <![CDATA[STEP94]]>
-    </line>
-    <line>
-      <![CDATA[STEP95]]>
-    </line>
-    <line>
-      <![CDATA[STEP96]]>
-    </line>
-    <line>
-      <![CDATA[STEP97]]>
-    </line>
-    <line>
-      <![CDATA[STEP98]]>
-    </line>
-    <line>
-      <![CDATA[STEP99]]>
-    </line>
-    <line>
-      <![CDATA[STEP100]]>
-    </line>
-    <line>
-      <![CDATA[STEP101]]>
-    </line>
-    <line>
-      <![CDATA[STEP102]]>
-    </line>
-    <line>
-      <![CDATA[STEP103]]>
-    </line>
-    <line>
-      <![CDATA[STEP104]]>
-    </line>
-    <line>
-      <![CDATA[STEP105]]>
-    </line>
-    <line>
-      <![CDATA[STEP106]]>
-    </line>
-    <line>
-      <![CDATA[STEP107]]>
-    </line>
-    <line>
-      <![CDATA[STEP108]]>
-    </line>
-    <line>
-      <![CDATA[STEP109]]>
-    </line>
-    <line>
-      <![CDATA[STEP110]]>
-    </line>
-    <line>
-      <![CDATA[STEP111]]>
-    </line>
-    <line>
-      <![CDATA[STEP112]]>
-    </line>
-    <line>
-      <![CDATA[STEP113]]>
-    </line>
-    <line>
-      <![CDATA[STEP114]]>
-    </line>
-    <line>
-      <![CDATA[STEP115]]>
-    </line>
-    <line>
-      <![CDATA[STEP116]]>
-    </line>
-    <line>
-      <![CDATA[STEP117]]>
-    </line>
-    <line>
-      <![CDATA[STEP118]]>
-    </line>
-    <line>
-      <![CDATA[STEP119]]>
-    </line>
-    <line>
-      <![CDATA[STEP120]]>
-    </line>
-    <line>
-      <![CDATA[STEP121]]>
-    </line>
-    <line>
-      <![CDATA[STEP122]]>
-    </line>
-    <line>
-      <![CDATA[STEP123]]>
-    </line>
-    <line>
-      <![CDATA[STEP124]]>
-    </line>
-    <line>
-      <![CDATA[STEP125]]>
-    </line>
-    <line>
-      <![CDATA[STEP126]]>
-    </line>
-    <line>
-      <![CDATA[STEP127]]>
-    </line>
-    <line>
-      <![CDATA[STEP128]]>
-    </line>
-    <line>
-      <![CDATA[STEP129]]>
-    </line>
-    <line>
-      <![CDATA[STEP130]]>
-    </line>
-    <line>
-      <![CDATA[STEP131]]>
-    </line>
-    <line>
-      <![CDATA[STEP132]]>
-    </line>
-    <line>
-      <![CDATA[STEP133]]>
-    </line>
-    <line>
-      <![CDATA[STEP134]]>
-    </line>
-    <line>
-      <![CDATA[STEP135]]>
-    </line>
-    <line>
-      <![CDATA[STEP136]]>
-    </line>
-    <line>
-      <![CDATA[STEP137]]>
-    </line>
-    <line>
-      <![CDATA[STEP138]]>
-    </line>
-    <line>
-      <![CDATA[STEP139]]>
-    </line>
-    <line>
-      <![CDATA[STEP140]]>
-    </line>
-    <line>
-      <![CDATA[STEP141]]>
-    </line>
-    <line>
-      <![CDATA[STEP142]]>
-    </line>
-    <line>
-      <![CDATA[STEP143]]>
-    </line>
-    <line>
-      <![CDATA[STEP144]]>
-    </line>
-    <line>
-      <![CDATA[STEP145]]>
-    </line>
-    <line>
-      <![CDATA[STEP146]]>
-    </line>
-    <line>
-      <![CDATA[STEP147]]>
-    </line>
-    <line>
-      <![CDATA[STEP148]]>
-    </line>
-    <line>
-      <![CDATA[STEP149]]>
-    </line>
-    <line>
-      <![CDATA[STEP150]]>
-    </line>
-    <line>
-      <![CDATA[STEP151]]>
-    </line>
-    <line>
-      <![CDATA[STEP152]]>
-    </line>
-    <line>
-      <![CDATA[STEP153]]>
-    </line>
-    <line>
-      <![CDATA[STEP154]]>
-    </line>
-    <line>
-      <![CDATA[STEP155]]>
-    </line>
-    <line>
-      <![CDATA[STEP156]]>
-    </line>
-    <line>
-      <![CDATA[STEP157]]>
-    </line>
-    <line>
-      <![CDATA[STEP158]]>
-    </line>
-    <line>
-      <![CDATA[STEP159]]>
-    </line>
-    <line>
-      <![CDATA[STEP160]]>
-    </line>
-    <line>
-      <![CDATA[STEP161]]>
-    </line>
-    <line>
-      <![CDATA[STEP162]]>
-    </line>
-    <line>
-      <![CDATA[STEP163]]>
-    </line>
-    <line>
-      <![CDATA[STEP164]]>
-    </line>
-    <line>
-      <![CDATA[STEP165]]>
-    </line>
-    <line>
-      <![CDATA[STEP166]]>
-    </line>
-    <line>
-      <![CDATA[STEP167]]>
-    </line>
-    <line>
-      <![CDATA[STEP168]]>
-    </line>
-    <line>
-      <![CDATA[STEP169]]>
-    </line>
-    <line>
-      <![CDATA[STEP170]]>
-    </line>
-    <line>
-      <![CDATA[STEP171]]>
-    </line>
-    <line>
-      <![CDATA[STEP172]]>
-    </line>
-    <line>
-      <![CDATA[STEP173]]>
-    </line>
-    <line>
-      <![CDATA[STEP174]]>
-    </line>
-    <line>
-      <![CDATA[STEP175]]>
-    </line>
-    <line>
-      <![CDATA[STEP176]]>
-    </line>
-    <line>
-      <![CDATA[STEP177]]>
-    </line>
-    <line>
-      <![CDATA[STEP178]]>
-    </line>
-    <line>
-      <![CDATA[STEP179]]>
-    </line>
-    <line>
-      <![CDATA[STEP180]]>
-    </line>
-    <line>
-      <![CDATA[STEP181]]>
-    </line>
-    <line>
-      <![CDATA[STEP182]]>
-    </line>
-    <line>
-      <![CDATA[STEP183]]>
-    </line>
-    <line>
-      <![CDATA[STEP184]]>
-    </line>
-    <line>
-      <![CDATA[STEP185]]>
-    </line>
-    <line>
-      <![CDATA[STEP186]]>
-    </line>
-    <line>
-      <![CDATA[STEP187]]>
-    </line>
-    <line>
-      <![CDATA[STEP188]]>
-    </line>
-    <line>
-      <![CDATA[STEP189]]>
-    </line>
-    <line>
-      <![CDATA[STEP190]]>
-    </line>
-    <line>
-      <![CDATA[STEP191]]>
-    </line>
-    <line>
-      <![CDATA[STEP192]]>
-    </line>
-    <line>
-      <![CDATA[STEP193]]>
-    </line>
-    <line>
-      <![CDATA[STEP194]]>
-    </line>
-    <line>
-      <![CDATA[STEP195]]>
-    </line>
-    <line>
-      <![CDATA[STEP196]]>
-    </line>
-    <line>
-      <![CDATA[STEP197]]>
-    </line>
-    <line>
-      <![CDATA[STEP198]]>
-    </line>
-    <line>
-      <![CDATA[STEP199]]>
-    </line>
-    <line>
-      <![CDATA[STEP200]]>
-    </line>
-    <line>
-      <![CDATA[STEP201]]>
-    </line>
-    <line>
-      <![CDATA[STEP202]]>
-    </line>
-    <line>
-      <![CDATA[STEP203]]>
-    </line>
-    <line>
-      <![CDATA[STEP204]]>
-    </line>
-    <line>
-      <![CDATA[STEP205]]>
-    </line>
-    <line>
-      <![CDATA[STEP206]]>
-    </line>
-    <line>
-      <![CDATA[STEP207]]>
-    </line>
-    <line>
-      <![CDATA[STEP208]]>
-    </line>
-    <line>
-      <![CDATA[STEP209]]>
-    </line>
-    <line>
-      <![CDATA[STEP210]]>
-    </line>
-    <line>
-      <![CDATA[STEP211]]>
-    </line>
-    <line>
-      <![CDATA[STEP212]]>
-    </line>
-    <line>
-      <![CDATA[STEP213]]>
-    </line>
-    <line>
-      <![CDATA[STEP214]]>
-    </line>
-    <line>
-      <![CDATA[STEP215]]>
-    </line>
-    <line>
-      <![CDATA[STEP216]]>
-    </line>
-    <line>
-      <![CDATA[STEP217]]>
-    </line>
-    <line>
-      <![CDATA[STEP218]]>
-    </line>
-    <line>
-      <![CDATA[STEP219]]>
-    </line>
-    <line>
-      <![CDATA[STEP220]]>
-    </line>
-    <line>
-      <![CDATA[STEP221]]>
-    </line>
-    <line>
-      <![CDATA[STEP222]]>
-    </line>
-    <line>
-      <![CDATA[STEP223]]>
-    </line>
-    <line>
-      <![CDATA[STEP224]]>
-    </line>
-    <line>
-      <![CDATA[STEP225]]>
-    </line>
-    <line>
-      <![CDATA[STEP226]]>
-    </line>
-    <line>
-      <![CDATA[STEP227]]>
-    </line>
-    <line>
-      <![CDATA[STEP228]]>
-    </line>
-    <line>
-      <![CDATA[STEP229]]>
-    </line>
-    <line>
-      <![CDATA[STEP230]]>
-    </line>
-    <line>
-      <![CDATA[STEP231]]>
-    </line>
-    <line>
-      <![CDATA[STEP232]]>
-    </line>
-    <line>
-      <![CDATA[STEP233]]>
-    </line>
-    <line>
-      <![CDATA[STEP234]]>
-    </line>
-    <line>
-      <![CDATA[STEP235]]>
-    </line>
-    <line>
-      <![CDATA[STEP236]]>
-    </line>
-    <line>
-      <![CDATA[STEP237]]>
-    </line>
-    <line>
-      <![CDATA[STEP238]]>
-    </line>
-    <line>
-      <![CDATA[STEP239]]>
-    </line>
-    <line>
-      <![CDATA[STEP240]]>
-    </line>
-    <line>
-      <![CDATA[STEP241]]>
-    </line>
-    <line>
-      <![CDATA[STEP242]]>
-    </line>
-    <line>
-      <![CDATA[STEP243]]>
-    </line>
-    <line>
-      <![CDATA[STEP244]]>
-    </line>
-    <line>
-      <![CDATA[STEP245]]>
-    </line>
-    <line>
-      <![CDATA[STEP246]]>
-    </line>
-    <line>
-      <![CDATA[STEP247]]>
-    </line>
-    <line>
-      <![CDATA[STEP248]]>
-    </line>
-    <line>
-      <![CDATA[STEP249]]>
-    </line>
-    <line>
-      <![CDATA[STEP250]]>
-    </line>
-    <line>
-      <![CDATA[STEP251]]>
-    </line>
-    <line>
-      <![CDATA[STEP252]]>
-    </line>
-    <line>
-      <![CDATA[STEP253]]>
-    </line>
-    <line>
-      <![CDATA[STEP254]]>
-    </line>
-    <line>
-      <![CDATA[STEP255]]>
-    </line>
-    <line>
-      <![CDATA[STEP256]]>
-    </line>
-    <line>
-      <![CDATA[STEP257]]>
-    </line>
-    <line>
-      <![CDATA[STEP258]]>
-    </line>
-    <line>
-      <![CDATA[STEP259]]>
-    </line>
-    <line>
-      <![CDATA[STEP260]]>
-    </line>
-    <line>
-      <![CDATA[STEP261]]>
-    </line>
-    <line>
-      <![CDATA[STEP262]]>
-    </line>
-    <line>
-      <![CDATA[STEP263]]>
-    </line>
-    <line>
-      <![CDATA[STEP264]]>
-    </line>
-    <line>
-      <![CDATA[STEP265]]>
-    </line>
-    <line>
-      <![CDATA[STEP266]]>
-    </line>
-    <line>
-      <![CDATA[STEP267]]>
-    </line>
-    <line>
-      <![CDATA[STEP268]]>
-    </line>
-    <line>
-      <![CDATA[STEP269]]>
-    </line>
-    <line>
-      <![CDATA[STEP270]]>
-    </line>
-    <line>
-      <![CDATA[STEP271]]>
-    </line>
-    <line>
-      <![CDATA[STEP272]]>
-    </line>
-    <line>
-      <![CDATA[STEP273]]>
-    </line>
-    <line>
-      <![CDATA[STEP274]]>
-    </line>
-    <line>
-      <![CDATA[STEP275]]>
-    </line>
-    <line>
-      <![CDATA[STEP276]]>
-    </line>
-    <line>
-      <![CDATA[STEP277]]>
-    </line>
-    <line>
-      <![CDATA[STEP278]]>
-    </line>
-    <line>
-      <![CDATA[STEP279]]>
-    </line>
-    <line>
-      <![CDATA[STEP280]]>
-    </line>
-    <line>
-      <![CDATA[STEP281]]>
-    </line>
-    <line>
-      <![CDATA[STEP282]]>
-    </line>
-    <line>
-      <![CDATA[STEP283]]>
-    </line>
-    <line>
-      <![CDATA[STEP284]]>
-    </line>
-    <line>
-      <![CDATA[STEP285]]>
-    </line>
-    <line>
-      <![CDATA[STEP286]]>
-    </line>
-    <line>
-      <![CDATA[STEP287]]>
-    </line>
-    <line>
-      <![CDATA[STEP288]]>
-    </line>
-    <line>
-      <![CDATA[STEP289]]>
-    </line>
-    <line>
-      <![CDATA[STEP290]]>
-    </line>
-    <line>
-      <![CDATA[STEP291]]>
-    </line>
-    <line>
-      <![CDATA[STEP292]]>
-    </line>
-    <line>
-      <![CDATA[STEP293]]>
-    </line>
-    <line>
-      <![CDATA[STEP294]]>
-    </line>
-    <line>
-      <![CDATA[STEP295]]>
-    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="2235651" started-at="2020-11-20T03:50:55Z" finished-at="2020-11-20T04:28:11Z">
+  <suite name="Default suite" duration-ms="522249" started-at="2020-11-20T21:06:50Z" finished-at="2020-11-20T21:15:32Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="2235651" started-at="2020-11-20T03:50:55Z" finished-at="2020-11-20T04:28:11Z">
-      <class name="SalesRefundPositivecases.CarPositivecash">
-        <test-method status="PASS" signature="browesrnstatiation()[pri:0, instance:SalesRefundPositivecases.CarPositivecash@d25987]" name="browesrnstatiation" is-config="true" duration-ms="8015" started-at="2020-11-20T09:36:13Z" finished-at="2020-11-20T09:36:21Z">
+    <test name="Default test" duration-ms="522249" started-at="2020-11-20T21:06:50Z" finished-at="2020-11-20T21:15:32Z">
+      <class name="travlogix.BusinessPartnersupplier">
+        <test-method status="PASS" signature="instantiation()[pri:0, instance:travlogix.BusinessPartnersupplier@15530b9]" name="instantiation" is-config="true" duration-ms="215" started-at="2020-11-21T02:36:50Z" finished-at="2020-11-21T02:36:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- instantiation -->
+        <test-method status="PASS" signature="browesrnstatiation()[pri:0, instance:travlogix.BusinessPartnersupplier@15530b9]" name="browesrnstatiation" is-config="true" duration-ms="10572" started-at="2020-11-21T02:36:53Z" finished-at="2020-11-21T02:37:03Z">
           <reporter-output>
             <line>
-              <![CDATA[STEP111]]>
+              <![CDATA[STEP1]]>
             </line>
           </reporter-output>
         </test-method> <!-- browesrnstatiation -->
-        <test-method status="PASS" signature="logincheckK(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:SalesRefundPositivecases.CarPositivecash@d25987]" name="logincheckK" duration-ms="468752" started-at="2020-11-20T09:36:21Z" data-provider="dp" finished-at="2020-11-20T09:44:10Z">
+        <test-method status="FAIL" signature="logincheckK(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:travlogix.BusinessPartnersupplier@15530b9]" name="logincheckK" duration-ms="505003" started-at="2020-11-21T02:37:03Z" data-provider="dp" finished-at="2020-11-21T02:45:28Z">
           <params>
             <param index="0">
               <value>
@@ -913,27 +248,27 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[Sales / Refund]]>
+                <![CDATA[Business Partner]]>
               </value>
             </param>
             <param index="3">
               <value>
-                <![CDATA[28]]>
+                <![CDATA[Supplier]]>
               </value>
             </param>
             <param index="4">
               <value>
-                <![CDATA[NOV]]>
+                <![CDATA[12011]]>
               </value>
             </param>
             <param index="5">
               <value>
-                <![CDATA[2020]]>
+                <![CDATA[OMAN]]>
               </value>
             </param>
             <param index="6">
               <value>
-                <![CDATA[OUTBOUND DOCKET]]>
+                <![CDATA[OFFLINE]]>
               </value>
             </param>
             <param index="7">
@@ -943,32 +278,32 @@
             </param>
             <param index="8">
               <value>
-                <![CDATA[AEBR01]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="9">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[C]]>
               </value>
             </param>
             <param index="10">
               <value>
-                <![CDATA[AE - CRYSTAL TRADING - EXMPT]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="11">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[AED]]>
               </value>
             </param>
             <param index="12">
               <value>
-                <![CDATA[Hotelbookings]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="13">
               <value>
-                <![CDATA[Hotelbookings]]>
+                <![CDATA[Tick]]>
               </value>
             </param>
             <param index="14">
@@ -978,500 +313,747 @@
             </param>
             <param index="15">
               <value>
-                <![CDATA[AE - BPS - Comp1]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="16">
               <value>
-                <![CDATA[1]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="17">
               <value>
-                <![CDATA[1]]>
+                <![CDATA[B]]>
               </value>
             </param>
             <param index="18">
               <value>
-                <![CDATA[BU111 - Mr.Comp 1 Branch 1 User 1]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="19">
               <value>
-                <![CDATA[BU111 - Mr.Comp 1 Branch 1 User 1]]>
+                <![CDATA[Cu]]>
               </value>
             </param>
             <param index="20">
               <value>
-                <![CDATA[06]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="21">
               <value>
-                <![CDATA[NOV]]>
+                <![CDATA[C]]>
               </value>
             </param>
             <param index="22">
               <value>
-                <![CDATA[2020]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="23">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[No]]>
               </value>
             </param>
             <param index="24">
               <value>
-                <![CDATA[24]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="25">
               <value>
-                <![CDATA[NOV]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="26">
               <value>
-                <![CDATA[2020]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="27">
               <value>
-                <![CDATA[pcc 5444]]>
+                <![CDATA[Office Address - Comp1]]>
               </value>
             </param>
             <param index="28">
               <value>
-                <![CDATA[pcc 5444]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="29">
               <value>
-                <![CDATA[1000]]>
+                <![CDATA[Chennai]]>
               </value>
             </param>
             <param index="30">
               <value>
-                <![CDATA[100]]>
+                <![CDATA[India]]>
               </value>
             </param>
             <param index="31">
               <value>
-                <![CDATA[testt]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="32">
               <value>
-                <![CDATA[Dubai]]>
+                <![CDATA[T]]>
               </value>
             </param>
             <param index="33">
               <value>
-                <![CDATA[Fordicon]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="34">
               <value>
-                <![CDATA[Friends Track]]>
+                <![CDATA[c]]>
               </value>
             </param>
             <param index="35">
               <value>
-                <![CDATA[DUBAI AIRPORT, DUBAI, United Arab Emirates]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="36">
               <value>
-                <![CDATA[Hotel]]>
+                <![CDATA[909019]]>
               </value>
             </param>
             <param index="37">
               <value>
-                <![CDATA[06]]>
+                <![CDATA[TEST]]>
               </value>
             </param>
             <param index="38">
               <value>
-                <![CDATA[Nov]]>
+                <![CDATA[9090909090]]>
               </value>
             </param>
             <param index="39">
               <value>
-                <![CDATA[2020]]>
+                <![CDATA[9090909090]]>
               </value>
             </param>
             <param index="40">
               <value>
-                <![CDATA[07]]>
+                <![CDATA[9090909090]]>
               </value>
             </param>
             <param index="41">
               <value>
-                <![CDATA[Nov]]>
+                <![CDATA[ask@gmail.com]]>
               </value>
             </param>
             <param index="42">
               <value>
-                <![CDATA[2020]]>
+                <![CDATA[ask1@gmai.com]]>
               </value>
             </param>
             <param index="43">
               <value>
-                <![CDATA[1]]>
+                <![CDATA[N]]>
               </value>
             </param>
             <param index="44">
               <value>
-                <![CDATA[QWERG]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="45">
               <value>
-                <![CDATA[123451234]]>
+                <![CDATA[Cmkalsop]]>
               </value>
             </param>
             <param index="46">
               <value>
-                <![CDATA[Testt]]>
+                <![CDATA[Y]]>
               </value>
             </param>
             <param index="47">
               <value>
-                <![CDATA[Normal]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="48">
               <value>
-                <![CDATA[AED]]>
+                <![CDATA[902920]]>
               </value>
             </param>
             <param index="49">
               <value>
-                <![CDATA[50]]>
+                <![CDATA[902920]]>
               </value>
             </param>
             <param index="50">
               <value>
-                <![CDATA[40]]>
+                <![CDATA[902920]]>
               </value>
             </param>
             <param index="51">
               <value>
-                <![CDATA[HDFC Card]]>
+                <![CDATA[Y]]>
               </value>
             </param>
             <param index="52">
               <value>
-                <![CDATA[10]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="53">
               <value>
-                <![CDATA[5]]>
+                <![CDATA[M]]>
               </value>
             </param>
             <param index="54">
               <value>
-                <![CDATA[CSRC003]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="55">
               <value>
-                <![CDATA[1]]>
+                <![CDATA[M]]>
               </value>
             </param>
             <param index="56">
               <value>
-                <![CDATA[1]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="57">
               <value>
-                <![CDATA[1]]>
+                <![CDATA[I]]>
               </value>
             </param>
             <param index="58">
               <value>
-                <![CDATA[MR. FIXED AGENT 02]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="59">
               <value>
-                <![CDATA[910292039]]>
+                <![CDATA[Cl]]>
               </value>
             </param>
             <param index="60">
               <value>
-                <![CDATA[TESTT]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="61">
               <value>
-                <![CDATA[TESTT]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="62">
               <value>
-                <![CDATA[Pass]]>
+                <![CDATA[ask]]>
               </value>
             </param>
             <param index="63">
               <value>
-                <![CDATA[QWERS]]>
+                <![CDATA[ask]]>
               </value>
             </param>
             <param index="64">
               <value>
-                <![CDATA[QWERS]]>
+                <![CDATA[ask]]>
               </value>
             </param>
             <param index="65">
               <value>
-                <![CDATA[QWERS]]>
+                <![CDATA[9090990090]]>
               </value>
             </param>
             <param index="66">
               <value>
-                <![CDATA[QWERS]]>
+                <![CDATA[090999909]]>
               </value>
             </param>
             <param index="67">
               <value>
-                <![CDATA[QWERS]]>
+                <![CDATA[0990909090]]>
               </value>
             </param>
             <param index="68">
               <value>
-                <![CDATA[QWERS]]>
+                <![CDATA[klopkdo@gmail.com]]>
               </value>
             </param>
             <param index="69">
               <value>
-                <![CDATA[AE Branch 01 - Dubai]]>
+                <![CDATA[asklm]]>
+              </value>
+            </param>
+            <param index="70">
+              <value>
+                <![CDATA[asklm]]>
+              </value>
+            </param>
+            <param index="71">
+              <value>
+                <![CDATA[asklm]]>
+              </value>
+            </param>
+            <param index="72">
+              <value>
+                <![CDATA[asklm]]>
+              </value>
+            </param>
+            <param index="73">
+              <value>
+                <![CDATA[asklm]]>
+              </value>
+            </param>
+            <param index="74">
+              <value>
+                <![CDATA[Indianbank]]>
+              </value>
+            </param>
+            <param index="75">
+              <value>
+                <![CDATA[chennai]]>
+              </value>
+            </param>
+            <param index="76">
+              <value>
+                <![CDATA[Bank]]>
+              </value>
+            </param>
+            <param index="77">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="78">
+              <value>
+                <![CDATA[India]]>
+              </value>
+            </param>
+            <param index="79">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="80">
+              <value>
+                <![CDATA[Chennai]]>
+              </value>
+            </param>
+            <param index="81">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="82">
+              <value>
+                <![CDATA[90192393332]]>
+              </value>
+            </param>
+            <param index="83">
+              <value>
+                <![CDATA[IDKFO09]]>
+              </value>
+            </param>
+            <param index="84">
+              <value>
+                <![CDATA[DFGKL90]]>
+              </value>
+            </param>
+            <param index="85">
+              <value>
+                <![CDATA[912039103]]>
+              </value>
+            </param>
+            <param index="86">
+              <value>
+                <![CDATA["oman]]>
+              </value>
+            </param>
+            <param index="87">
+              <value>
+                <![CDATA[99090290939]]>
+              </value>
+            </param>
+            <param index="88">
+              <value>
+                <![CDATA[A]]>
+              </value>
+            </param>
+            <param index="89">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="90">
+              <value>
+                <![CDATA[5]]>
+              </value>
+            </param>
+            <param index="91">
+              <value>
+                <![CDATA[OCT]]>
+              </value>
+            </param>
+            <param index="92">
+              <value>
+                <![CDATA[2020]]>
+              </value>
+            </param>
+            <param index="93">
+              <value>
+                <![CDATA[11]]>
+              </value>
+            </param>
+            <param index="94">
+              <value>
+                <![CDATA[Oct]]>
+              </value>
+            </param>
+            <param index="95">
+              <value>
+                <![CDATA[2020]]>
+              </value>
+            </param>
+            <param index="96">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="97">
+              <value>
+                <![CDATA[USD]]>
+              </value>
+            </param>
+            <param index="98">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="99">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="100">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="101">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="102">
+              <value>
+                <![CDATA[10]]>
+              </value>
+            </param>
+            <param index="103">
+              <value>
+                <![CDATA[10293]]>
+              </value>
+            </param>
+            <param index="104">
+              <value>
+                <![CDATA[PCC]]>
+              </value>
+            </param>
+            <param index="105">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="106">
+              <value>
+                <![CDATA[100]]>
+              </value>
+            </param>
+            <param index="107">
+              <value>
+                <![CDATA[5]]>
+              </value>
+            </param>
+            <param index="108">
+              <value>
+                <![CDATA[Oct]]>
+              </value>
+            </param>
+            <param index="109">
+              <value>
+                <![CDATA[2020]]>
+              </value>
+            </param>
+            <param index="110">
+              <value>
+                <![CDATA[11]]>
+              </value>
+            </param>
+            <param index="111">
+              <value>
+                <![CDATA[Oct]]>
+              </value>
+            </param>
+            <param index="112">
+              <value>
+                <![CDATA[2020]]>
+              </value>
+            </param>
+            <param index="113">
+              <value>
+                <![CDATA[OMANN]]>
+              </value>
+            </param>
+            <param index="114">
+              <value>
+                <![CDATA[A]]>
+              </value>
+            </param>
+            <param index="115">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="116">
+              <value>
+                <![CDATA[902]]>
+              </value>
+            </param>
+            <param index="117">
+              <value>
+                <![CDATA[A]]>
+              </value>
+            </param>
+            <param index="118">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="119">
+              <value>
+                <![CDATA[222]]>
+              </value>
+            </param>
+            <param index="120">
+              <value>
+                <![CDATA[Tr]]>
+              </value>
+            </param>
+            <param index="121">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="122">
+              <value>
+                <![CDATA[M]]>
+              </value>
+            </param>
+            <param index="123">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="124">
+              <value>
+                <![CDATA[5]]>
+              </value>
+            </param>
+            <param index="125">
+              <value>
+                <![CDATA[Oct]]>
+              </value>
+            </param>
+            <param index="126">
+              <value>
+                <![CDATA[2020]]>
+              </value>
+            </param>
+            <param index="127">
+              <value>
+                <![CDATA[11]]>
+              </value>
+            </param>
+            <param index="128">
+              <value>
+                <![CDATA[Oct]]>
+              </value>
+            </param>
+            <param index="129">
+              <value>
+                <![CDATA[2020]]>
+              </value>
+            </param>
+            <param index="130">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="131">
+              <value>
+                <![CDATA[a]]>
+              </value>
+            </param>
+            <param index="132">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="133">
+              <value>
+                <![CDATA[Fr]]>
+              </value>
+            </param>
+            <param index="134">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="135">
+              <value>
+                <![CDATA[100]]>
+              </value>
+            </param>
+            <param index="136">
+              <value>
+                <![CDATA[USD]]>
+              </value>
+            </param>
+            <param index="137">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="138">
+              <value>
+                <![CDATA[OMAN]]>
+              </value>
+            </param>
+            <param index="139">
+              <value>
+                <![CDATA[5]]>
+              </value>
+            </param>
+            <param index="140">
+              <value>
+                <![CDATA[Oct]]>
+              </value>
+            </param>
+            <param index="141">
+              <value>
+                <![CDATA[2020]]>
+              </value>
+            </param>
+            <param index="142">
+              <value>
+                <![CDATA[11]]>
+              </value>
+            </param>
+            <param index="143">
+              <value>
+                <![CDATA[Oct]]>
+              </value>
+            </param>
+            <param index="144">
+              <value>
+                <![CDATA[2020]]>
+              </value>
+            </param>
+            <param index="145">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="146">
+              <value>
+                <![CDATA[Debtors]]>
+              </value>
+            </param>
+            <param index="147">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="148">
+              <value>
+                <![CDATA[a]]>
+              </value>
+            </param>
+            <param index="149">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="150">
+              <value>
+                <![CDATA[Center Province]]>
+              </value>
+            </param>
+            <param index="151">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="152">
+              <value>
+                <![CDATA[a]]>
+              </value>
+            </param>
+            <param index="153">
+              <value>
+                <![CDATA[0]]>
               </value>
             </param>
           </params>
-          <reporter-output>
-            <line>
-              <![CDATA[STEP112]]>
-            </line>
-            <line>
-              <![CDATA[STEP113]]>
-            </line>
-            <line>
-              <![CDATA[STEP114]]>
-            </line>
-            <line>
-              <![CDATA[STEP115]]>
-            </line>
-            <line>
-              <![CDATA[STEP116]]>
-            </line>
-            <line>
-              <![CDATA[STEP117]]>
-            </line>
-            <line>
-              <![CDATA[STEP118]]>
-            </line>
-            <line>
-              <![CDATA[STEP119]]>
-            </line>
-            <line>
-              <![CDATA[STEP120]]>
-            </line>
-            <line>
-              <![CDATA[STEP121]]>
-            </line>
-            <line>
-              <![CDATA[STEP122]]>
-            </line>
-            <line>
-              <![CDATA[STEP123]]>
-            </line>
-            <line>
-              <![CDATA[STEP124]]>
-            </line>
-            <line>
-              <![CDATA[STEP125]]>
-            </line>
-            <line>
-              <![CDATA[STEP126]]>
-            </line>
-            <line>
-              <![CDATA[STEP127]]>
-            </line>
-            <line>
-              <![CDATA[STEP128]]>
-            </line>
-            <line>
-              <![CDATA[STEP129]]>
-            </line>
-            <line>
-              <![CDATA[STEP130]]>
-            </line>
-            <line>
-              <![CDATA[STEP131]]>
-            </line>
-            <line>
-              <![CDATA[STEP132]]>
-            </line>
-            <line>
-              <![CDATA[STEP133]]>
-            </line>
-            <line>
-              <![CDATA[STEP134]]>
-            </line>
-            <line>
-              <![CDATA[STEP135]]>
-            </line>
-            <line>
-              <![CDATA[STEP136]]>
-            </line>
-            <line>
-              <![CDATA[STEP137]]>
-            </line>
-            <line>
-              <![CDATA[STEP138]]>
-            </line>
-            <line>
-              <![CDATA[STEP139]]>
-            </line>
-            <line>
-              <![CDATA[STEP140]]>
-            </line>
-            <line>
-              <![CDATA[STEP141]]>
-            </line>
-            <line>
-              <![CDATA[STEP142]]>
-            </line>
-            <line>
-              <![CDATA[STEP143]]>
-            </line>
-            <line>
-              <![CDATA[STEP144]]>
-            </line>
-            <line>
-              <![CDATA[STEP145]]>
-            </line>
-            <line>
-              <![CDATA[STEP146]]>
-            </line>
-            <line>
-              <![CDATA[STEP147]]>
-            </line>
-            <line>
-              <![CDATA[STEP148]]>
-            </line>
-            <line>
-              <![CDATA[STEP149]]>
-            </line>
-            <line>
-              <![CDATA[STEP150]]>
-            </line>
-            <line>
-              <![CDATA[STEP151]]>
-            </line>
-            <line>
-              <![CDATA[STEP152]]>
-            </line>
-            <line>
-              <![CDATA[STEP153]]>
-            </line>
-            <line>
-              <![CDATA[STEP154]]>
-            </line>
-            <line>
-              <![CDATA[STEP155]]>
-            </line>
-            <line>
-              <![CDATA[STEP156]]>
-            </line>
-            <line>
-              <![CDATA[STEP157]]>
-            </line>
-            <line>
-              <![CDATA[STEP158]]>
-            </line>
-            <line>
-              <![CDATA[STEP159]]>
-            </line>
-            <line>
-              <![CDATA[STEP160]]>
-            </line>
-            <line>
-              <![CDATA[STEP161]]>
-            </line>
-            <line>
-              <![CDATA[STEP162]]>
-            </line>
-            <line>
-              <![CDATA[STEP163]]>
-            </line>
-            <line>
-              <![CDATA[STEP164]]>
-            </line>
-            <line>
-              <![CDATA[STEP165]]>
-            </line>
-            <line>
-              <![CDATA[STEP166]]>
-            </line>
-            <line>
-              <![CDATA[STEP167]]>
-            </line>
-            <line>
-              <![CDATA[STEP168]]>
-            </line>
-            <line>
-              <![CDATA[STEP169]]>
-            </line>
-            <line>
-              <![CDATA[STEP170]]>
-            </line>
-            <line>
-              <![CDATA[STEP171]]>
-            </line>
-            <line>
-              <![CDATA[STEP172]]>
-            </line>
-            <line>
-              <![CDATA[STEP173]]>
-            </line>
-            <line>
-              <![CDATA[STEP174]]>
-            </line>
-            <line>
-              <![CDATA[STEP175]]>
-            </line>
-            <line>
-              <![CDATA[STEP176]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- logincheckK -->
-        <test-method status="PASS" signature="close()[pri:0, instance:SalesRefundPositivecases.CarPositivecash@d25987]" name="close" is-config="true" duration-ms="467" started-at="2020-11-20T09:44:10Z" finished-at="2020-11-20T09:44:11Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- close -->
-      </class> <!-- SalesRefundPositivecases.CarPositivecash -->
-      <class name="SalesRefundPositivecases.CarPositivecredit">
-        <test-method status="FAIL" signature="logincheckK(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:SalesRefundPositivecases.CarPositivecredit@3884b2]" name="logincheckK" duration-ms="224" started-at="2020-11-20T09:51:41Z" data-provider="dp" finished-at="2020-11-20T09:51:41Z">
-          <exception class="org.testng.internal.reflect.MethodMatcherException">
+          <exception class="org.openqa.selenium.UnhandledAlertException">
             <message>
-              <![CDATA[
-Data provider mismatch
-Method: logincheckK([Parameter{index=0, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=1, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=2, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=3, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=4, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=5, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=6, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=7, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=8, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=9, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=10, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=11, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=12, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=13, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=14, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=15, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=16, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=17, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=18, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=19, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=20, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=21, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=22, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=23, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=24, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=25, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=26, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=27, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=28, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=29, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=30, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=31, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=32, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=33, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=34, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=35, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=36, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=37, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=38, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=39, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=40, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=41, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=42, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=43, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=44, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=45, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=46, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=47, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=48, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=49, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=50, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=51, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=52, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=53, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=54, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=55, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=56, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=57, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=58, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=59, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=60, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=61, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=62, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=63, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=64, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=65, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=66, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=67, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=68, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=69, type=java.lang.String, declaredAnnotations=[]}])
-Arguments: [(java.lang.String)CU101,(java.lang.String)P@ssw0rd,(java.lang.String)Sales / Refund,(java.lang.String)28,(java.lang.String)NOV,(java.lang.String)2020,(java.lang.String)OUTBOUND DOCKET,(java.lang.String)0,(java.lang.String)AEBR01,(java.lang.String)0,(java.lang.String)AE - CRYSTAL TRADING - EXMPT,(java.lang.String)0,(java.lang.String)Hotelbookings,(java.lang.String)Hotelbookings,(java.lang.String)0,(java.lang.String)AE - BPS - Comp1,(java.lang.String)1,(java.lang.String)1,(java.lang.String)Mr.Comp 1 Branch 1  User 1,(java.lang.String)Mr.Comp 1 Branch 1  User 1,(java.lang.String)06,(java.lang.String)NOV,(java.lang.String)2020,(java.lang.String)0,(java.lang.String)24,(java.lang.String)NOV,(java.lang.String)2020,(java.lang.String)pcc 5444,(java.lang.String)pcc 5444,(java.lang.String)1000,(java.lang.String)100,(java.lang.String)testt,(java.lang.String)Dubai,(java.lang.String)Fordicon,(java.lang.String)Friends Track,(java.lang.String)DUBAI AIRPORT, DUBAI, United Arab Emirates,(java.lang.String)Hotel,(java.lang.String)06,(java.lang.String)Nov,(java.lang.String)2020,(java.lang.String)07,(java.lang.String)Nov,(java.lang.String)2020,(java.lang.String)1,(java.lang.String)QWERG,(java.lang.String)123451234,(java.lang.String)Testt,(java.lang.String)Normal,(java.lang.String)AED,(java.lang.String)50,(java.lang.String)40,(java.lang.String)HDFC Card,(java.lang.String)10,(java.lang.String)5,(java.lang.String)CSRC003,(java.lang.String)1,(java.lang.String)1,(java.lang.String)1,(java.lang.String)MR. FIXED AGENT 02,(java.lang.String)910292039,(java.lang.String)TESTT,(java.lang.String)TESTT,(java.lang.String)Pass,(java.lang.String)QWERS,(java.lang.String)QWERS,(java.lang.String)QWERS,(java.lang.String)QWERS,(java.lang.String)QWERS,(java.lang.String)QWERS,(java.lang.String)AE Branch 01 - Dubai,(java.lang.String)9920010281]]]>
+              <![CDATA[unexpected alert open: {Alert text : }
+  (Session info: chrome=86.0.4240.198)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds: null
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:05:20.749Z'
+System info: host: 'PRABHA', ip: '192.168.186.1', os.name: 'Windows 8.1', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_211'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.37.544315 (730aa6a5fdba15..., userDataDir: C:\Users\ASHOKP~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 86.0.4240.198, webStorageEnabled: true}
+Session ID: 98d20597f9da6fa8321b50295aa969fd]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.testng.internal.reflect.MethodMatcherException: 
-Data provider mismatch
-Method: logincheckK([Parameter{index=0, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=1, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=2, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=3, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=4, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=5, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=6, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=7, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=8, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=9, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=10, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=11, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=12, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=13, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=14, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=15, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=16, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=17, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=18, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=19, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=20, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=21, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=22, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=23, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=24, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=25, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=26, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=27, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=28, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=29, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=30, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=31, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=32, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=33, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=34, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=35, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=36, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=37, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=38, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=39, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=40, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=41, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=42, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=43, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=44, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=45, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=46, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=47, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=48, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=49, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=50, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=51, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=52, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=53, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=54, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=55, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=56, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=57, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=58, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=59, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=60, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=61, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=62, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=63, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=64, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=65, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=66, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=67, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=68, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=69, type=java.lang.String, declaredAnnotations=[]}])
-Arguments: [(java.lang.String)CU101,(java.lang.String)P@ssw0rd,(java.lang.String)Sales / Refund,(java.lang.String)28,(java.lang.String)NOV,(java.lang.String)2020,(java.lang.String)OUTBOUND DOCKET,(java.lang.String)0,(java.lang.String)AEBR01,(java.lang.String)0,(java.lang.String)AE - CRYSTAL TRADING - EXMPT,(java.lang.String)0,(java.lang.String)Hotelbookings,(java.lang.String)Hotelbookings,(java.lang.String)0,(java.lang.String)AE - BPS - Comp1,(java.lang.String)1,(java.lang.String)1,(java.lang.String)Mr.Comp 1 Branch 1  User 1,(java.lang.String)Mr.Comp 1 Branch 1  User 1,(java.lang.String)06,(java.lang.String)NOV,(java.lang.String)2020,(java.lang.String)0,(java.lang.String)24,(java.lang.String)NOV,(java.lang.String)2020,(java.lang.String)pcc 5444,(java.lang.String)pcc 5444,(java.lang.String)1000,(java.lang.String)100,(java.lang.String)testt,(java.lang.String)Dubai,(java.lang.String)Fordicon,(java.lang.String)Friends Track,(java.lang.String)DUBAI AIRPORT, DUBAI, United Arab Emirates,(java.lang.String)Hotel,(java.lang.String)06,(java.lang.String)Nov,(java.lang.String)2020,(java.lang.String)07,(java.lang.String)Nov,(java.lang.String)2020,(java.lang.String)1,(java.lang.String)QWERG,(java.lang.String)123451234,(java.lang.String)Testt,(java.lang.String)Normal,(java.lang.String)AED,(java.lang.String)50,(java.lang.String)40,(java.lang.String)HDFC Card,(java.lang.String)10,(java.lang.String)5,(java.lang.String)CSRC003,(java.lang.String)1,(java.lang.String)1,(java.lang.String)1,(java.lang.String)MR. FIXED AGENT 02,(java.lang.String)910292039,(java.lang.String)TESTT,(java.lang.String)TESTT,(java.lang.String)Pass,(java.lang.String)QWERS,(java.lang.String)QWERS,(java.lang.String)QWERS,(java.lang.String)QWERS,(java.lang.String)QWERS,(java.lang.String)QWERS,(java.lang.String)AE Branch 01 - Dubai,(java.lang.String)9920010281]
-	at org.testng.internal.reflect.DataProviderMethodMatcher.getConformingArguments(DataProviderMethodMatcher.java:52)
-	at org.testng.internal.Invoker.injectParameters(Invoker.java:1278)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1171)
+              <![CDATA[org.openqa.selenium.UnhandledAlertException: unexpected alert open: {Alert text : }
+  (Session info: chrome=86.0.4240.198)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds: null
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:05:20.749Z'
+System info: host: 'PRABHA', ip: '192.168.186.1', os.name: 'Windows 8.1', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_211'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.37.544315 (730aa6a5fdba15..., userDataDir: C:\Users\ASHOKP~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 86.0.4240.198, webStorageEnabled: true}
+Session ID: 98d20597f9da6fa8321b50295aa969fd
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:172)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:605)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:294)
+	at travlogix.Wrappermethods.takeSnap(Wrappermethods.java:877)
+	at travlogix.Wrappermethods.sendtextbyxvalue(Wrappermethods.java:265)
+	at travlogix.BusinessPartnersupplier.logincheckK(BusinessPartnersupplier.java:439)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
 	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
 	at org.testng.TestRunner.privateRun(TestRunner.java:756)
@@ -1491,282 +1073,7 @@ Arguments: [(java.lang.String)CU101,(java.lang.String)P@ssw0rd,(java.lang.String
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.testng.internal.reflect.MethodMatcherException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logincheckK -->
-      </class> <!-- SalesRefundPositivecases.CarPositivecredit -->
-      <class name="SalesRefundPositivecases.Misccash">
-        <test-method status="PASS" signature="browesrnstatiation()[pri:0, instance:SalesRefundPositivecases.Misccash@d56d67]" name="browesrnstatiation" is-config="true" duration-ms="16167" started-at="2020-11-20T09:20:59Z" finished-at="2020-11-20T09:21:15Z">
-          <reporter-output>
-            <line>
-              <![CDATA[STEP1]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- browesrnstatiation -->
-        <test-method status="PASS" signature="logincheckK(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:SalesRefundPositivecases.Misccash@d56d67]" name="logincheckK" duration-ms="397165" started-at="2020-11-20T09:21:15Z" data-provider="dp" finished-at="2020-11-20T09:27:52Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[CU101]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[P@ssw0rd]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Sales / Refund]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[28]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[NOV]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[2020]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[OUTBOUND DOCKET]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="8">
-              <value>
-                <![CDATA[AEBR01]]>
-              </value>
-            </param>
-            <param index="9">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="10">
-              <value>
-                <![CDATA[AE - CRYSTAL TRADING - EXMPT]]>
-              </value>
-            </param>
-            <param index="11">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="12">
-              <value>
-                <![CDATA[Misc Bookings]]>
-              </value>
-            </param>
-            <param index="13">
-              <value>
-                <![CDATA[Misc Bookings]]>
-              </value>
-            </param>
-            <param index="14">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="15">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="16">
-              <value>
-                <![CDATA[HOTEL]]>
-              </value>
-            </param>
-            <param index="17">
-              <value>
-                <![CDATA[AE - BPS - Comp1]]>
-              </value>
-            </param>
-            <param index="18">
-              <value>
-                <![CDATA[BU122 - Mr. Comp1 Branch 2 User 2]]>
-              </value>
-            </param>
-            <param index="19">
-              <value>
-                <![CDATA[BU112 - Mr.Comp 1 Branch 1 User 2]]>
-              </value>
-            </param>
-            <param index="20">
-              <value>
-                <![CDATA[Dubai]]>
-              </value>
-            </param>
-            <param index="21">
-              <value>
-                <![CDATA[06]]>
-              </value>
-            </param>
-            <param index="22">
-              <value>
-                <![CDATA[Nov]]>
-              </value>
-            </param>
-            <param index="23">
-              <value>
-                <![CDATA[2020]]>
-              </value>
-            </param>
-            <param index="24">
-              <value>
-                <![CDATA[9090909909]]>
-              </value>
-            </param>
-            <param index="25">
-              <value>
-                <![CDATA[EDCVF]]>
-              </value>
-            </param>
-            <param index="26">
-              <value>
-                <![CDATA[TESTT]]>
-              </value>
-            </param>
-            <param index="27">
-              <value>
-                <![CDATA[Hotel]]>
-              </value>
-            </param>
-            <param index="28">
-              <value>
-                <![CDATA[Hotel]]>
-              </value>
-            </param>
-            <param index="29">
-              <value>
-                <![CDATA[Normal]]>
-              </value>
-            </param>
-            <param index="30">
-              <value>
-                <![CDATA[AED]]>
-              </value>
-            </param>
-            <param index="31">
-              <value>
-                <![CDATA[2]]>
-              </value>
-            </param>
-            <param index="32">
-              <value>
-                <![CDATA[5]]>
-              </value>
-            </param>
-            <param index="33">
-              <value>
-                <![CDATA[HDFC Card]]>
-              </value>
-            </param>
-            <param index="34">
-              <value>
-                <![CDATA[10]]>
-              </value>
-            </param>
-            <param index="35">
-              <value>
-                <![CDATA[INSURANCE_FEE]]>
-              </value>
-            </param>
-            <param index="36">
-              <value>
-                <![CDATA[10]]>
-              </value>
-            </param>
-            <param index="37">
-              <value>
-                <![CDATA[5]]>
-              </value>
-            </param>
-            <param index="38">
-              <value>
-                <![CDATA[5]]>
-              </value>
-            </param>
-            <param index="39">
-              <value>
-                <![CDATA[5]]>
-              </value>
-            </param>
-            <param index="40">
-              <value>
-                <![CDATA[MS. PERCENT AGENT 03]]>
-              </value>
-            </param>
-            <param index="41">
-              <value>
-                <![CDATA[AE Branch 01]]>
-              </value>
-            </param>
-            <param index="42">
-              <value>
-                <![CDATA[910292039]]>
-              </value>
-            </param>
-            <param index="43">
-              <value>
-                <![CDATA[TESTT]]>
-              </value>
-            </param>
-            <param index="44">
-              <value>
-                <![CDATA[TESTT]]>
-              </value>
-            </param>
-            <param index="45">
-              <value>
-                <![CDATA[Pass]]>
-              </value>
-            </param>
-            <param index="46">
-              <value>
-                <![CDATA[QWERS]]>
-              </value>
-            </param>
-            <param index="47">
-              <value>
-                <![CDATA[QWERS]]>
-              </value>
-            </param>
-            <param index="48">
-              <value>
-                <![CDATA[QWERS]]>
-              </value>
-            </param>
-            <param index="49">
-              <value>
-                <![CDATA[QWERS]]>
-              </value>
-            </param>
-            <param index="50">
-              <value>
-                <![CDATA[QWERS]]>
-              </value>
-            </param>
-            <param index="51">
-              <value>
-                <![CDATA[QWERS]]>
-              </value>
-            </param>
-          </params>
+          </exception> <!-- org.openqa.selenium.UnhandledAlertException -->
           <reporter-output>
             <line>
               <![CDATA[STEP2]]>
@@ -1918,1047 +1225,9 @@ Arguments: [(java.lang.String)CU101,(java.lang.String)P@ssw0rd,(java.lang.String
             <line>
               <![CDATA[STEP51]]>
             </line>
-          </reporter-output>
-        </test-method> <!-- logincheckK -->
-        <test-method status="PASS" signature="close()[pri:0, instance:SalesRefundPositivecases.Misccash@d56d67]" name="close" is-config="true" duration-ms="2269" started-at="2020-11-20T09:27:52Z" finished-at="2020-11-20T09:27:54Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- close -->
-      </class> <!-- SalesRefundPositivecases.Misccash -->
-      <class name="SalesRefundPositivecases.Hotelpositivecash">
-        <test-method status="PASS" signature="browesrnstatiation()[pri:0, instance:SalesRefundPositivecases.Hotelpositivecash@101b7af]" name="browesrnstatiation" is-config="true" duration-ms="9149" started-at="2020-11-20T09:44:11Z" finished-at="2020-11-20T09:44:20Z">
-          <reporter-output>
-            <line>
-              <![CDATA[STEP177]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- browesrnstatiation -->
-        <test-method status="PASS" signature="logincheckK(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:SalesRefundPositivecases.Hotelpositivecash@101b7af]" name="logincheckK" duration-ms="439449" started-at="2020-11-20T09:44:20Z" data-provider="dp" finished-at="2020-11-20T09:51:40Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[CU101]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[P@ssw0rd]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Sales / Refund]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[28]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[OCT]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[2020]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[OUTBOUND DOCKET]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="8">
-              <value>
-                <![CDATA[AEBR01]]>
-              </value>
-            </param>
-            <param index="9">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="10">
-              <value>
-                <![CDATA[AE - CRYSTAL TRADING - EXMPT]]>
-              </value>
-            </param>
-            <param index="11">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="12">
-              <value>
-                <![CDATA[Hotelbookings]]>
-              </value>
-            </param>
-            <param index="13">
-              <value>
-                <![CDATA[Hotelbookings]]>
-              </value>
-            </param>
-            <param index="14">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="15">
-              <value>
-                <![CDATA[AE - BPS - Comp1]]>
-              </value>
-            </param>
-            <param index="16">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="17">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-            <param index="18">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-            <param index="19">
-              <value>
-                <![CDATA[CU101 - Mr. Company 1 User 01]]>
-              </value>
-            </param>
-            <param index="20">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="21">
-              <value>
-                <![CDATA[BRANCH - Ms. Comp 2 Branch  B]]>
-              </value>
-            </param>
-            <param index="22">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="23">
-              <value>
-                <![CDATA[25]]>
-              </value>
-            </param>
-            <param index="24">
-              <value>
-                <![CDATA[OCT]]>
-              </value>
-            </param>
-            <param index="25">
-              <value>
-                <![CDATA[2020]]>
-              </value>
-            </param>
-            <param index="26">
-              <value>
-                <![CDATA[Dubai]]>
-              </value>
-            </param>
-            <param index="27">
-              <value>
-                <![CDATA[1 Hotel South Beach]]>
-              </value>
-            </param>
-            <param index="28">
-              <value>
-                <![CDATA[M hotel chain]]>
-              </value>
-            </param>
-            <param index="29">
-              <value>
-                <![CDATA[12HOT]]>
-              </value>
-            </param>
-            <param index="30">
-              <value>
-                <![CDATA[single]]>
-              </value>
-            </param>
-            <param index="31">
-              <value>
-                <![CDATA[Full Board]]>
-              </value>
-            </param>
-            <param index="32">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-            <param index="33">
-              <value>
-                <![CDATA[Nov]]>
-              </value>
-            </param>
-            <param index="34">
-              <value>
-                <![CDATA[2020]]>
-              </value>
-            </param>
-            <param index="35">
-              <value>
-                <![CDATA[04]]>
-              </value>
-            </param>
-            <param index="36">
-              <value>
-                <![CDATA[Nov]]>
-              </value>
-            </param>
-            <param index="37">
-              <value>
-                <![CDATA[2020]]>
-              </value>
-            </param>
-            <param index="38">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-            <param index="39">
-              <value>
-                <![CDATA[QWERS]]>
-              </value>
-            </param>
-            <param index="40">
-              <value>
-                <![CDATA[QWERS]]>
-              </value>
-            </param>
-            <param index="41">
-              <value>
-                <![CDATA[Hotlbookings]]>
-              </value>
-            </param>
-            <param index="42">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="43">
-              <value>
-                <![CDATA[Normal]]>
-              </value>
-            </param>
-            <param index="44">
-              <value>
-                <![CDATA[AED]]>
-              </value>
-            </param>
-            <param index="45">
-              <value>
-                <![CDATA[100]]>
-              </value>
-            </param>
-            <param index="46">
-              <value>
-                <![CDATA[100]]>
-              </value>
-            </param>
-            <param index="47">
-              <value>
-                <![CDATA[HDFC Card]]>
-              </value>
-            </param>
-            <param index="48">
-              <value>
-                <![CDATA[ASF]]>
-              </value>
-            </param>
-            <param index="49">
-              <value>
-                <![CDATA[10]]>
-              </value>
-            </param>
-            <param index="50">
-              <value>
-                <![CDATA[HTL001]]>
-              </value>
-            </param>
-            <param index="51">
-              <value>
-                <![CDATA[10]]>
-              </value>
-            </param>
-            <param index="52">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-            <param index="53">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-            <param index="54">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-            <param index="55">
-              <value>
-                <![CDATA[1000]]>
-              </value>
-            </param>
-            <param index="56">
-              <value>
-                <![CDATA[10]]>
-              </value>
-            </param>
-            <param index="57">
-              <value>
-                <![CDATA[EDFRG]]>
-              </value>
-            </param>
-            <param index="58">
-              <value>
-                <![CDATA[EDFRG]]>
-              </value>
-            </param>
-            <param index="59">
-              <value>
-                <![CDATA[EDFRG]]>
-              </value>
-            </param>
-            <param index="60">
-              <value>
-                <![CDATA[28]]>
-              </value>
-            </param>
-            <param index="61">
-              <value>
-                <![CDATA[Oct]]>
-              </value>
-            </param>
-            <param index="62">
-              <value>
-                <![CDATA[2020]]>
-              </value>
-            </param>
-            <param index="63">
-              <value>
-                <![CDATA[pcc 5444]]>
-              </value>
-            </param>
-            <param index="64">
-              <value>
-                <![CDATA[pcc 5444]]>
-              </value>
-            </param>
-            <param index="65">
-              <value>
-                <![CDATA[Agent001]]>
-              </value>
-            </param>
-            <param index="66">
-              <value>
-                <![CDATA[910292039]]>
-              </value>
-            </param>
-            <param index="67">
-              <value>
-                <![CDATA[TESTT]]>
-              </value>
-            </param>
-            <param index="68">
-              <value>
-                <![CDATA[TESTT]]>
-              </value>
-            </param>
-            <param index="69">
-              <value>
-                <![CDATA[Pass]]>
-              </value>
-            </param>
-            <param index="70">
-              <value>
-                <![CDATA[QWERS]]>
-              </value>
-            </param>
-            <param index="71">
-              <value>
-                <![CDATA[QWERS]]>
-              </value>
-            </param>
-            <param index="72">
-              <value>
-                <![CDATA[QWERS]]>
-              </value>
-            </param>
-            <param index="73">
-              <value>
-                <![CDATA[QWERS]]>
-              </value>
-            </param>
-            <param index="74">
-              <value>
-                <![CDATA[QWERS]]>
-              </value>
-            </param>
-            <param index="75">
-              <value>
-                <![CDATA[QWERS]]>
-              </value>
-            </param>
-            <param index="76">
-              <value>
-                <![CDATA[AE Branch 01 - Dubai]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-            <line>
-              <![CDATA[STEP178]]>
-            </line>
-            <line>
-              <![CDATA[STEP179]]>
-            </line>
-            <line>
-              <![CDATA[STEP180]]>
-            </line>
-            <line>
-              <![CDATA[STEP181]]>
-            </line>
-            <line>
-              <![CDATA[STEP182]]>
-            </line>
-            <line>
-              <![CDATA[STEP183]]>
-            </line>
-            <line>
-              <![CDATA[STEP184]]>
-            </line>
-            <line>
-              <![CDATA[STEP185]]>
-            </line>
-            <line>
-              <![CDATA[STEP186]]>
-            </line>
-            <line>
-              <![CDATA[STEP187]]>
-            </line>
-            <line>
-              <![CDATA[STEP188]]>
-            </line>
-            <line>
-              <![CDATA[STEP189]]>
-            </line>
-            <line>
-              <![CDATA[STEP190]]>
-            </line>
-            <line>
-              <![CDATA[STEP191]]>
-            </line>
-            <line>
-              <![CDATA[STEP192]]>
-            </line>
-            <line>
-              <![CDATA[STEP193]]>
-            </line>
-            <line>
-              <![CDATA[STEP194]]>
-            </line>
-            <line>
-              <![CDATA[STEP195]]>
-            </line>
-            <line>
-              <![CDATA[STEP196]]>
-            </line>
-            <line>
-              <![CDATA[STEP197]]>
-            </line>
-            <line>
-              <![CDATA[STEP198]]>
-            </line>
-            <line>
-              <![CDATA[STEP199]]>
-            </line>
-            <line>
-              <![CDATA[STEP200]]>
-            </line>
-            <line>
-              <![CDATA[STEP201]]>
-            </line>
-            <line>
-              <![CDATA[STEP202]]>
-            </line>
-            <line>
-              <![CDATA[STEP203]]>
-            </line>
-            <line>
-              <![CDATA[STEP204]]>
-            </line>
-            <line>
-              <![CDATA[STEP205]]>
-            </line>
-            <line>
-              <![CDATA[STEP206]]>
-            </line>
-            <line>
-              <![CDATA[STEP207]]>
-            </line>
-            <line>
-              <![CDATA[STEP208]]>
-            </line>
-            <line>
-              <![CDATA[STEP209]]>
-            </line>
-            <line>
-              <![CDATA[STEP210]]>
-            </line>
-            <line>
-              <![CDATA[STEP211]]>
-            </line>
-            <line>
-              <![CDATA[STEP212]]>
-            </line>
-            <line>
-              <![CDATA[STEP213]]>
-            </line>
-            <line>
-              <![CDATA[STEP214]]>
-            </line>
-            <line>
-              <![CDATA[STEP215]]>
-            </line>
-            <line>
-              <![CDATA[STEP216]]>
-            </line>
-            <line>
-              <![CDATA[STEP217]]>
-            </line>
-            <line>
-              <![CDATA[STEP218]]>
-            </line>
-            <line>
-              <![CDATA[STEP219]]>
-            </line>
-            <line>
-              <![CDATA[STEP220]]>
-            </line>
-            <line>
-              <![CDATA[STEP221]]>
-            </line>
-            <line>
-              <![CDATA[STEP222]]>
-            </line>
-            <line>
-              <![CDATA[STEP223]]>
-            </line>
-            <line>
-              <![CDATA[STEP224]]>
-            </line>
-            <line>
-              <![CDATA[STEP225]]>
-            </line>
-            <line>
-              <![CDATA[STEP226]]>
-            </line>
-            <line>
-              <![CDATA[STEP227]]>
-            </line>
-            <line>
-              <![CDATA[STEP228]]>
-            </line>
-            <line>
-              <![CDATA[STEP229]]>
-            </line>
-            <line>
-              <![CDATA[STEP230]]>
-            </line>
-            <line>
-              <![CDATA[STEP231]]>
-            </line>
-            <line>
-              <![CDATA[STEP232]]>
-            </line>
-            <line>
-              <![CDATA[STEP233]]>
-            </line>
-            <line>
-              <![CDATA[STEP234]]>
-            </line>
-            <line>
-              <![CDATA[STEP235]]>
-            </line>
-            <line>
-              <![CDATA[STEP236]]>
-            </line>
-            <line>
-              <![CDATA[STEP237]]>
-            </line>
-            <line>
-              <![CDATA[STEP238]]>
-            </line>
-            <line>
-              <![CDATA[STEP239]]>
-            </line>
-            <line>
-              <![CDATA[STEP240]]>
-            </line>
-            <line>
-              <![CDATA[STEP241]]>
-            </line>
-            <line>
-              <![CDATA[STEP242]]>
-            </line>
-            <line>
-              <![CDATA[STEP243]]>
-            </line>
-            <line>
-              <![CDATA[STEP244]]>
-            </line>
-            <line>
-              <![CDATA[STEP245]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- logincheckK -->
-        <test-method status="PASS" signature="close()[pri:0, instance:SalesRefundPositivecases.Hotelpositivecash@101b7af]" name="close" is-config="true" duration-ms="1138" started-at="2020-11-20T09:51:40Z" finished-at="2020-11-20T09:51:41Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- close -->
-      </class> <!-- SalesRefundPositivecases.Hotelpositivecash -->
-      <class name="SalesRefundPositivecases.Hotelpositive">
-        <test-method status="PASS" signature="browesrnstatiation()[pri:0, instance:SalesRefundPositivecases.Hotelpositive@18355a8]" name="browesrnstatiation" is-config="true" duration-ms="7990" started-at="2020-11-20T09:27:55Z" finished-at="2020-11-20T09:28:03Z">
-          <reporter-output>
             <line>
               <![CDATA[STEP52]]>
             </line>
-          </reporter-output>
-        </test-method> <!-- browesrnstatiation -->
-        <test-method status="FAIL" signature="logincheckK(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:SalesRefundPositivecases.Hotelpositive@18355a8]" name="logincheckK" duration-ms="487136" started-at="2020-11-20T09:28:03Z" data-provider="dp" finished-at="2020-11-20T09:36:10Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[CU101]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[P@ssw0rd]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Sales / Refund]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[17]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Nov]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[2020]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[OUTBOUND DOCKET]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="8">
-              <value>
-                <![CDATA[AEBR01]]>
-              </value>
-            </param>
-            <param index="9">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="10">
-              <value>
-                <![CDATA[AE - CRYSTAL TRADING - EXMPT]]>
-              </value>
-            </param>
-            <param index="11">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="12">
-              <value>
-                <![CDATA[Hotelbookings]]>
-              </value>
-            </param>
-            <param index="13">
-              <value>
-                <![CDATA[Hotelbookings]]>
-              </value>
-            </param>
-            <param index="14">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="15">
-              <value>
-                <![CDATA[AE - BPS - Comp1]]>
-              </value>
-            </param>
-            <param index="16">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="17">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-            <param index="18">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-            <param index="19">
-              <value>
-                <![CDATA[Mr. Company 1  User 01]]>
-              </value>
-            </param>
-            <param index="20">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="21">
-              <value>
-                <![CDATA[Ms. Comp 2 Branch  B]]>
-              </value>
-            </param>
-            <param index="22">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="23">
-              <value>
-                <![CDATA[18]]>
-              </value>
-            </param>
-            <param index="24">
-              <value>
-                <![CDATA[Nov]]>
-              </value>
-            </param>
-            <param index="25">
-              <value>
-                <![CDATA[2020]]>
-              </value>
-            </param>
-            <param index="26">
-              <value>
-                <![CDATA[Dubai]]>
-              </value>
-            </param>
-            <param index="27">
-              <value>
-                <![CDATA[1 Hotel South Beach]]>
-              </value>
-            </param>
-            <param index="28">
-              <value>
-                <![CDATA[M hotel chain]]>
-              </value>
-            </param>
-            <param index="29">
-              <value>
-                <![CDATA[12HOT]]>
-              </value>
-            </param>
-            <param index="30">
-              <value>
-                <![CDATA[Single Room]]>
-              </value>
-            </param>
-            <param index="31">
-              <value>
-                <![CDATA[Full Board]]>
-              </value>
-            </param>
-            <param index="32">
-              <value>
-                <![CDATA[20]]>
-              </value>
-            </param>
-            <param index="33">
-              <value>
-                <![CDATA[Nov]]>
-              </value>
-            </param>
-            <param index="34">
-              <value>
-                <![CDATA[2020]]>
-              </value>
-            </param>
-            <param index="35">
-              <value>
-                <![CDATA[21]]>
-              </value>
-            </param>
-            <param index="36">
-              <value>
-                <![CDATA[Nov]]>
-              </value>
-            </param>
-            <param index="37">
-              <value>
-                <![CDATA[2020]]>
-              </value>
-            </param>
-            <param index="38">
-              <value>
-                <![CDATA[11]]>
-              </value>
-            </param>
-            <param index="39">
-              <value>
-                <![CDATA[QWERS]]>
-              </value>
-            </param>
-            <param index="40">
-              <value>
-                <![CDATA[QWERS]]>
-              </value>
-            </param>
-            <param index="41">
-              <value>
-                <![CDATA[Hotlbookings]]>
-              </value>
-            </param>
-            <param index="42">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="43">
-              <value>
-                <![CDATA[Normal]]>
-              </value>
-            </param>
-            <param index="44">
-              <value>
-                <![CDATA[AEDName]]>
-              </value>
-            </param>
-            <param index="45">
-              <value>
-                <![CDATA[100]]>
-              </value>
-            </param>
-            <param index="46">
-              <value>
-                <![CDATA[100]]>
-              </value>
-            </param>
-            <param index="47">
-              <value>
-                <![CDATA[HDFC Card]]>
-              </value>
-            </param>
-            <param index="48">
-              <value>
-                <![CDATA[ASF]]>
-              </value>
-            </param>
-            <param index="49">
-              <value>
-                <![CDATA[10]]>
-              </value>
-            </param>
-            <param index="50">
-              <value>
-                <![CDATA[HTL001]]>
-              </value>
-            </param>
-            <param index="51">
-              <value>
-                <![CDATA[10]]>
-              </value>
-            </param>
-            <param index="52">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-            <param index="53">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-            <param index="54">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-            <param index="55">
-              <value>
-                <![CDATA[1000]]>
-              </value>
-            </param>
-            <param index="56">
-              <value>
-                <![CDATA[10]]>
-              </value>
-            </param>
-            <param index="57">
-              <value>
-                <![CDATA[EDFRG]]>
-              </value>
-            </param>
-            <param index="58">
-              <value>
-                <![CDATA[EDFRG]]>
-              </value>
-            </param>
-            <param index="59">
-              <value>
-                <![CDATA[EDFRG]]>
-              </value>
-            </param>
-            <param index="60">
-              <value>
-                <![CDATA[28]]>
-              </value>
-            </param>
-            <param index="61">
-              <value>
-                <![CDATA[Oct]]>
-              </value>
-            </param>
-            <param index="62">
-              <value>
-                <![CDATA[2020]]>
-              </value>
-            </param>
-            <param index="63">
-              <value>
-                <![CDATA[pcc 5444]]>
-              </value>
-            </param>
-            <param index="64">
-              <value>
-                <![CDATA[pcc 5444]]>
-              </value>
-            </param>
-            <param index="65">
-              <value>
-                <![CDATA[Agent001]]>
-              </value>
-            </param>
-            <param index="66">
-              <value>
-                <![CDATA[910292010]]>
-              </value>
-            </param>
-            <param index="67">
-              <value>
-                <![CDATA[TESTT]]>
-              </value>
-            </param>
-            <param index="68">
-              <value>
-                <![CDATA[TESTT]]>
-              </value>
-            </param>
-            <param index="69">
-              <value>
-                <![CDATA[Pass]]>
-              </value>
-            </param>
-            <param index="70">
-              <value>
-                <![CDATA[QWERS]]>
-              </value>
-            </param>
-            <param index="71">
-              <value>
-                <![CDATA[QWERS]]>
-              </value>
-            </param>
-            <param index="72">
-              <value>
-                <![CDATA[QWERS]]>
-              </value>
-            </param>
-            <param index="73">
-              <value>
-                <![CDATA[QWERS]]>
-              </value>
-            </param>
-            <param index="74">
-              <value>
-                <![CDATA[QWERS]]>
-              </value>
-            </param>
-            <param index="75">
-              <value>
-                <![CDATA[QWERS]]>
-              </value>
-            </param>
-            <param index="76">
-              <value>
-                <![CDATA[8820112784]]>
-              </value>
-            </param>
-          </params>
-          <exception class="atu.testng.reports.exceptions.ATUReporterStepFailedException">
-            <full-stacktrace>
-              <![CDATA[[ATU Custom Reporter Step Failed Exception]
-	at atu.testng.reports.listeners.ATUReportsListener.onTestSuccess(Unknown Source)
-	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1720)
-	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1699)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:703)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:756)
-	at org.testng.TestRunner.run(TestRunner.java:610)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
-	at org.testng.TestNG.runSuites(TestNG.java:1133)
-	at org.testng.TestNG.run(TestNG.java:1104)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-]]>
-            </full-stacktrace>
-          </exception> <!-- atu.testng.reports.exceptions.ATUReporterStepFailedException -->
-          <reporter-output>
             <line>
               <![CDATA[STEP53]]>
             </line>
@@ -3019,627 +1288,13 @@ Arguments: [(java.lang.String)CU101,(java.lang.String)P@ssw0rd,(java.lang.String
             <line>
               <![CDATA[STEP72]]>
             </line>
-            <line>
-              <![CDATA[STEP73]]>
-            </line>
-            <line>
-              <![CDATA[STEP74]]>
-            </line>
-            <line>
-              <![CDATA[STEP75]]>
-            </line>
-            <line>
-              <![CDATA[STEP76]]>
-            </line>
-            <line>
-              <![CDATA[STEP77]]>
-            </line>
-            <line>
-              <![CDATA[STEP78]]>
-            </line>
-            <line>
-              <![CDATA[STEP79]]>
-            </line>
-            <line>
-              <![CDATA[STEP80]]>
-            </line>
-            <line>
-              <![CDATA[STEP81]]>
-            </line>
-            <line>
-              <![CDATA[STEP82]]>
-            </line>
-            <line>
-              <![CDATA[STEP83]]>
-            </line>
-            <line>
-              <![CDATA[STEP84]]>
-            </line>
-            <line>
-              <![CDATA[STEP85]]>
-            </line>
-            <line>
-              <![CDATA[STEP86]]>
-            </line>
-            <line>
-              <![CDATA[STEP87]]>
-            </line>
-            <line>
-              <![CDATA[STEP88]]>
-            </line>
-            <line>
-              <![CDATA[STEP89]]>
-            </line>
-            <line>
-              <![CDATA[STEP90]]>
-            </line>
-            <line>
-              <![CDATA[STEP91]]>
-            </line>
-            <line>
-              <![CDATA[STEP92]]>
-            </line>
-            <line>
-              <![CDATA[STEP93]]>
-            </line>
-            <line>
-              <![CDATA[STEP94]]>
-            </line>
-            <line>
-              <![CDATA[STEP95]]>
-            </line>
-            <line>
-              <![CDATA[STEP96]]>
-            </line>
-            <line>
-              <![CDATA[STEP97]]>
-            </line>
-            <line>
-              <![CDATA[STEP98]]>
-            </line>
-            <line>
-              <![CDATA[STEP99]]>
-            </line>
-            <line>
-              <![CDATA[STEP100]]>
-            </line>
-            <line>
-              <![CDATA[STEP101]]>
-            </line>
-            <line>
-              <![CDATA[STEP102]]>
-            </line>
-            <line>
-              <![CDATA[STEP103]]>
-            </line>
-            <line>
-              <![CDATA[STEP104]]>
-            </line>
-            <line>
-              <![CDATA[STEP105]]>
-            </line>
-            <line>
-              <![CDATA[STEP106]]>
-            </line>
-            <line>
-              <![CDATA[STEP107]]>
-            </line>
-            <line>
-              <![CDATA[STEP108]]>
-            </line>
-            <line>
-              <![CDATA[STEP109]]>
-            </line>
-            <line>
-              <![CDATA[STEP110]]>
-            </line>
           </reporter-output>
         </test-method> <!-- logincheckK -->
-        <test-method status="PASS" signature="close()[pri:0, instance:SalesRefundPositivecases.Hotelpositive@18355a8]" name="close" is-config="true" duration-ms="2539" started-at="2020-11-20T09:36:10Z" finished-at="2020-11-20T09:36:13Z">
+        <test-method status="PASS" signature="close()[pri:0, instance:travlogix.BusinessPartnersupplier@15530b9]" name="close" is-config="true" duration-ms="3748" started-at="2020-11-21T02:45:28Z" finished-at="2020-11-21T02:45:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
-      </class> <!-- SalesRefundPositivecases.Hotelpositive -->
-      <class name="SalesRefundPositivecases.Airpositive">
-        <test-method status="PASS" signature="instantiation()[pri:0, instance:SalesRefundPositivecases.Airpositive@1fa1d9b]" name="instantiation" is-config="true" duration-ms="445" started-at="2020-11-20T09:20:55Z" finished-at="2020-11-20T09:20:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- instantiation -->
-        <test-method status="PASS" signature="instantiation()[pri:0, instance:SalesRefundPositivecases.CarPositivecash@d25987]" name="instantiation" is-config="true" duration-ms="0" started-at="2020-11-20T09:20:55Z" finished-at="2020-11-20T09:20:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- instantiation -->
-        <test-method status="PASS" signature="instantiation()[pri:0, instance:SalesRefundPositivecases.CarPositivecredit@3884b2]" name="instantiation" is-config="true" duration-ms="0" started-at="2020-11-20T09:20:55Z" finished-at="2020-11-20T09:20:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- instantiation -->
-        <test-method status="PASS" signature="instantiation()[pri:0, instance:SalesRefundPositivecases.Hotelpositive@18355a8]" name="instantiation" is-config="true" duration-ms="0" started-at="2020-11-20T09:20:55Z" finished-at="2020-11-20T09:20:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- instantiation -->
-        <test-method status="PASS" signature="instantiation()[pri:0, instance:SalesRefundPositivecases.Misccash@d56d67]" name="instantiation" is-config="true" duration-ms="5" started-at="2020-11-20T09:20:55Z" finished-at="2020-11-20T09:20:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- instantiation -->
-        <test-method status="PASS" signature="instantiation()[pri:0, instance:SalesRefundPositivecases.Hotelpositivecash@101b7af]" name="instantiation" is-config="true" duration-ms="0" started-at="2020-11-20T09:20:55Z" finished-at="2020-11-20T09:20:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- instantiation -->
-        <test-method status="PASS" signature="instantiation()[pri:0, instance:SalesRefundPositivecases.Misccredit@1275dab]" name="instantiation" is-config="true" duration-ms="0" started-at="2020-11-20T09:20:55Z" finished-at="2020-11-20T09:20:55Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- instantiation -->
-        <test-method status="FAIL" signature="logincheckK(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:SalesRefundPositivecases.Airpositive@1fa1d9b]" name="logincheckK" duration-ms="268" started-at="2020-11-20T09:36:13Z" data-provider="dp" finished-at="2020-11-20T09:36:13Z">
-          <exception class="org.testng.internal.reflect.MethodMatcherException">
-            <message>
-              <![CDATA[
-Data provider mismatch
-Method: logincheckK([Parameter{index=0, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=1, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=2, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=3, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=4, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=5, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=6, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=7, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=8, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=9, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=10, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=11, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=12, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=13, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=14, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=15, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=16, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=17, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=18, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=19, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=20, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=21, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=22, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=23, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=24, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=25, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=26, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=27, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=28, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=29, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=30, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=31, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=32, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=33, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=34, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=35, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=36, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=37, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=38, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=39, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=40, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=41, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=42, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=43, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=44, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=45, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=46, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=47, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=48, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=49, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=50, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=51, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=52, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=53, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=54, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=55, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=56, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=57, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=58, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=59, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=60, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=61, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=62, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=63, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=64, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=65, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=66, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=67, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=68, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=69, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=70, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=71, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=72, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=73, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=74, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=75, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=76, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=77, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=78, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=79, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=80, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=81, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=82, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=83, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=84, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=85, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=86, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=87, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=88, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=89, type=java.lang.String, declaredAnnotations=[]}])
-Arguments: [(java.lang.String)CU101,(java.lang.String)P@ssw0rd,(java.lang.String)Sales / Refund,(java.lang.String)28,(java.lang.String)OCT,(java.lang.String)2020,(java.lang.String)OUTBOUND DOCKET,(java.lang.String)0,(java.lang.String)AEBR01,(java.lang.String)0,(java.lang.String)jordan,(java.lang.String)0,(java.lang.String)testt,(java.lang.String)testt,(java.lang.String)0,(java.lang.String)IndiGo,(java.lang.String)0,(java.lang.String)AE Branch 01 - Dubai,(java.lang.String)0,(java.lang.String)9210291209,(java.lang.String)0,(java.lang.String)AE - BPS ,(java.lang.String)0,(java.lang.String)AE - BPS,(java.lang.String)0,(java.lang.String)0,(java.lang.String)Pax Tickets,(java.lang.String)0,(java.lang.String)KLNMOP,(java.lang.String)0,(java.lang.String)CUS101 ,(java.lang.String)0,(java.lang.String)CUS101,(java.lang.String)0,(java.lang.String)BRANCH - Ms. Comp 2 Branch  B,(java.lang.String)0,(java.lang.String)International,(java.lang.String)0,(java.lang.String)QWRRE,(java.lang.String)BOM,(java.lang.String)0,(java.lang.String)TEST,(java.lang.String)0,(java.lang.String)23,(java.lang.String)OCT,(java.lang.String)2020,(java.lang.String)0,(java.lang.String)1000,(java.lang.String)10,(java.lang.String)TEST,(java.lang.String)AUH,(java.lang.String)0,(java.lang.String)COK,(java.lang.String)0,(java.lang.String)18,(java.lang.String)0,(java.lang.String)30,(java.lang.String)OCT,(java.lang.String)2020,null,(java.lang.String)30,(java.lang.String)OCT,(java.lang.String)2020,null,(java.lang.String)9,(java.lang.String)9,(java.lang.String)200,(java.lang.String)0,(java.lang.String)4000,(java.lang.String)DXB,(java.lang.String)Normal,(java.lang.String)0,(java.lang.String)AED,(java.lang.String)0,(java.lang.String)500,(java.lang.String)10,(java.lang.String)32IGST,(java.lang.String)0,(java.lang.String)10,(java.lang.String)ARSRV01,(java.lang.String)0,(java.lang.String)4,(java.lang.String)1,(java.lang.String)1,(java.lang.String)MR. FIXED AGENT 02,(java.lang.String)0,(java.lang.String)1,(java.lang.String)1,(java.lang.String)1,(java.lang.String)TEST,(java.lang.String)F-First Class,(java.lang.String)Normal]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.internal.reflect.MethodMatcherException: 
-Data provider mismatch
-Method: logincheckK([Parameter{index=0, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=1, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=2, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=3, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=4, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=5, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=6, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=7, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=8, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=9, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=10, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=11, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=12, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=13, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=14, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=15, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=16, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=17, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=18, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=19, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=20, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=21, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=22, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=23, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=24, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=25, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=26, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=27, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=28, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=29, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=30, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=31, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=32, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=33, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=34, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=35, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=36, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=37, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=38, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=39, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=40, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=41, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=42, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=43, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=44, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=45, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=46, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=47, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=48, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=49, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=50, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=51, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=52, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=53, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=54, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=55, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=56, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=57, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=58, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=59, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=60, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=61, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=62, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=63, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=64, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=65, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=66, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=67, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=68, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=69, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=70, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=71, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=72, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=73, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=74, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=75, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=76, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=77, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=78, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=79, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=80, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=81, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=82, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=83, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=84, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=85, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=86, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=87, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=88, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=89, type=java.lang.String, declaredAnnotations=[]}])
-Arguments: [(java.lang.String)CU101,(java.lang.String)P@ssw0rd,(java.lang.String)Sales / Refund,(java.lang.String)28,(java.lang.String)OCT,(java.lang.String)2020,(java.lang.String)OUTBOUND DOCKET,(java.lang.String)0,(java.lang.String)AEBR01,(java.lang.String)0,(java.lang.String)jordan,(java.lang.String)0,(java.lang.String)testt,(java.lang.String)testt,(java.lang.String)0,(java.lang.String)IndiGo,(java.lang.String)0,(java.lang.String)AE Branch 01 - Dubai,(java.lang.String)0,(java.lang.String)9210291209,(java.lang.String)0,(java.lang.String)AE - BPS ,(java.lang.String)0,(java.lang.String)AE - BPS,(java.lang.String)0,(java.lang.String)0,(java.lang.String)Pax Tickets,(java.lang.String)0,(java.lang.String)KLNMOP,(java.lang.String)0,(java.lang.String)CUS101 ,(java.lang.String)0,(java.lang.String)CUS101,(java.lang.String)0,(java.lang.String)BRANCH - Ms. Comp 2 Branch  B,(java.lang.String)0,(java.lang.String)International,(java.lang.String)0,(java.lang.String)QWRRE,(java.lang.String)BOM,(java.lang.String)0,(java.lang.String)TEST,(java.lang.String)0,(java.lang.String)23,(java.lang.String)OCT,(java.lang.String)2020,(java.lang.String)0,(java.lang.String)1000,(java.lang.String)10,(java.lang.String)TEST,(java.lang.String)AUH,(java.lang.String)0,(java.lang.String)COK,(java.lang.String)0,(java.lang.String)18,(java.lang.String)0,(java.lang.String)30,(java.lang.String)OCT,(java.lang.String)2020,null,(java.lang.String)30,(java.lang.String)OCT,(java.lang.String)2020,null,(java.lang.String)9,(java.lang.String)9,(java.lang.String)200,(java.lang.String)0,(java.lang.String)4000,(java.lang.String)DXB,(java.lang.String)Normal,(java.lang.String)0,(java.lang.String)AED,(java.lang.String)0,(java.lang.String)500,(java.lang.String)10,(java.lang.String)32IGST,(java.lang.String)0,(java.lang.String)10,(java.lang.String)ARSRV01,(java.lang.String)0,(java.lang.String)4,(java.lang.String)1,(java.lang.String)1,(java.lang.String)MR. FIXED AGENT 02,(java.lang.String)0,(java.lang.String)1,(java.lang.String)1,(java.lang.String)1,(java.lang.String)TEST,(java.lang.String)F-First Class,(java.lang.String)Normal]
-	at org.testng.internal.reflect.DataProviderMethodMatcher.getConformingArguments(DataProviderMethodMatcher.java:52)
-	at org.testng.internal.Invoker.injectParameters(Invoker.java:1278)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1171)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:756)
-	at org.testng.TestRunner.run(TestRunner.java:610)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
-	at org.testng.TestNG.runSuites(TestNG.java:1133)
-	at org.testng.TestNG.run(TestNG.java:1104)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.internal.reflect.MethodMatcherException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logincheckK -->
-      </class> <!-- SalesRefundPositivecases.Airpositive -->
-      <class name="SalesRefundPositivecases.Misccredit">
-        <test-method status="PASS" signature="browesrnstatiation()[pri:0, instance:SalesRefundPositivecases.Misccredit@1275dab]" name="browesrnstatiation" is-config="true" duration-ms="8145" started-at="2020-11-20T09:51:41Z" finished-at="2020-11-20T09:51:49Z">
-          <reporter-output>
-            <line>
-              <![CDATA[STEP246]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- browesrnstatiation -->
-        <test-method status="PASS" signature="logincheckK(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:SalesRefundPositivecases.Misccredit@1275dab]" name="logincheckK" duration-ms="378627" started-at="2020-11-20T09:51:49Z" data-provider="dp" finished-at="2020-11-20T09:58:08Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[CU101]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[P@ssw0rd]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Sales / Refund]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[28]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[NOV]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[2020]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[OUTBOUND DOCKET]]>
-              </value>
-            </param>
-            <param index="7">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="8">
-              <value>
-                <![CDATA[AEBR01]]>
-              </value>
-            </param>
-            <param index="9">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="10">
-              <value>
-                <![CDATA[AE - CRYSTAL TRADING - EXMPT]]>
-              </value>
-            </param>
-            <param index="11">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="12">
-              <value>
-                <![CDATA[Misc Bookings]]>
-              </value>
-            </param>
-            <param index="13">
-              <value>
-                <![CDATA[Misc Bookings]]>
-              </value>
-            </param>
-            <param index="14">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="15">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="16">
-              <value>
-                <![CDATA[HOTEL]]>
-              </value>
-            </param>
-            <param index="17">
-              <value>
-                <![CDATA[AE - BPS - Comp1]]>
-              </value>
-            </param>
-            <param index="18">
-              <value>
-                <![CDATA[BU122 - Mr. Comp1 Branch 2 User 2]]>
-              </value>
-            </param>
-            <param index="19">
-              <value>
-                <![CDATA[BU112 - Mr.Comp 1 Branch 1 User 2]]>
-              </value>
-            </param>
-            <param index="20">
-              <value>
-                <![CDATA[Dubai]]>
-              </value>
-            </param>
-            <param index="21">
-              <value>
-                <![CDATA[06]]>
-              </value>
-            </param>
-            <param index="22">
-              <value>
-                <![CDATA[Nov]]>
-              </value>
-            </param>
-            <param index="23">
-              <value>
-                <![CDATA[2020]]>
-              </value>
-            </param>
-            <param index="24">
-              <value>
-                <![CDATA[9090909909]]>
-              </value>
-            </param>
-            <param index="25">
-              <value>
-                <![CDATA[EDCVF]]>
-              </value>
-            </param>
-            <param index="26">
-              <value>
-                <![CDATA[TESTT]]>
-              </value>
-            </param>
-            <param index="27">
-              <value>
-                <![CDATA[Hotel]]>
-              </value>
-            </param>
-            <param index="28">
-              <value>
-                <![CDATA[Hotel]]>
-              </value>
-            </param>
-            <param index="29">
-              <value>
-                <![CDATA[Normal]]>
-              </value>
-            </param>
-            <param index="30">
-              <value>
-                <![CDATA[AEDName]]>
-              </value>
-            </param>
-            <param index="31">
-              <value>
-                <![CDATA[2]]>
-              </value>
-            </param>
-            <param index="32">
-              <value>
-                <![CDATA[5]]>
-              </value>
-            </param>
-            <param index="33">
-              <value>
-                <![CDATA[HDFC Card]]>
-              </value>
-            </param>
-            <param index="34">
-              <value>
-                <![CDATA[10]]>
-              </value>
-            </param>
-            <param index="35">
-              <value>
-                <![CDATA[INSURANCE_FEE]]>
-              </value>
-            </param>
-            <param index="36">
-              <value>
-                <![CDATA[10]]>
-              </value>
-            </param>
-            <param index="37">
-              <value>
-                <![CDATA[5]]>
-              </value>
-            </param>
-            <param index="38">
-              <value>
-                <![CDATA[5]]>
-              </value>
-            </param>
-            <param index="39">
-              <value>
-                <![CDATA[5]]>
-              </value>
-            </param>
-            <param index="40">
-              <value>
-                <![CDATA[MS. PERCENT AGENT 03]]>
-              </value>
-            </param>
-            <param index="41">
-              <value>
-                <![CDATA[AE Branch 01]]>
-              </value>
-            </param>
-            <param index="42">
-              <value>
-                <![CDATA[910292039]]>
-              </value>
-            </param>
-            <param index="43">
-              <value>
-                <![CDATA[TESTT]]>
-              </value>
-            </param>
-            <param index="44">
-              <value>
-                <![CDATA[TESTT]]>
-              </value>
-            </param>
-            <param index="45">
-              <value>
-                <![CDATA[Pass]]>
-              </value>
-            </param>
-            <param index="46">
-              <value>
-                <![CDATA[QWERS]]>
-              </value>
-            </param>
-            <param index="47">
-              <value>
-                <![CDATA[QWERS]]>
-              </value>
-            </param>
-            <param index="48">
-              <value>
-                <![CDATA[QWERS]]>
-              </value>
-            </param>
-            <param index="49">
-              <value>
-                <![CDATA[QWERS]]>
-              </value>
-            </param>
-            <param index="50">
-              <value>
-                <![CDATA[QWERS]]>
-              </value>
-            </param>
-            <param index="51">
-              <value>
-                <![CDATA[QWERS]]>
-              </value>
-            </param>
-            <param index="52">
-              <value>
-                <![CDATA[7720010400]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-            <line>
-              <![CDATA[STEP247]]>
-            </line>
-            <line>
-              <![CDATA[STEP248]]>
-            </line>
-            <line>
-              <![CDATA[STEP249]]>
-            </line>
-            <line>
-              <![CDATA[STEP250]]>
-            </line>
-            <line>
-              <![CDATA[STEP251]]>
-            </line>
-            <line>
-              <![CDATA[STEP252]]>
-            </line>
-            <line>
-              <![CDATA[STEP253]]>
-            </line>
-            <line>
-              <![CDATA[STEP254]]>
-            </line>
-            <line>
-              <![CDATA[STEP255]]>
-            </line>
-            <line>
-              <![CDATA[STEP256]]>
-            </line>
-            <line>
-              <![CDATA[STEP257]]>
-            </line>
-            <line>
-              <![CDATA[STEP258]]>
-            </line>
-            <line>
-              <![CDATA[STEP259]]>
-            </line>
-            <line>
-              <![CDATA[STEP260]]>
-            </line>
-            <line>
-              <![CDATA[STEP261]]>
-            </line>
-            <line>
-              <![CDATA[STEP262]]>
-            </line>
-            <line>
-              <![CDATA[STEP263]]>
-            </line>
-            <line>
-              <![CDATA[STEP264]]>
-            </line>
-            <line>
-              <![CDATA[STEP265]]>
-            </line>
-            <line>
-              <![CDATA[STEP266]]>
-            </line>
-            <line>
-              <![CDATA[STEP267]]>
-            </line>
-            <line>
-              <![CDATA[STEP268]]>
-            </line>
-            <line>
-              <![CDATA[STEP269]]>
-            </line>
-            <line>
-              <![CDATA[STEP270]]>
-            </line>
-            <line>
-              <![CDATA[STEP271]]>
-            </line>
-            <line>
-              <![CDATA[STEP272]]>
-            </line>
-            <line>
-              <![CDATA[STEP273]]>
-            </line>
-            <line>
-              <![CDATA[STEP274]]>
-            </line>
-            <line>
-              <![CDATA[STEP275]]>
-            </line>
-            <line>
-              <![CDATA[STEP276]]>
-            </line>
-            <line>
-              <![CDATA[STEP277]]>
-            </line>
-            <line>
-              <![CDATA[STEP278]]>
-            </line>
-            <line>
-              <![CDATA[STEP279]]>
-            </line>
-            <line>
-              <![CDATA[STEP280]]>
-            </line>
-            <line>
-              <![CDATA[STEP281]]>
-            </line>
-            <line>
-              <![CDATA[STEP282]]>
-            </line>
-            <line>
-              <![CDATA[STEP283]]>
-            </line>
-            <line>
-              <![CDATA[STEP284]]>
-            </line>
-            <line>
-              <![CDATA[STEP285]]>
-            </line>
-            <line>
-              <![CDATA[STEP286]]>
-            </line>
-            <line>
-              <![CDATA[STEP287]]>
-            </line>
-            <line>
-              <![CDATA[STEP288]]>
-            </line>
-            <line>
-              <![CDATA[STEP289]]>
-            </line>
-            <line>
-              <![CDATA[STEP290]]>
-            </line>
-            <line>
-              <![CDATA[STEP291]]>
-            </line>
-            <line>
-              <![CDATA[STEP292]]>
-            </line>
-            <line>
-              <![CDATA[STEP293]]>
-            </line>
-            <line>
-              <![CDATA[STEP294]]>
-            </line>
-            <line>
-              <![CDATA[STEP295]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- logincheckK -->
-        <test-method status="PASS" signature="close()[pri:0, instance:SalesRefundPositivecases.Misccredit@1275dab]" name="close" is-config="true" duration-ms="2400" started-at="2020-11-20T09:58:08Z" finished-at="2020-11-20T09:58:11Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- close -->
-      </class> <!-- SalesRefundPositivecases.Misccredit -->
+      </class> <!-- travlogix.BusinessPartnersupplier -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

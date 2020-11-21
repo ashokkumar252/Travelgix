@@ -75,6 +75,8 @@ public class Vatsetup {
 		// wm.sendtextbyid("", );
 		wm.sendtextbyid("LoginCode", Username);
 		Thread.sleep(200);
+		wm.stab("LoginCode");
+		
 		wm.sendtextbyid("Password", Password);
 		Thread.sleep(200);
 		wm.clickbyxpath("//input[@value='Login']");

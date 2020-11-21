@@ -2,12 +2,13 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="CarPositivecredit" key="selection"/>
+		<item value="BusinessPartnersupplier" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="true" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="BusinessPartnersupplier"/>
 			<item value="CarPositivecredit"/>
 			<item value="Carcopytickect"/>
 			<item value="MiscConfirmationNumber "/>
@@ -15,7 +16,6 @@
 			<item value="//*[@id=&quot;IdSAMiscDynamicServiceDetailsDiv&quot;]/div/div/div[1]/div[1]/a/i"/>
 			<item value="Miscvouchernumber"/>
 			<item value="vouch"/>
-			<item value="TravelStatusDN"/>
 		</list>
 		<list key="replacehistory">
 			<item value="click"/>

@@ -62,7 +62,8 @@ public class CarPositivecredit {
 
 			String ProjectNumberAP, String DepartmentAP, String MajorClassAP, String TravelStatusAP,
 			String TotalSavingCodeAP, String GroupTravelIndicatorAP, String TourCodeAP, String EndorsementRestrictAP,
-			String FareCalculationAreaAP, String IntlSalesIndicatorAP, String Customerdetails
+			String FareCalculationAreaAP, String IntlSalesIndicatorAP, String Customerdetails,String Carcopytickect
+
 
 	) throws Exception
 
