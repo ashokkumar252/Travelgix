@@ -1,9 +1,0 @@
-package Salesrefundmisc;
-
-import org.testng.annotations.Test;
-
-public class Miscnegativewocwod {
-  @Test
-  public void f() {
-  }
-}

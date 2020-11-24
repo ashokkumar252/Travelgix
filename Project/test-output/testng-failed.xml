@@ -3,14 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="travlogix.BusinessPartnersupplier">
+      <class name="Salesrefundcar.Carbookingcard">
         <methods>
-          <include name="close"/>
+          <include name="logincheckK"/>
           <include name="instantiation"/>
-          <include name="browesrnstatiation"/>
-          <include name="logincheckK" invocation-numbers="0"/>
         </methods>
-      </class> <!-- travlogix.BusinessPartnersupplier -->
+      </class> <!-- Salesrefundcar.Carbookingcard -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

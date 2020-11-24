@@ -5,9 +5,9 @@
 <mapAttribute key="org.testng.eclipse.ALL_CLASS_METHODS"/>
 <listAttribute key="org.testng.eclipse.CLASS_TEST_LIST">
 <listEntry value="SalesRefundPositivecases.Misccash"/>
-<listEntry value="SalesRefundPositivecases.Hotelpositive"/>
-<listEntry value="SalesRefundPositivecases.Airpositive"/>
 <listEntry value="SalesRefundPositivecases.CarPositivecash"/>
+<listEntry value="SalesRefundPositivecases.Hotelpositivecredit"/>
+<listEntry value="SalesRefundPositivecases.Airpositivecash"/>
 <listEntry value="SalesRefundPositivecases.Hotelpositivecash"/>
 <listEntry value="SalesRefundPositivecases.CarPositivecredit"/>
 <listEntry value="SalesRefundPositivecases.Misccredit"/>

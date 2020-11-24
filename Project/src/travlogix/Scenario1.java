@@ -83,6 +83,8 @@ public class Scenario1 {
 
 		// wm.sendtextbyid("", );
 		wm.sendtextbyid("LoginCode", Username);
+		wm.stab("LoginCode");
+		
 		Thread.sleep(200);
 		wm.sendtextbyid("Password", Password);
 		Thread.sleep(200);
@@ -408,7 +410,7 @@ public class Scenario1 {
 				wm.keyboardarrowdownonetime("//input[@aria-owns='CountryName_listbox']");
 				Thread.sleep(50);
 				wm.Enterbyxpath("//input[@aria-owns='CountryName_listbox']");
-				Thread.sleep(500);
+				Thread.sleep(300);
 
 				wm.Listandenterdoubleclick("//span[@class='k-icon k-i-check']", "0");
 				

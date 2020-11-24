@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="BusinessPartnersupplier" key="selection"/>
+		<item value="FOP and total amount not matches successfully" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="true" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="BusinessPartnersupplier"/>
-			<item value="CarPositivecredit"/>
-			<item value="Carcopytickect"/>
-			<item value="MiscConfirmationNumber "/>
-			<item value="Payableagent not retrived successfuly"/>
-			<item value="//*[@id=&quot;IdSAMiscDynamicServiceDetailsDiv&quot;]/div/div/div[1]/div[1]/a/i"/>
-			<item value="Miscvouchernumber"/>
-			<item value="vouch"/>
+			<item value="FOP and total amount not matches successfully"/>
+			<item value="MiscFOPModeKey_listbox"/>
+			<item value="ConformationYes"/>
+			<item value="commis"/>
+			<item value="commi"/>
+			<item value="commiss"/>
+			<item value="comm"/>
+			<item value="tax"/>
 		</list>
 		<list key="replacehistory">
 			<item value="click"/>
@@ -25,7 +25,7 @@
 		<item value="257" key="DIALOG_WIDTH"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 		<item value="381" key="DIALOG_HEIGHT"/>
-		<item value="1053" key="DIALOG_X_ORIGIN"/>
-		<item value="327" key="DIALOG_Y_ORIGIN"/>
+		<item value="1010" key="DIALOG_X_ORIGIN"/>
+		<item value="326" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

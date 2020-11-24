@@ -34,5 +34,6 @@
 	<classpathentry kind="lib" path="C:/Wastaautomation/Project/lib/poi-scratchpad-3.13-20150929.jar"/>
 	<classpathentry kind="lib" path="C:/Wastaautomation/Project/lib/testng-6.8.5.jar"/>
 	<classpathentry kind="lib" path="C:/Wastaautomation/Project/lib/xmlbeans-2.6.0.jar"/>
+	<classpathentry kind="lib" path="C:/Travlogix/extentreports-java-2.41.2/extentreports-2.41.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

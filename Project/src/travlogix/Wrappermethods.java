@@ -56,6 +56,8 @@ public class Wrappermethods {
 		//System.setProperty("atu.reporter.config", "C:\\ATUReports\\atu.properties");
 		System.setProperty("atu.reporter.config", utility.Constant.ATUREPORTS);
 		
+		
+		
 	}
 
 	// D:\\selenium jajars 2.46\\ATUReporter_Selenium_testNG_5.5 BETA + ATU
@@ -166,11 +168,13 @@ public class Wrappermethods {
 			
 			driver.findElementByXPath(xpt1).click();
 			//ATUReports.add("Click by Xpath ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			//test.log(LogStatus.PASS, "Clicked by xpath");
 		} catch (NoSuchElementException e) {
 
 		//	ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
 		} catch (WebDriverException e) {
 			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			//test.log(LogStatus.FAIL, "Not Clicked by xpath");
 		} finally {
 			takeSnap();
 		}
@@ -221,11 +225,14 @@ public class Wrappermethods {
 			driver.findElementById(id).clear();
 			driver.findElementById(id).sendKeys(txt);
 			ATUReports.add(" User Entered the text as " + txt, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			//test.log(LogStatus.PASS, "User Entered the text");
 		} catch (NoSuchElementException e) {
 
 			//ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
 		} catch (WebDriverException e) {
 			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			//test.log(LogStatus.FAIL, "User not Entered the text");
+			
 		} finally {
 			takeSnap();
 		}
@@ -4910,17 +4917,17 @@ System.out.println("Element not present");
 								    try 
 									{
 								    	int j1=0;
-								    	Thread.sleep(300);
+								    	Thread.sleep(200);
 								    List<WebElement> list = driver.findElements(By.xpath(xpath1));    
-								    Thread.sleep(200);
+								    Thread.sleep(90);
 								    System.out.println("List Size is"+ +list.size());
 								    String  gtxt = driver.findElementByXPath(xpath1).getText();	
-								    Thread.sleep(200);
+								    Thread.sleep(90);
 								    int foo = Integer.parseInt(value);
-								    Thread.sleep(100);
+								    Thread.sleep(90);
 								   list.get(foo).click();
 					               ATUReports.add(Positivemessages, gtxt, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
-								     Thread.sleep(100);
+								  //  Thread.sleep(100);
 								  
 								    }			    
 								    
@@ -5865,7 +5872,7 @@ System.out.println("Element not present");
 																
 								//Sales net collections : publish fare -ORC + TAX + Service fee -Discount +outvat 
 
-	Double Netcollectionscalc = Publishedfare2 - Orc2 + tax2 + Servicefee2 - Discount2 + Outvat2;
+	Double Netcollectionscalc = (Publishedfare2) - (Orc2) + (tax2) + (Servicefee2) - (Discount2) + (Outvat2);
 				
 
 									

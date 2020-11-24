@@ -16,7 +16,8 @@ import atu.testng.reports.listeners.ConfigurationListener;
 import atu.testng.reports.listeners.MethodListener;
 
 @Listeners({ ATUReportsListener.class, ConfigurationListener.class, MethodListener.class })
-public class Airpositive {
+public class Airpositive 
+{
 
 	static {
 
@@ -500,6 +501,10 @@ public class Airpositive {
 				wm.Listnegativescearios(utility.Constant.Travelogixuitooltipvalidation, "0",
 						"Pass : Sales Refund Air Tickect created successfuly" + "",
 						"Fail:  Sales Refund Air Tickect not created successfuly " + "");
+				
+				//wm.Netcollections(Publishedfare, tax, Servicefee, Discount, Outvat, Systemnetcollections, Positivemessages, Negativemessages);
+				
+				
 			
 				
 
