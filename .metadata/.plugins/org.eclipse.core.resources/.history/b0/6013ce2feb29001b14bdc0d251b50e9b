@@ -1,9 +1,0 @@
-package Copytickectverifications;
-
-import org.testng.annotations.Test;
-
-public class Carcopytickect {
-  @Test
-  public void f() {
-  }
-}

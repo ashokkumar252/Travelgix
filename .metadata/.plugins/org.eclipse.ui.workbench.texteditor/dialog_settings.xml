@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="FOP and total amount not matches successfully" key="selection"/>
+		<item value="ConformationYes" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="true" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="FOP and total amount not matches successfully"/>
-			<item value="MiscFOPModeKey_listbox"/>
 			<item value="ConformationYes"/>
+			<item value=""/>
 			<item value="commis"/>
-			<item value="commi"/>
-			<item value="commiss"/>
-			<item value="comm"/>
 			<item value="tax"/>
+			<item value="yes"/>
+			<item value="Misc"/>
+			<item value="Miscvouch"/>
+			<item value="Miscvouchernumber"/>
 		</list>
 		<list key="replacehistory">
 			<item value="click"/>
