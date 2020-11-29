@@ -71,7 +71,7 @@ public class Wrappermethods {
 	// AndroidDriver driver1;
 	int i = 1;
 	static String store1; 
-	static String store2;
+	public static String store2;
 	public void launchbrowser(String brwsr, String URL)
 
 	{
@@ -6061,6 +6061,46 @@ System.out.println("Element not present");
 								    }
 
 								    }       
+
+									
+//=============================================================================================
+									
+//copy and paste the values
+									
+									 public void Copyandpaste(String xpath10) throws InterruptedException
+									 {
+									   try 
+										{
+									   	Thread.sleep(2000);
+									   
+
+			WebElement Elt = driver.findElement(By.xpath(xpath10)); 
+
+//			String  Elt1 = new String(Elt.getAttribute("value").trim());
+
+			String  Elt1 = new String(Elt.getText().trim());
+			
+
+
+									       Thread.sleep(500);
+
+									   
+									        store2 = Elt1.toString();
+										        Thread.sleep(500);
+										        
+									        System.out.println("the value is"+store2);
+									        
+									      ATUReports.add("Newly created details " + store2, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+									    	
+									        
+									   }
+									   catch (Exception e) {
+									   System.out.println("error");
+									   } finally {
+									   takeSnap();
+									   }
+
+									   }
 
 									
 									

@@ -1,56 +1,300 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
+    <line>
+      <![CDATA[STEP1]]>
+    </line>
+    <line>
+      <![CDATA[STEP2]]>
+    </line>
+    <line>
+      <![CDATA[STEP3]]>
+    </line>
+    <line>
+      <![CDATA[STEP4]]>
+    </line>
+    <line>
+      <![CDATA[STEP5]]>
+    </line>
+    <line>
+      <![CDATA[STEP6]]>
+    </line>
+    <line>
+      <![CDATA[STEP7]]>
+    </line>
+    <line>
+      <![CDATA[STEP8]]>
+    </line>
+    <line>
+      <![CDATA[STEP9]]>
+    </line>
+    <line>
+      <![CDATA[STEP10]]>
+    </line>
+    <line>
+      <![CDATA[STEP11]]>
+    </line>
+    <line>
+      <![CDATA[STEP12]]>
+    </line>
+    <line>
+      <![CDATA[STEP13]]>
+    </line>
+    <line>
+      <![CDATA[STEP14]]>
+    </line>
+    <line>
+      <![CDATA[STEP15]]>
+    </line>
+    <line>
+      <![CDATA[STEP16]]>
+    </line>
+    <line>
+      <![CDATA[STEP17]]>
+    </line>
+    <line>
+      <![CDATA[STEP18]]>
+    </line>
+    <line>
+      <![CDATA[STEP19]]>
+    </line>
+    <line>
+      <![CDATA[STEP20]]>
+    </line>
+    <line>
+      <![CDATA[STEP21]]>
+    </line>
+    <line>
+      <![CDATA[STEP22]]>
+    </line>
+    <line>
+      <![CDATA[STEP23]]>
+    </line>
+    <line>
+      <![CDATA[STEP24]]>
+    </line>
+    <line>
+      <![CDATA[STEP25]]>
+    </line>
+    <line>
+      <![CDATA[STEP26]]>
+    </line>
+    <line>
+      <![CDATA[STEP27]]>
+    </line>
+    <line>
+      <![CDATA[STEP28]]>
+    </line>
+    <line>
+      <![CDATA[STEP29]]>
+    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="2760" started-at="2020-11-24T18:31:11Z" finished-at="2020-11-24T18:31:14Z">
+  <suite name="Default suite" duration-ms="345694" started-at="2020-11-29T18:10:21Z" finished-at="2020-11-29T18:16:07Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="2760" started-at="2020-11-24T18:31:11Z" finished-at="2020-11-24T18:31:14Z">
-      <class name="Salesrefundcar.Carbookingcard">
-        <test-method status="PASS" signature="instantiation()[pri:0, instance:Salesrefundcar.Carbookingcard@be92ad]" name="instantiation" is-config="true" duration-ms="221" started-at="2020-11-25T00:01:11Z" finished-at="2020-11-25T00:01:11Z">
+    <test name="Default test" duration-ms="345694" started-at="2020-11-29T18:10:21Z" finished-at="2020-11-29T18:16:07Z">
+      <class name="Salesrefunddockectstatus.Notcollected">
+        <test-method status="PASS" signature="instantiation()[pri:0, instance:Salesrefunddockectstatus.Notcollected@be92ad]" name="instantiation" is-config="true" duration-ms="419" started-at="2020-11-29T23:40:21Z" finished-at="2020-11-29T23:40:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- instantiation -->
-        <test-method status="FAIL" signature="logincheckK(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Salesrefundcar.Carbookingcard@be92ad]" name="logincheckK" duration-ms="2451" started-at="2020-11-25T00:01:11Z" data-provider="dp" finished-at="2020-11-25T00:01:14Z">
-          <exception class="org.testng.internal.reflect.MethodMatcherException">
-            <message>
-              <![CDATA[
-Data provider mismatch
-Method: logincheckK([Parameter{index=0, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=1, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=2, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=3, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=4, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=5, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=6, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=7, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=8, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=9, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=10, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=11, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=12, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=13, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=14, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=15, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=16, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=17, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=18, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=19, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=20, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=21, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=22, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=23, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=24, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=25, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=26, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=27, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=28, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=29, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=30, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=31, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=32, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=33, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=34, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=35, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=36, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=37, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=38, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=39, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=40, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=41, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=42, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=43, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=44, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=45, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=46, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=47, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=48, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=49, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=50, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=51, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=52, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=53, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=54, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=55, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=56, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=57, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=58, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=59, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=60, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=61, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=62, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=63, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=64, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=65, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=66, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=67, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=68, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=69, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=70, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=71, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=72, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=73, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=74, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=75, type=java.lang.String, declaredAnnotations=[]}])
-Arguments: [(java.lang.String)CU101,(java.lang.String)P@ssw0rd,(java.lang.String)Sales / Refund,(java.lang.String)28,(java.lang.String)NOV,(java.lang.String)2020,(java.lang.String)OUTBOUND DOCKET,(java.lang.String)0,(java.lang.String)AEBR01,(java.lang.String)0,(java.lang.String)AE - CRYSTAL TRADING - EXMPT,(java.lang.String)0,(java.lang.String)Hotelbookings,(java.lang.String)Hotelbookings,(java.lang.String)0,(java.lang.String)AE - BPS - Comp1,(java.lang.String)1,(java.lang.String)1,(java.lang.String)Mr.Comp 1 Branch 1  User 1,(java.lang.String)Mr.Comp 1 Branch 1  User 1,(java.lang.String)06,(java.lang.String)NOV,(java.lang.String)2020,(java.lang.String)0,(java.lang.String)24,(java.lang.String)NOV,(java.lang.String)2020,(java.lang.String)pcc 5444,(java.lang.String)pcc 5444,(java.lang.String)1000,(java.lang.String)100,(java.lang.String)testt,(java.lang.String)Dubai,(java.lang.String)Fordicon,(java.lang.String)Friends Track,(java.lang.String)DUBAI AIRPORT, DUBAI, United Arab Emirates,(java.lang.String)Hotel,(java.lang.String)06,(java.lang.String)Nov,(java.lang.String)2020,(java.lang.String)07,(java.lang.String)Nov,(java.lang.String)2020,(java.lang.String)1,(java.lang.String)QWERG,(java.lang.String)123451234,(java.lang.String)Testt,(java.lang.String)Normal,(java.lang.String)AED,(java.lang.String)50,(java.lang.String)40,(java.lang.String)HDFC Card,(java.lang.String)10,(java.lang.String)5,(java.lang.String)CSRC003,(java.lang.String)1,(java.lang.String)1,(java.lang.String)1,(java.lang.String)MR. FIXED AGENT 02,(java.lang.String)910292039,(java.lang.String)TESTT,(java.lang.String)TESTT,(java.lang.String)Pass,(java.lang.String)QWERS,(java.lang.String)QWERS,(java.lang.String)QWERS,(java.lang.String)QWERS,(java.lang.String)QWERS,(java.lang.String)QWERS,(java.lang.String)AE Branch 01 - Dubai,(java.lang.String)9920010281]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.internal.reflect.MethodMatcherException: 
-Data provider mismatch
-Method: logincheckK([Parameter{index=0, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=1, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=2, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=3, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=4, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=5, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=6, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=7, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=8, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=9, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=10, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=11, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=12, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=13, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=14, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=15, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=16, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=17, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=18, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=19, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=20, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=21, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=22, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=23, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=24, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=25, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=26, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=27, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=28, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=29, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=30, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=31, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=32, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=33, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=34, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=35, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=36, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=37, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=38, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=39, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=40, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=41, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=42, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=43, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=44, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=45, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=46, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=47, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=48, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=49, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=50, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=51, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=52, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=53, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=54, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=55, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=56, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=57, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=58, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=59, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=60, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=61, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=62, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=63, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=64, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=65, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=66, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=67, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=68, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=69, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=70, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=71, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=72, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=73, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=74, type=java.lang.String, declaredAnnotations=[]}, Parameter{index=75, type=java.lang.String, declaredAnnotations=[]}])
-Arguments: [(java.lang.String)CU101,(java.lang.String)P@ssw0rd,(java.lang.String)Sales / Refund,(java.lang.String)28,(java.lang.String)NOV,(java.lang.String)2020,(java.lang.String)OUTBOUND DOCKET,(java.lang.String)0,(java.lang.String)AEBR01,(java.lang.String)0,(java.lang.String)AE - CRYSTAL TRADING - EXMPT,(java.lang.String)0,(java.lang.String)Hotelbookings,(java.lang.String)Hotelbookings,(java.lang.String)0,(java.lang.String)AE - BPS - Comp1,(java.lang.String)1,(java.lang.String)1,(java.lang.String)Mr.Comp 1 Branch 1  User 1,(java.lang.String)Mr.Comp 1 Branch 1  User 1,(java.lang.String)06,(java.lang.String)NOV,(java.lang.String)2020,(java.lang.String)0,(java.lang.String)24,(java.lang.String)NOV,(java.lang.String)2020,(java.lang.String)pcc 5444,(java.lang.String)pcc 5444,(java.lang.String)1000,(java.lang.String)100,(java.lang.String)testt,(java.lang.String)Dubai,(java.lang.String)Fordicon,(java.lang.String)Friends Track,(java.lang.String)DUBAI AIRPORT, DUBAI, United Arab Emirates,(java.lang.String)Hotel,(java.lang.String)06,(java.lang.String)Nov,(java.lang.String)2020,(java.lang.String)07,(java.lang.String)Nov,(java.lang.String)2020,(java.lang.String)1,(java.lang.String)QWERG,(java.lang.String)123451234,(java.lang.String)Testt,(java.lang.String)Normal,(java.lang.String)AED,(java.lang.String)50,(java.lang.String)40,(java.lang.String)HDFC Card,(java.lang.String)10,(java.lang.String)5,(java.lang.String)CSRC003,(java.lang.String)1,(java.lang.String)1,(java.lang.String)1,(java.lang.String)MR. FIXED AGENT 02,(java.lang.String)910292039,(java.lang.String)TESTT,(java.lang.String)TESTT,(java.lang.String)Pass,(java.lang.String)QWERS,(java.lang.String)QWERS,(java.lang.String)QWERS,(java.lang.String)QWERS,(java.lang.String)QWERS,(java.lang.String)QWERS,(java.lang.String)AE Branch 01 - Dubai,(java.lang.String)9920010281]
-	at org.testng.internal.reflect.DataProviderMethodMatcher.getConformingArguments(DataProviderMethodMatcher.java:52)
-	at org.testng.internal.Invoker.injectParameters(Invoker.java:1278)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1171)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:756)
-	at org.testng.TestRunner.run(TestRunner.java:610)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
-	at org.testng.TestNG.runSuites(TestNG.java:1133)
-	at org.testng.TestNG.run(TestNG.java:1104)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.internal.reflect.MethodMatcherException -->
+        <test-method status="PASS" signature="browesrnstatiation()[pri:0, instance:Salesrefunddockectstatus.Notcollected@be92ad]" name="browesrnstatiation" is-config="true" duration-ms="11751" started-at="2020-11-29T23:40:24Z" finished-at="2020-11-29T23:40:36Z">
+          <reporter-output>
+            <line>
+              <![CDATA[STEP1]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- browesrnstatiation -->
+        <test-method status="PASS" signature="Aircopytickect(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Salesrefunddockectstatus.Notcollected@be92ad]" name="Aircopytickect" duration-ms="330549" started-at="2020-11-29T23:40:36Z" data-provider="dp" finished-at="2020-11-29T23:46:06Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[CU101]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[P@ssw0rd]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Sales / Refund]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[29]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[NOV]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[2020]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[OUTBOUND DOCKET]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[AEBR01]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[jordan]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[0]]>
+              </value>
+            </param>
+            <param index="12">
+              <value>
+                <![CDATA[testt]]>
+              </value>
+            </param>
+            <param index="13">
+              <value>
+                <![CDATA[testt]]>
+              </value>
+            </param>
+            <param index="14">
+              <value>
+                <![CDATA[9210291269]]>
+              </value>
+            </param>
+            <param index="15">
+              <value>
+                <![CDATA[9210291230]]>
+              </value>
+            </param>
+            <param index="16">
+              <value>
+                <![CDATA[9920010281]]>
+              </value>
+            </param>
+            <param index="17">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="18">
+              <value>
+                <![CDATA[7720010409]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[STEP2]]>
+            </line>
+            <line>
+              <![CDATA[STEP3]]>
+            </line>
+            <line>
+              <![CDATA[STEP4]]>
+            </line>
+            <line>
+              <![CDATA[STEP5]]>
+            </line>
+            <line>
+              <![CDATA[STEP6]]>
+            </line>
+            <line>
+              <![CDATA[STEP7]]>
+            </line>
+            <line>
+              <![CDATA[STEP8]]>
+            </line>
+            <line>
+              <![CDATA[STEP9]]>
+            </line>
+            <line>
+              <![CDATA[STEP10]]>
+            </line>
+            <line>
+              <![CDATA[STEP11]]>
+            </line>
+            <line>
+              <![CDATA[STEP12]]>
+            </line>
+            <line>
+              <![CDATA[STEP13]]>
+            </line>
+            <line>
+              <![CDATA[STEP14]]>
+            </line>
+            <line>
+              <![CDATA[STEP15]]>
+            </line>
+            <line>
+              <![CDATA[STEP16]]>
+            </line>
+            <line>
+              <![CDATA[STEP17]]>
+            </line>
+            <line>
+              <![CDATA[STEP18]]>
+            </line>
+            <line>
+              <![CDATA[STEP19]]>
+            </line>
+            <line>
+              <![CDATA[STEP20]]>
+            </line>
+            <line>
+              <![CDATA[STEP21]]>
+            </line>
+            <line>
+              <![CDATA[STEP22]]>
+            </line>
+            <line>
+              <![CDATA[STEP23]]>
+            </line>
+            <line>
+              <![CDATA[STEP24]]>
+            </line>
+            <line>
+              <![CDATA[STEP25]]>
+            </line>
+            <line>
+              <![CDATA[STEP26]]>
+            </line>
+            <line>
+              <![CDATA[STEP27]]>
+            </line>
+            <line>
+              <![CDATA[STEP28]]>
+            </line>
+            <line>
+              <![CDATA[STEP29]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- Aircopytickect -->
+        <test-method status="PASS" signature="close()[pri:0, instance:Salesrefunddockectstatus.Notcollected@be92ad]" name="close" is-config="true" duration-ms="537" started-at="2020-11-29T23:46:06Z" finished-at="2020-11-29T23:46:07Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- logincheckK -->
-      </class> <!-- Salesrefundcar.Carbookingcard -->
+        </test-method> <!-- close -->
+      </class> <!-- Salesrefunddockectstatus.Notcollected -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
