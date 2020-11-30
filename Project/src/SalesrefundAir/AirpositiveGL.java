@@ -490,7 +490,7 @@ Thread.sleep(200);
 
 wm.Netcollectionsuisngorc("//input[@name='AtfdBaseFare']", "//input[@name='AtfdIncentivePaid']"
 		, "//input[@name='TotalTaxAmount']",
-		"//input[@name='TotalServiceFee']", "//input[@name='TotalDiscount']", " //input[@name='CO_OUTVAT']", 
+		"//input[@name='TotalServiceFee']", "//input[@name='TotalDiscount']", " //input[@name='TotOutputVat']", 
 		"//input[@name='Amt_NetCollection']", "Net collection  done correectly", "Net collection not done correectly");
 Thread.sleep(200);
 

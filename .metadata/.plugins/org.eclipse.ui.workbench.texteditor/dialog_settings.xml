@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="wm.Listandenter(&quot;//i[@class=&apos;fa fa-plus&apos;]&quot;, &quot;2&quot;);" key="selection"/>
+		<item value="Browser launched and URL got triggered" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="true" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="wm.Listandenter(&quot;//i[@class=&apos;fa fa-plus&apos;]&quot;, &quot;2&quot;);"/>
-			<item value="hotel"/>
-			<item value="h"/>
-			<item value="car"/>
-			<item value="Commonindex"/>
-			<item value="Ccv"/>
-			<item value="CcvdVoucherStatus_listbox"/>
-			<item value="Carcopytickect"/>
+			<item value="Browser launched and URL got triggered"/>
+			<item value="browesrnstatiation"/>
+			<item value="browesr"/>
+			<item value="method"/>
+			<item value="Before"/>
+			<item value="Beforemethod"/>
+			<item value="beforemethod"/>
+			<item value="Beforetest"/>
 		</list>
 		<list key="replacehistory">
 			<item value="click"/>

@@ -335,6 +335,17 @@ Thread.sleep(600);
 wm.clickbyxpath("//*[@id='testData']/i");
 Thread.sleep(500);
 
+
+wm.Netcollections("//input[@name='MiscRateDealFare']", "//input[@name='TotalTaxAmount']",
+		"//input[@name='TotalServiceFee']", "//input[@name='TotalDiscount']", " //input[@name='TotOutputVat']", 
+		"//input[@name='Amt_NetCollection']", "Net calclaiton done correectly", "Net calclaiton not done correectly");
+
+
+wm.Publishedfare("//input[@name='MiscRateDealFare']", "//input[@name='TotalTaxAmount']", "//input[@name='salestotcommm']"
+		,"//input[@name='TotInputVat']", "//input[@name='Amt_NetPayable']", "Net payable Calclated successfuly", 
+		"Net payable not Calclated successfuly");
+
+
 wm.clickbyxpath("//button[@id='btnmiscsave']");
 
 Thread.sleep(500);

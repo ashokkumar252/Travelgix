@@ -3,14 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="Salesrefunddockectstatus.Notcollected">
+      <class name="SalesRefundPositivecases.Airpositivecash">
         <methods>
-          <include name="Aircopytickect" invocation-numbers="0"/>
           <include name="instantiation"/>
           <include name="close"/>
+          <include name="logincheckK" invocation-numbers="0"/>
           <include name="browesrnstatiation"/>
         </methods>
-      </class> <!-- Salesrefunddockectstatus.Notcollected -->
+      </class> <!-- SalesRefundPositivecases.Airpositivecash -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -91,6 +91,7 @@ public class Wrappermethods {
 			ATUReports.setWebDriver(driver);
 			ATUReports.indexPageDescription = "Information dynamic Project";
 			ATUReports.setAuthorInfo("Automation", Utils.getCurrentTime(), "1.0");
+			ATUReports.add("Chromebrowser is instantiated", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
 
 		}
 
@@ -815,7 +816,7 @@ public class Wrappermethods {
 
 		driver.close();
 
-		//ATUReports.add("Browser got closed", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+		ATUReports.add("Browser got closed", LogAs.INFO, new CaptureScreen(ScreenshotOf.DESKTOP));
 
 	}
 	
@@ -5815,6 +5816,7 @@ System.out.println("Element not present");
 								    
 								   
 									    if(Netcollectionscalc.equals(Systemnetcollections2))
+									    	
 								    {
 								    ATUReports.add(Positivemessages, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 								    }
@@ -5839,6 +5841,10 @@ System.out.println("Element not present");
 
 									
 //=======================================================================================================
+									
+
+
+//===============================================================================================================									
 									
 									public void Netcollectionsuisngorc(String Publishedfare,String Orc,
 											String tax,String Servicefee,String Discount,String Outvat,String Systemnetcollections,
@@ -5888,7 +5894,82 @@ System.out.println("Element not present");
 								    System.out.print("\n the value of Netcollectionscalc is" + Netcollectionscalc);
 								    
 								   
-									    if(Netcollectionscalc.equals(Systemnetcollections2))
+								    if(Netcollectionscalc.equals(Systemnetcollections2))												    	
+									    	
+								    {
+								    ATUReports.add(Positivemessages, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+								    }
+								    else
+								    {
+								    ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+									    	
+								    }
+								    }
+									catch (NoSuchElementException e)
+									{
+
+								    ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+								    } catch (Exception e) {
+								    System.out.println("error");
+								    } finally {
+								    takeSnap();
+								    }
+
+								    }       
+//===========================================================================================================
+									
+									
+
+									public void Netcollectionsuisngorcsub(String Publishedfare,String Orc,
+											String tax,String Servicefee,String Discount,String Outvat,String Systemnetcollections,
+											String Positivemessages,String Negativemessages) throws InterruptedException
+								    {
+								    try 
+								    {
+
+								    WebElement Publishedfare1 = driver.findElement(By.xpath(Publishedfare)); 
+								    WebElement Orc1 = driver.findElement(By.xpath(Orc)); 								    
+									WebElement tax1 = driver.findElement(By.xpath(tax));
+									WebElement Servicefee1 = driver.findElement(By.xpath(Servicefee));
+									WebElement Discount1 = driver.findElement(By.xpath(Discount));
+									WebElement Outvat1 = driver.findElement(By.xpath(Outvat));
+									WebElement Systemnetcollections1 = driver.findElement(By.xpath(Systemnetcollections));
+									
+									
+									
+
+								    Thread.sleep(500);
+
+								    Double Publishedfare2 = new Double(Publishedfare1.getAttribute("value").trim());
+								    Double Orc2 = new Double(Orc1.getAttribute("value").trim());
+									Double tax2 = new Double(tax1.getAttribute("value").trim());
+									Double Servicefee2 = new Double(Servicefee1.getAttribute("value").trim());
+									Double Discount2 = new Double(Discount1.getAttribute("value").trim());
+									Double Outvat2 = new Double(Outvat1.getAttribute("value").trim());
+									Double Systemnetcollections2 = new Double(Systemnetcollections1.getAttribute("value").trim());
+											
+								//	Double d33=d30*d31;
+																
+								//Sales net collections : publish fare -ORC + TAX + Service fee -Discount +outvat 
+
+	Double Netcollectionscalc = (Publishedfare2) - (Orc2) + (tax2) + (Servicefee2) - (Discount2) + (Outvat2);
+				
+
+									
+								    Thread.sleep(500);
+								    System.out.print("\n the value of Publishedfare2 is" + Publishedfare2);
+								    System.out.print("\n the value of Publishedfare2 is" + Orc2);								    
+								    System.out.print("\n the value of tax2 is" + tax2);
+								    System.out.print("\n the value of Servicefee2 is" + Servicefee2);
+								    System.out.print("\n the value of Discount2 is" + Discount2);
+								    System.out.print("\n the value of Outvat2 is" + Outvat2);
+								    System.out.print("\n the value of Systemnetcollections2 is" + Systemnetcollections2);
+
+								    System.out.print("\n the value of Netcollectionscalc is" + Netcollectionscalc);
+								    
+								   
+								    if(Netcollectionscalc-Systemnetcollections2==0)												    	
+									    	
 								    {
 								    ATUReports.add(Positivemessages, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 								    }
@@ -5910,7 +5991,6 @@ System.out.println("Element not present");
 
 								    }       
 
-	
 									
 //===========================================================================================================
 

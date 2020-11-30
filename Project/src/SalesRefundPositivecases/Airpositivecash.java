@@ -64,7 +64,8 @@ public class Airpositivecash {
 			String Currency, String Currecnyindex, String AtfdBaseFare, String AtfdDealFare, String Aatcode,
 			String Aatcodeindex, String AatAmount, String Namee, String Nameeindex, String AtscBaseAmount,
 			String AtfdCommPercent1, String AtfdCommPercent2, String Agentincetive, String Agentincetiveindexx,
-			String AtfdDiscPercent1,String Modeindex,String Selectedbranch,String TravelStatusDN) throws Exception
+			String AtfdDiscPercent1,String Modeindex,String Selectedbranch,String TravelStatusDN,
+			String Class,String issuemode) throws Exception
 
 	{
 
@@ -466,6 +467,23 @@ public class Airpositivecash {
 		
 	   wm.clickbyxpath("//span[@class='k-icon k-i-check']");
 		Thread.sleep(900);
+		
+
+		
+wm.Netcollectionsuisngorcsub("//input[@name='AtfdBaseFare']", "//input[@name='AtfdIncentivePaid']"
+		, "//input[@name='TotalTaxAmount']",
+		"//input[@name='TotalServiceFee']", "//input[@name='TotalDiscount']", "//input[@name='TotOutputVat']", 
+		"//input[@name='Amt_NetCollection']", "Net collection  done correectly", "Net collection not done correectly");
+Thread.sleep(200);
+
+
+wm.Publishedfareusingorc("//input[@name='AtfdBaseFare']", "//input[@name='AtfdIncentivePaid']", 
+		"//input[@name='TotalTaxAmount']", "//input[@name='salestotcommm']"
+		,"//input[@name='TotInputVat']", "//input[@name='Amt_NetPayable']", "Net payable Calclated successfuly", 
+		"Net payable not Calclated successfuly");
+
+Thread.sleep(200);
+
 		
 		//udid details
 				wm.clickbyxpath("//*[@id='testData']/i");

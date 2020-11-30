@@ -1075,6 +1075,22 @@ Thread.sleep(300);
 wm.clickbyxpath("//span[@class='k-icon k-i-check']");
 Thread.sleep(500);
 
+
+wm.Netcollectionsuisngorc("//input[@name='AtfdBaseFare']", "//input[@name='AtfdIncentivePaid']"
+		, "//input[@name='TotalTaxAmount']",
+		"//input[@name='TotalServiceFee']", "//input[@name='TotalDiscount']", " //input[@name='TotOutputVat']", 
+		"//input[@name='Amt_NetCollection']", "Net collection  done correectly", "Net collection not done correectly");
+Thread.sleep(200);
+
+
+wm.Publishedfareusingorc("//input[@name='AtfdBaseFare']", "//input[@name='AtfdIncentivePaid']", 
+		"//input[@name='TotalTaxAmount']", "//input[@name='salestotcommm']"
+		,"//input[@name='TotInputVat']", "//input[@name='Amt_NetPayable']", "Net payable Calclated successfuly", 
+		"Net payable not Calclated successfuly");
+
+
+Thread.sleep(200);
+
 wm.stabbyxpath("//*[@id='AirFOPDetailGrid']/div[5]/span[1]/span/span/span[2]/span");
 wm.clickbyxpath("//*[@id='AirFOPDetailGrid']/div[5]/span[1]/span/span/span[2]/span");
 wm.clickbyxpath("//*[@id='AirFOPDetailGrid']/div[5]/span[1]/span/span/span[2]/span");
