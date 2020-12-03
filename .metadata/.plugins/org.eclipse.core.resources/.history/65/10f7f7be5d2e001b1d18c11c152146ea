@@ -1,9 +1,0 @@
-package Salesrefundcar;
-
-import org.testng.annotations.Test;
-
-public class Carbookingift {
-  @Test
-  public void f() {
-  }
-}

@@ -1,9 +1,0 @@
-package Salesrefunddockectstatus;
-
-import org.testng.annotations.Test;
-
-public class Notcollected {
-  @Test
-  public void f() {
-  }
-}

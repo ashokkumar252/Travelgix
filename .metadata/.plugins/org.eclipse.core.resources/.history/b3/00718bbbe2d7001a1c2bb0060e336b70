@@ -1,9 +1,0 @@
-package Masters;
-
-import org.testng.annotations.Test;
-
-public class 1Reasonmaster {
-  @Test
-  public void f() {
-  }
-}

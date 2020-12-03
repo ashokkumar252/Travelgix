@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;Project/src/travlogix/Miscservice charge.java&apos; to &apos;Miscservicecharge.java&apos;" description="Rename resource &apos;Miscservice charge.java&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/travlogix/Miscservice charge.java" name="Miscservicecharge.java" stamp="1602857593514" updateReferences="true"/>
-</session>

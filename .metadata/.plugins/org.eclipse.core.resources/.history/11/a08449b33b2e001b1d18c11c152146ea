@@ -1,9 +1,0 @@
-package SalesrefundHotel;
-
-import org.testng.annotations.Test;
-
-public class HotelbookingGL {
-  @Test
-  public void f() {
-  }
-}
