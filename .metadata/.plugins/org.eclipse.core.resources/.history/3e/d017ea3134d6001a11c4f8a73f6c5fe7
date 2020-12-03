@@ -1,0 +1,148 @@
+package shipogix;
+import utility.Constant;
+import java.io.IOException;
+import java.sql.Driver;
+import java.util.ArrayList;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+import shipogix.Wrappermethods;
+import atu.testng.reports.listeners.ATUReportsListener;
+import atu.testng.reports.listeners.ConfigurationListener;
+import atu.testng.reports.listeners.MethodListener;
+
+//import pack.Wrappermethods;
+@Listeners({ ATUReportsListener.class, ConfigurationListener.class, MethodListener.class })
+public class Scenario142 
+{
+
+	static {
+
+		System.setProperty("atu.reporter.config", "C:\\ATUReports\\atu.properties");
+	}
+
+	Wrappermethods wm;
+
+	@BeforeTest
+	public void instantiation() {
+		wm = new Wrappermethods();
+
+	}
+
+	@BeforeMethod
+	public void browesrnstatiation()
+
+	{
+
+		wm.launchbrowser("chrome", "http://webuat.infodynamic.net:8086/shiplogix/shiplogix/");
+
+		// wm.launchbrowser("", utility.Constant.URL);
+
+	}
+
+	@Test(dataProvider = "dp")
+	public void logincheckK(String Username, String Password, String Leftsidemenuname,String Voyagevesselcode,
+			String Voyagevesselcodeindex,String Mode,String Modeindex,String Connvoyage,String Convoyageindex
+			,String Blnumbers) throws Exception
+
+	{
+
+		Thread.sleep(2000);
+
+		// wm.sendtextbyid("", );
+		wm.sendtextbyid("LoginCode", Username);
+		Thread.sleep(200);
+		wm.sendtextbyid("Password", Password);
+		Thread.sleep(200);
+		wm.clickbyxpath("//input[@value='Login']");
+
+		wm.sleep();
+		wm.sleep();
+
+		// landing to home page
+
+		wm.sendtextbyid("input-items", Leftsidemenuname);
+
+		Thread.sleep(900);
+		wm.clickbyid("modExportManifestEntry");
+		Thread.sleep(900);
+		wm.clickbyid("pgmTSP001");
+		wm.sleep();
+		
+		
+	 wm.clickbyxpath("//label[@for='BasisAll_All']");
+	 Thread.sleep(900);
+	 
+	//Enter the voyagevesselcode 
+	 
+	 wm.sendtextbyxvalue("//input[@aria-owns='VoyageName_listbox']", Voyagevesselcode);
+	 Thread.sleep(900);
+	 wm.Listandenter("//*[@id='VoyageName_listbox']/li", Voyagevesselcodeindex);
+	 Thread.sleep(900);
+	 
+	 
+	 //select the mode
+	 wm.sendtextbyxvalue("//input[@aria-owns='ModeName_listbox']", Mode);
+	 Thread.sleep(900);
+	 wm.Listandenter("//*[@id='ModeName_listbox']/li", Modeindex);
+	 Thread.sleep(900);
+	 
+	 //selectedthe connection vyage index
+	 
+	 wm.sendtextbyxvalue("//input[@aria-owns='ConnectingVoyageName_listbox']", Connvoyage);
+	 Thread.sleep(900);
+	 wm.Listandenter("//*[@id='ConnectingVoyageName_listbox']/li", Convoyageindex);
+	 Thread.sleep(900);
+	 
+	 
+	 wm.scrolldownbyxpath("//button[@onclick='FetchData();']");
+	 Thread.sleep(900);
+	 
+	 //Done the filtering by BL numbers
+	 
+	 wm.Listandenter("//span[@class='k-icon k-i-filter']", "10");
+	 Thread.sleep(900);
+	 wm.sendtextbyxvalue("//input[@data-bind='value:filters[0].value']", Blnumbers);
+	 Thread.sleep(900);
+	 
+	 wm.clickbyxpath("//button[@type='submit']");
+	 Thread.sleep(900);
+	 
+	 wm.Listandenter("//input[@id='tspCheckId']", "0");
+	// wm.Listandenter("//input[@id='tspCheckId']", "0");
+	 
+	 Thread.sleep(900);
+
+	 wm.clickbyxpath("//button[@onclick='CopyData();']");
+	 Thread.sleep(900);
+	 
+	 wm.clickbyxpath(" //button[@id='btnMainSave']");
+	 Thread.sleep(900);
+	 
+	 
+	 
+	 
+	 wm.sleep();
+	 	
+	 
+				
+	}
+
+	@AfterMethod
+	public void close()
+
+	{
+		wm.close();
+
+	}
+
+	@DataProvider(name = "dp")
+	public Object[][] dp() throws IOException {
+
+		return Wrappermethods.getSheet("ship1", "Hftwo");
+
+	}
+}

@@ -1,0 +1,353 @@
+//WASTA login screen
+
+//Tarif truck
+package shipogix;
+import utility.Constant;
+import java.io.IOException;
+import java.sql.Driver;
+import java.util.ArrayList;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+import shipogix.Wrappermethods;
+import atu.testng.reports.listeners.ATUReportsListener;
+import atu.testng.reports.listeners.ConfigurationListener;
+import atu.testng.reports.listeners.MethodListener;
+
+//import pack.Wrappermethods;
+@Listeners({ ATUReportsListener.class, ConfigurationListener.class, MethodListener.class })
+public class Scenario8 {
+
+	static {
+
+		System.setProperty("atu.reporter.config", "C:\\ATUReports\\atu.properties");
+	}
+
+	Wrappermethods wm;
+
+	@BeforeTest
+	public void instantiation() {
+		wm = new Wrappermethods();
+
+	}
+
+	@BeforeMethod
+	public void browesrnstatiation()
+
+	{
+
+		wm.launchbrowser("chrome", "http://webuat.infodynamic.net:8086/shiplogix/shiplogix/");
+
+	}
+
+	@Test(dataProvider = "dp")
+	public void logincheckK(String Username, String Password,String ordertype,String Activeto,String Activeto1,
+			String Customer,String RequestNumber,String shipmode,String commodity,String unittype,
+			String Quantity,String Weight,String Grossweight,String volume,String volumesize,String Length,String width,
+			String HeightCM,String Routemode,String providerindex,String Routeprovidercity,			
+			String Ratetype,String Chargetype,String Chargetypeindex,String Payatlocations,String Payatlocationindex,
+			String Rbasictype,String Rbasictypeindex,String Ratecurrency,String Ratecurrencyindex,
+			String Ratecalculationmethodkey)throws Exception
+
+	{
+
+		Thread.sleep(2000);
+
+		// wm.sendtextbyid("", );
+		wm.sendtextbyid("LoginCode", Username);
+		Thread.sleep(500);
+		wm.sendtextbyid("Password", Password);
+		Thread.sleep(500);
+		wm.clickbyxpath("//input[@value='Login']");
+		wm.sleep();
+
+		// landing to home page
+
+		wm.clickbyid("modQUOT");
+		Thread.sleep(500);
+		wm.clickbyid("pgmQUOT01");
+		Thread.sleep(500);
+
+		wm.clickbyid("btnMainAdd");
+
+		Thread.sleep(2200);
+
+		//ORDER TYPE:
+		
+   wm.clickbyxpath(utility.Constant.xpordertype);
+   Thread.sleep(900);
+   wm.Listandenterquick("//*[@id='OrderType_listbox']/li", ordertype);
+   Thread.sleep(900);
+   Thread.sleep(200);
+	
+	wm.sendtextbyidnotusingclear("ActiveTo", Activeto1+Activeto);
+
+    Thread.sleep(900);
+     
+    wm.sendtextbyxvalue("//input[@aria-owns='RequestedByKey_listbox']", Customer);
+    Thread.sleep(900);
+    wm.keyboardarrowdownonetime("//input[@aria-owns='RequestedByKey_listbox']");
+   Thread.sleep(900);
+    wm.Enterbyxpath("//input[@aria-owns='RequestedByKey_listbox']");
+    Thread.sleep(900);
+    
+    wm.sendtextbyid("QuotationReference", RequestNumber);
+    Thread.sleep(900);
+    
+    wm.clickbyxpath("//span[@aria-owns='HeaderShipmentModeKey_listbox']");
+    Thread.sleep(900);
+    
+    wm.Listandenterquick("//*[@id='HeaderShipmentModeKey_listbox']/li", shipmode);
+    Thread.sleep(900);
+    
+    
+    //eneer the commodity details : 
+    	
+    wm.clickbyxpath("//div[@id='Commodity_Entry_Grid']/div[1]/a");
+    Thread.sleep(900);
+    //cargo info
+    
+    wm.clickbyxpath("//span[@aria-owns='CommodityKey_listbox']");
+    Thread.sleep(900);
+    wm.Listandenterquick("//*[@id='CommodityKey_listbox']/li", commodity);
+    Thread.sleep(900);
+    
+    
+//SELECTING UNIT INFO
+    wm.clickbyxpath("//span[@aria-owns='OrderTypeKey_listbox']");
+    Thread.sleep(900);
+    wm.Listandenterquick("//*[@id='OrderTypeKey_listbox']/li", unittype);
+    Thread.sleep(900);
+    
+     
+    wm.stabbyxpath("//span[@aria-owns='OrderTypeKey_listbox']");
+    Thread.sleep(900);
+    wm.sendtextbycssselecotr("#Quantity", ""+Quantity);
+    Thread.sleep(900);
+
+    wm.stabbyxpath("//input[@name='Quantity']");
+    Thread.sleep(900);
+    wm.sendtextbycssselecotr("#GrossWeight", ""+Weight);
+    Thread.sleep(900);
+    //selecting the gross weight grams or kilograms
+    
+    wm.clickbyxpath("//span[@aria-owns='GrossWtUOMKey_listbox']");
+    Thread.sleep(900);
+    wm.Listandenterquick("//*[@id='GrossWtUOMKey_listbox']/li", Grossweight);
+    Thread.sleep(900);
+    
+    
+    //ENETER THE VOLUME
+    wm.stabbyxpath("//span[@aria-owns='GrossWtUOMKey_listbox']");
+    Thread.sleep(900);
+    wm.sendtextbycssselecotr("#GrossVolume", ""+volume);
+    Thread.sleep(900);
+
+    wm.clickbyxpath("//span[@aria-owns='GrossVolUOMKey_listbox']");
+    Thread.sleep(900);
+    wm.Listandenterquick("//*[@id='GrossVolUOMKey_listbox']/li", volumesize);
+    Thread.sleep(900);
+    
+    
+   //ENETR THE LENGHT IN CM
+    
+    wm.stabbyxpath("//span[@aria-owns='GrossVolUOMKey_listbox']");
+    Thread.sleep(900);
+    wm.sendtextbycssselecotr("#LengthCM", ""+Length);
+    Thread.sleep(900);
+    
+    //enetr the width
+    wm.stabbyxpath("//input[@name='LengthCM']");
+    Thread.sleep(900);
+    wm.sendtextbycssselecotr("#WidthCM", ""+width);
+    Thread.sleep(900);
+    
+    
+    //eneter the height
+    wm.stabbyxpath("//input[@name='WidthCM']");
+    Thread.sleep(900);
+    wm.sendtextbycssselecotr("#HeightCM", ""+HeightCM);
+    Thread.sleep(900);
+    //clicking the save button
+    
+    wm.clickbyxpath("//a[@class='k-button k-button-icontext k-primary k-grid-update']");
+    
+    Thread.sleep(1000);
+    
+    wm.scrolldownbyxpath("//*[@id='ft-34']/div/div/div/div[1]");
+    Thread.sleep(1000);
+    
+    
+    //selecitng the route 
+    
+    // clicking the add button 
+    
+    wm.clickbyxpath("//a[@href='/shiplogix/shiplogix/Quotation/Route_GetList?Route_Grid-mode=insert']");
+    Thread.sleep(900);
+
+
+    wm.clickbyxpath("//span[@aria-owns='QuotationRouteModeKey_listbox']");
+    Thread.sleep(900);
+    wm.Listandenterquick("//*[@id='QuotationRouteModeKey_listbox']/li", Routemode);
+    Thread.sleep(900);
+
+    
+    //selecting the route provider
+
+    wm.clickbyxpath("//span[@aria-controls='QuotationRouteProviderKey_listbox']");
+    //wm.clickbyxpath("//input[@aria-owns='QuotationRouteProviderKey_listbox']");
+    Thread.sleep(900);
+    wm.Listandenterquick("//*[@id='QuotationRouteProviderKey_listbox']/li", providerindex);
+    Thread.sleep(900);
+     
+
+    //selecting the orgin
+    
+  //selecting the route provider
+
+    wm.clickbyxpath("//span[@aria-owns='QuotationRouteOriginKey_listbox']");
+      Thread.sleep(900);
+      wm.Listandenterquick("//*[@id='QuotationRouteOriginKey_listbox']/li", Routeprovidercity);
+    Thread.sleep(900);
+
+    
+    Thread.sleep(900);
+    wm.clickbyxpath("/html/body/div[3]/div/div[1]/div[1]/div/div/div/div[2]/div[3]/div/div/div/div[3]/div/table/thead/tr/th[19]/span");
+    wm.clickbyxpath("/html/body/div[3]/div/div[1]/div[1]/div/div/div/div[2]/div[3]/div/div/div/div[3]/div/table/thead/tr/th[19]/span");
+    
+    
+    //save
+    Thread.sleep(900);
+    Thread.sleep(500);
+   // wm.clickbyxpath("//*[@id='Route_Grid_active_cell']/a[1]");
+
+    wm.clickbyxpath("//a[@class='k-button k-button-icontext k-primary k-grid-update']");
+    
+   Thread.sleep(900);
+   
+   
+   //Enter the rate details
+   
+   //Adding add button in the ratedetails 
+   
+   wm.scrolldownbyxpath("/html/body/div[4]/div/div[1]/div[1]/div/div/div/div[2]/div[4]/div/div/div/div[2]/div/div[1]/a/span");
+   Thread.sleep(900);
+   
+
+   wm.clickbyxpath("//a[@href='/shiplogix/shiplogix/Quotation/RateDetailsGetList?RateDetailsGrid-mode=insert']");
+  
+   
+   Thread.sleep(900);
+   
+   //selecting thetype
+   wm.clickbyxpath("//span[@aria-owns='QuotationRateRateTypeKey_listbox']");
+   //wm.clickbyxpath("//input[@aria-owns='QuotationRouteProviderKey_listbox']");
+   Thread.sleep(900);
+   wm.Listandenterquick("//*[@id='QuotationRateRateTypeKey_listbox']/li", Ratetype);
+   Thread.sleep(900);
+   
+   
+   //charge descriptions
+   wm.sendtextbyxvalue("//input[@aria-owns='QuotationRateChargeDescKey_listbox']",Chargetype);
+   Thread.sleep(900);
+   wm.Listandenterquick("//*[@id='QuotationRateRateTypeKey_listbox']/li", Chargetypeindex);
+   Thread.sleep(900);
+   
+   //payatlocations
+   
+   wm.sendtextbyxvalue("//input[@aria-owns='QuotationRatePayatLocKey_listbox']",Payatlocations);
+   Thread.sleep(900);
+   wm.Listandenterquick("//*[@id='QuotationRatePayatLocKey_listbox']/li", Payatlocationindex);
+   Thread.sleep(900);
+   
+   
+   //quotation basics type
+   
+   wm.sendtextbyxvalue("//input[@aria-owns='QuotationRateBasisTypeKey_listbox']",Rbasictype);
+   Thread.sleep(900);
+   wm.Listandenterquick("//*[@id='QuotationRateBasisTypeKey_listbox']/li",Rbasictypeindex);
+   Thread.sleep(900);
+   
+   
+   //selecting the commodityvalues
+   wm.sendtextbyxvalue("//input[@aria-owns='QuotationRateCommodityKey_listbox']",Commodityvalues);
+   Thread.sleep(900);
+   wm.Listandenterquick("//*[@id='QuotationRateCommodityKey_listbox']/li",Commodityindex);
+   Thread.sleep(900);
+   
+   
+   
+   //selecteddthecurrency
+   
+   wm.sendtextbyxvalue("//input[@aria-owns='QuotationRateCurrencyKey_listbox']",Ratecurrency);
+   Thread.sleep(900);
+   wm.Listandenterquick("//*[@id='QuotationRateCurrencyKey_listbox']/li",Ratecurrencyindex);
+   Thread.sleep(900);
+   
+   //Ratecalculationmethodkey
+   
+   wm.clickbyxpath("//span[@aria-owns='QuotationRateCalMethodKey_listbox']");
+   Thread.sleep(900);
+   wm.Listandenterquick("//*[@id='QuotationRateCalMethodKey_listbox']/li",Ratecalculationmethodkey);
+   Thread.sleep(900);
+   
+   //Eter the quantity values
+   
+   wm.stabbyxpath("//span[@aria-owns='QuotationRateCalMethodKey_listbox']");
+   Thread.sleep(900);
+   wm.sendtextbycssselecotr("#QuotationRateQuantity", ""+Ratequantity);
+   Thread.sleep(900);
+   
+   
+   wm.Listandenterquick("//input[@aria-owns='AllinChargeKey_listbox']", "0");
+   Thread.sleep(900);
+   
+   //modeofpay
+   
+   wm.clickbyxpath("//span[@aria-owns='QuotationRateModeOfPayKey_listbox']");
+   Thread.sleep(900);
+   wm.Listandenterquick("//*[@id='QuotationRateModeOfPayKey_listbox']/li",Modeofpayindex);
+   Thread.sleep(900);
+   
+   
+   wm.clickbyxpath("//a[@class='k-button k-button-icontext k-primary k-grid-update']");
+
+   Thread.sleep(10000);
+   
+   
+   wm.clickbyxpath("//button[@id='btnMainSave']");
+   
+   wm.sleep();
+   wm.sleep();
+   wm.sleep();
+   wm.sleep();
+   
+   wm.clickbyxpath("/html/body/div[7]/div[3]/div/button/span");
+   
+   Thread.sleep(20000);
+ 
+   
+    
+
+   wm.sleep();
+    
+	}
+
+	@AfterMethod
+	public void close()
+
+	{
+		wm.close();
+
+	}
+
+	@DataProvider(name = "dp")
+	public Object[][] dp() throws IOException {
+
+		return Wrappermethods.getSheet("ship1", "eight");
+
+	}
+}
