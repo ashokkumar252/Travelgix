@@ -420,6 +420,19 @@ wm.Publishedfare("//input[@name='CtfdBaseFare']", "//input[@name='TotalTaxAmount
 		"Net payable not Calclated successfuly");
 
 
+wm.Netcollectionuisngcancellatiocharges("//input[@name='CtfdBaseFare']", "//input[@name='TotalTaxAmount']", 
+		"//input[@name='TotalServiceFee']", "//input[@name='TotalDiscount']", "//input[@name='TotOutputVat']", 
+		"//input[@name='Amt_NetCollection']", "//input[@name='CtfdAgentCancelCharge']",
+		"//input[@name='CtfdSupplierCancelCharge']", "Net calclaiton done correectly using cancelaltion charges",
+		"Net calclaiton not done correectly using cancelaltion charges");
+
+
+wm.Publishedfareusingcancelaltionchargeswithoutuccf("//input[@name='CtfdBaseFare']", "//input[@name='TotalTaxAmount']"
+		, "//input[@name='salestotcommm']", "//input[@name='CtfdSupplierCancelCharge']",
+		"//input[@name='TotInputVat']", "//input[@name='Amt_NetPayable']", "payable calculation done successfuly using cancellation charges", 
+		"payable calculation not done successfuly using cancellation charges");
+
+
 						
 				
 				

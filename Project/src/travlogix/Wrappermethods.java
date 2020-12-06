@@ -5844,6 +5844,224 @@ System.out.println("Element not present");
 									
 //=======================================================================================================
 									
+//Netcollectionwithcacellationcharges
+									
+									public void Netcollectionuisngcancellatiocharges(String Publishedfare,
+											String tax,String Servicefee,String Discount,String Outvat,
+											String Systemnetcollections,String agentcancellatiocharges,
+											String airlinecancelaltioncharges,
+											String Positivemessages,String Negativemessages	) throws InterruptedException
+								    {
+								    try 
+								    {
+
+								    WebElement Publishedfare1 = driver.findElement(By.xpath(Publishedfare)); 
+								    								    
+									WebElement tax1 = driver.findElement(By.xpath(tax));
+									WebElement Servicefee1 = driver.findElement(By.xpath(Servicefee));
+									WebElement Discount1 = driver.findElement(By.xpath(Discount));
+									WebElement Outvat1 = driver.findElement(By.xpath(Outvat));
+									WebElement Systemnetcollections1 = driver.findElement(By.xpath(Systemnetcollections));
+									WebElement agentcancellatiocharges1 = driver.findElement(By.xpath(agentcancellatiocharges));
+									WebElement airlinecancelaltioncharges1 = driver.findElement(By.xpath(airlinecancelaltioncharges));
+									
+									
+									
+
+								    Thread.sleep(500);
+
+								    Double Publishedfare2 = new Double(Publishedfare1.getAttribute("value").trim());
+								    
+									Double tax2 = new Double(tax1.getAttribute("value").trim());
+									System.out.println("tax2 value is"+tax2);
+									Double Servicefee2 = new Double(Servicefee1.getAttribute("value").trim());
+									Double Discount2 = new Double(Discount1.getAttribute("value").trim());
+									Double Outvat2 = new Double(Outvat1.getAttribute("value").trim());
+									Double Systemnetcollections2 = new Double(Systemnetcollections1.getAttribute("value").trim());
+									
+									Double agentcancellatiocharges2 = new Double(agentcancellatiocharges1.getAttribute("value").trim());
+									System.out.println("agentcancellatiocharges2"+agentcancellatiocharges1);
+									
+									Double airlinecancelaltioncharges2 = new Double(airlinecancelaltioncharges1.getAttribute("value").trim());
+
+									System.out.println("airlinecancelaltioncharges2"+airlinecancelaltioncharges2);		
+									
+									
+								//	Double d33=d30*d31;
+																
+								//Sales net collections : publish fare -ORC + TAX + Service fee -Discount +outvat 
+
+
+	Double Netcollectionscalc = (Publishedfare2) - (0) + (tax2) + (Servicefee2) - (Discount2) + (Outvat2)-(agentcancellatiocharges2)
+			-(airlinecancelaltioncharges2);
+	
+//publishedfare- ORC+totaltax-totaldiscount-agentcancllaitoncharges-airlinecancellaitoncharges+total servce charges+totaloutputvat
+
+	
+
+
+									
+								    Thread.sleep(500);
+								    System.out.print("\n the value of Publishedfare2 is" + Publishedfare2);
+								    								    
+								    System.out.print("\n the value of tax2 is" + tax2);
+								    System.out.print("\n the value of Servicefee2 is" + Servicefee2);
+								    System.out.print("\n the value of Discount2 is" + Discount2);
+								    System.out.print("\n the value of Outvat2 is" + Outvat2);
+								    System.out.print("\n the value of Systemnetcollections2 is" + Systemnetcollections2);
+
+								    System.out.print("\n the value of Netcollectionscalc is" + Netcollectionscalc);
+
+								    System.out.print("\n the value of agentcancellatiocharges2 is" + agentcancellatiocharges2);
+
+								    System.out.print("\n the value of airlinecancelaltioncharges2 is" + airlinecancelaltioncharges2);
+								    
+								   
+								    if(Netcollectionscalc.equals(Systemnetcollections2))												    	
+									    	
+								    {
+								    ATUReports.add(Positivemessages, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+								    
+								    ATUReports.add("Publishedfare2="+Publishedfare2,LogAs.INFO, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+								   // ATUReports.add("Orc2="+Orc2,LogAs.INFO, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+								    ATUReports.add("tax2="+tax2,LogAs.INFO, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+								    ATUReports.add("Servicefee2="+Servicefee2,LogAs.INFO, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+								    ATUReports.add("Discount2="+Discount2,LogAs.INFO, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+								    ATUReports.add("Outvat2="+Outvat2,LogAs.INFO, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+								    ATUReports.add("Systemnetcollections2="+Systemnetcollections2,LogAs.INFO, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+								    ATUReports.add("Netcollectionscalc="+Netcollectionscalc,LogAs.INFO, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+								    ATUReports.add("agentcancellatiocharges2="+agentcancellatiocharges2,LogAs.INFO, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+								    ATUReports.add("airlinecancelaltioncharges2="+airlinecancelaltioncharges2,LogAs.INFO, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+								    
+								    }
+								    else
+								    {
+								    ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+									    	
+								    }
+								    }
+									catch (NoSuchElementException e)
+									{
+
+								    ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+								    } catch (Exception e) {
+								    System.out.println("error");
+								    } finally {
+								    takeSnap();
+								    }
+
+								    }       
+//========================================================================================================
+									
+//hotel netcalcualtion charges withusing cancelaltioncharges
+									
+									public void Hotelnetcalculationchargesusingcancelationcharges(String Publishedfare,
+											String tax,String Servicefee,String Discount,String Outvat,
+											String Systemnetcollections,String Hotelagentcancellatiocharges,
+											String Hotelairlinecancelaltioncharges,
+											String Positivemessages,String Negativemessages	) throws InterruptedException
+								    {
+								    try 
+								    {
+
+								    WebElement Publishedfare1 = driver.findElement(By.xpath(Publishedfare)); 
+								    								    
+									WebElement tax1 = driver.findElement(By.xpath(tax));
+									WebElement Servicefee1 = driver.findElement(By.xpath(Servicefee));
+									WebElement Discount1 = driver.findElement(By.xpath(Discount));
+									WebElement Outvat1 = driver.findElement(By.xpath(Outvat));
+									WebElement Systemnetcollections1 = driver.findElement(By.xpath(Systemnetcollections));
+									WebElement Hotelagentcancellatiocharges1 = driver.findElement(By.xpath(Hotelagentcancellatiocharges));
+									WebElement Hotelairlinecancelaltioncharges1 = driver.findElement(By.xpath(Hotelairlinecancelaltioncharges));
+									
+									
+									
+
+								    Thread.sleep(500);
+
+								    Double Publishedfare2 = new Double(Publishedfare1.getAttribute("value").trim());
+								    
+									Double tax2 = new Double(tax1.getAttribute("value").trim());
+									System.out.println("tax2 value is"+tax2);
+									Double Servicefee2 = new Double(Servicefee1.getAttribute("value").trim());
+									Double Discount2 = new Double(Discount1.getAttribute("value").trim());
+									Double Outvat2 = new Double(Outvat1.getAttribute("value").trim());
+									Double Systemnetcollections2 = new Double(Systemnetcollections1.getAttribute("value").trim());
+									
+									Double Hotelagentcancellatiocharges2 = new Double(Hotelagentcancellatiocharges1.getAttribute("value").trim());
+									System.out.println("Hotelagentcancellatiocharges2"+Hotelagentcancellatiocharges2);
+									
+									Double Hotelairlinecancelaltioncharges2 = new Double(Hotelairlinecancelaltioncharges1.getAttribute("value").trim());
+									System.out.println("Hotelairlinecancelaltioncharges2"+Hotelairlinecancelaltioncharges2);		
+									
+									
+								//	Double d33=d30*d31;
+																
+								//Sales net collections : publish fare -ORC + TAX + Service fee -Discount +outvat 
+
+
+	Double Netcollectionscalc = (Publishedfare2) - (0) + (tax2) + (Servicefee2) - (Discount2) + (Outvat2)-(Hotelagentcancellatiocharges2)
+			-(Hotelairlinecancelaltioncharges2);
+	
+//publishedfare- ORC+totaltax-totaldiscount-agentcancllaitoncharges-airlinecancellaitoncharges+total servce charges+totaloutputvat
+
+	
+
+
+									
+								    Thread.sleep(500);
+								    System.out.print("\n the value of Publishedfare2 is" + Publishedfare2);
+								    								    
+								    System.out.print("\n the value of tax2 is" + tax2);
+								    System.out.print("\n the value of Servicefee2 is" + Servicefee2);
+								    System.out.print("\n the value of Discount2 is" + Discount2);
+								    System.out.print("\n the value of Outvat2 is" + Outvat2);
+								    System.out.print("\n the value of Systemnetcollections2 is" + Systemnetcollections2);
+
+								    System.out.print("\n the value of Netcollectionscalc is" + Netcollectionscalc);
+
+								    System.out.print("\n the value of agentcancellatiocharges2 is" + Hotelairlinecancelaltioncharges2);
+
+								    System.out.print("\n the value of airlinecancelaltioncharges2 is" + Hotelairlinecancelaltioncharges2);
+								    
+								   
+								    if(Netcollectionscalc.equals(Systemnetcollections2))												    	
+									    	
+								    {
+								    ATUReports.add(Positivemessages, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+								    
+								    ATUReports.add("Publishedfare2="+Publishedfare2,LogAs.INFO, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+								   // ATUReports.add("Orc2="+Orc2,LogAs.INFO, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+								    ATUReports.add("tax2="+tax2,LogAs.INFO, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+								    ATUReports.add("Servicefee2="+Servicefee2,LogAs.INFO, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+								    ATUReports.add("Discount2="+Discount2,LogAs.INFO, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+								    ATUReports.add("Outvat2="+Outvat2,LogAs.INFO, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+								    ATUReports.add("Systemnetcollections2="+Systemnetcollections2,LogAs.INFO, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+								    ATUReports.add("Netcollectionscalc="+Netcollectionscalc,LogAs.INFO, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+								    ATUReports.add("Hotelagentcancellatiocharges2="+Hotelagentcancellatiocharges2,LogAs.INFO, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+								    ATUReports.add("Hotelairlinecancelaltioncharges2="+Hotelairlinecancelaltioncharges2,LogAs.INFO, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+								    
+								    }
+								    else
+								    {
+								    ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+									    	
+								    }
+								    }
+									catch (NoSuchElementException e)
+									{
+
+								    ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+								    } catch (Exception e) {
+								    System.out.println("error");
+								    } finally {
+								    takeSnap();
+								    }
+
+								    }       
+
+
+
 
 
 //===============================================================================================================									
@@ -6027,6 +6245,11 @@ System.out.println("Element not present");
 								    }       
 
 									
+									
+//=================================================================================================================
+									
+									
+																		
 //=================================================================================================================
 									
 
@@ -6179,7 +6402,9 @@ System.out.println("Element not present");
 								    }       
 
 //=====================================================================================================
+																		
 									
+//=========================================================================================================									
 									public void Publishedfareusingorc(String Publishedfare,
 									String Orc,String tax,String commission,String invat,String Systemnetcollections,
 											String Positivemessages,String Negativemessages) throws InterruptedException
@@ -6351,8 +6576,155 @@ System.out.println("Element not present");
 
 								    }       
 
+
+									
+									
+//====================================================================================================
+									
 									
 
+									//published fare using cancelaltion charges
+																		
+	public void Publishedfareusingcancelaltionchargeswithoutuccf(String Sellingfare, String tax, String commission,
+			String aircancelchar, String invat, String Systemnetcollections, String Positivemessages,
+			String Negativemessages) throws InterruptedException {
+		try {
+
+			// Sellingfare+totax-totalcommamount-aircancelchar+totalinputvat-airlincecardamount(uccf)
+
+			WebElement Sellingfare1 = driver.findElement(By.xpath(Sellingfare));
+			WebElement tax1 = driver.findElement(By.xpath(tax));
+			WebElement commission1 = driver.findElement(By.xpath(commission));
+			WebElement aircancelchar1 = driver.findElement(By.xpath(aircancelchar));
+			WebElement invat1 = driver.findElement(By.xpath(invat));
+			// WebElement airlincecardamount1 =
+			// driver.findElement(By.xpath(airlincecardamount));
+			WebElement Systemnetcollections1 = driver.findElement(By.xpath(Systemnetcollections));
+
+			Thread.sleep(500);
+
+			Double Sellingfare2 = new Double(Sellingfare1.getAttribute("value").trim());
+			Double tax2 = new Double(tax1.getAttribute("value").trim());
+			Double commission2 = new Double(commission1.getAttribute("value").trim());
+			Double aircancelchar2 = new Double(aircancelchar1.getAttribute("value").trim());
+			Double invat2 = new Double(invat1.getAttribute("value").trim());
+			// Double airlincecardamount2 = new
+			// Double(airlincecardamount1.getAttribute("value").trim());
+			Double Systemnetcollections2 = new Double(Systemnetcollections1.getAttribute("value").trim());
+
+			// Double d33=d30*d31;
+
+			// Sales net collections : publish fare -ORC + TAX + Service fee
+			// -Discount +outvat
+
+			Double Publishedfarecalculations = (Sellingfare2) + (tax2) - (commission2) - (aircancelchar2) + (invat2);
+
+			Thread.sleep(500);
+			System.out.print("\n the value of Sellingfare2 is" + Sellingfare2);
+			System.out.print("\n the value of tax2 is" + tax2);
+			System.out.print("\n the value of commission2 is" + commission2);
+			System.out.print("\n the value of aircancelchar2 is" + aircancelchar2);
+			System.out.print("\n the value of invat2 is" + invat2);
+			// System.out.print("\n the value of airlincecardamount2 is" +
+			// airlincecardamount2);
+
+			System.out.print("\n the value of Systemnetcollections2 is" + Publishedfarecalculations);
+
+			System.out.print("\n the value of Netcollectionscalc is" + Systemnetcollections2);
+
+			if (Systemnetcollections2.equals(Publishedfarecalculations)) {
+				ATUReports.add(Positivemessages, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+
+				ATUReports.add("Sellingfare=" + Sellingfare2, LogAs.INFO, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+				ATUReports.add("tax2=" + tax2, LogAs.INFO, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+				ATUReports.add("commission2=" + commission2, LogAs.INFO, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+				ATUReports.add("aircancelchar2=" + aircancelchar2, LogAs.INFO,
+						new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+				ATUReports.add("invat2=" + invat2, LogAs.INFO, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+				// ATUReports.add("airlincecardamount2="+airlincecardamount2,LogAs.INFO,
+				// new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+				ATUReports.add("Publishedfarecalculations=" + Publishedfarecalculations, LogAs.INFO,
+						new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+				ATUReports.add("Systemnetcollections2=" + Systemnetcollections2, LogAs.INFO,
+						new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+
+			} else {
+				ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+				ATUReports.add("Sellingfare=" + Sellingfare2, LogAs.INFO, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+				ATUReports.add("tax2=" + tax2, LogAs.INFO, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+				ATUReports.add("commission2=" + commission2, LogAs.INFO, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+				ATUReports.add("aircancelchar2=" + aircancelchar2, LogAs.INFO,
+						new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+				ATUReports.add("invat2=" + invat2, LogAs.INFO, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+				// ATUReports.add("airlincecardamount2="+airlincecardamount2,LogAs.INFO,
+				// new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+				ATUReports.add("Publishedfarecalculations=" + Publishedfarecalculations, LogAs.INFO,
+						new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+				ATUReports.add("Systemnetcollections2=" + Systemnetcollections2, LogAs.INFO,
+						new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+
+			}
+		} catch (NoSuchElementException e) {
+
+			ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+		} catch (Exception e) {
+			System.out.println("error");
+		} finally {
+			takeSnap();
+		}
+
+	}
+
+//======================================================================================================
+
+									public void Airprofitcalculations(String commission,String Servicefee,
+											String Discount,String Agentcancell,String ORCreceived,String ORCparted) throws InterruptedException
+								    {
+								    
+								    
+
+								    WebElement commission1 = driver.findElement(By.xpath(commission)); 
+									WebElement Servicefee1 = driver.findElement(By.xpath(Servicefee));
+									WebElement Discount1 = driver.findElement(By.xpath(Discount));
+									WebElement Agentcancel = driver.findElement(By.xpath(Agentcancell));
+									WebElement ORCreceived1 = driver.findElement(By.xpath(ORCreceived));
+									WebElement ORCparted1 = driver.findElement(By.xpath(ORCparted));
+
+								    Thread.sleep(500);
+
+								    Double commission2 = new Double(commission1.getAttribute("value").trim());
+									Double Servicefee2 = new Double(Servicefee1.getAttribute("value").trim());
+									Double Discount2 = new Double(Discount1.getAttribute("value").trim());
+									Double Agentcance2 = new Double(Agentcancel.getAttribute("value").trim());							
+									Double ORCreceived2 = new Double(ORCreceived1.getAttribute("value").trim());
+									//Double airlincecardamount2 = new Double(airlincecardamount1.getAttribute("value").trim());
+									Double ORCparted2 = new Double(ORCparted1.getAttribute("value").trim());
+											
+							
+Double Profitamount = ( commission2 ) + ( Servicefee2 ) - ( Discount2 ) + ( Agentcance2 )+( ORCreceived2 )-( ORCparted2);
+				
+
+									
+								    Thread.sleep(500);
+								    System.out.print("\n the value of commission2 is" + commission2);
+								    System.out.print("\n the value of Servicefee2 is" + Servicefee2);
+								    System.out.print("\n the value of Discount2 is" + Discount2);
+								    System.out.print("\n the value of Agentcance2 is" + Agentcance2);
+								    System.out.print("\n the value of ORCreceived2 is" + ORCreceived2);
+								    System.out.print("\n the value of ORCparted2 is" + ORCparted2);
+								    System.out.print("\n the value of Profitamount is" + Profitamount);
+									    
+								    								   
+	ATUReports.add("Profitamount="+Profitamount,LogAs.INFO, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+
+								    
+
+								    }
+								    
+
+
+
+	
 //=============================================================================================
 									
 //copy and paste the values

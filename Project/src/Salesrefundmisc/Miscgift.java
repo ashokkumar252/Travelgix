@@ -346,6 +346,22 @@ wm.Publishedfare("//input[@name='MiscRateDealFare']", "//input[@name='TotalTaxAm
 		"Net payable not Calclated successfuly");
 
 
+
+
+wm.Netcollectionuisngcancellatiocharges("//input[@name='MiscRateDealFare']", "//input[@name='TotalTaxAmount']",
+		"//input[@name='TotalServiceFee']", "//input[@name='TotalDiscount']", "//input[@name='TotOutputVat']", 
+		"//input[@name='Amt_NetCollection']", "//*[@name='MiscRateSupplierCancellationChargeRfnd']",
+		"//*[@name='MiscRateSupplierCancellationCharge']", "Net calclaiton done correectly by using the cancelaltion charges",
+		"Net calclaiton not done correectly by using the cancelaltion charges");
+
+wm.Publishedfareusingcancelaltionchargeswithoutuccf("//input[@name='MiscRateDealFare']", "//input[@name='TotalTaxAmount']",
+		"//input[@name='salestotcommm']", "//*[@name='MiscRateSupplierCancellationCharge']", 
+		"//input[@name='TotInputVat']", "//input[@name='Amt_NetPayable']", 
+		"Publishedfare done correectly by using the cancelaltion charges", 
+		"ublishedfare not done correectly by using the cancelaltion charges");
+
+
+
 wm.clickbyxpath("//button[@id='btnmiscsave']");
 
 Thread.sleep(500);

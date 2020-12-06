@@ -223,68 +223,17 @@
     <line>
       <![CDATA[STEP74]]>
     </line>
-    <line>
-      <![CDATA[STEP75]]>
-    </line>
-    <line>
-      <![CDATA[STEP76]]>
-    </line>
-    <line>
-      <![CDATA[STEP77]]>
-    </line>
-    <line>
-      <![CDATA[STEP78]]>
-    </line>
-    <line>
-      <![CDATA[STEP79]]>
-    </line>
-    <line>
-      <![CDATA[STEP80]]>
-    </line>
-    <line>
-      <![CDATA[STEP81]]>
-    </line>
-    <line>
-      <![CDATA[STEP82]]>
-    </line>
-    <line>
-      <![CDATA[STEP83]]>
-    </line>
-    <line>
-      <![CDATA[STEP84]]>
-    </line>
-    <line>
-      <![CDATA[STEP85]]>
-    </line>
-    <line>
-      <![CDATA[STEP86]]>
-    </line>
-    <line>
-      <![CDATA[STEP87]]>
-    </line>
-    <line>
-      <![CDATA[STEP88]]>
-    </line>
-    <line>
-      <![CDATA[STEP89]]>
-    </line>
-    <line>
-      <![CDATA[STEP90]]>
-    </line>
-    <line>
-      <![CDATA[STEP91]]>
-    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="573467" started-at="2020-12-03T20:04:42Z" finished-at="2020-12-03T20:14:16Z">
+  <suite name="Default suite" duration-ms="395759" started-at="2020-12-06T23:00:19Z" finished-at="2020-12-06T23:06:55Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="573467" started-at="2020-12-03T20:04:42Z" finished-at="2020-12-03T20:14:16Z">
-      <class name="SalesrefundAir.Airpositivecreditcard">
-        <test-method status="PASS" signature="instantiation()[pri:0, instance:SalesrefundAir.Airpositivecreditcard@be92ad]" name="instantiation" is-config="true" duration-ms="276" started-at="2020-12-04T01:34:42Z" finished-at="2020-12-04T01:34:43Z">
+    <test name="Default test" duration-ms="395759" started-at="2020-12-06T23:00:19Z" finished-at="2020-12-06T23:06:55Z">
+      <class name="Salesrefundmisc.Misccard">
+        <test-method status="PASS" signature="instantiation()[pri:0, instance:Salesrefundmisc.Misccard@be92ad]" name="instantiation" is-config="true" duration-ms="246" started-at="2020-12-07T04:30:19Z" finished-at="2020-12-07T04:30:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- instantiation -->
-        <test-method status="PASS" signature="browesrnstatiation()[pri:0, instance:SalesrefundAir.Airpositivecreditcard@be92ad]" name="browesrnstatiation" is-config="true" duration-ms="12884" started-at="2020-12-04T01:34:45Z" finished-at="2020-12-04T01:34:58Z">
+        <test-method status="PASS" signature="browesrnstatiation()[pri:0, instance:Salesrefundmisc.Misccard@be92ad]" name="browesrnstatiation" is-config="true" duration-ms="11818" started-at="2020-12-07T04:30:22Z" finished-at="2020-12-07T04:30:34Z">
           <reporter-output>
             <line>
               <![CDATA[STEP1]]>
@@ -294,7 +243,7 @@
             </line>
           </reporter-output>
         </test-method> <!-- browesrnstatiation -->
-        <test-method status="PASS" signature="Airpositivecreditcard(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:SalesrefundAir.Airpositivecreditcard@be92ad]" name="Airpositivecreditcard" duration-ms="554880" started-at="2020-12-04T01:34:58Z" data-provider="dp" finished-at="2020-12-04T01:44:13Z">
+        <test-method status="PASS" signature="logincheckK(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Salesrefundmisc.Misccard@be92ad]" name="logincheckK" duration-ms="379959" started-at="2020-12-07T04:30:34Z" data-provider="dp" finished-at="2020-12-07T04:36:54Z">
           <params>
             <param index="0">
               <value>
@@ -313,12 +262,12 @@
             </param>
             <param index="3">
               <value>
-                <![CDATA[23]]>
+                <![CDATA[28]]>
               </value>
             </param>
             <param index="4">
               <value>
-                <![CDATA[Nov]]>
+                <![CDATA[NOV]]>
               </value>
             </param>
             <param index="5">
@@ -348,7 +297,7 @@
             </param>
             <param index="10">
               <value>
-                <![CDATA[jordan]]>
+                <![CDATA[AE - CRYSTAL TRADING - EXMPT]]>
               </value>
             </param>
             <param index="11">
@@ -358,12 +307,12 @@
             </param>
             <param index="12">
               <value>
-                <![CDATA[testt]]>
+                <![CDATA[Misc Bookings]]>
               </value>
             </param>
             <param index="13">
               <value>
-                <![CDATA[testt]]>
+                <![CDATA[Misc Bookings]]>
               </value>
             </param>
             <param index="14">
@@ -373,406 +322,215 @@
             </param>
             <param index="15">
               <value>
-                <![CDATA[IndiGo]]>
+                <![CDATA[0]]>
               </value>
             </param>
             <param index="16">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[HOTEL]]>
               </value>
             </param>
             <param index="17">
               <value>
-                <![CDATA[AE Branch 01 - Dubai]]>
+                <![CDATA[AE - BPS - Comp1]]>
               </value>
             </param>
             <param index="18">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[BU122 - Mr. Comp1 Branch 2 User 2]]>
               </value>
             </param>
             <param index="19">
               <value>
-                <![CDATA[9210291310]]>
+                <![CDATA[BU112 - Mr.Comp 1 Branch 1 User 2]]>
               </value>
             </param>
             <param index="20">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[Dubai]]>
               </value>
             </param>
             <param index="21">
               <value>
-                <![CDATA[AE - BPS ]]>
+                <![CDATA[06]]>
               </value>
             </param>
             <param index="22">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[Nov]]>
               </value>
             </param>
             <param index="23">
               <value>
-                <![CDATA[AE - BPS]]>
+                <![CDATA[2020]]>
               </value>
             </param>
             <param index="24">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[9090909909]]>
               </value>
             </param>
             <param index="25">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[EDCVF]]>
               </value>
             </param>
             <param index="26">
               <value>
-                <![CDATA[Pax Tickets]]>
+                <![CDATA[TESTT]]>
               </value>
             </param>
             <param index="27">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[Hotel]]>
               </value>
             </param>
             <param index="28">
               <value>
-                <![CDATA[KLNMOP]]>
+                <![CDATA[Hotel]]>
               </value>
             </param>
             <param index="29">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[Normal]]>
               </value>
             </param>
             <param index="30">
               <value>
-                <![CDATA[CUS101 ]]>
+                <![CDATA[AEDName]]>
               </value>
             </param>
             <param index="31">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[2]]>
               </value>
             </param>
             <param index="32">
               <value>
-                <![CDATA[CUS101]]>
+                <![CDATA[5]]>
               </value>
             </param>
             <param index="33">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[HDFC Card]]>
               </value>
             </param>
             <param index="34">
               <value>
-                <![CDATA[BRANCH - Ms. Comp 2 Branch  B]]>
+                <![CDATA[10]]>
               </value>
             </param>
             <param index="35">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[INSURANCE_FEE]]>
               </value>
             </param>
             <param index="36">
               <value>
-                <![CDATA[International]]>
+                <![CDATA[10]]>
               </value>
             </param>
             <param index="37">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[5]]>
               </value>
             </param>
             <param index="38">
               <value>
-                <![CDATA[QWRRE]]>
+                <![CDATA[5]]>
               </value>
             </param>
             <param index="39">
               <value>
-                <![CDATA[BOM]]>
+                <![CDATA[5]]>
               </value>
             </param>
             <param index="40">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[MS. PERCENT AGENT 03]]>
               </value>
             </param>
             <param index="41">
               <value>
-                <![CDATA[TEST]]>
+                <![CDATA[AE Branch 01]]>
               </value>
             </param>
             <param index="42">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[910292039]]>
               </value>
             </param>
             <param index="43">
               <value>
-                <![CDATA[23]]>
+                <![CDATA[TESTT]]>
               </value>
             </param>
             <param index="44">
               <value>
-                <![CDATA[Nov]]>
+                <![CDATA[TESTT]]>
               </value>
             </param>
             <param index="45">
               <value>
-                <![CDATA[2020]]>
+                <![CDATA[Pass]]>
               </value>
             </param>
             <param index="46">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[QWERS]]>
               </value>
             </param>
             <param index="47">
               <value>
-                <![CDATA[1000]]>
+                <![CDATA[QWERS]]>
               </value>
             </param>
             <param index="48">
               <value>
-                <![CDATA[10]]>
+                <![CDATA[QWERS]]>
               </value>
             </param>
             <param index="49">
               <value>
-                <![CDATA[TEST]]>
+                <![CDATA[QWERS]]>
               </value>
             </param>
             <param index="50">
               <value>
-                <![CDATA[AUH]]>
+                <![CDATA[QWERS]]>
               </value>
             </param>
             <param index="51">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[QWERS]]>
               </value>
             </param>
             <param index="52">
               <value>
-                <![CDATA[COK]]>
+                <![CDATA[7720010400]]>
               </value>
             </param>
             <param index="53">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[2]]>
               </value>
             </param>
             <param index="54">
               <value>
-                <![CDATA[18]]>
+                <![CDATA[M CARD]]>
               </value>
             </param>
             <param index="55">
               <value>
-                <![CDATA[0]]>
+                <![CDATA[901291039]]>
               </value>
             </param>
             <param index="56">
               <value>
-                <![CDATA[30]]>
-              </value>
-            </param>
-            <param index="57">
-              <value>
-                <![CDATA[Nov]]>
-              </value>
-            </param>
-            <param index="58">
-              <value>
-                <![CDATA[2020]]>
-              </value>
-            </param>
-            <param index="59">
-              <value is-null="true"/>
-            </param>
-            <param index="60">
-              <value>
-                <![CDATA[30]]>
-              </value>
-            </param>
-            <param index="61">
-              <value>
-                <![CDATA[Nov]]>
-              </value>
-            </param>
-            <param index="62">
-              <value>
-                <![CDATA[2020]]>
-              </value>
-            </param>
-            <param index="63">
-              <value is-null="true"/>
-            </param>
-            <param index="64">
-              <value>
-                <![CDATA[9]]>
-              </value>
-            </param>
-            <param index="65">
-              <value>
-                <![CDATA[9]]>
-              </value>
-            </param>
-            <param index="66">
-              <value>
-                <![CDATA[200]]>
-              </value>
-            </param>
-            <param index="67">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="68">
-              <value>
-                <![CDATA[4000]]>
-              </value>
-            </param>
-            <param index="69">
-              <value>
-                <![CDATA[DXB]]>
-              </value>
-            </param>
-            <param index="70">
-              <value>
-                <![CDATA[Normal]]>
-              </value>
-            </param>
-            <param index="71">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="72">
-              <value>
-                <![CDATA[AED]]>
-              </value>
-            </param>
-            <param index="73">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="74">
-              <value>
-                <![CDATA[500]]>
-              </value>
-            </param>
-            <param index="75">
-              <value>
-                <![CDATA[40]]>
-              </value>
-            </param>
-            <param index="76">
-              <value>
-                <![CDATA[32IGST]]>
-              </value>
-            </param>
-            <param index="77">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="78">
-              <value>
-                <![CDATA[20]]>
-              </value>
-            </param>
-            <param index="79">
-              <value>
-                <![CDATA[ARSRV01]]>
-              </value>
-            </param>
-            <param index="80">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="81">
-              <value>
-                <![CDATA[4]]>
-              </value>
-            </param>
-            <param index="82">
-              <value>
-                <![CDATA[5]]>
-              </value>
-            </param>
-            <param index="83">
-              <value>
-                <![CDATA[5]]>
-              </value>
-            </param>
-            <param index="84">
-              <value>
-                <![CDATA[MR. FIXED AGENT 02]]>
-              </value>
-            </param>
-            <param index="85">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="86">
-              <value>
-                <![CDATA[6]]>
-              </value>
-            </param>
-            <param index="87">
-              <value>
-                <![CDATA[2]]>
-              </value>
-            </param>
-            <param index="88">
-              <value>
-                <![CDATA[1]]>
-              </value>
-            </param>
-            <param index="89">
-              <value>
-                <![CDATA[TEST]]>
-              </value>
-            </param>
-            <param index="90">
-              <value>
-                <![CDATA[F-First Class]]>
-              </value>
-            </param>
-            <param index="91">
-              <value>
-                <![CDATA[Normal]]>
-              </value>
-            </param>
-            <param index="92">
-              <value>
-                <![CDATA[M card]]>
-              </value>
-            </param>
-            <param index="93">
-              <value>
-                <![CDATA[0]]>
-              </value>
-            </param>
-            <param index="94">
-              <value>
-                <![CDATA[9309482920]]>
-              </value>
-            </param>
-            <param index="95">
-              <value>
                 <![CDATA[12]]>
               </value>
             </param>
-            <param index="96">
+            <param index="57">
               <value>
                 <![CDATA[2020]]>
               </value>
@@ -992,67 +750,16 @@
             <line>
               <![CDATA[STEP73]]>
             </line>
+          </reporter-output>
+        </test-method> <!-- logincheckK -->
+        <test-method status="PASS" signature="close()[pri:0, instance:Salesrefundmisc.Misccard@be92ad]" name="close" is-config="true" duration-ms="1153" started-at="2020-12-07T04:36:54Z" finished-at="2020-12-07T04:36:55Z">
+          <reporter-output>
             <line>
               <![CDATA[STEP74]]>
             </line>
-            <line>
-              <![CDATA[STEP75]]>
-            </line>
-            <line>
-              <![CDATA[STEP76]]>
-            </line>
-            <line>
-              <![CDATA[STEP77]]>
-            </line>
-            <line>
-              <![CDATA[STEP78]]>
-            </line>
-            <line>
-              <![CDATA[STEP79]]>
-            </line>
-            <line>
-              <![CDATA[STEP80]]>
-            </line>
-            <line>
-              <![CDATA[STEP81]]>
-            </line>
-            <line>
-              <![CDATA[STEP82]]>
-            </line>
-            <line>
-              <![CDATA[STEP83]]>
-            </line>
-            <line>
-              <![CDATA[STEP84]]>
-            </line>
-            <line>
-              <![CDATA[STEP85]]>
-            </line>
-            <line>
-              <![CDATA[STEP86]]>
-            </line>
-            <line>
-              <![CDATA[STEP87]]>
-            </line>
-            <line>
-              <![CDATA[STEP88]]>
-            </line>
-            <line>
-              <![CDATA[STEP89]]>
-            </line>
-            <line>
-              <![CDATA[STEP90]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- Airpositivecreditcard -->
-        <test-method status="PASS" signature="close()[pri:0, instance:SalesrefundAir.Airpositivecreditcard@be92ad]" name="close" is-config="true" duration-ms="3094" started-at="2020-12-04T01:44:13Z" finished-at="2020-12-04T01:44:16Z">
-          <reporter-output>
-            <line>
-              <![CDATA[STEP91]]>
-            </line>
           </reporter-output>
         </test-method> <!-- close -->
-      </class> <!-- SalesrefundAir.Airpositivecreditcard -->
+      </class> <!-- Salesrefundmisc.Misccard -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

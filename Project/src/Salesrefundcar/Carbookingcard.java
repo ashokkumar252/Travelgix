@@ -410,7 +410,7 @@ wm.comparetwovalues1to1("//input[@name='AirFopAmount']"
 Thread.sleep(200);
 
 wm.Netcollections("//input[@name='CtfdBaseFare']", "//input[@name='TotalTaxAmount']",
-		"//input[@name='TotalServiceFee']", "//input[@name='TotalDiscount']", " //input[@name='TotOutputVat']", 
+		"//input[@name='TotalServiceFee']", "//input[@name='TotalDiscount']", "//input[@name='TotOutputVat']", 
 		"//input[@name='Amt_NetCollection']", "Net calclaiton done correectly", "Net calclaiton not done correectly");
 
 
@@ -420,6 +420,18 @@ wm.Publishedfare("//input[@name='CtfdBaseFare']", "//input[@name='TotalTaxAmount
 
 
 
+
+wm.Netcollectionuisngcancellatiocharges("//input[@name='CtfdBaseFare']", "//input[@name='TotalTaxAmount']", 
+		"//input[@name='TotalServiceFee']", "//input[@name='TotalDiscount']", "//input[@name='TotOutputVat']", 
+		"//input[@name='Amt_NetCollection']", "//input[@name='CtfdAgentCancelCharge']",
+		"//input[@name='CtfdSupplierCancelCharge']", "Net calclaiton done correectly using cancelaltion charges",
+		"Net calclaiton not done correectly using cancelaltion charges");
+
+
+wm.Publishedfareusingcancelaltionchargeswithoutuccf("//input[@name='CtfdBaseFare']", "//input[@name='TotalTaxAmount']"
+		, "//input[@name='salestotcommm']", "//input[@name='CtfdSupplierCancelCharge']",
+		"//input[@name='TotInputVat']", "//input[@name='Amt_NetPayable']", "payable calculation done successfuly using cancellation charges", 
+		"payable calculation not done successfuly using cancellation charges");
 
 		
 //====================================================================================

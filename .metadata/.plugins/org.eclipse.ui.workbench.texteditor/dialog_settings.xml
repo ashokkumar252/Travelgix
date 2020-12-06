@@ -2,20 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="Net collection" key="selection"/>
+		<item value="airlinecancelaltioncharges" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="true" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="Net collection"/>
-			<item value="Net collection done correectly using cancelaltion"/>
-			<item value="Net publishedfare Calclated successfuly using cancelaltion charges"/>
-			<item value="Netcollectionsuisngorcandcancellatiocharges"/>
-			<item value="netcol"/>
-			<item value="BSP based payable agent not reflected in payable agent field"/>
-			<item value="Inactivecustomer"/>
-			<item value="lead"/>
+			<item value="airlinecancelaltioncharges"/>
+			<item value="//input[@name=&apos;hoteltfdAirlineCancelCharge&apos;"/>
+			<item value="Publishedfareusingcancelaltionchargeswithoutuccf"/>
+			<item value="agentcancellatiocharges"/>
+			<item value="Publishedfareusingcancelaltioncharges"/>
+			<item value="Netcollectionuisngcancellatiocharges"/>
+			<item value="publishe"/>
+			<item value="netcollection"/>
 		</list>
 		<list key="replacehistory">
 			<item value="click"/>

@@ -4,10 +4,21 @@
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="Project"/>
 <mapAttribute key="org.testng.eclipse.ALL_CLASS_METHODS"/>
 <listAttribute key="org.testng.eclipse.CLASS_TEST_LIST">
+<listEntry value="Salesrefundmisc.Miscuccf"/>
+<listEntry value="SalesrefundHotel.HotelbookingGL"/>
 <listEntry value="Salesrefundcar.Carbookingift"/>
+<listEntry value="SalesrefundHotel.Hotelbookinguccf"/>
 <listEntry value="Salesrefundcar.Carnegative"/>
 <listEntry value="Salesrefundcar.CarbookingGL"/>
+<listEntry value="SalesrefundHotel.HotelbookingGift"/>
 <listEntry value="Salesrefundcar.Carbookingcard"/>
+<listEntry value="Salesrefundmisc.Miscgift"/>
+<listEntry value="Salesrefundmisc.Misccard"/>
+<listEntry value="SalesrefundHotel.Hotelbookingcard"/>
+<listEntry value="Salesrefundmisc.Miscnegativewocwod"/>
+<listEntry value="SalesrefundHotel.Hotelnegative"/>
+<listEntry value="Salesrefundmisc.MiscGL"/>
+<listEntry value="Salesrefundmisc.Miscnegative"/>
 <listEntry value="Salesrefundcar.Carbookinguccf"/>
 </listAttribute>
 <listAttribute key="org.testng.eclipse.METHOD_TEST_LIST"/>

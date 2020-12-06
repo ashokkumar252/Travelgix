@@ -3,14 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="SalesrefundHotel.Hotelnegative">
+      <class name="SalesrefundHotel.Hotelbookingcard">
         <methods>
-          <include name="browesrnstatiation"/>
+          <include name="logincheckK"/>
           <include name="instantiation"/>
           <include name="close"/>
-          <include name="Hotelnegative"/>
+          <include name="browesrnstatiation"/>
         </methods>
-      </class> <!-- SalesrefundHotel.Hotelnegative -->
+      </class> <!-- SalesrefundHotel.Hotelbookingcard -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

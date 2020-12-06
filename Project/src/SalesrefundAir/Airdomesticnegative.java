@@ -1103,6 +1103,11 @@ wm.Publishedfareusingcancelaltioncharges("//input[@name='AtfdDealFare']", "//inp
 		"Net publishedfare Calclated successfuly using cancelaltion charges"
 		, "Net publishedfare not Calclated successfuly using cancelaltion charges");
 
+Thread.sleep(200);
+wm.Airprofitcalculations("//input[@name='salestotcommm']", "//input[@name='TotalServiceFee']",
+		"//input[@name='TotalDiscount']", "//input[@name='AtfdAgentCancelCharge']",
+		"//input[@name='AFAirlineIncentiveReceived']", "//input[@name='AtfdIncentivePaid']");
+
 
 
 Thread.sleep(200);

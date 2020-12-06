@@ -511,6 +511,13 @@ wm.Publishedfareusingorc("//input[@name='AtfdBaseFare']", "//input[@name='AtfdIn
 		"Net payable not Calclated successfuly");
 
 Thread.sleep(200);
+wm.Airprofitcalculations("//input[@name='salestotcommm']", "//input[@name='TotalServiceFee']",
+		"//input[@name='TotalDiscount']", "//input[@name='AtfdAgentCancelCharge']",
+		"//input[@name='AFAirlineIncentiveReceived']", "//input[@name='AtfdIncentivePaid']");
+
+
+
+Thread.sleep(200);
 
 		
 		//udid details

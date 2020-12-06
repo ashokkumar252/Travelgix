@@ -428,6 +428,19 @@ wm.Publishedfare("//input[@name='hoteltfdBaseFare']", "//input[@name='TotalTaxAm
 		,"//input[@name='TotInputVat']", "//input[@name='Amt_NetPayable']", "Net payable Calclated successfuly", 
 		"Net payable not Calclated successfuly");
 
+wm.Hotelnetcalculationchargesusingcancelationcharges("//input[@name='hoteltfdBaseFare']", "//input[@name='TotalTaxAmount']"
+		,"//input[@name='TotalServiceFee']", "//input[@name='TotalDiscount']", "//input[@name='TotOutputVat']", 
+		"//input[@name='Amt_NetCollection']", "//*[@id='hoteltfdSupplierCancelCharge']", 
+		"//*[@id='AG_INPVAT']","Net calclaiton done correectly uisng cancellation charges", 
+		"Net calclaiton not done correectly uisng cancellation charges");
+
+
+wm.Publishedfareusingcancelaltionchargeswithoutuccf("//input[@name='hoteltfdBaseFare']", "//input[@name='TotalTaxAmount']"
+		, "//input[@name='salestotcommm']", "//*[@id='AG_INPVAT']", 
+		"//input[@name='TotInputVat']", "//input[@name='Amt_NetPayable']",
+		"Net payable Calclated successfuly done uisng cancellaiton charges", 
+		"Net payable Calclated not successfuly done uisng cancellaiton charges");
+
 		
 		
 //===================================================================
