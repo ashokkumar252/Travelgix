@@ -41,7 +41,7 @@ public class Docketstatusnew
 
 //		wm.launchbrowser("chrome", utility.Constant.TRAVELOGIXURL);
 
-		wm.launchbrowser("headless", utility.Constant.TRAVELOGIXURL);
+		wm.launchbrowser("chrome", utility.Constant.TRAVELOGIXURL);
 		
 		
 
