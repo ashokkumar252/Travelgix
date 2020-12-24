@@ -37,12 +37,12 @@ public class Miscuccf
 
 	{
 
-		wm.launchbrowser("chrome", utility.Constant.TRAVELOGIXURL);
+		wm.launchbrowser(utility.Constant.Browsername, utility.Constant.TRAVELOGIXURL);
 
 	}
 
 	@Test(dataProvider = "dp")
-	public void logincheckK(String Username, String Password, String Leftsidemenu, String ActiveFrom1,
+	public void Miscuccf(String Username, String Password, String Leftsidemenu, String ActiveFrom1,
 			String ActiveFrom2, String ActiveFrom3, String Docktype, String Docktypeindex, String Salesbracnh,
 			String Salesbracnhindex, String Customer, String Customerindex, String Leadpaxnamee,
 			String dktClientReference, String Tickectstatusindex,
@@ -223,8 +223,27 @@ public class Miscuccf
 	Thread.sleep(200);
 
 //Enter the taxdetails
-	
 	// Enter the taxdetails
+
+			// enter the details in service fee
+
+			wm.Listandenter("//span[@class='k-icon k-i-add']", "1");
+			Thread.sleep(500);
+
+			// enter service chargee
+			wm.sendtextbyxvalue("//input[@aria-owns='MiscServiceChargeId_listbox']", Servicecharge);
+			Thread.sleep(90);
+			wm.Listandenter("//*[@id='MiscServiceChargeId_listbox']/li", Commonindex);
+			Thread.sleep(200);
+
+			wm.sendtextbycssselecotrwithoutclear("#MiscServiceFeeAmount", "" + MiscServiceFeeAmount);
+			Thread.sleep(200);
+			wm.clickbyxpath("//span[@class='k-icon k-i-check']");
+
+			Thread.sleep(200);
+
+
+			// Enter the taxdetails
 
 			wm.Listandenter("//span[@class='k-icon k-i-add']", "0");
 			Thread.sleep(500);
@@ -241,27 +260,14 @@ public class Miscuccf
 
 			wm.sendtextbycssselecotrwithoutclear("#MiscTaxAmount", "" + MiscTaxAmount);
 			Thread.sleep(200);
-			wm.clickbyxpath("//span[@class='k-icon k-i-check']");
-			Thread.sleep(200);
-
-			// enter the details in service fee
-
-			wm.Listandenter("//span[@class='k-icon k-i-add']", "1");
-			Thread.sleep(500);
-
-//enter  service chargee
-			wm.sendtextbyxvalue("//input[@aria-owns='MiscServiceChargeId_listbox']",Servicecharge);
+			wm.stabbyxpath("//input[@name='MiscTaxAmount']");
 			Thread.sleep(90);
-			wm.Listandenter("//*[@id='MiscServiceChargeId_listbox']/li", Commonindex);
-			Thread.sleep(200);
-
-			wm.sendtextbycssselecotrwithoutclear("#MiscServiceFeeAmount", "" + MiscServiceFeeAmount);
-			Thread.sleep(200);
+			
 			wm.clickbyxpath("//span[@class='k-icon k-i-check']");
 			Thread.sleep(200);
 
 
-wm.clickbyxpath("//*[@id='idSAMiscFareDev']/div/div[1]/div[1]/a/i");
+//wm.clickbyxpath("//*[@id='idSAMiscFareDev']/div/div[1]/div[1]/a/i");
 Thread.sleep(200);
 
 //enterthe commissionamount
@@ -344,7 +350,7 @@ Thread.sleep(900);
 wm.clickbyxpath("//*[@id='testData']/i");
 Thread.sleep(500);
 
-
+/*
 wm.Netcollections("//input[@name='MiscRateDealFare']", "//input[@name='TotalTaxAmount']",
 		"//input[@name='TotalServiceFee']", "//input[@name='TotalDiscount']", " //input[@name='TotOutputVat']", 
 		"//input[@name='Amt_NetCollection']", "Net calclaiton done correectly", "Net calclaiton not done correectly");
@@ -354,7 +360,7 @@ wm.Publishedfare("//input[@name='MiscRateDealFare']", "//input[@name='TotalTaxAm
 		,"//input[@name='TotInputVat']", "//input[@name='Amt_NetPayable']", "Net payable Calclated successfuly", 
 		"Net payable not Calclated successfuly");
 
-
+*/
 wm.Netcollectionuisngcancellatiocharges("//input[@name='MiscRateDealFare']", "//input[@name='TotalTaxAmount']",
 		"//input[@name='TotalServiceFee']", "//input[@name='TotalDiscount']", "//input[@name='TotOutputVat']", 
 		"//input[@name='Amt_NetCollection']", "//*[@name='MiscRateSupplierCancellationChargeRfnd']",
@@ -377,42 +383,88 @@ Thread.sleep(500);
 
 // Enter the udid details
 
-wm.findelementandsendtextbycss("#Project_Number_AP", ProjectNumberAP);
-Thread.sleep(50);
-wm.findelementandsendtextbycss("#Department_AP", DepartmentAP);
-Thread.sleep(50);
-wm.findelementandsendtextbycss("#Major_Class_AP", MajorClassAP);
-Thread.sleep(50);
 
-wm.findelementandsendtextbycss("#Travel_Status_AP", TravelStatusAP);
-Thread.sleep(50);
-wm.findelementandsendtextbycss("#Total_Saving_Code_AP", TotalSavingCodeAP);
-Thread.sleep(50);
-wm.findelementandsendtextbycss("#Group_Travel_Indicator_AP", GroupTravelIndicatorAP);
-Thread.sleep(50);
-wm.findelementandsendtextbycss("#Tour_Code_AP", TourCodeAP);
-Thread.sleep(50);
-wm.findelementandsendtextbycss("#Endorsement_Restrict_AP", EndorsementRestrictAP);
-Thread.sleep(50);
-wm.findelementandsendtextbycss("#Fare_Calculation_Area_AP", FareCalculationAreaAP);
-Thread.sleep(200);
-wm.clickbyxpath("//span[@aria-owns='Booking_Type_AP_listbox']");
-Thread.sleep(200);
-wm.Listandenter("//*[@id='Booking_Type_AP_listbox']/li", Commonindex);
-Thread.sleep(200);
 
-wm.findelementandsendtextbycss("#Intl_Sales_Indicator_AP", IntlSalesIndicatorAP);
-Thread.sleep(200);
+
+wm.Listandenterthevaluesinvisblexpath("//input[@name='Travel_Status_DN']", DepartmentAP);
+//Thread.sleep(50);
+wm.Listandenterthevaluesinvisblexpath("//*[@name='Project_Number_AP']", ProjectNumberAP);
+//Thread.sleep(50);
+wm.Listandenterthevaluesinvisblexpath("//*[@name='Department_AP']", DepartmentAP);
+//Thread.sleep(50);
+wm.Listandenterthevaluesinvisblexpath("//input[@name='Major_Class_AP']", MajorClassAP);
+//Thread.sleep(50);
+
+wm.Listandenterthevaluesinvisblexpath("//input[@name='Travel_Status_AP']", TravelStatusAP);
+//Thread.sleep(50);
+wm.Listandenterthevaluesinvisblexpath("//input[@name='Total_Saving_Code_AP']", TotalSavingCodeAP);
+//Thread.sleep(50);
+wm.Listandenterthevaluesinvisblexpath("//input[@name='Group_Travel_Indicator_AP']", GroupTravelIndicatorAP);
+//Thread.sleep(50);
+wm.Listandenterthevaluesinvisblexpath("//input[@name='Tour_Code_AP']", TourCodeAP);
+//Thread.sleep(50);
+wm.Listandenterthevaluesinvisblexpath("//input[@name='Endorsement_Restrict_AP']", EndorsementRestrictAP);
+//Thread.sleep(50);
+wm.Listandenterthevaluesinvisblexpath("//input[@name='Fare_Calculation_Area_AP']", FareCalculationAreaAP);
+//Thread.sleep(200);
+
+
+	wm.Listandenter("//span[@aria-owns='Booking_Type_AP_listbox']", "0");
+	
+	Thread.sleep(300);
+	
+	wm.Listandenter("//*[@id='Booking_Type_AP_listbox']/li", Commonindex);
+	Thread.sleep(300);
+
+	wm.Listandenterthevaluesinvisblexpath("//input[@name='Intl_Sales_Indicator_AP']", IntlSalesIndicatorAP);
+	Thread.sleep(500);
+
+	
 wm.doubleclickusingxpath("//button[@id='btnmiscsave']");
 
 
 Thread.sleep(16000);
 
+
+wm.clickbyxpath("//*[@class='btn btn-danger']");
+	Thread.sleep(500);
+
+	wm.Listandenterquick("//span[contains(text(),'Leave Page')]", "0");
+	wm.Listandenterquick("//span[contains(text(),'Leave Page')]", "1");
+	wm.Listandenterquick("//span[contains(text(),'Leave Page')]", "2");
+	wm.Listandenterquick("//span[contains(text(),'Leave Page')]", "3");
+wm.sleep();
+
+
+wm.Verifythedropdownvalues("//input[@name='DktNumber']",
+		"Pass : Sales Refund MISCUCCF   created successfuly" + "",
+		"Fail:  Sales Refund MISCUCCF   not created successfuly " + "");
+
+/*	
+	wm.Listnegativescearios("//*[@id='DktNumber']", "0",
+			"Pass : Sales Refund MISC  created successfuly" + "",
+			"Fail:  Sales Refund MISc   not created successfuly " + "");
+*/	
+	Thread.sleep(2000);
+	
+	//wm.gettext("//*[@id='DktNumber']");
+	
+	wm.storestrign2("//*[@name='DktNumber']");
+	
+	//wm.gettext("//*[@id='DktNumber']");
+	
+	//wm.Gettextbylistandprint("//*[@id='DktNumber']", "Docketnumber is");
+	
+	
+	Thread.sleep(300);
+	
+	
+/*
 wm.Listnegativescearios("//input[@name='MiscConfirmationNumber']", "0", 
 		"MISC Created Successfully", "MISC Not Created Successfully");
 
 		wm.sleep();
-
+*/
 	}
 
 	@AfterMethod

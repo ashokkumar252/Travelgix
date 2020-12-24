@@ -36,7 +36,7 @@ public class Miscnegativewocwod
 
 	{
 
-		wm.launchbrowser("chrome", utility.Constant.TRAVELOGIXURL);
+		wm.launchbrowser(utility.Constant.Browsername, utility.Constant.TRAVELOGIXURL);
 
 	}
 
@@ -337,7 +337,27 @@ Thread.sleep(600);
 
 //Enter the taxdetails
 
-// Enter the taxdetails
+//Enter the taxdetails
+
+		// enter the details in service fee
+
+		wm.Listandenter("//span[@class='k-icon k-i-add']", "1");
+		Thread.sleep(500);
+
+		// enter service chargee
+		wm.sendtextbyxvalue("//input[@aria-owns='MiscServiceChargeId_listbox']", Servicecharge);
+		Thread.sleep(90);
+		wm.Listandenter("//*[@id='MiscServiceChargeId_listbox']/li", Commonindex);
+		Thread.sleep(200);
+
+		wm.sendtextbycssselecotrwithoutclear("#MiscServiceFeeAmount", "" + MiscServiceFeeAmount);
+		Thread.sleep(200);
+		wm.clickbyxpath("//span[@class='k-icon k-i-check']");
+
+		Thread.sleep(200);
+
+
+		// Enter the taxdetails
 
 		wm.Listandenter("//span[@class='k-icon k-i-add']", "0");
 		Thread.sleep(500);
@@ -354,22 +374,9 @@ Thread.sleep(600);
 
 		wm.sendtextbycssselecotrwithoutclear("#MiscTaxAmount", "" + MiscTaxAmount);
 		Thread.sleep(200);
-		wm.clickbyxpath("//span[@class='k-icon k-i-check']");
-		Thread.sleep(200);
-
-		// enter the details in service fee
-
-		wm.Listandenter("//span[@class='k-icon k-i-add']", "1");
-		Thread.sleep(500);
-
-//enter  service chargee
-		wm.sendtextbyxvalue("//input[@aria-owns='MiscServiceChargeId_listbox']",Servicecharge);
+		wm.stabbyxpath("//input[@name='MiscTaxAmount']");
 		Thread.sleep(90);
-		wm.Listandenter("//*[@id='MiscServiceChargeId_listbox']/li", Commonindex);
-		Thread.sleep(200);
-
-		wm.sendtextbycssselecotrwithoutclear("#MiscServiceFeeAmount", "" + MiscServiceFeeAmount);
-		Thread.sleep(200);
+		
 		wm.clickbyxpath("//span[@class='k-icon k-i-check']");
 		Thread.sleep(200);
 
@@ -425,7 +432,7 @@ Thread.sleep(200);
 wm.doubleclickusingxpath("//span[@class='k-icon k-i-check']");
 Thread.sleep(900);
 
-
+/*
 
 wm.comparetwovalues1to1("//input[@name='AirFopAmount']"
 		, "//input[@name='Amt_NetCollection']", 
@@ -442,7 +449,7 @@ wm.Netcollections("//input[@name='MiscRateDealFare']", "//input[@name='TotalTaxA
 wm.Publishedfare("//input[@name='MiscRateDealFare']", "//input[@name='TotalTaxAmount']", "//input[@name='salestotcommm']"
 		,"//input[@name='TotInputVat']", "//input[@name='Amt_NetPayable']", "Net payable Calclated successfuly", 
 		"Net payable not Calclated successfuly");
-
+*/
 
 
 wm.Netcollectionuisngcancellatiocharges("//input[@name='MiscRateDealFare']", "//input[@name='TotalTaxAmount']",

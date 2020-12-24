@@ -40,12 +40,12 @@ public class Accountsetup
 
 	{
 
-		wm.launchbrowser("chrome", utility.Constant.TRAVELOGIXURL);
+		wm.launchbrowser(utility.Constant.Browsername, utility.Constant.TRAVELOGIXURL);
 
 	}
 
 	@Test(dataProvider = "dp")
-	public void logincheckK(String Username, String Password, String Leftsidemenu,String Branchname,String Branchnameindex,
+	public void Accountsetup(String Username, String Password, String Leftsidemenu,String Branchname,String Branchnameindex,
 			String Productname,String Productnamindex,String Servicetype,String Servicetypeindex,String Voucher,
 			String Voucherstatusindex,String Default,String Defaultcollectionsindex,String Playbackaccount,
 			String Playbackaccountindex) throws Exception

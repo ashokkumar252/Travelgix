@@ -39,12 +39,12 @@ public class Agentincentive {
 
 	{
 
-		wm.launchbrowser("chrome", utility.Constant.TRAVELOGIXURL);
+		wm.launchbrowser(utility.Constant.Browsername, utility.Constant.TRAVELOGIXURL);
 
 	}
 
 	@Test(dataProvider = "dp")
-	public void logincheckK(String Username, String Password, String Leftsidemenu,String Code,
+	public void Agentincentive(String Username, String Password, String Leftsidemenu,String Code,
 			String Description,String AtaiAddress,String AtaiBankAc,String Customername,
 			String Customernameindex,String Agentincetive,String Agentincetiveindex,String Agentstatus,
 			String Agentstatusindex,String AtaiEffectiveDate1,String AtaiEffectiveDate2,

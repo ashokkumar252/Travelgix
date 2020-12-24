@@ -13,7 +13,6 @@ import travlogix.Wrappermethods;
 import atu.testng.reports.listeners.ATUReportsListener;
 import atu.testng.reports.listeners.ConfigurationListener;
 import atu.testng.reports.listeners.MethodListener;
-
 @Listeners({ ATUReportsListener.class, ConfigurationListener.class, MethodListener.class })
 public class Miscnegative {
 	static {
@@ -35,8 +34,7 @@ public class Miscnegative {
 	public void browesrnstatiation()
 
 	{
-
-		wm.launchbrowser("chrome", utility.Constant.TRAVELOGIXURL);
+		wm.launchbrowser(utility.Constant.Browsername, utility.Constant.TRAVELOGIXURL);
 
 	}
 
@@ -199,7 +197,7 @@ public class Miscnegative {
 		wm.Listnegativescearios("//*[@id='miscBranchKey_listbox']/li", "0",
 				"User able to selected the newly created miscBranchKey_listbox successfully",
 				"User not able to selected the newly created miscBranchKey_listbox successfully");
-		Thread.sleep(90);
+		Thread.sleep(500);
 
 //		wm.Listandenter("//*[@id='miscBranchKey_listbox']/li", Commonindex);
 		Thread.sleep(200);
@@ -207,6 +205,7 @@ public class Miscnegative {
 		// 5 Misc Payable agent User allowed to select the newly created payable
 		// agent lov
 		wm.Clearbyxpath("//input[@aria-owns='MiscPayableAgentKey_listbox']");
+		Thread.sleep(200);
 		
 		wm.sendtextbyxvalue("//input[@aria-owns='MiscPayableAgentKey_listbox']", Payableagent);
 		Thread.sleep(500);
@@ -336,8 +335,27 @@ wm.stabbyxpath("//input[@aria-owns='MiscOwnLodgeCardKey_listbox']");
 Thread.sleep(600);
 
 //Enter the taxdetails
+//Enter the taxdetails
 
-// Enter the taxdetails
+		// enter the details in service fee
+
+		wm.Listandenter("//span[@class='k-icon k-i-add']", "1");
+		Thread.sleep(500);
+
+		// enter service chargee
+		wm.sendtextbyxvalue("//input[@aria-owns='MiscServiceChargeId_listbox']", Servicecharge);
+		Thread.sleep(90);
+		wm.Listandenter("//*[@id='MiscServiceChargeId_listbox']/li", Commonindex);
+		Thread.sleep(200);
+
+		wm.sendtextbycssselecotrwithoutclear("#MiscServiceFeeAmount", "" + MiscServiceFeeAmount);
+		Thread.sleep(200);
+		wm.clickbyxpath("//span[@class='k-icon k-i-check']");
+
+		Thread.sleep(200);
+
+
+		// Enter the taxdetails
 
 		wm.Listandenter("//span[@class='k-icon k-i-add']", "0");
 		Thread.sleep(500);
@@ -354,27 +372,14 @@ Thread.sleep(600);
 
 		wm.sendtextbycssselecotrwithoutclear("#MiscTaxAmount", "" + MiscTaxAmount);
 		Thread.sleep(200);
-		wm.clickbyxpath("//span[@class='k-icon k-i-check']");
-		Thread.sleep(200);
-
-		// enter the details in service fee
-
-		wm.Listandenter("//span[@class='k-icon k-i-add']", "1");
-		Thread.sleep(500);
-
-//enter  service chargee
-		wm.sendtextbyxvalue("//input[@aria-owns='MiscServiceChargeId_listbox']",Servicecharge);
+		wm.stabbyxpath("//input[@name='MiscTaxAmount']");
 		Thread.sleep(90);
-		wm.Listandenter("//*[@id='MiscServiceChargeId_listbox']/li", Commonindex);
-		Thread.sleep(200);
-
-		wm.sendtextbycssselecotrwithoutclear("#MiscServiceFeeAmount", "" + MiscServiceFeeAmount);
-		Thread.sleep(200);
+		
 		wm.clickbyxpath("//span[@class='k-icon k-i-check']");
 		Thread.sleep(200);
 
 
-wm.clickbyxpath("//*[@id='idSAMiscFareDev']/div/div[1]/div[1]/a/i");
+// wm.clickbyxpath("//*[@id='idSAMiscFareDev']/div/div[1]/div[1]/a/i");
 Thread.sleep(200);
 
 //enterthe commissionamount
@@ -392,7 +397,7 @@ wm.Selectallbyxpath("//input[@name='MiscRateDiscPercent1']");
 wm.sendtextbycssselecotrwithoutclear("#MiscRateDiscPercent1", "" + MiscRateDiscPercent1);
 
 
-Thread.sleep(200);
+Thread.sleep(500);
 
 wm.clickbyxpath("//*[@id='idMiscCommissionAndDiscountDiv']/div/div[1]/div[1]/a/i");
 
@@ -426,14 +431,14 @@ wm.doubleclickusingxpath("//span[@class='k-icon k-i-check']");
 Thread.sleep(900);
 
 
-
+/*
 wm.comparetwovalues1to1("//input[@name='AirFopAmount']"
 		, "//input[@name='Amt_NetCollection']", 
 		"Pass: FOP and total amount matches successfully"
 		, " Fail: FOP and total amount not matches successfully");
-
+*/
 Thread.sleep(200);
-
+/*
 wm.Netcollections("//input[@name='MiscRateDealFare']", "//input[@name='TotalTaxAmount']",
 		"//input[@name='TotalServiceFee']", "//input[@name='TotalDiscount']", " //input[@name='TotOutputVat']", 
 		"//input[@name='Amt_NetCollection']", "Net calclaiton done correectly", "Net calclaiton not done correectly");
@@ -442,7 +447,7 @@ wm.Netcollections("//input[@name='MiscRateDealFare']", "//input[@name='TotalTaxA
 wm.Publishedfare("//input[@name='MiscRateDealFare']", "//input[@name='TotalTaxAmount']", "//input[@name='salestotcommm']"
 		,"//input[@name='TotInputVat']", "//input[@name='Amt_NetPayable']", "Net payable Calclated successfuly", 
 		"Net payable not Calclated successfuly");
-
+*/
 
 
 wm.Netcollectionuisngcancellatiocharges("//input[@name='MiscRateDealFare']", "//input[@name='TotalTaxAmount']",
@@ -450,6 +455,8 @@ wm.Netcollectionuisngcancellatiocharges("//input[@name='MiscRateDealFare']", "//
 		"//input[@name='Amt_NetCollection']", "//*[@name='MiscRateSupplierCancellationChargeRfnd']",
 		"//*[@name='MiscRateSupplierCancellationCharge']", "Net calclaiton done correectly by using the cancelaltion charges",
 		"Net calclaiton not done correectly by using the cancelaltion charges");
+
+Thread.sleep(200);
 
 wm.Publishedfareusingcancelaltionchargeswithoutuccf("//input[@name='MiscRateDealFare']", "//input[@name='TotalTaxAmount']",
 		"//input[@name='salestotcommm']", "//*[@name='MiscRateSupplierCancellationCharge']", 

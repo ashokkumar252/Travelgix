@@ -3,14 +3,14 @@
 <suite name="Failed suite [Suite]">
   <test name="Test(failed)">
     <classes>
-      <class name="Copytickectverifications.Aircopytickect">
+      <class name="Salesrefundcar.Carnegative">
         <methods>
-          <include name="browesrnstatiation"/>
           <include name="instantiation"/>
           <include name="close"/>
-          <include name="Aircopytickect" invocation-numbers="0"/>
+          <include name="Carnegative" invocation-numbers="0"/>
+          <include name="browesrnstatiation"/>
         </methods>
-      </class> <!-- Copytickectverifications.Aircopytickect -->
+      </class> <!-- Salesrefundcar.Carnegative -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

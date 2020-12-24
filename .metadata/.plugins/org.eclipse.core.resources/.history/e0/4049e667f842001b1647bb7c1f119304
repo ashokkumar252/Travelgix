@@ -1,0 +1,39 @@
+package utility;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
+public class batfile {
+
+	public static void main(String[] args) throws IOException
+	{
+	
+	
+		
+		//     C:\\Travlogix\\Batch file execution\\Salesrefundcar
+	File dir = new File("C:\\Travlogix\\Batch file execution\\Salesrefundcar");
+	
+	// List<WebElement> list = driver.findElements(By.xpath(xpath1));
+	
+	 List<WebElement> list =  "C:\\Travlogix\\Batch file execution\\Salesrefundcar";
+
+	 
+    System.out.println("Totla list size"+dir.size());
+
+    
+    ProcessBuilder pb = new ProcessBuilder("cmd.exe", "/C", "Start","Carbookingcard.bat");
+    
+    
+    pb.directory(dir);
+    Process p = pb.start();
+
+	
+		
+	}
+	
+
+}

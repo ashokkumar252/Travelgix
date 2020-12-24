@@ -38,12 +38,12 @@ public class Hotelservicecharge
 
 	{
 
-		wm.launchbrowser("chrome", utility.Constant.TRAVELOGIXURL);
+		wm.launchbrowser(utility.Constant.Browsername, utility.Constant.TRAVELOGIXURL);
 
 	}
 
 	@Test(dataProvider = "dp")
-	public void logincheckK(String Username, String Password, String Leftsidemenu,String Hotelservicehcragerulename,
+	public void Hotelservicecharge(String Username, String Password, String Leftsidemenu,String Hotelservicehcragerulename,
 			String Hotelservicehcragerulenameindex,String Applytype,String Applytypeindex,String Servicechargmode,
 			String Servicechargmodeindex,String discount,String Allocationtype,String Allocationtypeindex,
 			String Servicehcrgaeapplyon,String Servicehcrgaeapplyonindex,String Clientcategory,

@@ -1,0 +1,35 @@
+package utility;
+import java.io.File;
+import java.io.IOException;
+import java.util.List;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+public class batfile 
+{
+	public static void main(String[] args) throws IOException
+	{
+		String[] pathnames;
+
+	/*
+	File dir = new File("C:\\Travlogix\\Batch file execution\\Salesrefundcar");
+	ProcessBuilder pb = new ProcessBuilder("cmd.exe", "/C", "Start","Carbookingcard.bat");    
+    pb.directory(dir);
+    Process p = pb.start();
+*/
+	
+		File dir = new File("C:\\Travlogix\\Batch file execution\\Salesrefundcar");
+		
+		pathnames = dir.list();
+		
+		for (String pathname : pathnames) 
+		{
+			System.out.println(pathname);
+
+		}
+
+
+		
+	}
+	
+
+}

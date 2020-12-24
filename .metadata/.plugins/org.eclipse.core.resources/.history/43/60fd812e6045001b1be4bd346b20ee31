@@ -1,0 +1,9 @@
+package AllFop;
+
+import org.testng.annotations.Test;
+
+public class Miscallfops {
+  @Test
+  public void f() {
+  }
+}

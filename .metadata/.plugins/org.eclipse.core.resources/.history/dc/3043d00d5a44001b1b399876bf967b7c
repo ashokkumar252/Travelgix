@@ -1,0 +1,9 @@
+package Hotelcreditcashcarduccf;
+
+import org.testng.annotations.Test;
+
+public class HotelCreditUCCF {
+  @Test
+  public void f() {
+  }
+}

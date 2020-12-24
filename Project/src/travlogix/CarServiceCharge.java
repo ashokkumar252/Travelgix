@@ -39,12 +39,12 @@ public class CarServiceCharge {
 
 	{
 
-		wm.launchbrowser("chrome", utility.Constant.TRAVELOGIXURL);
+		wm.launchbrowser(utility.Constant.Browsername, utility.Constant.TRAVELOGIXURL);
 
 	}
 
 	@Test(dataProvider = "dp")
-	public void logincheckK(String Username, String Password, String Leftsidemenu,String Servicerulename,String Applytype,
+	public void CarServiceCharge(String Username, String Password, String Leftsidemenu,String Servicerulename,String Applytype,
 			String Applytypeindex,String Servicechargemode,String Servicechargemodeindexx,String discount,String Allocationtype,
 			String Allocationtypeindex,String CcscdCarServChgBook,String Sericechageapplyon,String Sericechageapplyonindex,String Clientcategory,
 			String Clientcategoryindex) throws Exception

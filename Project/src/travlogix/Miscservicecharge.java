@@ -39,12 +39,12 @@ public class Miscservicecharge
 
 	{
 
-		wm.launchbrowser("chrome", utility.Constant.TRAVELOGIXURL);
+		wm.launchbrowser(utility.Constant.Browsername, utility.Constant.TRAVELOGIXURL);
 
 	}
 
 	@Test(dataProvider = "dp")
-	public void logincheckK(String Username, String Password, String Leftsidemenu,String Servicecargename,
+	public void Miscservicecharge(String Username, String Password, String Leftsidemenu,String Servicecargename,
 			String Servicecargenameindex,String Allocationtype,String Allocationtypeindex,
 			String Servicechargemode,String Servicechargemodeindex,String misChargeAmount,
 			String Applytype,String Applytypeindex,String Applyon,String Applyonindexx,String discount,

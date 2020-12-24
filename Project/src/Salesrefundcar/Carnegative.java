@@ -36,7 +36,7 @@ public class Carnegative {
 
 	{
 
-		wm.launchbrowser("chrome", utility.Constant.TRAVELOGIXURL);
+		wm.launchbrowser(utility.Constant.Browsername, utility.Constant.TRAVELOGIXURL);
 
 	}
 
@@ -93,7 +93,7 @@ public class Carnegative {
 
 		// Docket type
 		wm.Mousemoveover("//input[@name='dktDocTypeCode_input']");
-		Thread.sleep(50);
+		Thread.sleep(90);
 		wm.Listnegativescearios(utility.Constant.Travelogixuitooltipvalidation, Commonindex,
 				"Pass : dktDocTypeCode_input Field  validation is avilable ",
 				"Fail : dktDocTypeCode_input Field  validaiton is not avilable ");
@@ -101,7 +101,7 @@ public class Carnegative {
 
 		// sales branch
 		wm.Mousemoveover("//input[@name='DktBranchKey_input']");
-		Thread.sleep(50);
+		Thread.sleep(90);
 		wm.Listnegativescearios(utility.Constant.Travelogixuitooltipvalidation, Commonindex,
 				"Pass : DktBranchKey_input Field  validation is avilable ",
 				"Fail : DktBranchKey_input Field  validaiton is not avilable ");
@@ -109,7 +109,7 @@ public class Carnegative {
 
 		// Customer
 		wm.Mousemoveover("//input[@name='DktPartnername_input']");
-		Thread.sleep(50);
+		Thread.sleep(90);
 		wm.Listnegativescearios(utility.Constant.Travelogixuitooltipvalidation, Commonindex,
 				"Pass : DktPartnername_input Field  validation is avilable ",
 				"Fail : DktPartnername_input Field  validaiton is not avilable ");
@@ -117,7 +117,7 @@ public class Carnegative {
 
 		// lead paxname
 		wm.Mousemoveover("//input[@name='dktLeadPaxName']");
-		Thread.sleep(50);
+		Thread.sleep(90);
 		wm.Listnegativescearios(utility.Constant.Travelogixuitooltipvalidation, Commonindex,
 				"Pass : dktLeadPaxName Field  validation is avilable ",
 				"Fail : dktLeadPaxName Field  validaiton is not avilable ");
@@ -143,7 +143,7 @@ public class Carnegative {
 
 		// Custmerr
 		wm.sendtextbyxvalue("//input[@aria-owns='DktPartnername_listbox']", Customer);
-		Thread.sleep(200);
+		Thread.sleep(300);
 		wm.Listandenter("//*[@id='DktPartnername_listbox']/li", Commonindex);
 		Thread.sleep(200);
 
@@ -151,7 +151,7 @@ public class Carnegative {
 		wm.sendtextbycssselecotrwithoutclear("#dktLeadPaxName", "" + dktLeadPaxName);
 
 		wm.Listandenter("//i[@class='fa fa-chevron-down']", "2");
-		Thread.sleep(200);
+		Thread.sleep(300);
 		wm.Listandenter("//i[@class='fa fa-plus']", "2");
 		Thread.sleep(1500);
 
@@ -478,26 +478,6 @@ public class Carnegative {
 		 * Thread.sleep(500);
 		 */
 
-		// Enter the taxdetails
-
-		wm.Listandenter("//span[@class='k-icon k-i-add']", "0");
-		Thread.sleep(500);
-
-		wm.stabbyxpath(" //span[@class='k-icon k-i-cancel']");
-		Thread.sleep(200);
-
-		// taxcodee
-
-		wm.clickbyxpath("//span[@aria-owns='AatCode_listbox']");
-		Thread.sleep(50);
-		wm.Listandenter("//*[@id='AatCode_listbox']/li", Commonindex);
-		Thread.sleep(200);
-
-		wm.sendtextbycssselecotrwithoutclear("#AatAmount", "" + AatAmount);
-		Thread.sleep(200);
-		wm.clickbyxpath("//span[@class='k-icon k-i-check']");
-		Thread.sleep(200);
-
 		// enter the details in service fee
 
 		wm.Listandenter("//span[@class='k-icon k-i-add']", "1");
@@ -513,20 +493,40 @@ public class Carnegative {
 		wm.stabbyxpath("//input[@aria-owns='CscServiceChargeId_listbox']");
 		Thread.sleep(200);
 
-		wm.doubleclickusingxpath("//input[@name='CscBaseAmount']");
-		Thread.sleep(200);
-
-		// wm.sendtextbyxvalue("//input[@name='CscBaseAmount']", CscBaseAmount);
-
-		Thread.sleep(200);
-
 		wm.sendtextbycssselecotr("#CscBaseAmount", "" + CscBaseAmount);
 		Thread.sleep(200);
 
 		wm.clickbyxpath("//span[@class='k-icon k-i-check']");
-		Thread.sleep(900);
+		Thread.sleep(200);
 
-		wm.clickbyxpath("//*[@id='div_Car_Header_Details']/div[4]/div/div[1]/div[1]/a/i");
+
+		// taxcodee
+
+		// Enter the taxdetails
+
+		wm.Listandenter("//span[@class='k-icon k-i-add']", "0");
+		Thread.sleep(500);
+
+		wm.stabbyxpath(" //span[@class='k-icon k-i-cancel']");
+		Thread.sleep(200);
+
+		
+		wm.clickbyxpath("//span[@aria-owns='AatCode_listbox']");
+		Thread.sleep(50);
+		wm.Listandenter("//*[@id='AatCode_listbox']/li", Commonindex);
+		Thread.sleep(200);
+
+		wm.sendtextbycssselecotrwithoutclear("#AatAmount", "" + AatAmount);
+		Thread.sleep(200);
+		wm.stabbyxpath("//input[@name='AatAmount']");
+		Thread.sleep(200);
+		
+		wm.clickbyxpath("//span[@class='k-icon k-i-check']");
+		Thread.sleep(500);
+
+
+		
+		//wm.clickbyxpath("//*[@id='div_Car_Header_Details']/div[4]/div/div[1]/div[1]/a/i");
 
 		// Enter the commissiondetals
 
@@ -547,7 +547,7 @@ public class Carnegative {
 		// Enter the agent incetives
 
 		// Agent incentivee
-
+		Thread.sleep(200);
 		wm.sendtextbyxvalue("//input[@aria-owns='CtscPaybackParnerName_listbox']", Agentincentive);
 		Thread.sleep(100);
 		wm.Listandenter("//*[@id='CtscPaybackParnerName_listbox']/li", Commonindex);
@@ -570,14 +570,14 @@ public class Carnegative {
 
 		// ==============================================================
 
-
+/*
 wm.comparetwovalues1to1("//input[@name='AirFopAmount']"
 		, "//input[@name='Amt_NetCollection']", 
 		"Pass: FOP and total amount matches successfully"
 		, " Fail: FOP and total amount not matches successfully");
-
+*/
 Thread.sleep(200);
-
+/*
 wm.Netcollections("//input[@name='CtfdBaseFare']", "//input[@name='TotalTaxAmount']",
 		"//input[@name='TotalServiceFee']", "//input[@name='TotalDiscount']", " //input[@name='TotOutputVat']", 
 		"//input[@name='Amt_NetCollection']", "Net calclaiton done correectly", "Net calclaiton not done correectly");
@@ -586,7 +586,7 @@ wm.Netcollections("//input[@name='CtfdBaseFare']", "//input[@name='TotalTaxAmoun
 wm.Publishedfare("//input[@name='CtfdBaseFare']", "//input[@name='TotalTaxAmount']", "//input[@name='salestotcommm']"
 		,"//input[@name='TotInputVat']", "//input[@name='Amt_NetPayable']", "Net payable Calclated successfuly", 
 		"Net payable not Calclated successfuly");
-
+*/
 
 wm.Netcollectionuisngcancellatiocharges("//input[@name='CtfdBaseFare']", "//input[@name='TotalTaxAmount']", 
 		"//input[@name='TotalServiceFee']", "//input[@name='TotalDiscount']", "//input[@name='TotOutputVat']", 

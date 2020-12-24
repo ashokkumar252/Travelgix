@@ -38,12 +38,12 @@ public class BusinessPartnersupplier {
 
 	{
 
-		wm.launchbrowser("chrome", utility.Constant.TRAVELOGIXURL);
+		wm.launchbrowser(utility.Constant.Browsername, utility.Constant.TRAVELOGIXURL);
 
 	}
 
 	@Test(dataProvider = "dp")
-	public void logincheckK(String Username, String Password, String Leftsidemenu, String Account, String SupplierCode,
+	public void BusinessPartnersupplier(String Username, String Password, String Leftsidemenu, String Account, String SupplierCode,
 			String SupplierName, String Suppliertype, String Suppliertypeindex,String VATRegStatusindex
 ,String Customercategory,
 			String Customercategoryindex, String Mastercurrecny, String Mastercurrecnyindex, String Documentmethod,

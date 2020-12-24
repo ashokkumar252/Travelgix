@@ -39,12 +39,12 @@ public class Accountsetupnegativescenarios
 
 	{
 
-		wm.launchbrowser("chrome", utility.Constant.TRAVELOGIXURL);
+		wm.launchbrowser(utility.Constant.Browsername, utility.Constant.TRAVELOGIXURL);
 
 	}
 
 	@Test(dataProvider = "dp")
-	public void logincheckK(String Username, String Password, String Leftsidemenu,String branchNamelistbox,
+	public void Accountsetupnegativescenarios(String Username, String Password, String Leftsidemenu,String branchNamelistbox,
 			String branchNamelistboxindex,String productName,String productNameindex,String transName,
 			String transNameindex,String VoucherstatusName,String VoucherstatusNameindex,
 			String DefaultBankName,String DefaultBankNameindex,String PaybackExpenseGlName,String PaybackExpenseGlNameindex,

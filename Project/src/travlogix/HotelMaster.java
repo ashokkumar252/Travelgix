@@ -39,12 +39,12 @@ public class HotelMaster {
 
 	{
 
-		wm.launchbrowser("chrome", utility.Constant.TRAVELOGIXURL);
+		wm.launchbrowser(utility.Constant.Browsername, utility.Constant.TRAVELOGIXURL);
 
 	}
 
 	@Test(dataProvider = "dp")
-	public void logincheckK(String Username, String Password, String Leftsidemenu,String Name,String Country,
+	public void HotelMaster(String Username, String Password, String Leftsidemenu,String Name,String Country,
 			String Countryindex,String Cityname,String Cityindexx,String HtlPBox,String Hotelchainname,
 			String Hotelchainnameindex,String HtlTypeNamelistbox,String HtlTypeNamelistboxindex,
 			String HtlServiceDetails,String Supplierlink,String Supplierlinkindex,String HtlAddress1,

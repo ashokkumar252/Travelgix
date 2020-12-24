@@ -37,12 +37,12 @@ public class Hotelbookingcard
 
 	{
 
-		wm.launchbrowser("chrome", utility.Constant.TRAVELOGIXURL);
+		wm.launchbrowser(utility.Constant.Browsername, utility.Constant.TRAVELOGIXURL);
 
 	}
 
 	@Test(dataProvider = "dp")
-	public void logincheckK(String Username, String Password, String Leftsidemenu, String ActiveFrom1,
+	public void Hotelbookingcard(String Username, String Password, String Leftsidemenu, String ActiveFrom1,
 			String ActiveFrom2, String ActiveFrom3, String Docktype, String Docktypeindex, String Salesbracnh,
 			String Salesbracnhindex, String Customer, String Customerindex, String Leadpaxnamee,
 			String dktClientReference, String Tickectstatusindex,
@@ -257,7 +257,7 @@ public class Hotelbookingcard
 
 		wm.stabbyxpath("//input[@aria-owns='HtfdOwnLodgeCardKey_listbox']");
 		Thread.sleep(600);
-
+/*
 		wm.Listandenter("//span[@class='k-icon k-i-add']", "0");
 		Thread.sleep(500);
 
@@ -275,7 +275,7 @@ public class Hotelbookingcard
 		Thread.sleep(200);
 		wm.clickbyxpath("//span[@class='k-icon k-i-check']");
 		Thread.sleep(200);
-
+*/
 		// enter the details in service fee
 
 		wm.Listandenter("//span[@class='k-icon k-i-add']", "1");
@@ -296,7 +296,31 @@ public class Hotelbookingcard
 		wm.clickbyxpath("//span[@class='k-icon k-i-check']");
 		Thread.sleep(200);
 
-		wm.clickbyxpath("//*[@id='div_Hotel_Header_Details']/div[3]/div/div[1]/div[1]/a/i");
+		//wm.clickbyxpath("//*[@id='div_Hotel_Header_Details']/div[3]/div/div[1]/div[1]/a/i");
+		
+
+		wm.Listandenter("//span[@class='k-icon k-i-add']", "0");
+		Thread.sleep(500);
+
+		wm.stabbyxpath(" //span[@class='k-icon k-i-cancel']");
+		Thread.sleep(200);
+
+		// TAX code
+		wm.sendtextbyxvalue("//input[@aria-owns='HotelAtCode_listbox']", Taxcodee);
+		Thread.sleep(100);
+		wm.Listandenter("//*[@id='HotelAtCode_listbox']/li", Commonindex);
+		Thread.sleep(200);
+
+		// TAxamountt
+		wm.sendtextbycssselecotrwithoutclear("#HotelAtAmount", HotelAtAmount);
+		Thread.sleep(200);
+		wm.stabbyxpath("//input[@name='HotelAtAmount']");
+		Thread.sleep(200);
+		wm.clickbyxpath("//span[@class='k-icon k-i-check']");
+		Thread.sleep(200);
+		
+
+
 
 		// Enter the commissiondetails
 
@@ -366,9 +390,9 @@ public class Hotelbookingcard
 		// Agent incentivee
 
 		wm.sendtextbyxvalue("//input[@aria-owns='hotelHAAgentAccountName_listbox']", Agentincentive);
-		Thread.sleep(100);
+		Thread.sleep(500);
 		wm.Listandenter("//*[@id='hotelHAAgentAccountName_listbox']/li", Commonindex);
-		Thread.sleep(200);
+		Thread.sleep(300);
 
 		
 		wm.clickbyxpath("//*[@id='AgentIncentiveDiv']/div/div[1]/div[1]/a/i");
@@ -388,9 +412,9 @@ public class Hotelbookingcard
 		//selecte the Credit card  options
 				wm.clickbyxpath("//span[@aria-owns='MiscFOPModeKey_listbox']");		
 				//wm.sendtextbyxvalue("//input[@aria-owns='AAtscPaybackParnerDesc_listbox']", Agentincetive);
-				Thread.sleep(200);
+				Thread.sleep(500);
 				wm.Listandenter("//*[@id='MiscFOPModeKey_listbox']/li", Modeindex);
-				Thread.sleep(1200);
+				Thread.sleep(900);
 				
 				//selected the branch
 				
@@ -403,10 +427,10 @@ public class Hotelbookingcard
 				Thread.sleep(200);
 				
 				wm.sendtextbycssselecotrwithoutclear("#fcardnum", ""+fcardnum);
-				Thread.sleep(200);
+				Thread.sleep(300);
 
 				wm.sendtextbycssselecotr("#fcardDate", "" + fcardDate1 + "/" + fcardDate3);
-				Thread.sleep(200);
+				Thread.sleep(300);
 
 		
 		
@@ -419,7 +443,7 @@ public class Hotelbookingcard
 
 
 
-
+/*
 wm.Netcollections("//input[@name='hoteltfdBaseFare']", "//input[@name='TotalTaxAmount']",
 		"//input[@name='TotalServiceFee']", "//input[@name='TotalDiscount']", "//input[@name='TotOutputVat']", 
 		"//input[@name='Amt_NetCollection']", "Net calclaiton done correectly", "Net calclaiton not done correectly");
@@ -428,14 +452,17 @@ wm.Publishedfare("//input[@name='hoteltfdBaseFare']", "//input[@name='TotalTaxAm
 		"//input[@name='salestotcommm']"
 		,"//input[@name='TotInputVat']", "//input[@name='Amt_NetPayable']", "Net payable Calclated successfuly", 
 		"Net payable not Calclated successfuly");
+*/
 
-
+		
 wm.Hotelnetcalculationchargesusingcancelationcharges("//input[@name='hoteltfdBaseFare']", "//input[@name='TotalTaxAmount']"
 		,"//input[@name='TotalServiceFee']", "//input[@name='TotalDiscount']", "//input[@name='TotOutputVat']", 
 		"//input[@name='Amt_NetCollection']", "//*[@id='hoteltfdSupplierCancelCharge']", 
 		"//*[@id='AG_INPVAT']","Net calclaiton done correectly uisng cancellation charges", 
 		"Net calclaiton not done correectly uisng cancellation charges");
 
+
+Thread.sleep(300);
 
 wm.Publishedfareusingcancelaltionchargeswithoutuccf("//input[@name='hoteltfdBaseFare']", "//input[@name='TotalTaxAmount']"
 		, "//input[@name='salestotcommm']", "//*[@id='AG_INPVAT']", 
@@ -449,7 +476,10 @@ wm.Publishedfareusingcancelaltionchargeswithoutuccf("//input[@name='hoteltfdBase
 		
 		
 		wm.clickbyxpath("//button[@id='btnhotelsave']");
-	
+
+
+Thread.sleep(500);
+
 		//Enter the udid details 
 		
 //wm.clickbyxpath("//*[@id='testData']/i");
@@ -485,15 +515,44 @@ wm.Publishedfareusingcancelaltionchargeswithoutuccf("//input[@name='hoteltfdBase
 		
 
 		wm.sleep();
-		wm.clickbyxpath("//button[@id='btnhotelsave']");
+		wm.sleep();
+		wm.sleep();
+		wm.sleep();
+		
+		wm.clickbyxpath("//*[@class='btn btn-danger']");
 		Thread.sleep(500);
-			
-		wm.Mousemoveover("//input[@name='hotelProviderKey_input']");
-		Thread.sleep(200);
-		wm.Listnegativescearios(utility.Constant.Travelogixuitooltipvalidation, "0",
-				"Pass : Sales Refund hotel  created successfuly" + "",
-				"Fail:  Sales Refund hotel  not created successfuly " + "");
 	
+		wm.Listandenterquick("//span[contains(text(),'Leave Page')]", "0");
+		wm.Listandenterquick("//span[contains(text(),'Leave Page')]", "1");
+		wm.Listandenterquick("//span[contains(text(),'Leave Page')]", "2");
+		wm.Listandenterquick("//span[contains(text(),'Leave Page')]", "3");
+	 wm.sleep();
+	 wm.sleep();
+	
+
+		wm.Verifythedropdownvalues("//input[@name='DktNumber']",
+				"Pass : Sales Refund Hotelbookingcard   created successfuly" + "",
+				"Fail:  Sales Refund Hotelbookingcard   not created successfuly " + "");
+	
+		
+	 /*
+		wm.Listnegativescearios("//*[@id='DktNumber']", "0",
+				"Pass : Sales Refund Hotel   created successfuly" + "",
+				"Fail:  Sales Refund Hotel   not created successfuly " + "");
+	*/	
+		wm.sleep();
+		
+		//wm.gettext("//*[@id='DktNumber']");
+		
+		wm.storestrign2("//input[@name='DktNumber']");
+		
+		//wm.gettext("//*[@id='DktNumber']");
+		
+		//wm.Gettextbylistandprint("//*[@id='DktNumber']", "Docketnumber is");
+		
+		
+		Thread.sleep(300);
+
 
 	}
 

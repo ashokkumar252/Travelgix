@@ -38,7 +38,7 @@ public class Airdomesticnegative
 
 	{
 
-		wm.launchbrowser("chrome", utility.Constant.TRAVELOGIXURL);
+		wm.launchbrowser(utility.Constant.Browsername, utility.Constant.TRAVELOGIXURL);
 
 	}
 
@@ -1174,8 +1174,11 @@ wm.comparetwovalues1to1("//input[@name='AirFopAmount']"
 		wm.Listnegativescearios(utility.Constant.Travelogixuitooltipvalidation, "0",
 				"Pass : Sales Refund Air Tickect created successfuly" + "",
 				"Fail:  Sales Refund Air Tickect not created successfuly " + "");
-	
+
+		Thread.sleep(200);
 		
+		wm.Printmessages("Air tickect number"+AatdTicketNumber);
+
 
 
 

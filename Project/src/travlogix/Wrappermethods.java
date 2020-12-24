@@ -1,4 +1,5 @@
 package travlogix;
+import java.awt.Desktop;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -9,6 +10,7 @@ import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
+import javax.swing.plaf.synth.SynthStyle;
 import org.apache.commons.io.FileUtils;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -23,6 +25,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 //import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -39,9 +42,7 @@ import atu.testng.reports.logging.LogAs;
 import atu.testng.reports.utils.Utils;
 import atu.testng.selenium.reports.CaptureScreen;
 import atu.testng.selenium.reports.CaptureScreen.ScreenshotOf;
-
 @Listeners({ ATUReportsListener.class, ConfigurationListener.class, MethodListener.class })
-
 public class Wrappermethods {
 
 	/*
@@ -57,7 +58,16 @@ public class Wrappermethods {
 		//System.setProperty("atu.reporter.config", "C:\\ATUReports\\atu.properties");
 		System.setProperty("atu.reporter.config", utility.Constant.ATUREPORTS);
 		
+	
 		
+	//ATUReports.add("Started", LogAs.INFO, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+
+		ATUReports.add("Started", LogAs.INFO, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+		
+		
+
+		
+	
 		
 	}
 
@@ -73,15 +83,18 @@ public class Wrappermethods {
 	int i = 1;
 	static String store1; 
 	public static String store2;
+	
+	
 	public void launchbrowser(String brwsr, String URL)
 
 	{
 		if (brwsr.equalsIgnoreCase("chrome")) {
-				//System.setProperty("webdriver.chrome.driver", "E:\\chrome driver\\chromedriver.exe");
-				//System.setProperty("webdriver.chrome.driver", "C:\\chromedriver\\Chromedriver2\\chromedriver.exe");
 			
-				//System.setProperty("webdriver.chrome.driver", "C:\\Wastaautomation\\chromedriver.exe");
-				System.setProperty("webdriver.chrome.driver", utility.Constant.CHROMEDRIVEREXE);
+			ATUReports.setWebDriver(driver);
+			ATUReports.indexPageDescription = "Information dynamic Project";
+			ATUReports.setAuthorInfo("Automation", Utils.getCurrentTime(), "1.0");
+			System.setProperty("webdriver.chrome.driver", utility.Constant.CHROMEDRIVEREXE);
+			ATUReports.add("Chrome Browser is instantiated", LogAs.INFO, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 				
 			
 				
@@ -89,11 +102,11 @@ public class Wrappermethods {
 
 			driver = new ChromeDriver();
 
-			ATUReports.setWebDriver(driver);
+/*			ATUReports.setWebDriver(driver);
 			ATUReports.indexPageDescription = "Information dynamic Project";
 			ATUReports.setAuthorInfo("Automation", Utils.getCurrentTime(), "1.0");
-			ATUReports.add("Chromebrowser is instantiated", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
-
+			ATUReports.add("Chromebrowser is instantiated", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+*/
 		}
 
 		else if (brwsr.equalsIgnoreCase("ie")) {
@@ -105,21 +118,28 @@ public class Wrappermethods {
 			ATUReports.setWebDriver(driver);
 			ATUReports.indexPageDescription = "FreeWheel MRM Project";
 			ATUReports.setAuthorInfo("ID", Utils.getCurrentTime(), "1.0");
-			ATUReports.add("InternetExplorer is instantiated", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("InternetExplorer is instantiated", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+			
 		}
-		else if (brwsr.equalsIgnoreCase("headless")) {
-			System.setProperty("webdriver.chrome.driver", utility.Constant.CHROMEDRIVEREXE);
+		else if (brwsr.equalsIgnoreCase("headless"))
+		{
+			
+		System.setProperty("webdriver.chrome.driver", utility.Constant.CHROMEDRIVEREXE);
 
-			ChromeOptions option=new ChromeOptions();
-			option.addArguments("headless");
-			option.setHeadless(true);
-			driver = new ChromeDriver(option);
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("--headless");
+			options.addArguments("Window-size=1280,800");
+		
+			options.setHeadless(true);
+			driver = new ChromeDriver(options);
 			
 			ATUReports.setWebDriver(driver);
 			ATUReports.indexPageDescription = "Travlogix headless project";
 			ATUReports.setAuthorInfo("ID", Utils.getCurrentTime(), "1.0");
-			ATUReports.add("headless chrome browser is instantiated", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
-		} 
+			ATUReports.add("headless chrome browser is instantiated", LogAs.PASSED, 
+					new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+
+			} 
 		else
 
 		{
@@ -130,7 +150,7 @@ public class Wrappermethods {
 			ATUReports.setAuthorInfo("ID", Utils.getCurrentTime(), "1.0");
 			// ATUReports.setAuthorInfo(ID, arg1, arg2);
 
-			ATUReports.add("Firefox Driver is instantiated", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("Firefox Driver is instantiated", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 
 		}
 
@@ -138,7 +158,7 @@ public class Wrappermethods {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.get(URL);
 		ATUReports.add("Browser launched and URL got triggered ", LogAs.PASSED,
-				new CaptureScreen(ScreenshotOf.DESKTOP));
+				new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 	}
 
 	public void enterbyxpath(String xpt, String data)
@@ -152,14 +172,14 @@ public class Wrappermethods {
 			// ATUReports.add("Enter the Data successfully", LogAs.PASSED, new
 			// CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 
-			ATUReports.add("Data Entered as " + data, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("Data Entered as " + data, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 
 		} catch (NoSuchElementException e) {
 
-			ATUReports.add("No element found", LogAs.FAILED, new CaptureScreen(CaptureScreen.ScreenshotOf.DESKTOP));
-			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No element found", LogAs.FAILED, new CaptureScreen(CaptureScreen.ScreenshotOf.BROWSER_PAGE));
+			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (WebDriverException e) {
-			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}
@@ -170,13 +190,13 @@ public class Wrappermethods {
 		try {
 			
 			driver.findElementByXPath(xpt1).click();
-			//ATUReports.add("Click by Xpath ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			//ATUReports.add("Click by Xpath ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 			//test.log(LogStatus.PASS, "Clicked by xpath");
 		} catch (NoSuchElementException e) {
 
-		//	ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+		//	ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (WebDriverException e) {
-			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 			//test.log(LogStatus.FAIL, "Not Clicked by xpath");
 		} finally {
 			takeSnap();
@@ -193,14 +213,14 @@ public class Wrappermethods {
 			Builder.moveToElement(driver.findElementByXPath(xpth)).build().perform();
 
 			Thread.sleep(1000);
-			ATUReports.add("Mouse moved over to the Manage ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("Mouse moved over to the Manage ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 			driver.findElementByLinkText(lnk).click();
-			ATUReports.add("User clicked the " + lnk + "link", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("User clicked the " + lnk + "link", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (NoSuchElementException e) {
 
-			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (WebDriverException e) {
-			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}
@@ -210,12 +230,12 @@ public class Wrappermethods {
 
 		try {
 			driver.findElementByLinkText(lnk).click();
-			ATUReports.add("User clicked the " + lnk + "link", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("User clicked the " + lnk + "link", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (NoSuchElementException e) {
 
-			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (WebDriverException e) {
-			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}
@@ -227,13 +247,20 @@ public class Wrappermethods {
 
 			driver.findElementById(id).clear();
 			driver.findElementById(id).sendKeys(txt);
-			ATUReports.add(" User Entered the text as " + txt, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+		//	ATUReports.add(" User Entered the text as " + txt, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+			ATUReports.add(" User Entered the text as " + txt, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+			ATUReports.add(" User Entered the text as " + txt, LogAs.INFO,new CaptureScreen(ScreenshotOf.DESKTOP));
+
+			
 			//test.log(LogStatus.PASS, "User Entered the text");
 		} catch (NoSuchElementException e) {
 
-			//ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			//ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (WebDriverException e) {
-			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			//ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+			ATUReports.add(" ", LogAs.INFO, new CaptureScreen(ScreenshotOf.DESKTOP));
+			
 			//test.log(LogStatus.FAIL, "User not Entered the text");
 			
 		} finally {
@@ -248,12 +275,12 @@ public class Wrappermethods {
 
 			driver.findElementById(id).clear();
 			driver.findElementById(id).sendKeys("txt");
-			ATUReports.add(" User Entered the text as " + txt, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add(" User Entered the text as " + txt, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (NoSuchElementException e) {
 
-			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (WebDriverException e) {
-			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}
@@ -265,12 +292,12 @@ public class Wrappermethods {
 			driver.findElementByXPath(xva).clear();
 			driver.findElementByXPath(xva).sendKeys(txt);
 
-			ATUReports.add(" User Entered the text as " + txt, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add(" User Entered the text as " + txt, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (NoSuchElementException e) {
 
-			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (WebDriverException e) {
-			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}
@@ -282,12 +309,12 @@ public class Wrappermethods {
 			driver.findElementByXPath(xva).clear();
 			driver.findElementByXPath(xva).sendKeys(""+5);
 
-			ATUReports.add(" User Entered the text as " + txt, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add(" User Entered the text as " + txt, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (NoSuchElementException e) {
 
-			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (WebDriverException e) {
-			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}
@@ -303,12 +330,12 @@ public class Wrappermethods {
 			driver.findElementByCssSelector(xva).sendKeys(txt);
 			// driver.findElementByCssSelector(xva).sendKeys(txt);
 
-			ATUReports.add(" User Entered the text as " + txt, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add(" User Entered the text as " + txt, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (NoSuchElementException e) {
 
-			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (WebDriverException e) {
-			//ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			//ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}
@@ -323,12 +350,12 @@ public class Wrappermethods {
 			int i = 10;
 			driver.findElementByXPath(xva).clear();
 			driver.findElementByXPath(xva).sendKeys(txt.valueOf(i));
-			ATUReports.add(" User Entered the text as " + txt, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add(" User Entered the text as " + txt, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (NoSuchElementException e) {
 
-			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (WebDriverException e) {
-			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}
@@ -351,12 +378,12 @@ public class Wrappermethods {
 			
 			//driver.findElementByXPath(xpath).sendKeys(txt.valueOf(i));
 
-			ATUReports.add(" User Entered the text as " + txt, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add(" User Entered the text as " + txt, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (NoSuchElementException e) {
 
-			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (WebDriverException e) {
-			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}
@@ -374,12 +401,12 @@ public class Wrappermethods {
 			driver.findElementById(id).clear();
 			driver.findElementById(id).sendKeys(txt.valueOf(i));
 
-			ATUReports.add(" User Entered the text as " + txt, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add(" User Entered the text as " + txt, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (NoSuchElementException e) {
 
-			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (WebDriverException e) {
-			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}
@@ -397,12 +424,12 @@ public class Wrappermethods {
 
 				// driver.findElement(By.id("accountInputBox_input")).sendKeys(Integer.toString(vCustAccNum));
 
-				ATUReports.add(" User Entered the text as ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+				ATUReports.add(" User Entered the text as ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 			} catch (NoSuchElementException e) {
 
-				ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+				ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 			} catch (WebDriverException e) {
-				ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+				ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 			} finally {
 				takeSnap();
 			}
@@ -420,12 +447,12 @@ public class Wrappermethods {
 			try {
 				
 				driver.findElementByXPath(xpt1).clear();
-				ATUReports.add("Network link got clicked ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+				ATUReports.add("Network link got clicked ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 			} catch (NoSuchElementException e) {
 
-			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 			} catch (WebDriverException e) {
-				ATUReports.add("Element not cleared", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+				ATUReports.add("Element not cleared", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 			} finally {
 				takeSnap();
 			}
@@ -444,12 +471,12 @@ public class Wrappermethods {
 
 			// driver.findElement(By.id("accountInputBox_input")).sendKeys(Integer.toString(vCustAccNum));
 
-			ATUReports.add(" User Entered the text as ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add(" User Entered the text as ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (NoSuchElementException e) {
 
-			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (WebDriverException e) {
-			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}
@@ -461,15 +488,15 @@ public class Wrappermethods {
 		try {
 			Select dropdown = new Select(driver.findElementById(idvalue));
 			ATUReports.add(" List Values are loaded in to Dropdown ", LogAs.PASSED,
-					new CaptureScreen(ScreenshotOf.DESKTOP));
+					new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 			Thread.sleep(3000);
 			dropdown.selectByVisibleText(text);
-			ATUReports.add(" user selected the Rating ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add(" user selected the Rating ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (NoSuchElementException e) {
 
-			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (WebDriverException e) {
-			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}
@@ -480,18 +507,18 @@ public class Wrappermethods {
 			Thread.sleep(2000);
 			Select dropdown = new Select(driver.findElementByXPath(xpvalue));
 			ATUReports.add(" List Values are loaded in to Dropdown ", LogAs.PASSED,
-					new CaptureScreen(ScreenshotOf.DESKTOP));
+					new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 			Thread.sleep(2000);
 			dropdown.selectByVisibleText(text);
 			Thread.sleep(2000);
 			// dropdown.selectByIndex(1);
-			ATUReports.add(" user selected the Rating ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add(" user selected the Rating ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (NoSuchElementException e) {
 
-			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (WebDriverException e) {
 			System.out.print("Error message" + e);
-			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}
@@ -515,7 +542,7 @@ public class Wrappermethods {
 			System.out.println("xpath1 value is" + xpath1);
 
 			ATUReports.add(" List Values are loaded in to Dropdown ", LogAs.PASSED,
-					new CaptureScreen(ScreenshotOf.DESKTOP));
+					new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 
 			Thread.sleep(2000);
 
@@ -523,12 +550,12 @@ public class Wrappermethods {
 
 			Thread.sleep(2000);
 			// dropdown.selectByIndex(1);
-			ATUReports.add(" user selected the Rating ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add(" user selected the Rating ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (NoSuchElementException e) {
 
-			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (WebDriverException e) {
-			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}
@@ -541,16 +568,16 @@ public class Wrappermethods {
 			Select dropdown = new Select(driver.findElementById(id));
 
 			ATUReports.add(" List Values are loaded in to Dropdown ", LogAs.PASSED,
-					new CaptureScreen(ScreenshotOf.DESKTOP));
+					new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 			Thread.sleep(1000);
 			// dropdown.selectByVisibleText(text);
 			dropdown.selectByIndex(text);
-			ATUReports.add(" user selected the Rating ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add(" user selected the Rating ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (NoSuchElementException e) {
 
-			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (WebDriverException e) {
-			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}
@@ -565,16 +592,16 @@ public class Wrappermethods {
 			Select dropdown = new Select(driver.findElementByXPath(xpath));
 
 			ATUReports.add(" List Values are loaded in to Dropdown ", LogAs.PASSED,
-					new CaptureScreen(ScreenshotOf.DESKTOP));
+					new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 			Thread.sleep(1000);
 			// dropdown.selectByVisibleText(text);
 			dropdown.selectByIndex(text);
-			ATUReports.add(" user selected the Rating ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add(" user selected the Rating ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (NoSuchElementException e) {
 
-			ATUReports.add("index value not found", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("index value not found", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (WebDriverException e) {
-			ATUReports.add("index value not found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("index value not found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}
@@ -587,13 +614,13 @@ public class Wrappermethods {
 	public void elementfindedbyid(String id) throws InterruptedException {
 		try {
 			driver.findElementById(id);
-			ATUReports.add(" Element finded by id value ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add(" Element finded by id value ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 			Thread.sleep(1000);
 		} catch (NoSuchElementException e) {
 
-			ATUReports.add("Element not finded by id value ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("Element not finded by id value ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (WebDriverException e) {
-			ATUReports.add("Element not finded by id value ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("Element not finded by id value ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}
@@ -604,13 +631,13 @@ public class Wrappermethods {
 	public void elementfindedbyxpath(String xpath1) throws InterruptedException {
 		try {
 			driver.findElementByXPath(xpath1);
-			ATUReports.add(" Element finded by xpath ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add(" Element finded by xpath ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 			Thread.sleep(1000);
 		} catch (NoSuchElementException e) {
 
-			ATUReports.add("Element not finded by xpath ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("Element not finded by xpath ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (WebDriverException e) {
-			ATUReports.add("Element not finded by xpath", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("Element not finded by xpath", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}
@@ -621,13 +648,13 @@ public class Wrappermethods {
 	public void elementfindedbyname(String name1) throws InterruptedException {
 		try {
 			driver.findElementByName(name1);
-			ATUReports.add(" Element finded by name  ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add(" Element finded by name  ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 			Thread.sleep(1000);
 		} catch (NoSuchElementException e) {
 
-			ATUReports.add("Element not finded by name  ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("Element not finded by name  ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (WebDriverException e) {
-			ATUReports.add("Element not finded by name ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("Element not finded by name ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}
@@ -636,13 +663,13 @@ public class Wrappermethods {
 	public void elementfindedlinktext(String linkname) throws InterruptedException {
 		try {
 			driver.findElementByLinkText(linkname);
-			ATUReports.add(" Element finded by linkname  ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add(" Element finded by linkname  ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 			Thread.sleep(1000);
 		} catch (NoSuchElementException e) {
 
-			ATUReports.add("Element not finded by linkname  ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("Element not finded by linkname  ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (WebDriverException e) {
-			ATUReports.add("Element not finded by linkname ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("Element not finded by linkname ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}
@@ -661,11 +688,11 @@ public class Wrappermethods {
 
 			// driver.findElementById(id).sendKeys(Keys.);
 
-			ATUReports.add("keyboard space  Action Done", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("keyboard space  Action Done", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		}
 
 		catch (WebDriverException e) {
-			ATUReports.add("Keyboard space Action  not Done ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("Keyboard space Action  not Done ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}
@@ -690,11 +717,11 @@ public class Wrappermethods {
 			alert1.accept();	  
 
 			
-			ATUReports.add("keyboard tab  Action Done", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("keyboard tab  Action Done", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		}
 
 		catch (WebDriverException e) {
-			ATUReports.add("Keyboard tab Action  not Done ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("Keyboard tab Action  not Done ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}
@@ -710,11 +737,11 @@ public class Wrappermethods {
 
 			// driver.findElementById(id).sendKeys(Keys.);
 
-			ATUReports.add("keyboard space  Action Done", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("keyboard space  Action Done", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		}
 
 		catch (WebDriverException e) {
-			ATUReports.add("Keyboard space Action  not Done ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("Keyboard space Action  not Done ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}
@@ -727,15 +754,15 @@ public class Wrappermethods {
 			Select dropdown = new Select(driver.findElementById(id));
 
 			ATUReports.add(" List Values are loaded in to Dropdown ", LogAs.PASSED,
-					new CaptureScreen(ScreenshotOf.DESKTOP));
+					new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 			Thread.sleep(1000);
 			dropdown.selectByVisibleText(text);
-			ATUReports.add(" user selected the Rating ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add(" user selected the Rating ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (NoSuchElementException e) {
 
-			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (WebDriverException e) {
-			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}
@@ -749,15 +776,15 @@ public class Wrappermethods {
 			Select dropdown = new Select(driver.findElementByCssSelector(id));
 
 			ATUReports.add(" List Values are loaded in to Dropdown ", LogAs.PASSED,
-					new CaptureScreen(ScreenshotOf.DESKTOP));
+					new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 			Thread.sleep(1000);
 			dropdown.selectByVisibleText(text);
-			ATUReports.add(" user selected the Rating ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add(" user selected the Rating ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (NoSuchElementException e) {
 
-			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (WebDriverException e) {
-			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}
@@ -770,12 +797,12 @@ public class Wrappermethods {
 	{
 		try {
 			driver.findElementByClassName(name).click();
-			ATUReports.add("User clicked the Submit Button", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("User clicked the Submit Button", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (NoSuchElementException e) {
 
-			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (WebDriverException e) {
-			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}
@@ -786,12 +813,12 @@ public class Wrappermethods {
 	{
 		try {
 			driver.findElementById(id).click();
-			ATUReports.add("User clicked the Submit Button", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("User clicked the Submit Button", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (NoSuchElementException e) {
 
-			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (WebDriverException e) {
-			//ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			//ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}
@@ -801,12 +828,12 @@ public class Wrappermethods {
 		try {
 			driver.findElementByName(name).click();
 
-			ATUReports.add("User clicked the Submit Button", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("User clicked the Submit Button", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (NoSuchElementException e) {
 
-			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (WebDriverException e) {
-			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}
@@ -815,10 +842,10 @@ public class Wrappermethods {
 	public void close()
 
 	{
-
+		ATUReports.add("Browser got closed", LogAs.INFO, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		driver.close();
 
-		ATUReports.add("Browser got closed", LogAs.INFO, new CaptureScreen(ScreenshotOf.DESKTOP));
+		
 
 	}
 	
@@ -970,11 +997,11 @@ public class Wrappermethods {
 
 			driver.findElementById(id).sendKeys(Keys.TAB);
 
-			ATUReports.add("TAb Action Done", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("TAb Action Done", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		}
 
 		catch (WebDriverException e) {
-			ATUReports.add("Tab Action not Done ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("Tab Action not Done ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}
@@ -991,11 +1018,11 @@ public class Wrappermethods {
 
 			driver.findElementByXPath(xpath).sendKeys(Keys.TAB);
 
-			ATUReports.add("TAb Action Done", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("TAb Action Done", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		}
 
 		catch (WebDriverException e) {
-			//ATUReports.add("Tab Action not Done ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			//ATUReports.add("Tab Action not Done ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}
@@ -1007,9 +1034,9 @@ public class Wrappermethods {
 		try {
 			element.sendKeys(Keys.ENTER);
 
-			ATUReports.add("Enter Action Done", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("Enter Action Done", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (WebDriverException e) {
-			ATUReports.add("Enter Action not Done ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("Enter Action not Done ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}
@@ -1023,9 +1050,9 @@ public class Wrappermethods {
 		try {
 			element.sendKeys(Keys.ESCAPE);
 
-			ATUReports.add("Enter Action Done", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("Enter Action Done", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (WebDriverException e) {
-			ATUReports.add("Enter Action not Done ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("Enter Action not Done ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}
@@ -1043,12 +1070,12 @@ public class Wrappermethods {
 
 			driver.findElementByCssSelector(xpt1).click();
 
-			ATUReports.add("CSSselector  got clicked ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("CSSselector  got clicked ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (NoSuchElementException e) {
 
-			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (WebDriverException e) {
-			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}
@@ -1067,19 +1094,19 @@ public class Wrappermethods {
 				driver.findElementByXPath(xpath).click();
 			
 			
-			ATUReports.add("Element found ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("Element found ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 			}
 			
 			else
 			{
-			//	ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			//	ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 			}
 
 			// ATUReports.add("ID element got clicked ", LogAs.PASSED, new
-			// CaptureScreen(ScreenshotOf.DESKTOP));
+			// CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (NoSuchElementException e) {
 
-			//ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			//ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} 
 		finally {
 			takeSnap();
@@ -1100,12 +1127,12 @@ public class Wrappermethods {
 			
 
 			// ATUReports.add("ID element got clicked ", LogAs.PASSED, new
-			// CaptureScreen(ScreenshotOf.DESKTOP));
+			// CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (NoSuchElementException e) {
 
-			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (WebDriverException e) {
-			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}
@@ -1127,14 +1154,14 @@ public class Wrappermethods {
 	 * else { return false;
 	 * 
 	 * } //ATUReports.add("Xpath element got clicked ", LogAs.PASSED, new
-	 * CaptureScreen(ScreenshotOf.DESKTOP));
+	 * CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 	 * 
 	 * }catch (NoSuchElementException e) {
 	 * 
 	 * ATUReports.add("No element found ", LogAs.FAILED, new
-	 * CaptureScreen(ScreenshotOf.DESKTOP)); } catch (WebDriverException e) {
+	 * CaptureScreen(ScreenshotOf.BROWSER_PAGE)); } catch (WebDriverException e) {
 	 * ATUReports.add("No driver found ", LogAs.FAILED, new
-	 * CaptureScreen(ScreenshotOf.DESKTOP)); } }finally { takeSnap(); } }
+	 * CaptureScreen(ScreenshotOf.BROWSER_PAGE)); } }finally { takeSnap(); } }
 	 */
 
 	// System sleep time
@@ -1143,11 +1170,11 @@ public class Wrappermethods {
 		try {
 			Thread.sleep(4000);
 			// ATUReports.add("waiting sleep time", LogAs.PASSED, new
-			// CaptureScreen(ScreenshotOf.DESKTOP));
+			// CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 
 		} catch (WebDriverException e) {
 			// ATUReports.add("waiting sleep time failed", LogAs.FAILED, new
-			// CaptureScreen(ScreenshotOf.DESKTOP));
+			// CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		}
 	}
 
@@ -1158,11 +1185,11 @@ public class Wrappermethods {
 	 * Exception { try {
 	 * 
 	 * driver.findElement(by) ATUReports.add("waiting sleep time", LogAs.PASSED,
-	 * new CaptureScreen(ScreenshotOf.DESKTOP));
+	 * new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 	 * 
 	 * } catch (WebDriverException e) { ATUReports.add(
 	 * "waiting sleep time failed", LogAs.FAILED, new
-	 * CaptureScreen(ScreenshotOf.DESKTOP)); } }
+	 * CaptureScreen(ScreenshotOf.BROWSER_PAGE)); } }
 	 */
 	// driver Close
 
@@ -1174,10 +1201,10 @@ public class Wrappermethods {
 			String jobid = driver.findElementByXPath("xpath").getText();
 
 			ATUReports.add("capture the  message as" + jobid + "xpath", LogAs.PASSED,
-					new CaptureScreen(ScreenshotOf.DESKTOP));
+					new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 
 		} catch (WebDriverException e) {
-			ATUReports.add("user unable to capture the message", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("user unable to capture the message", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		}
 	}
 
@@ -1193,16 +1220,16 @@ public class Wrappermethods {
 
 				// driver.findElementByXPath(xpath).click();
 				ATUReports.add("Error message" + "Passenger Age mismatch issue" + "", LogAs.PASSED,
-						new CaptureScreen(ScreenshotOf.DESKTOP));
+						new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 			} else {
 				ATUReports.add("Error message" + "No Error message  displayed" + "", LogAs.PASSED,
-						new CaptureScreen(ScreenshotOf.DESKTOP));
+						new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 			}
 		} catch (NoSuchElementException e) {
 
-			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (WebDriverException e) {
-			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}
@@ -1220,10 +1247,10 @@ public class Wrappermethods {
 			driver.switchTo().frame(0);
 			Thread.sleep(1000);
 
-			ATUReports.add("switch to iframe" + "" + "xpath", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("switch to iframe" + "" + "xpath", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 
 		} catch (WebDriverException e) {
-			ATUReports.add("user unable switch to iframe", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("user unable switch to iframe", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		}
 	}
 
@@ -1269,12 +1296,12 @@ public class Wrappermethods {
 			}
 
 			// ATUReports.add("xpath element got clicked ", LogAs.PASSED, new
-			// CaptureScreen(ScreenshotOf.DESKTOP));
+			// CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (NoSuchElementException e) {
 
-			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (WebDriverException e) {
-			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}
@@ -1292,9 +1319,9 @@ public class Wrappermethods {
 			// CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (NoSuchElementException e) {
 
-			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (WebDriverException e) {
-			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}
@@ -1319,9 +1346,9 @@ public class Wrappermethods {
 			// CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (NoSuchElementException e) {
 
-			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (WebDriverException e) {
-			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}
@@ -1344,9 +1371,9 @@ public class Wrappermethods {
 			ATUReports.add("User scroll down the page ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (NoSuchElementException e) {
 
-			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (WebDriverException e) {
-			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}
@@ -1365,9 +1392,9 @@ public class Wrappermethods {
 			//ATUReports.add("User scroll down the page ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (NoSuchElementException e) {
 
-//			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+//			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (WebDriverException e) {
-	//		ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+	//		ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}
@@ -1391,9 +1418,9 @@ public class Wrappermethods {
 			//ATUReports.add("User scroll down the page ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (NoSuchElementException e) {
 
-			//ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			//ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (WebDriverException e) {
-			//ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			//ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}
@@ -1416,9 +1443,9 @@ public class Wrappermethods {
 			ATUReports.add("User scroll down the page ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (NoSuchElementException e) {
 
-			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (WebDriverException e) {
-			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}
@@ -1441,9 +1468,9 @@ public class Wrappermethods {
 			ATUReports.add("User scroll down the page ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (NoSuchElementException e) {
 
-			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (WebDriverException e) {
-			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}
@@ -1549,14 +1576,14 @@ public class Wrappermethods {
 			 */
 
 			// ATUReports.add("xpath element got clicked ", LogAs.PASSED, new
-			// CaptureScreen(ScreenshotOf.DESKTOP));
+			// CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (NoSuchElementException e) {
 
 			// ATUReports.add("No element found ", LogAs.FAILED, new
-			// CaptureScreen(ScreenshotOf.DESKTOP));
+			// CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (WebDriverException e) {
 			// ATUReports.add("No driver found ", LogAs.FAILED, new
-			// CaptureScreen(ScreenshotOf.DESKTOP));
+			// CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}
@@ -1592,12 +1619,12 @@ public class Wrappermethods {
 				driver.findElementById(id).click();
 			}
 
-			ATUReports.add("xpath element got clicked ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("xpath element got clicked ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (NoSuchElementException e) {
 
-			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (WebDriverException e) {
-			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}
@@ -1622,24 +1649,24 @@ public class Wrappermethods {
 			// if(gettext1.contains(gettext2))
 			{
 				// ATUReports.add("Service charge matches ", LogAs.PASSED, new
-				// CaptureScreen(ScreenshotOf.DESKTOP));
+				// CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 
-				ATUReports.add("value not mathces" + gettext1 + "", LogAs.PASSED,new CaptureScreen(ScreenshotOf.DESKTOP));
+				ATUReports.add("value not mathces" + gettext1 + "", LogAs.PASSED,new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 
 			} else 
 			{
-				ATUReports.add("value mathces" + gettext1 + "", LogAs.FAILED,new CaptureScreen(ScreenshotOf.DESKTOP));
+				ATUReports.add("value mathces" + gettext1 + "", LogAs.FAILED,new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 			}
 
 			// ATUReports.add("xpath element got clicked ", LogAs.PASSED, new
-			// CaptureScreen(ScreenshotOf.DESKTOP));
+			// CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (NoSuchElementException e) {
 
 			// ATUReports.add("No element found ", LogAs.FAILED, new
-			// CaptureScreen(ScreenshotOf.DESKTOP));
+			// CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (WebDriverException e) {
 			// ATUReports.add("No driver found ", LogAs.FAILED, new
-			// CaptureScreen(ScreenshotOf.DESKTOP));
+			// CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}
@@ -1665,22 +1692,22 @@ public class Wrappermethods {
 				
 
 				ATUReports.add("Service charge matches for child" + gettext1 + "", LogAs.PASSED,
-						new CaptureScreen(ScreenshotOf.DESKTOP));
+						new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 
 			} else {
 				ATUReports.add("Service charge not matches for child" + gettext1 + "", LogAs.FAILED,
-						new CaptureScreen(ScreenshotOf.DESKTOP));
+						new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 			}
 
 			// ATUReports.add("xpath element got clicked ", LogAs.PASSED, new
-			// CaptureScreen(ScreenshotOf.DESKTOP));
+			// CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (NoSuchElementException e) {
 
 			// ATUReports.add("No element found ", LogAs.FAILED, new
-			// CaptureScreen(ScreenshotOf.DESKTOP));
+			// CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (WebDriverException e) {
 			// ATUReports.add("No driver found ", LogAs.FAILED, new
-			// CaptureScreen(ScreenshotOf.DESKTOP));
+			// CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}
@@ -1702,25 +1729,25 @@ public class Wrappermethods {
 			// if(gettext1.contains(gettext2))
 			{
 				// ATUReports.add("Service charge matches ", LogAs.PASSED, new
-				// CaptureScreen(ScreenshotOf.DESKTOP));
+				// CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 
 				ATUReports.add("Dicount amount reflected correctly" + gettext1 + "", LogAs.PASSED,
-						new CaptureScreen(ScreenshotOf.DESKTOP));
+						new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 
 			} else {
 				ATUReports.add("Dicount amount not reflected correctly" + gettext1 + "", LogAs.FAILED,
-						new CaptureScreen(ScreenshotOf.DESKTOP));
+						new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 			}
 
 			// ATUReports.add("xpath element got clicked ", LogAs.PASSED, new
-			// CaptureScreen(ScreenshotOf.DESKTOP));
+			// CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (NoSuchElementException e) {
 
 			// ATUReports.add("No element found ", LogAs.FAILED, new
-			// CaptureScreen(ScreenshotOf.DESKTOP));
+			// CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (WebDriverException e) {
 			// ATUReports.add("No driver found ", LogAs.FAILED, new
-			// CaptureScreen(ScreenshotOf.DESKTOP));
+			// CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}
@@ -1742,25 +1769,25 @@ public class Wrappermethods {
 			// if(gettext1.contains(gettext2))
 			{
 				// ATUReports.add("Service charge matches ", LogAs.PASSED, new
-				// CaptureScreen(ScreenshotOf.DESKTOP));
+				// CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 
 				ATUReports.add("Coupon code reflected successfully" + gettext1 + "", LogAs.PASSED,
-						new CaptureScreen(ScreenshotOf.DESKTOP));
+						new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 
 			} else {
 				ATUReports.add("Coupon code not reflected" + gettext1 + "", LogAs.FAILED,
-						new CaptureScreen(ScreenshotOf.DESKTOP));
+						new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 			}
 
 			// ATUReports.add("xpath element got clicked ", LogAs.PASSED, new
-			// CaptureScreen(ScreenshotOf.DESKTOP));
+			// CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (NoSuchElementException e) {
 
 			// ATUReports.add("No element found ", LogAs.FAILED, new
-			// CaptureScreen(ScreenshotOf.DESKTOP));
+			// CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (WebDriverException e) {
 			// ATUReports.add("No driver found ", LogAs.FAILED, new
-			// CaptureScreen(ScreenshotOf.DESKTOP));
+			// CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}
@@ -1794,28 +1821,28 @@ public class Wrappermethods {
 			// if (driver.findElementByXPath(xpath).isEnabled())
 			if (results5.contentEquals(resutls4)) {
 				// ATUReports.add("Service charge matches ", LogAs.PASSED, new
-				// CaptureScreen(ScreenshotOf.DESKTOP));
+				// CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 
 				ATUReports.add("Service charge matches" + results5 + "", LogAs.PASSED,
-						new CaptureScreen(ScreenshotOf.DESKTOP));
+						new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 
 				ATUReports.add("Service charge matches" + resutls4 + "", LogAs.PASSED,
-						new CaptureScreen(ScreenshotOf.DESKTOP));
+						new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 
 			} else {
 				ATUReports.add("Service charge not matches" + gettext1 + "", LogAs.FAILED,
-						new CaptureScreen(ScreenshotOf.DESKTOP));
+						new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 			}
 
 			// ATUReports.add("xpath element got clicked ", LogAs.PASSED, new
-			// CaptureScreen(ScreenshotOf.DESKTOP));
+			// CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (NoSuchElementException e) {
 
 			// ATUReports.add("No element found ", LogAs.FAILED, new
-			// CaptureScreen(ScreenshotOf.DESKTOP));
+			// CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (WebDriverException e) {
 			// ATUReports.add("No driver found ", LogAs.FAILED, new
-			// CaptureScreen(ScreenshotOf.DESKTOP));
+			// CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}
@@ -1849,14 +1876,14 @@ public class Wrappermethods {
 			gettext3 = Integer.toString(myNum);
 			System.out.println("After integer to string conversions == " + gettext3);
 			
-						// CaptureScreen(ScreenshotOf.DESKTOP));
+						// CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (NoSuchElementException e) {
 
 			// ATUReports.add("No element found ", LogAs.FAILED, new
-			// CaptureScreen(ScreenshotOf.DESKTOP));
+			// CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (WebDriverException e) {
 			// ATUReports.add("No driver found ", LogAs.FAILED, new
-			// CaptureScreen(ScreenshotOf.DESKTOP));
+			// CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}
@@ -1940,7 +1967,7 @@ public class Wrappermethods {
     ATUReports.add("clicked", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
     } catch (NoSuchElementException e) {
 
-    ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+    ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
     } catch (Exception e) {
     System.out.println("error");
     } finally {
@@ -2005,7 +2032,7 @@ public class Wrappermethods {
 	        	{
 	        		System.out.print("fail");
 	        		Thread.sleep(1000);
-	        		 ATUReports.add("Currency not matched ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+	        		 ATUReports.add("Currency not matched ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 	        	
 	    }*/
 
@@ -2022,7 +2049,7 @@ public class Wrappermethods {
 	   // ATUReports.add("clicked", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 	    } catch (NoSuchElementException e) {
 
-	   // ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+	   // ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 	    } catch (Exception e) {
 	    System.out.println("error");
 	    } finally {
@@ -2133,7 +2160,7 @@ public class Wrappermethods {
 	    Thread.sleep(1000);
 	    list.get(i).click();        
 	    
-	    //ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+	    //ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 	    }
 	    catch (Exception e) {
 	    System.out.println("error");
@@ -2223,12 +2250,12 @@ public class Wrappermethods {
 			Thread.sleep(1000);
 			//
 			
-						// CaptureScreen(ScreenshotOf.DESKTOP));
+						// CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (NoSuchElementException e) {
 
-			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (WebDriverException e) {
-			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}*/
@@ -2241,13 +2268,13 @@ public class Wrappermethods {
 	public void elementfindedbyxpathnegtive(String xpath1) throws InterruptedException {
 		try {
 			driver.findElementByXPath(xpath1);
-			ATUReports.add(" Element finded by xpath ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add(" Element finded by xpath ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 			Thread.sleep(1000);
 		} catch (NoSuchElementException e) {
 
-			ATUReports.add("Element not finded by xpath ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("Element not finded by xpath ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (WebDriverException e) {
-			ATUReports.add("Element not finded by xpath", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("Element not finded by xpath", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}
@@ -2258,13 +2285,13 @@ public class Wrappermethods {
 	public void elementfindedbyxpathnegtive1(String xpath1) throws InterruptedException {
 		try {
 			driver.findElementByXPath(xpath1);
-			ATUReports.add(" Element Finded by xpath ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add(" Element Finded by xpath ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 			Thread.sleep(1000);
 		} catch (NoSuchElementException e) {
 
-			ATUReports.add("Element not finded by xpath ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("Element not finded by xpath ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (WebDriverException e) {
-			ATUReports.add("Element not finded by xpath", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("Element not finded by xpath", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}
@@ -2296,10 +2323,10 @@ public class Wrappermethods {
 			ATUReports.add("clicked", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (NoSuchElementException e) {
 
-			ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (WebDriverException e) {
 			// ATUReports.add("No driver found ", LogAs.FAILED, new
-			// CaptureScreen(ScreenshotOf.DESKTOP));
+			// CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}
@@ -2371,7 +2398,7 @@ public class Wrappermethods {
     }
     	else
     	{
-    		ATUReports.add("Value changed ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+    		ATUReports.add("Value changed ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
      }
 
     }
@@ -2379,7 +2406,7 @@ public class Wrappermethods {
     } 
     catch (NoSuchElementException e) 
     {
-    ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+    ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
     } catch (Exception e) {
     System.out.println("error");
     } finally {
@@ -2416,12 +2443,12 @@ public class Wrappermethods {
 				
 				// driver.findElementByCssSelector(xva).sendKeys(txt);
 
-				//ATUReports.add(" User Entered the text as " + "", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+				//ATUReports.add(" User Entered the text as " + "", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 			} catch (NoSuchElementException e) {
 
-				//ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+				//ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 			} catch (WebDriverException e) {
-				//ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+				//ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 			} finally {
 				takeSnap();
 			}
@@ -2456,12 +2483,12 @@ public class Wrappermethods {
 					
 					// driver.findElementByCssSelector(xva).sendKeys(txt);
 
-					//ATUReports.add(" User Entered the text as " + "", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+					//ATUReports.add(" User Entered the text as " + "", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 				} catch (NoSuchElementException e) {
 
-					//ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+					//ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 				} catch (WebDriverException e) {
-					//ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+					//ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 				} finally {
 					takeSnap();
 				}
@@ -2506,12 +2533,12 @@ public class Wrappermethods {
 					
 					// driver.findElementByCssSelector(xva).sendKeys(txt);
 
-					//ATUReports.add(" User Entered the text as " + "", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+					//ATUReports.add(" User Entered the text as " + "", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 				} catch (NoSuchElementException e) {
 
-					//ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+					//ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 				} catch (WebDriverException e) {
-					//ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+					//ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 				} finally {
 					takeSnap();
 				}
@@ -2540,12 +2567,12 @@ public class Wrappermethods {
 					
 					// driver.findElementByCssSelector(xva).sendKeys(txt);
 
-					//ATUReports.add(" User Entered the text as " + "", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+					//ATUReports.add(" User Entered the text as " + "", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 				} catch (NoSuchElementException e) {
 
-					//ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+					//ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 				} catch (WebDriverException e) {
-					//ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+					//ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 				} finally {
 					takeSnap();
 				}
@@ -2574,25 +2601,25 @@ public class Wrappermethods {
 					System.out.println(gettext3);
 						
 						// ATUReports.add("Service charge matches ", LogAs.PASSED, new
-						// CaptureScreen(ScreenshotOf.DESKTOP));
+						// CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 
 						ATUReports.add("Currency reflected correctly" + gettext1 + "", LogAs.PASSED,
-								new CaptureScreen(ScreenshotOf.DESKTOP));
+								new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 
 					} else {
 						ATUReports.add("Currency  not reflected correctly" + gettext1 + "", LogAs.FAILED,
-								new CaptureScreen(ScreenshotOf.DESKTOP));
+								new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 					}
 
 					// ATUReports.add("xpath element got clicked ", LogAs.PASSED, new
-					// CaptureScreen(ScreenshotOf.DESKTOP));
+					// CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 				} catch (NoSuchElementException e) {
 
 					// ATUReports.add("No element found ", LogAs.FAILED, new
-					// CaptureScreen(ScreenshotOf.DESKTOP));
+					// CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 				} catch (WebDriverException e) {
 					// ATUReports.add("No driver found ", LogAs.FAILED, new
-					// CaptureScreen(ScreenshotOf.DESKTOP));
+					// CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 				} finally {
 					takeSnap();
 				}
@@ -2620,12 +2647,12 @@ public class Wrappermethods {
 					
 					// driver.findElementByCssSelector(xva).sendKeys(txt);
 
-					ATUReports.add(" User Entered the text as " + d, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+					ATUReports.add(" User Entered the text as " + d, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 				} catch (NoSuchElementException e) {
 					System.out.print("Error messgae is" + e);
-					ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+					ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 				} catch (WebDriverException e) {
-					ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+					ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 				} finally {
 					takeSnap();
 				}
@@ -2655,11 +2682,11 @@ public class Wrappermethods {
 				
 					if(foo==0)
 					{		
-						ATUReports.add(" AR matching Done successfully" + foo, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+						ATUReports.add(" AR matching Done successfully" + foo, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 					}
 					else
 					{
-						ATUReports.add(" AR matching Not Done successfully " + foo, LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+						ATUReports.add(" AR matching Not Done successfully " + foo, LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 					}		
 					}
 					catch(Exception e)
@@ -2692,11 +2719,11 @@ public class Wrappermethods {
 				
 					if(foo!=0)
 					{		
-						ATUReports.add(" AR unmatching Done successfully" + foo, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+						ATUReports.add(" AR unmatching Done successfully" + foo, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 					}
 					else
 					{
-						ATUReports.add(" AR unmatching Not Done successfully " + foo, LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+						ATUReports.add(" AR unmatching Not Done successfully " + foo, LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 					}		
 					}
 					catch(Exception e)
@@ -2733,11 +2760,11 @@ public class Wrappermethods {
 				
 					if(foo==foo1)
 					{		
-						ATUReports.add(" AR unmatching Done successfully" + foo, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+						ATUReports.add(" AR unmatching Done successfully" + foo, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 					}
 					else
 					{
-						ATUReports.add(" AR unmatching Not Done successfully " + foo, LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+						ATUReports.add(" AR unmatching Not Done successfully " + foo, LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 					}		
 					}
 					catch(Exception e)
@@ -2765,7 +2792,7 @@ public class Wrappermethods {
 		        Thread.sleep(500);
 
 	         System.out.println("the value is"+d);
-	         //ATUReports.add("created details are " + store1, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+	         //ATUReports.add("created details are " + store1, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 				 
 	    }
 	    catch (Exception e) {
@@ -2794,7 +2821,7 @@ public class Wrappermethods {
 	        
         System.out.println("the value is"+store2);
         
-      ATUReports.add("Newly created details " + store2, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+      ATUReports.add("Newly created details " + store2, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
     	
         
    }
@@ -2814,12 +2841,12 @@ public class Wrappermethods {
 			driver.findElementByXPath(xva).clear();
 			driver.findElementByXPath(xva).sendKeys(value);
 
-			ATUReports.add(" User Entered the text as " + store1, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add(" User Entered the text as " + store1, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (NoSuchElementException e) {
 
-			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (WebDriverException e) {
-			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}
@@ -2865,7 +2892,7 @@ System.out.println("Element not present");
 			    list.get(foo).click();
 			     Thread.sleep(1000);
 			    
-			    //ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			    //ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 			    }
 			    catch (Exception e) {
 			    System.out.println("error");
@@ -2877,7 +2904,7 @@ System.out.println("Element not present");
 			
 			//================================================================================
 
-			//Listbyenter
+			//Listbyenter  and send the values for visible xpath
 			
 			public void Listandenter(String xpath1,String value) throws InterruptedException
 			  {
@@ -2900,7 +2927,7 @@ System.out.println("Element not present");
 
 			     Thread.sleep(600);
 			    
-			    //ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			    //ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 			    }
 			    catch (Exception e) {
 			    System.out.println("error");
@@ -2932,7 +2959,7 @@ System.out.println("Element not present");
 			   list.get(foo).click();
                // driver.findElementByXPath(xpath1).sendKeys(Keys.ENTER);
 			     Thread.sleep(100);
-			  //  ATUReports.add("Getindexandclicked", LogAs.INFO, new CaptureScreen(ScreenshotOf.DESKTOP));
+			  //  ATUReports.add("Getindexandclicked", LogAs.INFO, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 			    }
 			    catch (Exception e) {
 			    System.out.println("error");
@@ -2955,17 +2982,17 @@ System.out.println("Element not present");
 						System.out.println(jobid);
 						
 
-					ATUReports.add(usermessage + jobid + "xpath", LogAs.FAILED,new CaptureScreen(ScreenshotOf.DESKTOP));
+					ATUReports.add(usermessage + jobid + "", LogAs.FAILED,new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 
 					}
 					else
 					{
-						ATUReports.add(usermessage , LogAs.PASSED,new CaptureScreen(ScreenshotOf.DESKTOP));
+						ATUReports.add(usermessage , LogAs.PASSED,new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 			
 					}
 					
 				} catch (WebDriverException e) {
-					ATUReports.add("user unable to capture the message", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+					ATUReports.add("user unable to capture the message", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 				}
 			}
 			
@@ -2994,7 +3021,7 @@ System.out.println("Element not present");
 
 			     Thread.sleep(1000);
 			    
-			    //ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			    //ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 			    }
 			    catch (Exception e) {
 			    System.out.println("error");
@@ -3011,37 +3038,34 @@ System.out.println("Element not present");
 			
 			//Fnding lement in xpath and sending values
 			
-			public void findbyelementbyxpathandsend(String xpath,String xpath1) 
-			{
 
-				try {
+			//Listbyenter  and send the values for visible xpath
+			
+			public void Listandenterthevaluesinvisblexpath(String xpath1,String value)
+			
+			  {
+			    List<WebElement> list = driver.findElements(By.xpath(xpath1));      
+			    	
+					    System.out.println("List Size is"+ +list.size());
+			    if(list.size()!=0)
+			    {
+			    	driver.findElementByXPath(xpath1).sendKeys(value);
+				    
+			    	
+			    }
+			    else
+			    {
+			   System.out.println("Element is not rpesent");
+			    }
+			   
+			
 
-					if (driver.findElementByXPath(xpath).isDisplayed())
-
-					{
-						driver.findElementByXPath(xpath).click();
-						driver.findElementByXPath(xpath).sendKeys(xpath1);
-
-
-						ATUReports.add("Element found ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
-					}
-
-					else {
-						// ATUReports.add("No element found ", LogAs.FAILED, new
-						// CaptureScreen(ScreenshotOf.DESKTOP));
-					}
-
-					// ATUReports.add("ID element got clicked ", LogAs.PASSED, new
-					// CaptureScreen(ScreenshotOf.DESKTOP));
-				} catch (NoSuchElementException e) {
-
-					//ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
-				} finally {
-					takeSnap();
-				}
-			}
-
-
+            	    //ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+			    }
+			    
+			      
+//===================================================================================
+			
 			//===============================================================================
 			
 
@@ -3062,17 +3086,17 @@ System.out.println("Element not present");
 					if(jobid.contentEquals(excelvalues))
 					{
 					//if(jobid.matches(jobid2))
-					ATUReports.add(usermessage + jobid , LogAs.PASSED,new CaptureScreen(ScreenshotOf.DESKTOP));
+					ATUReports.add(usermessage + jobid , LogAs.PASSED,new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 					}
 					else
 					{
-					ATUReports.add(usermessage + jobid , LogAs.FAILED,new CaptureScreen(ScreenshotOf.DESKTOP));
+					ATUReports.add(usermessage + jobid , LogAs.FAILED,new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 					}		
 					
 					
 										
 				} catch (WebDriverException e) {
-					ATUReports.add("user unable to capture the message", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+					ATUReports.add("user unable to capture the message", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 				}
 			}
 
@@ -3099,17 +3123,17 @@ System.out.println("Element not present");
 					if(jobid.contentEquals(jobid2))
 					{
 					//if(jobid.matches(jobid2))
-					ATUReports.add(usermessage + jobid , LogAs.PASSED,new CaptureScreen(ScreenshotOf.DESKTOP));
+					ATUReports.add(usermessage + jobid , LogAs.PASSED,new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 					}
 					else
 					{
-					ATUReports.add(usermessage + jobid , LogAs.FAILED,new CaptureScreen(ScreenshotOf.DESKTOP));
+					ATUReports.add(usermessage + jobid , LogAs.FAILED,new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 					}		
 					
 					
 										
 				} catch (WebDriverException e) {
-					ATUReports.add("user unable to capture the message", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+					ATUReports.add("user unable to capture the message", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 				}
 			}
 
@@ -3172,17 +3196,17 @@ System.out.println("Element not present");
 						System.out.println(jobid);
 						
 
-					ATUReports.add(usermessage + jobid , LogAs.FAILED,new CaptureScreen(ScreenshotOf.DESKTOP));
+					ATUReports.add(usermessage + jobid , LogAs.FAILED,new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 
 					}
 					else
 					{
-						ATUReports.add(usermessage + jobid  , LogAs.PASSED,new CaptureScreen(ScreenshotOf.DESKTOP));
+						ATUReports.add(usermessage + jobid  , LogAs.PASSED,new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 			
 					}
 					
 				} catch (WebDriverException e) {
-					ATUReports.add("user unable to capture the message", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+					ATUReports.add("user unable to capture the message", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 				}
 			}
 			
@@ -3245,7 +3269,7 @@ System.out.println("Element not present");
 						 
 					 {
 						 
-						 ATUReports.add( usermessage + s , excelvalues+ "", LogAs.PASSED,new CaptureScreen(ScreenshotOf.DESKTOP));
+						 ATUReports.add( usermessage + s , excelvalues+ "", LogAs.PASSED,new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 	 
 	                      //break;
 					 
@@ -3253,7 +3277,7 @@ System.out.println("Element not present");
 					 
 						/*else
 						
-							ATUReports.add(usermessage , LogAs.FAILED,new CaptureScreen(ScreenshotOf.DESKTOP));
+							ATUReports.add(usermessage , LogAs.FAILED,new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 				*/
 						}
 
@@ -3262,7 +3286,7 @@ System.out.println("Element not present");
 				 
 			 
 				 
-					//ATUReports.add(usermessage , LogAs.FAILED,new CaptureScreen(ScreenshotOf.DESKTOP));
+					//ATUReports.add(usermessage , LogAs.FAILED,new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 							 
 				 
 			 }
@@ -3312,7 +3336,7 @@ System.out.println("Element not present");
 						 
 					 {
 						 
-						 ATUReports.add( usermessage + s , excelvalues+ "", LogAs.PASSED,new CaptureScreen(ScreenshotOf.DESKTOP));
+						 ATUReports.add( usermessage + s , excelvalues+ "", LogAs.PASSED,new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 	 
 	                      //break;
 					 
@@ -3320,7 +3344,7 @@ System.out.println("Element not present");
 					 
 						/*else
 						
-							ATUReports.add(usermessage , LogAs.FAILED,new CaptureScreen(ScreenshotOf.DESKTOP));
+							ATUReports.add(usermessage , LogAs.FAILED,new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 				*/
 						}
 
@@ -3329,7 +3353,7 @@ System.out.println("Element not present");
 				 
 			 
 				 
-					//ATUReports.add(usermessage , LogAs.FAILED,new CaptureScreen(ScreenshotOf.DESKTOP));
+					//ATUReports.add(usermessage , LogAs.FAILED,new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 							 
 				 
 			 }
@@ -3382,10 +3406,10 @@ System.out.println("Element not present");
 									
 							 
 					 {
-							 ATUReports.add( usermessage + s , excelvalues+ "", LogAs.PASSED,new CaptureScreen(ScreenshotOf.DESKTOP));
+							 ATUReports.add( usermessage + s , excelvalues+ "", LogAs.PASSED,new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 								
 						 
-						// ATUReports.add( "value is s" + s , excelvalues+ "xpath", LogAs.PASSED,new CaptureScreen(ScreenshotOf.DESKTOP));
+						// ATUReports.add( "value is s" + s , excelvalues+ "xpath", LogAs.PASSED,new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 	 
 	                   //   break;
 					 
@@ -3393,7 +3417,7 @@ System.out.println("Element not present");
 					 
 						else
 						
-							ATUReports.add(usermessage , LogAs.FAILED,new CaptureScreen(ScreenshotOf.DESKTOP));
+							ATUReports.add(usermessage , LogAs.FAILED,new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 				
 						}
 
@@ -3402,7 +3426,7 @@ System.out.println("Element not present");
 				 
 			 
 				 
-					//ATUReports.add(usermessage , LogAs.FAILED,new CaptureScreen(ScreenshotOf.DESKTOP));
+					//ATUReports.add(usermessage , LogAs.FAILED,new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 							 
 				 
 			 }
@@ -3455,9 +3479,9 @@ System.out.println("Element not present");
 							 
 					 {
 						 
-						 //ATUReports.add( "value is s" + s , excelvalues+ "xpath", LogAs.PASSED,new CaptureScreen(ScreenshotOf.DESKTOP));
+						 //ATUReports.add( "value is s" + s , excelvalues+ "xpath", LogAs.PASSED,new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 						 
-						 ATUReports.add( usermessage + s , excelvalues+ "", LogAs.PASSED,new CaptureScreen(ScreenshotOf.DESKTOP));
+						 ATUReports.add( usermessage + s , excelvalues+ "", LogAs.PASSED,new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 							
 						 
 	                      break;
@@ -3466,7 +3490,7 @@ System.out.println("Element not present");
 					 
 						/*else
 						
-							ATUReports.add(usermessage , LogAs.FAILED,new CaptureScreen(ScreenshotOf.DESKTOP));
+							ATUReports.add(usermessage , LogAs.FAILED,new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 				*/
 						}
 
@@ -3475,7 +3499,7 @@ System.out.println("Element not present");
 				 
 			 
 				 
-					//ATUReports.add(usermessage , LogAs.FAILED,new CaptureScreen(ScreenshotOf.DESKTOP));
+					//ATUReports.add(usermessage , LogAs.FAILED,new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 							 
 				 
 			 }
@@ -3527,7 +3551,7 @@ System.out.println("Element not present");
 							 
 					 {
 						 
-						 ATUReports.add( "value is s" + s , excelvalues+ "xpath", LogAs.PASSED,new CaptureScreen(ScreenshotOf.DESKTOP));
+						 ATUReports.add( "value is s" + s , excelvalues+ "xpath", LogAs.PASSED,new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 	 
 	                      break;
 					 
@@ -3535,7 +3559,7 @@ System.out.println("Element not present");
 					 
 						else
 						
-							ATUReports.add(usermessage , LogAs.FAILED,new CaptureScreen(ScreenshotOf.DESKTOP));
+							ATUReports.add(usermessage , LogAs.FAILED,new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 				
 						}
 
@@ -3544,7 +3568,7 @@ System.out.println("Element not present");
 				 
 			 
 				 
-					//ATUReports.add(usermessage , LogAs.FAILED,new CaptureScreen(ScreenshotOf.DESKTOP));
+					//ATUReports.add(usermessage , LogAs.FAILED,new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 							 
 				 
 			 }
@@ -3595,9 +3619,9 @@ System.out.println("Element not present");
 							 
 					 {
 						 
-						 //ATUReports.add( "value is s" + s , excelvalues+ "xpath", LogAs.PASSED,new CaptureScreen(ScreenshotOf.DESKTOP));
+						 //ATUReports.add( "value is s" + s , excelvalues+ "xpath", LogAs.PASSED,new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 	 
-						 ATUReports.add( usermessage + s , excelvalues+ "", LogAs.PASSED,new CaptureScreen(ScreenshotOf.DESKTOP));
+						 ATUReports.add( usermessage + s , excelvalues+ "", LogAs.PASSED,new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 							
 	                      break;
 					 
@@ -3605,7 +3629,7 @@ System.out.println("Element not present");
 					 
 						/*else
 						
-							ATUReports.add(usermessage , LogAs.FAILED,new CaptureScreen(ScreenshotOf.DESKTOP));
+							ATUReports.add(usermessage , LogAs.FAILED,new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 				*/
 						}
 
@@ -3614,7 +3638,7 @@ System.out.println("Element not present");
 				 
 			 
 				 
-					//ATUReports.add(usermessage , LogAs.FAILED,new CaptureScreen(ScreenshotOf.DESKTOP));
+					//ATUReports.add(usermessage , LogAs.FAILED,new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 							 
 				 
 			 }
@@ -3665,7 +3689,7 @@ System.out.println("Element not present");
 							 
 					 {
 						 
-						 ATUReports.add( "value is s" + s , excelvalues+ "xpath", LogAs.PASSED,new CaptureScreen(ScreenshotOf.DESKTOP));
+						 ATUReports.add( "value is s" + s , excelvalues+ "xpath", LogAs.PASSED,new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 	 
 	                      break;
 					 
@@ -3673,7 +3697,7 @@ System.out.println("Element not present");
 					 
 						else
 						
-							ATUReports.add(usermessage , LogAs.FAILED,new CaptureScreen(ScreenshotOf.DESKTOP));
+							ATUReports.add(usermessage , LogAs.FAILED,new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 				
 						}
 
@@ -3682,7 +3706,7 @@ System.out.println("Element not present");
 				 
 			 
 				 
-					//ATUReports.add(usermessage , LogAs.FAILED,new CaptureScreen(ScreenshotOf.DESKTOP));
+					//ATUReports.add(usermessage , LogAs.FAILED,new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 							 
 				 
 			 }
@@ -3728,9 +3752,9 @@ System.out.println("Element not present");
 							 
 					 {
 						 
-						 //ATUReports.add( "value is s" + s , excelvalues+ "xpath", LogAs.PASSED,new CaptureScreen(ScreenshotOf.DESKTOP));
+						 //ATUReports.add( "value is s" + s , excelvalues+ "xpath", LogAs.PASSED,new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 	 
-						 ATUReports.add( usermessage + s , excelvalues+ "", LogAs.PASSED,new CaptureScreen(ScreenshotOf.DESKTOP));
+						 ATUReports.add( usermessage + s , excelvalues+ "", LogAs.PASSED,new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 							
 	                      break;
 					 
@@ -3738,7 +3762,7 @@ System.out.println("Element not present");
 					 
 						/*else
 						
-							ATUReports.add(usermessage , LogAs.FAILED,new CaptureScreen(ScreenshotOf.DESKTOP));
+							ATUReports.add(usermessage , LogAs.FAILED,new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 				*/
 						}
 
@@ -3747,7 +3771,7 @@ System.out.println("Element not present");
 				 
 			 
 				 
-					//ATUReports.add(usermessage , LogAs.FAILED,new CaptureScreen(ScreenshotOf.DESKTOP));
+					//ATUReports.add(usermessage , LogAs.FAILED,new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 							 
 				 
 			 }
@@ -3798,7 +3822,7 @@ System.out.println("Element not present");
 							 
 					 {
 						 
-						 ATUReports.add( "value is s" + s , excelvalues+ "xpath", LogAs.PASSED,new CaptureScreen(ScreenshotOf.DESKTOP));
+						 ATUReports.add( "value is s" + s , excelvalues+ "xpath", LogAs.PASSED,new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 	 
 	                      break;
 					 
@@ -3806,7 +3830,7 @@ System.out.println("Element not present");
 					 
 						else
 						
-							ATUReports.add(usermessage , LogAs.FAILED,new CaptureScreen(ScreenshotOf.DESKTOP));
+							ATUReports.add(usermessage , LogAs.FAILED,new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 				
 						}
 
@@ -3815,7 +3839,7 @@ System.out.println("Element not present");
 				 
 			 
 				 
-					//ATUReports.add(usermessage , LogAs.FAILED,new CaptureScreen(ScreenshotOf.DESKTOP));
+					//ATUReports.add(usermessage , LogAs.FAILED,new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 							 
 				 
 			 }
@@ -3834,13 +3858,13 @@ System.out.println("Element not present");
 						driver.findElementByXPath(xva).clear();
 						driver.findElementByXPath(xva).sendKeys(txt);
 
-						ATUReports.add(" User Entered the text as " + txt, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+						ATUReports.add(" User Entered the text as " + txt, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 						}
 					} catch (NoSuchElementException e) {
 
-						ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+						ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 					} catch (WebDriverException e) {
-						ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+						ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 					} finally {
 						takeSnap();
 					}
@@ -3857,12 +3881,12 @@ System.out.println("Element not present");
 						//driver.findElementById(id).clear();
 						driver.findElementByName(name).clear();
 						driver.findElementByName(name).sendKeys(txt);
-						ATUReports.add(" User Entered the text as " + txt, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+						ATUReports.add(" User Entered the text as " + txt, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 					} catch (NoSuchElementException e) {
 
-						ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+						ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 					} catch (WebDriverException e) {
-						ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+						ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 					} finally {
 						takeSnap();
 					}
@@ -3911,7 +3935,7 @@ System.out.println("Element not present");
 							 
 						 {
 							 
-							 ATUReports.add( usermessage ,s, LogAs.PASSED,new CaptureScreen(ScreenshotOf.DESKTOP));
+							 ATUReports.add( usermessage ,s, LogAs.PASSED,new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		 
 		                      //break;
 						 
@@ -3919,7 +3943,7 @@ System.out.println("Element not present");
 						 
 							/*else
 							
-								ATUReports.add(usermessage , LogAs.FAILED,new CaptureScreen(ScreenshotOf.DESKTOP));
+								ATUReports.add(usermessage , LogAs.FAILED,new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 					*/
 							}
 
@@ -3928,7 +3952,7 @@ System.out.println("Element not present");
 					 
 				 
 					 
-						//ATUReports.add(usermessage , LogAs.FAILED,new CaptureScreen(ScreenshotOf.DESKTOP));
+						//ATUReports.add(usermessage , LogAs.FAILED,new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 								 
 					 
 				 }
@@ -3946,12 +3970,12 @@ System.out.println("Element not present");
 
 							//driver.findElementById(id).clear();
 							driver.findElementById(id).sendKeys(txt);
-							ATUReports.add(" User Entered the text as " + txt, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+							ATUReports.add(" User Entered the text as " + txt, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 						} catch (NoSuchElementException e) {
 
-							ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+							ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 						} catch (WebDriverException e) {
-							ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+							ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 						} finally {
 							takeSnap();
 						}
@@ -3964,12 +3988,12 @@ System.out.println("Element not present");
 							//driver.findElementByXPath(xva).clear();
 							driver.findElementByXPath(xva).sendKeys(txt);
 
-							ATUReports.add(" User Entered the text as " + txt, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+							ATUReports.add(" User Entered the text as " + txt, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 						} catch (NoSuchElementException e) {
 
-							ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+							ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 						} catch (WebDriverException e) {
-							ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+							ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 						} finally {
 							takeSnap();
 						}
@@ -3987,12 +4011,12 @@ System.out.println("Element not present");
 							driver.findElementByCssSelector(xva).sendKeys(txt);
 							// driver.findElementByCssSelector(xva).sendKeys(txt);
 
-							ATUReports.add(" User Entered the text as " + txt, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+							ATUReports.add(" User Entered the text as " + txt, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 						} catch (NoSuchElementException e) {
 
-							ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+							ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 						} catch (WebDriverException e) {
-							//ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+							//ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 						} finally {
 							takeSnap();
 						}
@@ -4015,12 +4039,12 @@ System.out.println("Element not present");
 							//driver.findElementById(id).sendKeys(Keys.ARROW_DOWN);
 							//driver.findElementsByXPath(xva).sendKeys(Keys.NUMPAD5);
 							
-						ATUReports.add(" User Entered the text as " + txt, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+						ATUReports.add(" User Entered the text as " + txt, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 						} catch (NoSuchElementException e) {
 
-							ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+							ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 						} catch (WebDriverException e) {
-							ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+							ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 						} finally {
 							takeSnap();
 						}
@@ -4078,7 +4102,7 @@ System.out.println("Element not present");
 
 					     Thread.sleep(600);
 					    
-					    //ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+					    //ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 					    }
 					    catch (Exception e) {
 					    System.out.println("error");
@@ -4114,13 +4138,13 @@ System.out.println("Element not present");
 								    
 								   list.get(foo).getText();
 */
-								   ATUReports.add("Record number" + "" , jobid, LogAs.PASSED,new CaptureScreen(ScreenshotOf.DESKTOP));
+								   ATUReports.add("Record number" + "" , jobid, LogAs.PASSED,new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 								   
 					               // driver.findElementByXPath(xpath1).sendKeys(Keys.ENTER);
 
 								     Thread.sleep(100);
 								    
-								   // ATUReports.add("value not captured  ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+								   // ATUReports.add("value not captured  ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 								    }
 								    catch (Exception e) {
 								    System.out.println("error");
@@ -4151,14 +4175,14 @@ System.out.println("Element not present");
 											if(actualTooltip.equals(expectedTooltip))
 											{							
 									            System.out.println("Test Case Passed");		
-									            ATUReports.add(usermessage, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+									            ATUReports.add(usermessage, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 												
 									        }
 												} catch (NoSuchElementException e) {
 
-										  ATUReports.add(usermessage1, LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+										  ATUReports.add(usermessage1, LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 										} catch (WebDriverException e) {
-											//ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+											//ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 										} finally {
 											takeSnap();
 										}
@@ -4185,14 +4209,14 @@ System.out.println("Element not present");
 											if(actualTooltip.equals(expectedTooltip))
 											{							
 									            System.out.println("Test Case Passed");		
-									            ATUReports.add(usermessage, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+									            ATUReports.add(usermessage, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 												
 									        }
 												} catch (NoSuchElementException e) {
 
-										  ATUReports.add(usermessage1, LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+										  ATUReports.add(usermessage1, LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 										} catch (WebDriverException e) {
-											//ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+											//ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 										} finally {
 											takeSnap();
 										}
@@ -4214,14 +4238,14 @@ System.out.println("Element not present");
 										Builder.moveToElement(driver.findElementByXPath(xpth)).build().perform();
 
 										Thread.sleep(1000);
-										ATUReports.add("Mouse moved over to the Manage ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+										ATUReports.add("Mouse moved over to the Manage ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 										//driver.findElementByLinkText(lnk).click();
-										//ATUReports.add("User clicked the " + "" + "link", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+										//ATUReports.add("User clicked the " + "" + "link", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 									} catch (NoSuchElementException e) {
 
-										ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+										ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 									} catch (WebDriverException e) {
-										ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+										ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 									} finally {
 										takeSnap();
 									}
@@ -4240,14 +4264,14 @@ System.out.println("Element not present");
 
 										if (driver.findElementByXPath(xpath).isDisplayed())
 											
-										ATUReports.add(usermessage, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+										ATUReports.add(usermessage, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 										
-										// ATUReports.add("ID element got clicked ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+										// ATUReports.add("ID element got clicked ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 									} catch (NoSuchElementException e) {
 
-										ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+										ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 									} catch (WebDriverException e) {
-										ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+										ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 									} finally {
 										takeSnap();
 									}
@@ -4265,14 +4289,14 @@ System.out.println("Element not present");
 										if (driver.findElementByXPath(xpath).isDisplayed())
 										{
 											
-										ATUReports.add(usermessage, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+										ATUReports.add(usermessage, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 										}
-										// ATUReports.add("ID element got clicked ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+										// ATUReports.add("ID element got clicked ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 									} catch (NoSuchElementException e) {
 
-										ATUReports.add(usermessage1, LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+										ATUReports.add(usermessage1, LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 									} catch (WebDriverException e) {
-										//ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+										//ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 									} finally {
 										takeSnap();
 									}
@@ -4295,14 +4319,14 @@ System.out.println("Element not present");
 											
 										
 											
-										ATUReports.add(usermessage, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+										ATUReports.add(usermessage, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 										
-										// ATUReports.add("ID element got clicked ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+										// ATUReports.add("ID element got clicked ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 									} catch (NoSuchElementException e) {
 
-										ATUReports.add(usermessage1, LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+										ATUReports.add(usermessage1, LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 									} catch (WebDriverException e) {
-										//ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+										//ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 									} finally {
 										takeSnap();
 									}
@@ -4326,14 +4350,14 @@ System.out.println("Element not present");
 											
 										
 											
-										ATUReports.add(usermessage, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+										ATUReports.add(usermessage, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 										
-										// ATUReports.add("ID element got clicked ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+										// ATUReports.add("ID element got clicked ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 									} catch (NoSuchElementException e) {
 
-										ATUReports.add(usermessage1, LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+										ATUReports.add(usermessage1, LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 									} catch (WebDriverException e) {
-										//ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+										//ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 									} finally {
 										takeSnap();
 									}
@@ -4355,14 +4379,14 @@ System.out.println("Element not present");
 										if (driver.findElementByXPath(xpath).isDisplayed())
 										{
 
-											ATUReports.add(usermessage, LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+											ATUReports.add(usermessage, LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 										}
-										// ATUReports.add("ID element got clicked ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+										// ATUReports.add("ID element got clicked ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 									} catch (NoSuchElementException e) {
 
-										ATUReports.add(usermessage1, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+										ATUReports.add(usermessage1, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 									} catch (WebDriverException e) {
-										//ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+										//ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 									} finally {
 										takeSnap();
 									}
@@ -4380,16 +4404,16 @@ System.out.println("Element not present");
 									try 
 									{
 										driver.findElementByXPath(xpt1).click();
-									ATUReports.add(usermessage, LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+									ATUReports.add(usermessage, LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 									
 									} 
 									catch (NoSuchElementException e)
 									
 									{
 
-									ATUReports.add(usermessage1, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+									ATUReports.add(usermessage1, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 									} catch (WebDriverException e) {
-										//ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+										//ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 									} finally {
 										takeSnap();
 									}
@@ -4429,19 +4453,19 @@ System.out.println("Element not present");
 											driver.findElementByXPath(xpath).click();
 										
 										
-										ATUReports.add("Element found ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+										ATUReports.add("Element found ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 										}
 										
 										else
 										{
-										//	ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+										//	ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 										}
 
 										// ATUReports.add("ID element got clicked ", LogAs.PASSED, new
-										// CaptureScreen(ScreenshotOf.DESKTOP));
+										// CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 									} catch (NoSuchElementException e) {
 
-										//ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+										//ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 									} 
 									finally {
 										takeSnap();
@@ -4479,7 +4503,7 @@ System.out.println("Element not present");
 
 								     Thread.sleep(600);
 								    
-								    //ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+								    //ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 								    }
 								    catch (Exception e) {
 								    System.out.println("error");
@@ -4503,6 +4527,8 @@ System.out.println("Element not present");
 									Actions actions = new Actions(driver);
 									WebElement elementLocator = driver.findElement(By.xpath(xpt1));
 									actions.doubleClick(elementLocator).perform();
+								    ATUReports.add("Double click done",LogAs.INFO, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+									
 
 								}
 
@@ -4518,12 +4544,12 @@ System.out.println("Element not present");
 										
 										driver.findElementByXPath(xpt1).clear();
 										
-										ATUReports.add(Usermessage1, LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+										ATUReports.add(Usermessage1, LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 									} catch (NoSuchElementException e) {
 
-									ATUReports.add(Usermessage , LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+									ATUReports.add(Usermessage , LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 									} catch (WebDriverException e) {
-										ATUReports.add(Usermessage, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+										ATUReports.add(Usermessage, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 									} finally {
 										takeSnap();
 									}
@@ -4539,12 +4565,12 @@ System.out.println("Element not present");
 										
 										driver.findElementByXPath(xpt1).clear();
 										
-										ATUReports.add(Usermessage1, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+										ATUReports.add(Usermessage1, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 									} catch (NoSuchElementException e) {
 
-									ATUReports.add(Usermessage , LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+									ATUReports.add(Usermessage , LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 									} catch (WebDriverException e) {
-										ATUReports.add(Usermessage, LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+										ATUReports.add(Usermessage, LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 									} finally {
 										takeSnap();
 									}
@@ -4578,13 +4604,13 @@ System.out.println("Element not present");
 
 										//driver.findElementByXPath(xpt1).clear();
 										
-										ATUReports.add(Usermessage1, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+										ATUReports.add(Usermessage1, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 									} catch (NoSuchElementException e) {
 
-									//ATUReports.add(Usermessage , LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+									//ATUReports.add(Usermessage , LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 							
 									} catch (WebDriverException e) {
-										//ATUReports.add(Usermessage, LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+										//ATUReports.add(Usermessage, LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 									} finally {
 										takeSnap();
 									}
@@ -4619,13 +4645,13 @@ System.out.println("Element not present");
 
 										//driver.findElementByXPath(xpt1).clear();
 										
-										ATUReports.add(Usermessage1, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+										ATUReports.add(Usermessage1, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 									} catch (NoSuchElementException e) {
 
-									//ATUReports.add(Usermessage , LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+									//ATUReports.add(Usermessage , LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 							
 									} catch (WebDriverException e) {
-										//ATUReports.add(Usermessage, LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+										//ATUReports.add(Usermessage, LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 									} finally {
 										takeSnap();
 									}
@@ -4713,7 +4739,7 @@ System.out.println("Element not present");
 												 
 
 											// if(s.matches(jobid1))
-										 ATUReports.add( usermessage + s , ""+ s, LogAs.PASSED,new CaptureScreen(ScreenshotOf.DESKTOP));
+										 ATUReports.add( usermessage + s , ""+ s, LogAs.PASSED,new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 										 	
 											 
 											 
@@ -4722,7 +4748,7 @@ System.out.println("Element not present");
 									 
 								 
 									 
-									//	ATUReports.add("Message not capture" , LogAs.FAILED,new CaptureScreen(ScreenshotOf.DESKTOP));
+									//	ATUReports.add("Message not capture" , LogAs.FAILED,new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 												 
 									 
 								 }
@@ -4769,13 +4795,13 @@ System.out.println("Element not present");
 																		 
 
 																	// if(s.matches(jobid1))
-																 ATUReports.add( usermessage + s , ""+ s, LogAs.PASSED,new CaptureScreen(ScreenshotOf.DESKTOP));
+																 ATUReports.add( usermessage + s , ""+ s, LogAs.PASSED,new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 																 	
 																	 
 																	 
 																 {
 																	 
-																	// ATUReports.add( usermessage + s , ""+ "", LogAs.PASSED,new CaptureScreen(ScreenshotOf.DESKTOP));
+																	// ATUReports.add( usermessage + s , ""+ "", LogAs.PASSED,new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 												 
 												                      //break;
 																 
@@ -4783,7 +4809,7 @@ System.out.println("Element not present");
 																 
 																	/*else
 																	
-																		ATUReports.add(usermessage , LogAs.FAILED,new CaptureScreen(ScreenshotOf.DESKTOP));
+																		ATUReports.add(usermessage , LogAs.FAILED,new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 															*/
 																	}
 
@@ -4792,7 +4818,7 @@ System.out.println("Element not present");
 															 
 														 
 															 
-																//ATUReports.add(usermessage , LogAs.FAILED,new CaptureScreen(ScreenshotOf.DESKTOP));
+																//ATUReports.add(usermessage , LogAs.FAILED,new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 																		 
 															 
 														 }
@@ -4845,11 +4871,11 @@ System.out.println("Element not present");
 										
 											if(Totalamountt==Totalamountt)
 											{		
-												ATUReports.add("matching Done successfully" + Totalamountt, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+												ATUReports.add("matching Done successfully" + Totalamountt, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 											}
 											else
 											{
-												ATUReports.add("nmatching Not Done successfully " + Totalamountt, LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+												ATUReports.add("nmatching Not Done successfully " + Totalamountt, LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 											}		
 											}
 											catch(Exception e)
@@ -4869,11 +4895,11 @@ System.out.println("Element not present");
 											driver.findElementByXPath(xpath).sendKeys(Keys.TAB);
 											driver.findElementByXPath(xpath).sendKeys(input);
 
-											ATUReports.add("TAb Action Done", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+											ATUReports.add("TAb Action Done", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 										}
 
 										catch (WebDriverException e) {
-											//ATUReports.add("Tab Action not Done ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+											//ATUReports.add("Tab Action not Done ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 										} finally {
 											takeSnap();
 										}
@@ -4904,7 +4930,7 @@ System.out.println("Element not present");
 									   
 						               // driver.findElementByXPath(xpath1).sendKeys(Keys.ENTER);
 									     Thread.sleep(100);
-									    //ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+									    //ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 									    }
 									    catch (Exception e) {
 									    System.out.println("error");
@@ -4929,17 +4955,17 @@ System.out.println("Element not present");
 								    int foo = Integer.parseInt(value);
 								    Thread.sleep(90);
 								   list.get(foo).click();
-					               ATUReports.add(Positivemessages, gtxt, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+					               ATUReports.add(Positivemessages, gtxt, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 								  //  Thread.sleep(100);
 								  
 								    }			    
 								    
 								    catch (NoSuchElementException e) 
 								    {
-								    	ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+								    	ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 										} 
 								    catch (Exception e) {
-								    	ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+								    	ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 								    }
 								   
 								    finally 
@@ -4968,17 +4994,17 @@ System.out.println("Element not present");
 									    int foo = Integer.parseInt(value);
 									    Thread.sleep(100);
 									   list.get(foo).click();
-						               ATUReports.add(Negativemessages, gtxt, LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+						               ATUReports.add(Negativemessages, gtxt, LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 									     Thread.sleep(100);
 									  
 									    }			    
 									    
 									    catch (NoSuchElementException e) 
 									    {
-									    	ATUReports.add(Positivemessages, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+									    	ATUReports.add(Positivemessages, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 											} 
 									    catch (Exception e) {
-									    	ATUReports.add(Positivemessages, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+									    	ATUReports.add(Positivemessages, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 									    }
 									   
 									    finally 
@@ -5005,19 +5031,19 @@ System.out.println("Element not present");
 								    	if(size<16)
 								    	{
 								   
-								          ATUReports.add(Positivemessages, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+								          ATUReports.add(Positivemessages, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 								    	}
 								    	
 								    		else
 								    		{
-								    			 ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+								    			 ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 											       		
 									    			
 								    	}
 									    
 									}
 								    catch (WebDriverException e) {
-								    	ATUReports.add("", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+								    	ATUReports.add("", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 								    } finally {
 								    takeSnap();
 								    }
@@ -5034,14 +5060,16 @@ System.out.println("Element not present");
 
 											if (driver.findElementByXPath(xpath).isDisplayed())
 												
-											ATUReports.add(Positivemessage, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+												//driver.findElementByXPath(xpath).click();
 											
-											// ATUReports.add("ID element got clicked ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+											ATUReports.add(Positivemessage, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+											
+											// ATUReports.add("ID element got clicked ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 										} catch (NoSuchElementException e) {
 
-											ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+											ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 										} catch (WebDriverException e) {
-											ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+											ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 										} finally {
 											takeSnap();
 										}
@@ -5062,18 +5090,18 @@ System.out.println("Element not present");
 											if (gtxt.equals(Verifymessages)) 
 
 //											{
-											ATUReports.add(Positivemessage, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+											ATUReports.add(Positivemessage, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 										  
 										else
-											ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+											ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 												
 											
 											} 
 										catch (NoSuchElementException e) {
 
-											//ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+											//ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 										} catch (WebDriverException e) {
-											//ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+											//ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 										} catch (Exception e) {
 											// TODO Auto-generated catch block
 											e.printStackTrace();
@@ -5084,7 +5112,46 @@ System.out.println("Element not present");
 									}
 									
 									
+//===================================================================================================
 									
+									public void Verifythealertpopupmessagesnegativescenarios(String xpath,
+											String Verifymessages,
+											String Positivemessage,String Negativemessages)
+									{
+
+										try 
+										{
+											Thread.sleep(1000);
+											String  gtxt = driver.findElementByXPath(xpath).getText();											
+											System.out.println(gtxt);
+											System.out.println(Verifymessages);
+											
+
+											if (gtxt.equals(Verifymessages)) 
+
+//											{
+											ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+										  
+										else
+											ATUReports.add(Positivemessage, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+												
+											
+											} 
+										catch (NoSuchElementException e) {
+
+											//ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+										} catch (WebDriverException e) {
+											//ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+										} catch (Exception e) {
+											// TODO Auto-generated catch block
+											e.printStackTrace();
+										} 
+										finally {
+											takeSnap();
+										}
+									}
+									
+
 									
 //==============================================================================================
 
@@ -5098,23 +5165,25 @@ System.out.println("Element not present");
 										{
 											Thread.sleep(1000);
 											String  gtxt = driver.findElementByXPath(xpath).getText();											
-											System.out.println(gtxt);
+											System.out.println("gtxt"+gtxt);
+											System.out.println("Verifymessages"+Verifymessages);
+											
 
 											if (gtxt.contains(Verifymessages))													
 
 //											{
-											ATUReports.add(Positivemessage, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+											ATUReports.add(Positivemessage, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 										  
 										else
-											ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+											ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 												
 											
 											} 
 										catch (NoSuchElementException e) {
 
-											//ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+											//ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 										} catch (WebDriverException e) {
-											//ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+											//ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 										} catch (Exception e) {
 											// TODO Auto-generated catch block
 											e.printStackTrace();
@@ -5144,12 +5213,12 @@ System.out.println("Element not present");
 										if (s.matches(alphaRegex)) 
 									         {
 									            //System.out.println("'"+ str.charAt(i)+"' is a number");
-									            ATUReports.add(Positivemessage, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+									            ATUReports.add(Positivemessage, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 												 
 									         }
 									         else {
 									         //   System.out.println("'"+ str.charAt(i)+"' is a letter");
-									            ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+									            ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 									        	
 									         }
 									      }
@@ -5207,11 +5276,11 @@ System.out.println("Element not present");
 									final int tick = gtxt.length();
 									if(tick>10)
 									{
-										ATUReports.add(Positivemessage, LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+										ATUReports.add(Positivemessage, LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 									}
 									else
 									{
-										ATUReports.add(negativemessage, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+										ATUReports.add(negativemessage, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 											
 										
 										} 
@@ -5244,18 +5313,18 @@ System.out.println("Element not present");
 											if (gtxt2.contains(gtxt1))																			
 
 //											{
-											ATUReports.add(Positivemessage, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+											ATUReports.add(Positivemessage, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 										  
 										else
-											ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+											ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 												
 											
 											} 
 										catch (NoSuchElementException e) {
 
-											//ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+											//ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 										} catch (WebDriverException e) {
-											//ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+											//ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 										} catch (Exception e) {
 											// TODO Auto-generated catch block
 											e.printStackTrace();
@@ -5270,8 +5339,8 @@ System.out.println("Element not present");
 									
 //=========================================================================================
 
-									public void Verifythealertpopupmessagesusincontainsusinggetattributenegative(String xpath,String Verifymessages,
-											String Positivemessage,String Negativemessages)
+									public void Verifythealertpopupmessagesusincontainsusinggetattributenegative(String xpath,
+											String Verifymessages,String Positivemessage,String Negativemessages)
 									{
 
 										try 
@@ -5289,18 +5358,18 @@ System.out.println("Element not present");
 											if (gtxt2.contains(gtxt1))													
 
 //											{
-											ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+											ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 										  
 										else
-											ATUReports.add(Positivemessage, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+											ATUReports.add(Positivemessage, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 												
 											
 											} 
 										catch (NoSuchElementException e) {
 
-											//ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+											//ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 										} catch (WebDriverException e) {
-											//ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+											//ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 										} catch (Exception e) {
 											// TODO Auto-generated catch block
 											e.printStackTrace();
@@ -5334,18 +5403,18 @@ System.out.println("Element not present");
 												if (gtxt2!=	gtxt1)	
 
 //											{
-											ATUReports.add(Positivemessage, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+											ATUReports.add(Positivemessage, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 										  
 										else
-											ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+											ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 												
 											
 											} 
 										catch (NoSuchElementException e) {
 
-											//ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+											//ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 										} catch (WebDriverException e) {
-											//ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+											//ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 										} catch (Exception e) {
 											// TODO Auto-generated catch block
 											e.printStackTrace();
@@ -5379,18 +5448,18 @@ System.out.println("Element not present");
 												
 													if (gtxt2.contentEquals(gtxt1))
 //											{
-											ATUReports.add(Positivemessage, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+											ATUReports.add(Positivemessage, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 										  
 										else
-											ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+											ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 												
 											
 											} 
 										catch (NoSuchElementException e) {
 
-											//ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+											//ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 										} catch (WebDriverException e) {
-											//ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+											//ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 										} catch (Exception e) {
 											// TODO Auto-generated catch block
 											e.printStackTrace();
@@ -5448,7 +5517,7 @@ System.out.println("Element not present");
 									catch (NoSuchElementException e)
 									{
 
-								    ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+								    ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 								    } catch (Exception e) {
 								    System.out.println("error");
 								    } finally {
@@ -5494,7 +5563,7 @@ System.out.println("Element not present");
 									catch (NoSuchElementException e)
 									{
 
-								    ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+								    ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 								    } catch (Exception e) {
 								    System.out.println("error");
 								    } finally {
@@ -5547,7 +5616,7 @@ System.out.println("Element not present");
 									catch (NoSuchElementException e)
 									{
 
-								    ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+								    ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 								    } catch (Exception e) {
 								    System.out.println("error");
 								    } finally {
@@ -5602,7 +5671,7 @@ System.out.println("Element not present");
 									catch (NoSuchElementException e)
 									{
 
-								    ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+								    ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 								    } catch (Exception e) {
 								    System.out.println("error");
 								    } finally {
@@ -5663,7 +5732,7 @@ System.out.println("Element not present");
 									catch (NoSuchElementException e)
 									{
 
-								    ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+								    ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 								    } catch (Exception e) {
 								    System.out.println("error");
 								    } finally {
@@ -5719,7 +5788,7 @@ System.out.println("Element not present");
 									catch (NoSuchElementException e)
 									{
 
-								    ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+								    ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 								    } catch (Exception e) {
 								    System.out.println("error");
 								    } finally {
@@ -5735,19 +5804,21 @@ System.out.println("Element not present");
 									public void findelementandsendtextbycss(String Css, String txt) {
 										try {
 											
-										if (driver.findElementByCssSelector(Css).isDisplayed())
+										if (driver.findElementByCssSelector(Css).isEnabled())
+											//if (driver.findElementByCssSelector(Css).isDisplayed())
+												
 								                 {
-											driver.findElementByCssSelector(Css).clear();
+											//driver.findElementByCssSelector(Css).clear();
 											driver.findElementByCssSelector(Css).sendKeys(txt);
 											
 
-											ATUReports.add(" User Entered the text as " + txt, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+											ATUReports.add(" User Entered the text as " + txt, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 											}
 										} catch (NoSuchElementException e) {
 
-											ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+											//ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 										} catch (WebDriverException e) {
-											ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+										//	ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 										} finally {
 											takeSnap();
 										}
@@ -5831,7 +5902,7 @@ System.out.println("Element not present");
 									catch (NoSuchElementException e)
 									{
 
-								    ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+								    ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 								    } catch (Exception e) {
 								    System.out.println("error");
 								    } finally {
@@ -5943,7 +6014,7 @@ System.out.println("Element not present");
 									catch (NoSuchElementException e)
 									{
 
-								    ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+								    ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 								    } catch (Exception e) {
 								    System.out.println("error");
 								    } finally {
@@ -6051,7 +6122,7 @@ System.out.println("Element not present");
 									catch (NoSuchElementException e)
 									{
 
-								    ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+								    ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 								    } catch (Exception e) {
 								    System.out.println("error");
 								    } finally {
@@ -6128,7 +6199,7 @@ System.out.println("Element not present");
 									catch (NoSuchElementException e)
 									{
 
-								    ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+								    ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 								    } catch (Exception e) {
 								    System.out.println("error");
 								    } finally {
@@ -6235,7 +6306,7 @@ System.out.println("Element not present");
 									catch (NoSuchElementException e)
 									{
 
-								    ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+								    ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 								    } catch (Exception e) {
 								    System.out.println("error");
 								    } finally {
@@ -6315,7 +6386,7 @@ System.out.println("Element not present");
 									catch (NoSuchElementException e)
 									{
 
-								    ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+								    ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 								    } catch (Exception e) {
 								    System.out.println("error");
 								    } finally {
@@ -6392,7 +6463,7 @@ System.out.println("Element not present");
 									catch (NoSuchElementException e)
 									{
 
-								    ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+								    ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 								    } catch (Exception e) {
 								    System.out.println("error");
 								    } finally {
@@ -6468,7 +6539,7 @@ System.out.println("Element not present");
 									catch (NoSuchElementException e)
 									{
 
-								    ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+								    ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 								    } catch (Exception e) {
 								    System.out.println("error");
 								    } finally {
@@ -6567,7 +6638,7 @@ System.out.println("Element not present");
 									catch (NoSuchElementException e)
 									{
 
-								    ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+								    ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 								    } catch (Exception e) {
 								    System.out.println("error");
 								    } finally {
@@ -6666,7 +6737,7 @@ System.out.println("Element not present");
 			}
 		} catch (NoSuchElementException e) {
 
-			ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (Exception e) {
 			System.out.println("error");
 		} finally {
@@ -6721,6 +6792,56 @@ Double Profitamount = ( commission2 ) + ( Servicefee2 ) - ( Discount2 ) + ( Agen
 
 								    }
 								    
+//===========================================================================================================
+									
+									
+		public void Totalamountdividebypercentage(String xpath1,String Fopdivide,
+				String Positivemessages,String Negativemessages) throws InterruptedException
+								    {
+								    try 
+								    {
+
+								    WebElement elt11 = driver.findElement(By.xpath(xpath1));
+									
+
+								    Thread.sleep(300);
+
+				Double d21 = new Double(elt11.getAttribute("value").trim()); //FOP Amountt
+				Double d23 = new Double(Fopdivide.trim());
+									
+									Double d22 = d21*d23/100;
+									
+									
+
+								    Thread.sleep(200);
+								    System.out.print("\n the value of d11 is" + d21);//seeling fare
+								    System.out.print("\n the value of d12 is" + d22); //
+								    Thread.sleep(200);
+								 	
+									if(d21!=d22)
+								    {
+								driver.findElementByXPath(xpath1).clear();
+								driver.findElementByXPath(xpath1).sendKeys(d22.toString());
+								Thread.sleep(200);
+								    ATUReports.add(Positivemessages, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+								    }
+								    else
+								    {
+								    ATUReports.add(Negativemessages, LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+									    	
+								    }
+								    }
+									catch (NoSuchElementException e)
+									{
+
+								    ATUReports.add("NotClicked ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+								    } catch (Exception e) {
+								    System.out.println("error");
+								    } finally {
+								    takeSnap();
+								    }
+
+								    }       
 
 
 
@@ -6752,7 +6873,7 @@ Double Profitamount = ( commission2 ) + ( Servicefee2 ) - ( Discount2 ) + ( Agen
 										        
 									        System.out.println("the value is"+store2);
 									        
-									      ATUReports.add("Newly created details " + store2, LogAs.PASSED, new CaptureScreen(ScreenshotOf.DESKTOP));
+									      ATUReports.add("Newly created Details " + store2, LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 									    	
 									        
 									   }
@@ -6764,7 +6885,88 @@ Double Profitamount = ( commission2 ) + ( Servicefee2 ) - ( Discount2 ) + ( Agen
 
 									   }
 
+//================================================================================================
+									 
+									 
+
+									//copy and paste the values and pass the message 
+
+	public void Copyandpasteandmessage(String xpath10,String usermessage) throws InterruptedException {
+		try {
+			Thread.sleep(2000);
+
+			WebElement Elt = driver.findElement(By.xpath(xpath10));
+
+			// String Elt1 = new String(Elt.getAttribute("value").trim());
+
+			String Elt1 = new String(Elt.getText().trim());
+
+			Thread.sleep(500);
+
+			store2 = Elt1.toString();
+			Thread.sleep(500);
+
+			System.out.println("the value is" + store2);
+
+			ATUReports.add(usermessage + store2, LogAs.PASSED,new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+
+		} catch (Exception e) {
+			System.out.println("error");
+		} finally {
+			takeSnap();
+		}
+
+	}
+
+//==================================================================================================
+	
+
+//=================================================================================================
+									 
+public void Printmessages(String Msg)
+{
+	 ATUReports.add(Msg,LogAs.INFO, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+	   
+}
 									
+
+
+//======================================================================================
+
+
+
+public void findbyelementbyxpathandsendthevalues(String xpath,String xpath1) 
+{
+
+	try {
+
+		if (driver.findElementByXPath(xpath).isEnabled())
+
+		{
+			//driver.findElementByXPath(xpath).click();
+			driver.findElementByXPath(xpath).sendKeys(xpath1);
+
+
+			ATUReports.add("Element found ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+		}
+
+		else {
+			// ATUReports.add("No element found ", LogAs.FAILED, new
+			// CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+		}
+
+		// ATUReports.add("ID element got clicked ", LogAs.PASSED, new
+		// CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+	} catch (NoSuchElementException e) {
+
+		//ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
+	} finally {
+		takeSnap();
+	}
+}
+
+
+
 									
 //===================================================================================================================
 									
@@ -6777,9 +6979,9 @@ Double Profitamount = ( commission2 ) + ( Servicefee2 ) - ( Discount2 ) + ( Agen
 			ATUReports.add("User scroll down the page ", LogAs.PASSED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (NoSuchElementException e) {
 
-			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No element found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} catch (WebDriverException e) {
-			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.DESKTOP));
+			ATUReports.add("No driver found ", LogAs.FAILED, new CaptureScreen(ScreenshotOf.BROWSER_PAGE));
 		} finally {
 			takeSnap();
 		}

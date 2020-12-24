@@ -1,0 +1,9 @@
+package Carcreditcashcarduccf;
+
+import org.testng.annotations.Test;
+
+public class CarCashCard {
+  @Test
+  public void f() {
+  }
+}

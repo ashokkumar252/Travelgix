@@ -39,12 +39,12 @@ public class AirServiceCharge {
 
 	{
 
-		wm.launchbrowser("chrome", utility.Constant.TRAVELOGIXURL);
+		wm.launchbrowser(utility.Constant.Browsername, utility.Constant.TRAVELOGIXURL);
 
 	}
 
 	@Test(dataProvider = "dp")
-	public void logincheckK(String Username, String Password, String Leftsidemenu,String Servicehcargename,
+	public void AirServiceCharge(String Username, String Password, String Leftsidemenu,String Servicehcargename,
 			String Applytype,String Applytypeindex,String Allocationtype,String Allocationtypeindexx,
 			String Servicechargemode,String Servicechargemodeindex,String discount,String AascdServChrgBook,
 			String Servichcargeapplyon,String Servichcargeapplyonindexx,String AascdServChrgAdult,

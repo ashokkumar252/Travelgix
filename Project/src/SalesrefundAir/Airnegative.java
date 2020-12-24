@@ -39,7 +39,7 @@ public class Airnegative {
 
 	{
 
-		wm.launchbrowser("chrome", utility.Constant.TRAVELOGIXURL);
+		wm.launchbrowser(utility.Constant.Browsername, utility.Constant.TRAVELOGIXURL);
 
 	}
 
@@ -955,10 +955,10 @@ Thread.sleep(200);
 // Enter the commission amunt
 
 wm.sendtextbycssselecotrwithoutclear("#AtfdCommPercent1", "" + AtfdCommPercent1);
-Thread.sleep(50);
+Thread.sleep(90);
 
 wm.sendtextbycssselecotrwithoutclear("#AtfdCommPercent2", "" + AtfdCommPercent2);
-Thread.sleep(50);
+Thread.sleep(90);
 
 wm.sendtextbycssselecotrwithoutclear("#AtfdDiscPercent1", "" + AtfdDiscPercent1);
 Thread.sleep(600);
@@ -1173,7 +1173,7 @@ wm.Airprofitcalculations("//input[@name='salestotcommm']", "//input[@name='Total
 
 //============================================================================================================
 		
-		wm.sleep();
+		//wm.sleep();
 		Thread.sleep(500);
 
 		

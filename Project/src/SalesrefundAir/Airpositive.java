@@ -36,12 +36,8 @@ public class Airpositive
 
 	@BeforeMethod
 	public void browesrnstatiation()
-
-	{
-
-		wm.launchbrowser("chrome", utility.Constant.TRAVELOGIXURL);
-
-	}
+{wm.launchbrowser(utility.Constant.Browsername, utility.Constant.TRAVELOGIXURL);
+}
 
 	@Test(dataProvider = "dp")
 	public void Airpositive(String Username, String Password, String Leftsidemenu, String ActiveFrom1,
@@ -96,19 +92,19 @@ public class Airpositive
 
 		// Dockett
 		wm.sendtextbyxvalue("//input[@aria-owns='dktDocTypeCode_listbox']", Docktype);
-		Thread.sleep(50);
+		Thread.sleep(90);
 		wm.Listandenter("//*[@id='dktDocTypeCode_listbox']/li", Docktypeindex);
 		Thread.sleep(150);
 
 		// Salesbranch
 		wm.sendtextbyxvalue("//input[@aria-owns='DktBranchKey_listbox']", Salesbracnh);
-		Thread.sleep(50);
+		Thread.sleep(90);
 		wm.Listandenter("//*[@id='DktBranchKey_listbox']/li", Salesbracnhindex);
 		Thread.sleep(150);
 
 		// customerr
 		wm.sendtextbyxvalue("//input[@aria-owns='DktPartnername_listbox']", Customer);
-		Thread.sleep(50);
+		Thread.sleep(90);
 		wm.Listandenter("//*[@id='DktPartnername_listbox']/li", Customerindex);
 		Thread.sleep(150);
 
@@ -130,7 +126,7 @@ public class Airpositive
 		// sales:
 
 		wm.clickbyxpath("//span[@aria-owns='AatdTicketStatus_listbox']");
-		Thread.sleep(50);
+		Thread.sleep(90);
 		wm.Listandenter("//*[@id='AatdTicketStatus_listbox']/li", Tickectstatusindex);
 		Thread.sleep(150);
 
@@ -172,13 +168,13 @@ public class Airpositive
 		// issuemodee
 		// wm.sendtextbyxvalue("//input[@aria-owns='AatdIssueType_listbox']",issuemode);
 		wm.clickbyxpath("//span[@aria-owns='AatdIssueType_listbox']");
-		Thread.sleep(50);
+		Thread.sleep(90);
 		wm.Listandenter("//*[@id='AatdIssueType_listbox']/li", issuemodeindex);
 		Thread.sleep(90);
 
 		// servicetype
 		wm.sendtextbyxvalue("//input[@aria-owns='AatdTransTypeDesc_listbox']", Servicetype);
-		Thread.sleep(50);
+		Thread.sleep(90);
 		wm.Listandenter("//*[@id='AatdTransTypeDesc_listbox']/li", Servicetypeindexx);
 		Thread.sleep(90);
 
@@ -190,32 +186,32 @@ public class Airpositive
 		// paxtype
 
 		wm.clickbyxpath("//span[@aria-owns='AatdPassengerType_listbox']");
-		Thread.sleep(50);
+		Thread.sleep(90);
 		wm.Listandenter("//*[@id='AatdPassengerType_listbox']/li", PAxtypeindex);
 		Thread.sleep(150);
 
 		// bookinegexecutivee
 		wm.sendtextbyxvalue("//input[@aria-owns='AirBookingExecutieveName_listbox']", Bookingexecutive);
-		Thread.sleep(50);
+		Thread.sleep(90);
 		wm.Listandenter("//*[@id='AirBookingExecutieveName_listbox']/li", Bookingexecutiveindex);
 		Thread.sleep(150);
 
 		// issuringexecutive
 		wm.sendtextbyxvalue("//input[@aria-owns='AirIssuingExecutieveName_listbox']", AirIssuingExecutieveName);
-		Thread.sleep(50);
+		Thread.sleep(90);
 		wm.Listandenter("//*[@id='AirIssuingExecutieveName_listbox']/li", AirIssuingExecutieveNameindex);
 		Thread.sleep(150);
 
 		// salesexecutive
 		wm.sendtextbyxvalue("//input[@aria-owns='AatdSalesExecutiveName_listbox']", Salesexecutive);
-		Thread.sleep(50);
+		Thread.sleep(90);
 		wm.Listandenter("//*[@id='AatdSalesExecutiveName_listbox']/li", Salesexecutiveindex);
 		Thread.sleep(150);
 
 		// nternatio or doemstic
 
 		wm.sendtextbyxvalue("//input[@aria-owns='AatdInterDomestic_listbox']", intedomectiv);
-		Thread.sleep(50);
+		Thread.sleep(90);
 		wm.Listandenter("//*[@id='AatdInterDomestic_listbox']/li", intedomectivindex);
 		Thread.sleep(150);
 
@@ -239,7 +235,7 @@ public class Airpositive
 
 		// issuedpcc
 		wm.clickbyxpath("//span[@aria-owns='AatdIssuingPcc_listbox']");
-		Thread.sleep(50);
+		Thread.sleep(90);
 		wm.Listandenter("//*[@id='AatdIssuingPcc_listbox']/li", issuepccindex);
 		Thread.sleep(150);
 
@@ -250,7 +246,7 @@ public class Airpositive
 
 		// bookingpcc
 		wm.clickbyxpath("//span[@aria-owns='AatdBookingPcc_listbox']");
-		Thread.sleep(50);
+		Thread.sleep(90);
 		wm.Listandenter("//*[@id='AatdBookingPcc_listbox']/li", Bookingpccc);
 		Thread.sleep(150);
 
@@ -438,19 +434,24 @@ public class Airpositive
 		// agent incentivee
 
 		wm.sendtextbyxvalue("//input[@aria-owns='AAtscPaybackParnerDesc_listbox']", Agentincetive);
-		Thread.sleep(100);
+		Thread.sleep(300);
 		wm.Listandenter("//*[@id='AAtscPaybackParnerDesc_listbox']/li", Agentincetiveindexx);
 		Thread.sleep(200);
 
 		//Enter the FOPwindows
 
 		wm.Listandenter("//span[@class='k-icon k-i-add']", "3");
-		Thread.sleep(200);
+		Thread.sleep(500);
+		
+		wm.Listandenter("//button[@id='ConformationYes']", "0");
+		
+		Thread.sleep(500);
+		
 
 		//selecte the cash options
 		wm.clickbyxpath("//span[@aria-owns='MiscFOPModeKey_listbox']");		
 		//wm.sendtextbyxvalue("//input[@aria-owns='AAtscPaybackParnerDesc_listbox']", Agentincetive);
-		Thread.sleep(200);
+		Thread.sleep(300);
 		wm.Listandenter("//*[@id='MiscFOPModeKey_listbox']/li", Modeindex);
 		Thread.sleep(1200);
 		
@@ -466,7 +467,7 @@ public class Airpositive
 		
 	   wm.clickbyxpath("//span[@class='k-icon k-i-check']");
 		Thread.sleep(500);
-		
+		/*
 
 wm.Netcollectionsuisngorc("//input[@name='AtfdBaseFare']", "//input[@name='AtfdIncentivePaid']"
 		, "//input[@name='TotalTaxAmount']",
@@ -479,7 +480,7 @@ wm.Publishedfareusingorc("//input[@name='AtfdBaseFare']", "//input[@name='AtfdIn
 		"//input[@name='TotalTaxAmount']", "//input[@name='salestotcommm']"
 		,"//input[@name='TotInputVat']", "//input[@name='Amt_NetPayable']", "Net payable Calclated successfuly", 
 		"Net payable not Calclated successfuly");
-Thread.sleep(200);
+*/Thread.sleep(200);
 
 
 
@@ -529,6 +530,8 @@ Thread.sleep(200);
 				//wm.clickbyid("btnMainSave");
 				wm.sleep();
 				wm.sleep();
+				wm.sleep();
+				
 				
 				wm.sendtextbycssselecotrwithoutclear("#AatdTicketNumber", "" + AatdTicketNumber);
 				Thread.sleep(300);
@@ -542,7 +545,10 @@ Thread.sleep(200);
 						"Fail:  Sales Refund Air Tickect not created successfuly " + "");
 				
 				//wm.Netcollections(Publishedfare, tax, Servicefee, Discount, Outvat, Systemnetcollections, Positivemessages, Negativemessages);
+				Thread.sleep(200);
 				
+				wm.Printmessages("Air tickect number"+AatdTicketNumber);
+
 				
 			
 				
@@ -551,6 +557,8 @@ Thread.sleep(200);
 		
 		wm.sleep();
 		Thread.sleep(300);
+		wm.close();
+		
 
 	}
 

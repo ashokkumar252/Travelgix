@@ -41,14 +41,14 @@ public class Docketstatusnew
 
 //		wm.launchbrowser("chrome", utility.Constant.TRAVELOGIXURL);
 
-		wm.launchbrowser("chrome", utility.Constant.TRAVELOGIXURL);
-		
+		wm.launchbrowser(utility.Constant.Browsername, utility.Constant.TRAVELOGIXURL);
+
 		
 
 	}
 
 	@Test(dataProvider = "dp")
-	public void Aircopytickect(String Username,String Password,
+	public void Docketstatusnew(String Username,String Password,
 			String Leftsidemenu,String ActiveFrom1,String ActiveFrom2,String ActiveFrom3,
 			String Docktype,String Docktypeindex,String Salesbracnh,String Salesbracnhindex,
 			String Customer,String Customerindex,String Leadpaxnamee,String dktClientReference) throws Exception

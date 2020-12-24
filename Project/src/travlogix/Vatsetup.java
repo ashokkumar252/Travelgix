@@ -39,12 +39,12 @@ public class Vatsetup {
 
 	{
 
-		wm.launchbrowser("chrome", utility.Constant.TRAVELOGIXURL);
+		wm.launchbrowser(utility.Constant.Browsername, utility.Constant.TRAVELOGIXURL);
 
 	}
 
 	@Test(dataProvider = "dp")
-	public void logincheckK(String Username, String Password, String Leftsidemenu, String Code, String Description,
+	public void Vatsetup(String Username, String Password, String Leftsidemenu, String Code, String Description,
 			String Type, String Typeindex, String Category, String Catindexxegoryindex, String Glcodee,
 			String Glcodeeindexx, String VGtcmHsnCode, String Hsntype, String Hsntypeindex, String VGtcmHsnDescription,
 			String ActfromDate1, String ActfromDate2, String ActfromDate3, String ActtoDate1, String ActtoDate2,

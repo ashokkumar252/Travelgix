@@ -39,12 +39,12 @@ public class Airline {
 
 	{
 
-		wm.launchbrowser("chrome", utility.Constant.TRAVELOGIXURL);
+		wm.launchbrowser(utility.Constant.Browsername, utility.Constant.TRAVELOGIXURL);
 
 	}
 
 	@Test(dataProvider = "dp")
-	public void logincheckK(String Username, String Password, String Leftsidemenu, String AirlineCode,
+	public void Airline(String Username, String Password, String Leftsidemenu, String AirlineCode,
 			String AirlineName, String AirlineShortName, String AirlineActiveFrom1, String AirlineActiveFrom2,
 			String AirlineActiveFrom3, String AirlineActiveTo1, String AirlineActiveTo2, String AirlineActiveTo3,
 			String Statuindexx, String AirlineCommTypeValuelistbox, String AirlineCommTypeValuelistboxindex,

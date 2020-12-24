@@ -39,7 +39,7 @@ public class Hotelnegative {
 
 	{
 
-		wm.launchbrowser("chrome", utility.Constant.TRAVELOGIXURL);
+		wm.launchbrowser(utility.Constant.Browsername, utility.Constant.TRAVELOGIXURL);
 
 	}
 
@@ -487,11 +487,12 @@ public class Hotelnegative {
 		wm.stabbyxpath("//input[@aria-owns='HtfdOwnLodgeCardKey_listbox']");
 		Thread.sleep(600);
 
-		wm.Listandenter("//span[@class='k-icon k-i-add']", "0");
+/*		wm.Listandenter("//span[@class='k-icon k-i-add']", "0");
 		Thread.sleep(500);
 
 		wm.stabbyxpath(" //span[@class='k-icon k-i-cancel']");
 		Thread.sleep(200);
+		
 
 		// TAX code
 		wm.sendtextbyxvalue("//input[@aria-owns='HotelAtCode_listbox']", Taxcodee);
@@ -504,7 +505,7 @@ public class Hotelnegative {
 		Thread.sleep(200);
 		wm.clickbyxpath("//span[@class='k-icon k-i-check']");
 		Thread.sleep(200);
-
+*/
 		// enter the details in service fee
 
 		wm.Listandenter("//span[@class='k-icon k-i-add']", "1");
@@ -523,12 +524,40 @@ public class Hotelnegative {
 		Thread.sleep(300);
 
 		wm.clickbyxpath("//span[@class='k-icon k-i-check']");
+		Thread.sleep(600);
+	//======
+		
+		wm.Listandenter("//span[@class='k-icon k-i-add']", "0");
+		Thread.sleep(500);
+
+		wm.stabbyxpath(" //span[@class='k-icon k-i-cancel']");
+		Thread.sleep(200);
+		
+
+		// TAX code
+		wm.sendtextbyxvalue("//input[@aria-owns='HotelAtCode_listbox']", Taxcodee);
+		Thread.sleep(100);
+		wm.Listandenter("//*[@id='HotelAtCode_listbox']/li", Commonindex);
 		Thread.sleep(200);
 
+		// TAxamountt
+		wm.sendtextbycssselecotrwithoutclear("#HotelAtAmount", HotelAtAmount);
+		Thread.sleep(200);
+
+
+		wm.stabbyxpath("//input[@name='HotelAtAmount']");
+		Thread.sleep(200);
+		wm.clickbyxpath("//span[@class='k-icon k-i-check']");
+		Thread.sleep(200);
+
+		
+		
+		
+Thread.sleep(200);		
 		wm.clickbyxpath("//*[@id='div_Hotel_Header_Details']/div[3]/div/div[1]/div[1]/a/i");
 
 		// Enter the commissiondetails
-
+		Thread.sleep(200);
 		wm.Selectallbyxpath("//input[@name='hotelFareCommPercent1']");	
 		wm.sendtextbycssselecotrwithoutclear("#hotelFareCommPercent1", "" + hotelFareCommPercent1);
 		Thread.sleep(500);
@@ -599,7 +628,7 @@ public class Hotelnegative {
 		wm.doubleclickusingxpath("//span[@class='k-icon k-i-check']");
 		Thread.sleep(900);
 
-		
+		/*
 
 wm.comparetwovalues1to1("//input[@name='AirFopAmount']"
 		, "//input[@name='Amt_NetCollection']", 
@@ -618,7 +647,7 @@ wm.Publishedfare("//input[@name='hoteltfdBaseFare']", "//input[@name='TotalTaxAm
 		"//input[@name='salestotcommm']"
 		,"//input[@name='TotInputVat']", "//input[@name='Amt_NetPayable']", "Net payable Calclated successfuly", 
 		"Net payable not Calclated successfuly");
-
+*/
 
 wm.Hotelnetcalculationchargesusingcancelationcharges("//input[@name='hoteltfdBaseFare']", "//input[@name='TotalTaxAmount']"
 		,"//input[@name='TotalServiceFee']", "//input[@name='TotalDiscount']", "//input[@name='TotOutputVat']", 

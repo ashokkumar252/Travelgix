@@ -38,12 +38,12 @@ public class Carmaster {
 
 	{
 
-		wm.launchbrowser("chrome", utility.Constant.TRAVELOGIXURL);
+		wm.launchbrowser(utility.Constant.Browsername, utility.Constant.TRAVELOGIXURL);
 
 	}
 
 	@Test(dataProvider = "dp")
-	public void logincheckK(String Username, String Password, String Leftsidemenu, String Ccode, String Cdescription,
+	public void Carmaster(String Username, String Password, String Leftsidemenu, String Ccode, String Cdescription,
 			String Cvehciletypee, String Cvehciletypeeindexx, String Csupplier, String Csupplierindex,
 			String CarRemarks, String CarReference, String CActiveFrom1, String CActiveFrom2, String CActiveFrom3,
 			String CActiveto1, String CActiveto2, String CActiveto3, String Statusindex3) throws Exception

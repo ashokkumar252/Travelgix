@@ -39,12 +39,12 @@ public class Airpositivecash {
 
 	{
 
-		wm.launchbrowser("chrome", utility.Constant.TRAVELOGIXURL);
+		wm.launchbrowser(utility.Constant.Browsername, utility.Constant.TRAVELOGIXURL);
 
 	}
 
 	@Test(dataProvider = "dp")
-	public void logincheckK(String Username, String Password, String Leftsidemenu, String ActiveFrom1,
+	public void Airpositivecash(String Username, String Password, String Leftsidemenu, String ActiveFrom1,
 			String ActiveFrom2, String ActiveFrom3, String Docktype, String Docktypeindex, String Salesbracnh,
 			String Salesbracnhindex, String Customer, String Customerindex, String Leadpaxnamee,
 			String dktClientReference, String Tickectstatusindex, String Airline, String Airlineindex,
@@ -447,7 +447,9 @@ public class Airpositivecash {
 
 		wm.Listandenter("//span[@class='k-icon k-i-add']", "3");
 		Thread.sleep(200);
-
+		wm.Listandenter("//button[@id='ConformationYes']", "0");
+		Thread.sleep(600);
+			
 		//selecte the cash options
 		wm.clickbyxpath("//span[@aria-owns='MiscFOPModeKey_listbox']");		
 		//wm.sendtextbyxvalue("//input[@aria-owns='AAtscPaybackParnerDesc_listbox']", Agentincetive);
@@ -468,7 +470,7 @@ public class Airpositivecash {
 	   wm.clickbyxpath("//span[@class='k-icon k-i-check']");
 		Thread.sleep(900);
 		
-
+/*
 		
 wm.Netcollectionsuisngorcsub("//input[@name='AtfdBaseFare']", "//input[@name='AtfdIncentivePaid']"
 		, "//input[@name='TotalTaxAmount']",
@@ -482,12 +484,28 @@ wm.Publishedfareusingorc("//input[@name='AtfdBaseFare']", "//input[@name='AtfdIn
 		,"//input[@name='TotInputVat']", "//input[@name='Amt_NetPayable']", "Net payable Calclated successfuly", 
 		"Net payable not Calclated successfuly");
 
+*/Thread.sleep(200);
+
+
+wm.Netcollectionsuisngorcandcancellatiocharges("//input[@name='AtfdBaseFare']", "//input[@name='AtfdIncentivePaid']"
+		, "//input[@name='TotalTaxAmount']",
+		"//input[@name='TotalServiceFee']", "//input[@name='TotalDiscount']", " //input[@name='TotOutputVat']", 
+		"//input[@name='Amt_NetCollection']", "//input[@name='AtfdAgentCancelCharge']",
+		" //input[@name='AtfdAirlineCancelCharge']","Net collection  done uisng cancelaltion chargescorreectly", 
+		"Net collection not done correectly using canelaltion charges");
 Thread.sleep(200);
+
+
+wm.Publishedfareusingcancelaltioncharges("//input[@name='AtfdDealFare']", "//input[@name='TotalTaxAmount']"
+		,"//input[@name='salestotcommm']", "//input[@name='AtfdAirlineCancelCharge']", 
+		"//input[@name='TotInputVat']", "", "//input[@name='Amt_NetPayable']", 
+		"Net publishedfare Calclated successfuly using cancelaltion charges"
+		, "Net publishedfare not Calclated successfuly using cancelaltion charges");
 
 		
 		//udid details
 				wm.clickbyxpath("//*[@id='testData']/i");
-				Thread.sleep(900);
+				Thread.sleep(600);
 				
 //				wm.clickbyxpath("//*[@id='acc110']/i");
 //			Thread.sleep(300);
@@ -518,8 +536,13 @@ Thread.sleep(200);
 				wm.Listnegativescearios(utility.Constant.Travelogixuitooltipvalidation, "0",
 						"Pass : Sales Refund Air Tickect created successfuly" + "",
 						"Fail:  Sales Refund Air Tickect not created successfuly " + "");
-			
 				
+				
+			
+Thread.sleep(200);
+				
+				wm.Printmessages("Air tickect number"+AatdTicketNumber);
+
 
 				
 		

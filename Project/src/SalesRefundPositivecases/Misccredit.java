@@ -37,12 +37,12 @@ public class Misccredit {
 
 	{
 
-		wm.launchbrowser("chrome", utility.Constant.TRAVELOGIXURL);
+		wm.launchbrowser(utility.Constant.Browsername, utility.Constant.TRAVELOGIXURL);
 
 	}
 
 	@Test(dataProvider = "dp")
-	public void logincheckK(String Username, String Password, String Leftsidemenu, String ActiveFrom1,
+	public void Misccredit(String Username, String Password, String Leftsidemenu, String ActiveFrom1,
 			String ActiveFrom2, String ActiveFrom3, String Docktype, String Docktypeindex, String Salesbracnh,
 			String Salesbracnhindex, String Customer, String Customerindex, String Leadpaxnamee,
 			String dktClientReference, String Tickectstatusindex,
@@ -299,7 +299,7 @@ Thread.sleep(500);
 wm.Listandenter("//span[@class='k-icon k-i-add']", "2");
 Thread.sleep(500);
 
-wm.findbyelementbyxpathandclick("//button[@id='ConformationYes']");
+wm.Listandenter("//button[@id='ConformationYes']", "0");
 Thread.sleep(900);
 
 // ===========================================
@@ -332,42 +332,85 @@ Thread.sleep(500);
 
 // Enter the udid details
 
-wm.findelementandsendtextbycss("#Project_Number_AP", ProjectNumberAP);
-Thread.sleep(50);
-wm.findelementandsendtextbycss("#Department_AP", DepartmentAP);
-Thread.sleep(50);
-wm.findelementandsendtextbycss("#Major_Class_AP", MajorClassAP);
-Thread.sleep(50);
 
-wm.findelementandsendtextbycss("#Travel_Status_AP", TravelStatusAP);
-Thread.sleep(50);
-wm.findelementandsendtextbycss("#Total_Saving_Code_AP", TotalSavingCodeAP);
-Thread.sleep(50);
-wm.findelementandsendtextbycss("#Group_Travel_Indicator_AP", GroupTravelIndicatorAP);
-Thread.sleep(50);
-wm.findelementandsendtextbycss("#Tour_Code_AP", TourCodeAP);
-Thread.sleep(50);
-wm.findelementandsendtextbycss("#Endorsement_Restrict_AP", EndorsementRestrictAP);
-Thread.sleep(50);
-wm.findelementandsendtextbycss("#Fare_Calculation_Area_AP", FareCalculationAreaAP);
-Thread.sleep(200);
-wm.clickbyxpath("//span[@aria-owns='Booking_Type_AP_listbox']");
-Thread.sleep(200);
-wm.Listandenter("//*[@id='Booking_Type_AP_listbox']/li", Commonindex);
-Thread.sleep(200);
 
-wm.findelementandsendtextbycss("#Intl_Sales_Indicator_AP", IntlSalesIndicatorAP);
-Thread.sleep(200);
-wm.findbyelementbyxpathandclick("//button[@id='btnmiscsave']");
+wm.Listandenterthevaluesinvisblexpath("//input[@name='Travel_Status_DN']", DepartmentAP);
+//Thread.sleep(50);
+wm.Listandenterthevaluesinvisblexpath("//*[@name='Project_Number_AP']", ProjectNumberAP);
+//Thread.sleep(50);
+wm.Listandenterthevaluesinvisblexpath("//*[@name='Department_AP']", DepartmentAP);
+//Thread.sleep(50);
+wm.Listandenterthevaluesinvisblexpath("//input[@name='Major_Class_AP']", MajorClassAP);
+//Thread.sleep(50);
+
+wm.Listandenterthevaluesinvisblexpath("//input[@name='Travel_Status_AP']", TravelStatusAP);
+//Thread.sleep(50);
+wm.Listandenterthevaluesinvisblexpath("//input[@name='Total_Saving_Code_AP']", TotalSavingCodeAP);
+//Thread.sleep(50);
+wm.Listandenterthevaluesinvisblexpath("//input[@name='Group_Travel_Indicator_AP']", GroupTravelIndicatorAP);
+//Thread.sleep(50);
+wm.Listandenterthevaluesinvisblexpath("//input[@name='Tour_Code_AP']", TourCodeAP);
+//Thread.sleep(50);
+wm.Listandenterthevaluesinvisblexpath("//input[@name='Endorsement_Restrict_AP']", EndorsementRestrictAP);
+//Thread.sleep(50);
+wm.Listandenterthevaluesinvisblexpath("//input[@name='Fare_Calculation_Area_AP']", FareCalculationAreaAP);
+//Thread.sleep(200);
+
+
+	wm.Listandenter("//span[@aria-owns='Booking_Type_AP_listbox']", "0");
+	
+	Thread.sleep(200);
+	
+	wm.Listandenter("//*[@id='Booking_Type_AP_listbox']/li", Commonindex);
+	Thread.sleep(200);
+
+	wm.Listandenterthevaluesinvisblexpath("//input[@name='Intl_Sales_Indicator_AP']", IntlSalesIndicatorAP);
+	Thread.sleep(500);
+
+	wm.findbyelementbyxpathandclick("//button[@id='btnmiscsave']");
 
 
 Thread.sleep(16000);
 
+wm.clickbyxpath("//*[@class='btn btn-danger']");
+Thread.sleep(500);
+
+wm.Listandenterquick("//span[contains(text(),'Leave Page')]", "0");
+wm.Listandenterquick("//span[contains(text(),'Leave Page')]", "1");
+wm.Listandenterquick("//span[contains(text(),'Leave Page')]", "2");
+wm.Listandenterquick("//span[contains(text(),'Leave Page')]", "3");
+wm.sleep();
+
+
+wm.Verifythedropdownvalues("//input[@name='DktNumber']",
+		"Pass : Sales Refund MISc credit   created successfuly" + "",
+		"Fail:  Sales Refund MISC credit   not created successfuly " + "");
+
+
+/*wm.Listnegativescearios("//*[@id='DktNumber']", "0",
+		"Pass : Sales Refund Misc   created successfuly" + "",
+		"Fail:  Sales Refund Misc  not created successfuly " + "");
+*/
+Thread.sleep(2000);
+
+//wm.gettext("//*[@id='DktNumber']");
+
+wm.storestrign2("//input[@name='DktNumber']");
+
+//wm.gettext("//*[@id='DktNumber']");
+
+//wm.Gettextbylistandprint("//*[@id='DktNumber']", "Docketnumber is");
+
+
+Thread.sleep(300);
+
+
+/*
 wm.Listnegativescearios("//input[@name='MiscConfirmationNumber']", "0", 
 		"MISC Created Successfully", "MISC Not Created Successfully");
 
 		wm.sleep();
-
+*/
 	}
 
 	@AfterMethod

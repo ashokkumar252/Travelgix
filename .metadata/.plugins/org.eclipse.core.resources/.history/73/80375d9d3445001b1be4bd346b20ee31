@@ -1,0 +1,9 @@
+package Misccreditcashcarduccf;
+
+import org.testng.annotations.Test;
+
+public class MiscCreditCard {
+  @Test
+  public void f() {
+  }
+}

@@ -1,5 +1,4 @@
 package Salesrefundallservicesindocket;
-
 import utility.Constant;
 import java.io.IOException;
 import java.sql.Driver;
@@ -15,7 +14,6 @@ import atu.testng.reports.listeners.ATUReportsListener;
 import atu.testng.reports.listeners.ConfigurationListener;
 import atu.testng.reports.listeners.MethodListener;
 import SalesRefundPositivecases.Airpositivecash;
-
 @Listeners({ ATUReportsListener.class, ConfigurationListener.class, MethodListener.class })
 public class Allservices {
 
@@ -40,12 +38,12 @@ public class Allservices {
 
 	{
 
-		wm.launchbrowser("chrome", utility.Constant.TRAVELOGIXURL);
+		wm.launchbrowser(utility.Constant.Browsername, utility.Constant.TRAVELOGIXURL);
 
 	}
 
 	@Test(dataProvider = "dp")
-	public void Aircopytickect(String Username, String Password, String Leftsidemenu, String ActiveFrom1,
+	public void Allservices(String Username, String Password, String Leftsidemenu, String ActiveFrom1,
 			String ActiveFrom2, String ActiveFrom3, String Docktype, String Docktypeindex, String Salesbracnh,
 			String Salesbracnhindex, String Customer, String Customerindex, String Leadpaxnamee,
 			String dktClientReference, String AatdTicketNumber, String ClassTypeCodelistbox, String Payableagent,
@@ -83,19 +81,19 @@ public class Allservices {
 
 		// Dockett
 		wm.sendtextbyxvalue("//input[@aria-owns='dktDocTypeCode_listbox']", Docktype);
-		Thread.sleep(50);
+		Thread.sleep(90);
 		wm.Listandenter("//*[@id='dktDocTypeCode_listbox']/li", Docktypeindex);
 		Thread.sleep(200);
 
 		// Salesbranch
 		wm.sendtextbyxvalue("//input[@aria-owns='DktBranchKey_listbox']", Salesbracnh);
-		Thread.sleep(50);
+		Thread.sleep(90);
 		wm.Listandenter("//*[@id='DktBranchKey_listbox']/li", Salesbracnhindex);
 		Thread.sleep(200);
 
 		// customerr
 		wm.sendtextbyxvalue("//input[@aria-owns='DktPartnername_listbox']", Customer);
-		Thread.sleep(50);
+		Thread.sleep(90);
 		wm.Listandenter("//*[@id='DktPartnername_listbox']/li", Customerindex);
 		Thread.sleep(200);
 
@@ -211,16 +209,16 @@ public class Allservices {
 		wm.Listandenterquick("//span[contains(text(),'Leave Page')]", "1");
 		wm.Listandenterquick("//span[contains(text(),'Leave Page')]", "2");
 		wm.Listandenterquick("//span[contains(text(),'Leave Page')]", "3");
-		Thread.sleep(2000);
+		Thread.sleep(2500);
 
 		// Enter the hotel
 		wm.Listandenter("//i[@class='fa fa-plus']", "1");
-		Thread.sleep(600);
+		Thread.sleep(700);
 
 		wm.sendtextbycssselecotrwithoutclear("#hotelVoucherNumber", Hoteltickectnumber);
-		Thread.sleep(300);
+		Thread.sleep(900);
 		wm.clickbyxpath("//input[@aria-owns='hotelBookingUserName_listbox']");
-		Thread.sleep(90);
+		Thread.sleep(120);
 		wm.Listandenter("//button[@id='ConformationYes']", "0");
 
 		// wm.clickbyxpath("//button[@id='ConformationYes']");
@@ -228,7 +226,8 @@ public class Allservices {
 
 		wm.doubleclickusingxpath("//button[@id='btnhotelsave']");
 
-		Thread.sleep(300);
+		Thread.sleep(900);
+		
 		wm.Listandenter("//span[@class='k-icon k-i-add']", "2");
 		Thread.sleep(600);
 
@@ -248,7 +247,7 @@ public class Allservices {
 		Thread.sleep(900);
 		
 		wm.clickbyxpath("//span[@id='SalesPopup_wnd_title']");
-		Thread.sleep(90);
+		Thread.sleep(120);
 		
 		
 		wm.Listandenterquick("//span[contains(text(),'OK')]", "0");
@@ -268,7 +267,7 @@ public class Allservices {
 
 
 				wm.clickbyxpath("//a[@class='btn btn-danger']");
-				Thread.sleep(90);
+				Thread.sleep(120);
 				/*		
 		Thread.sleep(600);
 		wm.doubleclickusingxpath("//span[@id='SalesPopup_wnd_title']");
@@ -306,9 +305,9 @@ public class Allservices {
 		// Enter the car details
 
 		wm.sendtextbyxvalue("//input[@onchange='onCarCopyTicketChange(this)']", Carcopytickect);
-		Thread.sleep(300);
+		Thread.sleep(500);
 		wm.stabbyxpath("//input[@onchange='onCarCopyTicketChange(this)']");
-		Thread.sleep(200);
+		Thread.sleep(500);
 		wm.Listandenter("//button[@id='ConformationYes']", "0");
 		Thread.sleep(2000);
 
@@ -339,7 +338,7 @@ public class Allservices {
 
 
 		wm.clickbyxpath("//button[@class='btn btn-danger']");
-		Thread.sleep(90);
+		Thread.sleep(120);
 		
 		
 /*		wm.Listandenterquick("//span[@class='k-icon k-i-close']", "0");

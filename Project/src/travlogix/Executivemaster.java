@@ -39,12 +39,12 @@ public class Executivemaster {
 
 	{
 
-		wm.launchbrowser("chrome", utility.Constant.TRAVELOGIXURL);
+		wm.launchbrowser(utility.Constant.Browsername, utility.Constant.TRAVELOGIXURL);
 
 	}
 
 	@Test(dataProvider = "dp")
-	public void logincheckK(String Username, String Password, String Leftsidemenu,String user,String userindex,String Executivegenderindex,
+	public void Executivemaster(String Username, String Password, String Leftsidemenu,String user,String userindex,String Executivegenderindex,
 			String ExecContactNo,String ExecEmailId,String Allocatedbranch,String Allocatedbranchindex,String Nationality,
 			String Nationalityindex,String Desigination,String Desiginationindex,String ExecAccessLevel,
 			String Discountmethod,String Discountmethodindexx,String ExecAllowedDiscValue,String ExecGalileoSignInCode,

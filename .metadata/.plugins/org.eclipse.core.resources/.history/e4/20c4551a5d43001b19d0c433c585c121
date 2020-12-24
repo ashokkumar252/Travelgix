@@ -1,0 +1,9 @@
+package Aircreditcashcarduccf;
+
+import org.testng.annotations.Test;
+
+public class CreditUCCF {
+  @Test
+  public void f() {
+  }
+}

@@ -37,12 +37,12 @@ public class CarbookingGL
 
 	{
 
-		wm.launchbrowser("chrome", utility.Constant.TRAVELOGIXURL);
+		wm.launchbrowser(utility.Constant.Browsername, utility.Constant.TRAVELOGIXURL);
 
 	}
 
 	@Test(dataProvider = "dp")
-	public void logincheckK(String Username, String Password, String Leftsidemenu, String ActiveFrom1,
+	public void CarbookingGL(String Username, String Password, String Leftsidemenu, String ActiveFrom1,
 			String ActiveFrom2, String ActiveFrom3, String Docktype, String Docktypeindex, String Salesbracnh,
 			String Salesbracnhindex, String Customer, String Customerindex, String Leadpaxnamee,
 			String dktClientReference, String Tickectstatusindex,
@@ -70,10 +70,10 @@ public class CarbookingGL
 
 		// wm.sendtextbyid("", );
 		wm.sendtextbyid("LoginCode", Username);
-		Thread.sleep(50);
+		Thread.sleep(90);
 		wm.stab("LoginCode");
 		wm.sendtextbyid("Password", Password);
-		Thread.sleep(50);
+		Thread.sleep(90);
 		wm.clickbyxpath("//input[@value='Login']");
 		Thread.sleep(900);
 
@@ -93,19 +93,19 @@ public class CarbookingGL
 
 		// Dockett
 		wm.sendtextbyxvalue("//input[@aria-owns='dktDocTypeCode_listbox']", Docktype);
-		Thread.sleep(50);
+		Thread.sleep(90);
 		wm.Listandenter("//*[@id='dktDocTypeCode_listbox']/li", Docktypeindex);
 		Thread.sleep(200);
 
 		// Salesbranch
 		wm.sendtextbyxvalue("//input[@aria-owns='DktBranchKey_listbox']", Salesbracnh);
-		Thread.sleep(50);
+		Thread.sleep(90);
 		wm.Listandenter("//*[@id='DktBranchKey_listbox']/li", Salesbracnhindex);
 		Thread.sleep(200);
 
 		// customerr
 		wm.sendtextbyxvalue("//input[@aria-owns='DktPartnername_listbox']", Customer);
-		Thread.sleep(50);
+		Thread.sleep(90);
 		wm.Listandenter("//*[@id='DktPartnername_listbox']/li", Customerindex);
 		Thread.sleep(200);
 
@@ -186,31 +186,31 @@ public class CarbookingGL
 
 		// Servicedetails
 		wm.sendtextbyxvalue("//input[@aria-owns='CcvdCityName_listbox']", City);
-		Thread.sleep(50);
+		Thread.sleep(90);
 		wm.Listandenter("//*[@id='CcvdCityName_listbox']/li", Commonindex);
 		Thread.sleep(90);
 
 		// cartypee
 		wm.sendtextbyxvalue("//input[@aria-owns='CcvdCarTypeKey_listbox']", Cartype);
-		Thread.sleep(50);
+		Thread.sleep(90);
 		wm.Listandenter("//*[@id='CcvdCarTypeKey_listbox']/li", Commonindex);
 		Thread.sleep(90);
 
 		// carchain
 		wm.sendtextbyxvalue("//input[@aria-owns='CcvdCarChainKey_listbox']", Carchain);
-		Thread.sleep(50);
+		Thread.sleep(90);
 		wm.Listandenter("//*[@id='CcvdCarChainKey_listbox']/li", Commonindex);
 		Thread.sleep(90);
 
 		// pickupplace
 		wm.sendtextbyxvalue("//input[@aria-owns='CcvdPickupPlace_listbox']", Pickupplace);
-		Thread.sleep(50);
+		Thread.sleep(90);
 		wm.Listandenter("//*[@id='CcvdPickupPlace_listbox']/li", Commonindex);
 		Thread.sleep(90);
 
 		// Dropofplace
 		wm.sendtextbyxvalue("//input[@aria-owns='CcvdDropoffPlace_listbox']", Dropoffplace);
-		Thread.sleep(50);
+		Thread.sleep(90);
 		wm.Listandenter("//*[@id='CcvdDropoffPlace_listbox']/li", Commonindex);
 		Thread.sleep(90);
 
@@ -226,7 +226,7 @@ public class CarbookingGL
 				"" + CcvdDropoffTime1 + "-" + CcvdDropoffTime2 + "-" + CcvdDropoffTime3 + " " + "00:00");
 		// wm.sendtextbycssselecotrwithoutclear("#CcvdDropoffTime", "00:00");
 
-		Thread.sleep(50);
+		Thread.sleep(90);
 		// no of unites
 		wm.sendtextbycssselecotrwithoutclear("#CcvdNotNoOfCars", CcvdNotNoOfCars);
 		Thread.sleep(90);
@@ -248,13 +248,13 @@ public class CarbookingGL
 
 		// procee typee
 		wm.sendtextbyxvalue("//input[@aria-owns='CtfdProcessTypeKey_listbox']", Processtype);
-		Thread.sleep(50);
+		Thread.sleep(90);
 		wm.Listandenter("//*[@id='CtfdProcessTypeKey_listbox']/li", Commonindex);
 		Thread.sleep(200);
 
 		// Currency
 		wm.sendtextbyxvalue("//input[@aria-owns='CtfdTransCurrency_listbox']", Currency);
-		Thread.sleep(50);
+		Thread.sleep(90);
 		wm.Listandenter("//*[@id='CtfdTransCurrency_listbox']/li", Commonindex);
 		Thread.sleep(200);
 
@@ -286,49 +286,54 @@ public class CarbookingGL
 		 * "//*[@id='div_Car_Header_Details']/div[4]/div/div[1]/div[1]/a/i");
 		 * Thread.sleep(500);
 		 */
-
-		// Enter the taxdetails
-
-		wm.Listandenter("//span[@class='k-icon k-i-add']", "0");
-		Thread.sleep(500);
-
-		wm.stabbyxpath(" //span[@class='k-icon k-i-cancel']");
-		Thread.sleep(200);
-
-		// taxcodee
-
-		wm.clickbyxpath("//span[@aria-owns='AatCode_listbox']");
-		Thread.sleep(50);
-		wm.Listandenter("//*[@id='AatCode_listbox']/li", Commonindex);
-		Thread.sleep(200);
-
-		wm.sendtextbycssselecotrwithoutclear("#AatAmount", "" + AatAmount);
-		Thread.sleep(200);
-		wm.clickbyxpath("//span[@class='k-icon k-i-check']");
-		Thread.sleep(500);
-
 		// enter the details in service fee
 
-		wm.Listandenter("//span[@class='k-icon k-i-add']", "1");
-		Thread.sleep(500);
+				wm.Listandenter("//span[@class='k-icon k-i-add']", "1");
+				Thread.sleep(500);
 
-		// servicecarge
-		wm.sendtextbyxvalue("//input[@aria-owns='CscServiceChargeId_listbox']", Servicecharge);
+				// servicecarge
+				wm.sendtextbyxvalue("//input[@aria-owns='CscServiceChargeId_listbox']", Servicecharge);
 
-		// wm.clickbyxpath("//span[@aria-owns='CscServiceChargeId_listbox']");
-		Thread.sleep(200);
-		wm.Listandenter("//*[@id='CscServiceChargeId_listbox']/li", Commonindex);
-		Thread.sleep(500);
-		wm.stabbyxpath("//input[@aria-owns='CscServiceChargeId_listbox']");
-		Thread.sleep(200);
+				// wm.clickbyxpath("//span[@aria-owns='CscServiceChargeId_listbox']");
+				Thread.sleep(200);
+				wm.Listandenter("//*[@id='CscServiceChargeId_listbox']/li", Commonindex);
+				Thread.sleep(500);
+				wm.stabbyxpath("//input[@aria-owns='CscServiceChargeId_listbox']");
+				Thread.sleep(200);
 
-		wm.sendtextbycssselecotr("#CscBaseAmount", "" + CscBaseAmount);
-		Thread.sleep(200);
+				wm.sendtextbycssselecotr("#CscBaseAmount", "" + CscBaseAmount);
+				Thread.sleep(200);
 
-		wm.clickbyxpath("//span[@class='k-icon k-i-check']");
-		Thread.sleep(200);
+				wm.clickbyxpath("//span[@class='k-icon k-i-check']");
+				Thread.sleep(200);
 
-		wm.clickbyxpath("//*[@id='div_Car_Header_Details']/div[4]/div/div[1]/div[1]/a/i");
+
+				// taxcodee
+
+				// Enter the taxdetails
+
+				wm.Listandenter("//span[@class='k-icon k-i-add']", "0");
+				Thread.sleep(500);
+
+				wm.stabbyxpath(" //span[@class='k-icon k-i-cancel']");
+				Thread.sleep(200);
+
+				
+				wm.clickbyxpath("//span[@aria-owns='AatCode_listbox']");
+				Thread.sleep(90);
+				wm.Listandenter("//*[@id='AatCode_listbox']/li", Commonindex);
+				Thread.sleep(200);
+
+				wm.sendtextbycssselecotrwithoutclear("#AatAmount", "" + AatAmount);
+				Thread.sleep(200);
+				wm.stabbyxpath("//input[@name='AatAmount']");
+				Thread.sleep(200);
+				
+				wm.clickbyxpath("//span[@class='k-icon k-i-check']");
+				Thread.sleep(200);
+
+				
+		//wm.clickbyxpath("//*[@id='div_Car_Header_Details']/div[4]/div/div[1]/div[1]/a/i");
 
 		// Enter the commissiondetals
 
@@ -347,6 +352,7 @@ public class CarbookingGL
 		// Enter the agent incetives
 
 		// Agent incentivee
+		Thread.sleep(200);
 
 		wm.sendtextbyxvalue("//input[@aria-owns='CtscPaybackParnerName_listbox']", Agentincentive);
 		Thread.sleep(100);
@@ -407,14 +413,14 @@ public class CarbookingGL
 		
 
 
-
+/*
 wm.comparetwovalues1to1("//input[@name='AirFopAmount']"
 		, "//input[@name='Amt_NetCollection']", 
 		"Pass: FOP and total amount matches successfully"
 		, " Fail: FOP and total amount not matches successfully");
-
+*/
 Thread.sleep(200);
-
+/*
 wm.Netcollections("//input[@name='CtfdBaseFare']", "//input[@name='TotalTaxAmount']",
 		"//input[@name='TotalServiceFee']", "//input[@name='TotalDiscount']", " //input[@name='TotOutputVat']", 
 		"//input[@name='Amt_NetCollection']", "Net calclaiton done correectly", "Net calclaiton not done correectly");
@@ -423,7 +429,7 @@ wm.Netcollections("//input[@name='CtfdBaseFare']", "//input[@name='TotalTaxAmoun
 wm.Publishedfare("//input[@name='CtfdBaseFare']", "//input[@name='TotalTaxAmount']", "//input[@name='salestotcommm']"
 		,"//input[@name='TotInputVat']", "//input[@name='Amt_NetPayable']", "Net payable Calclated successfuly", 
 		"Net payable not Calclated successfuly");
-
+*/
 
 wm.Netcollectionuisngcancellatiocharges("//input[@name='CtfdBaseFare']", "//input[@name='TotalTaxAmount']", 
 		"//input[@name='TotalServiceFee']", "//input[@name='TotalDiscount']", "//input[@name='TotOutputVat']", 
@@ -462,50 +468,85 @@ wm.Publishedfareusingcancelaltionchargeswithoutuccf("//input[@name='CtfdBaseFare
 		// ======================================================================
 
 		// Enter the udid details
+		
+		
 
-		wm.findelementandsendtextbycss("#Project_Number_AP", ProjectNumberAP);
-		Thread.sleep(50);
-		wm.findelementandsendtextbycss("#Department_AP", DepartmentAP);
-		Thread.sleep(50);
-		wm.findelementandsendtextbycss("#Major_Class_AP", MajorClassAP);
-		Thread.sleep(50);
+	wm.Listandenterthevaluesinvisblexpath("//input[@name='Travel_Status_DN']", DepartmentAP);
+//	Thread.sleep(50);
+	wm.Listandenterthevaluesinvisblexpath("//*[@name='Project_Number_AP']", ProjectNumberAP);
+	//Thread.sleep(50);
+	wm.Listandenterthevaluesinvisblexpath("//*[@name='Department_AP']", DepartmentAP);
+	//Thread.sleep(50);
+	wm.Listandenterthevaluesinvisblexpath("//input[@name='Major_Class_AP']", MajorClassAP);
+	//Thread.sleep(50);
 
-		wm.findelementandsendtextbycss("#Travel_Status_AP", TravelStatusAP);
-		Thread.sleep(50);
-		wm.findelementandsendtextbycss("#Total_Saving_Code_AP", TotalSavingCodeAP);
-		Thread.sleep(50);
-		wm.findelementandsendtextbycss("#Group_Travel_Indicator_AP", GroupTravelIndicatorAP);
-		Thread.sleep(50);
-		wm.findelementandsendtextbycss("#Tour_Code_AP", TourCodeAP);
-		Thread.sleep(50);
-		wm.findelementandsendtextbycss("#Endorsement_Restrict_AP", EndorsementRestrictAP);
-		Thread.sleep(50);
-		wm.findelementandsendtextbycss("#Fare_Calculation_Area_AP", FareCalculationAreaAP);
+	wm.Listandenterthevaluesinvisblexpath("//input[@name='Travel_Status_AP']", TravelStatusAP);
+	//Thread.sleep(50);
+	wm.Listandenterthevaluesinvisblexpath("//input[@name='Total_Saving_Code_AP']", TotalSavingCodeAP);
+	//Thread.sleep(50);
+	wm.Listandenterthevaluesinvisblexpath("//input[@name='Group_Travel_Indicator_AP']", GroupTravelIndicatorAP);
+	//Thread.sleep(50);
+	wm.Listandenterthevaluesinvisblexpath("//input[@name='Tour_Code_AP']", TourCodeAP);
+	//Thread.sleep(50);
+	wm.Listandenterthevaluesinvisblexpath("//input[@name='Endorsement_Restrict_AP']", EndorsementRestrictAP);
+	//Thread.sleep(50);
+	wm.Listandenterthevaluesinvisblexpath("//input[@name='Fare_Calculation_Area_AP']", FareCalculationAreaAP);
+	//Thread.sleep(200);
+
+	
+		wm.Listandenter("//span[@aria-owns='Booking_Type_AP_listbox']", "0");
+		
 		Thread.sleep(200);
-		wm.clickbyxpath("//span[@aria-owns='Booking_Type_AP_listbox']");
-		Thread.sleep(200);
+		
 		wm.Listandenter("//*[@id='Booking_Type_AP_listbox']/li", Commonindex);
 		Thread.sleep(200);
 
-		wm.findelementandsendtextbycss("#Intl_Sales_Indicator_AP", IntlSalesIndicatorAP);
-		Thread.sleep(200);
-		wm.findbyelementbyxpathandclick("//button[@id='btncarsave']");
-		Thread.sleep(50);
-
-		Thread.sleep(16000);
-		wm.clickbyxpath("//button[@id='btncarsave']");
-
+		wm.Listandenterthevaluesinvisblexpath("//input[@name='Intl_Sales_Indicator_AP']", IntlSalesIndicatorAP);
 		Thread.sleep(500);
+
+		wm.doubleclickusingxpath("//button[@id='btncarsave']");
 		
-		wm.Mousemoveover("//input[@name='CcvdSalesExecutiveName_input']");
-		Thread.sleep(200);
-		wm.Listnegativescearios(utility.Constant.Travelogixuitooltipvalidation, "0",
+   wm.sleep();
+   wm.sleep();
+   wm.sleep();
+wm.sleep();
+   
+   Thread.sleep(8000);
+
+	 
+	 wm.clickbyxpath("//*[@class='btn btn-danger']");
+		Thread.sleep(500);
+	
+		wm.Listandenterquick("//span[contains(text(),'Leave Page')]", "0");
+		wm.Listandenterquick("//span[contains(text(),'Leave Page')]", "1");
+		wm.Listandenterquick("//span[contains(text(),'Leave Page')]", "2");
+		wm.Listandenterquick("//span[contains(text(),'Leave Page')]", "3");
+	 wm.sleep();
+	 
+
+		wm.Verifythedropdownvalues("//input[@name='DktNumber']",
+				"Pass : Sales Refund CARbooking GL   created successfuly" + "",
+				"Fail:  Sales Refund CARbooking GL   not created successfuly " + "");
+	
+	/*	
+		wm.Listnegativescearios("//*[@id='DktNumber']", "0",
 				"Pass : Sales Refund CAR   created successfuly" + "",
 				"Fail:  Sales Refund CAR   not created successfuly " + "");
+	*/	
+		Thread.sleep(500);
 		
+		//wm.gettext("//*[@id='DktNumber']");
+		
+		wm.storestrign2("//input[@name='DktNumber']");
+		
+		//wm.gettext("//*[@id='DktNumber']");
+		
+		//wm.Gettextbylistandprint("//*[@id='DktNumber']", "Docketnumber is");
+		
+		
+		Thread.sleep(300);
   
-
-
+    
 
 	}
 

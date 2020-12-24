@@ -38,12 +38,13 @@ public class Hotelpositivecredit {
 
 	{
 
-		wm.launchbrowser("chrome", utility.Constant.TRAVELOGIXURL);
+
+		wm.launchbrowser(utility.Constant.Browsername, utility.Constant.TRAVELOGIXURL);
 
 	}
 
 	@Test(dataProvider = "dp")
-	public void logincheckK(String Username, String Password, String Leftsidemenu, String ActiveFrom1,
+	public void Hotelpositivecredit(String Username, String Password, String Leftsidemenu, String ActiveFrom1,
 			String ActiveFrom2, String ActiveFrom3, String Docktype, String Docktypeindex, String Salesbracnh,
 			String Salesbracnhindex, String Customer, String Customerindex, String Leadpaxnamee,
 			String dktClientReference, String Tickectstatusindex,
@@ -140,11 +141,11 @@ public class Hotelpositivecredit {
 
 		// child
 		wm.sendtextbycssselecotr("#hotelChild", "" + hotelChild);
-		Thread.sleep(80);
+		Thread.sleep(90);
 
 		// booking executivee
 		wm.sendtextbyxvalue("//input[@aria-owns='hotelBookingUserName_listbox']", Bookingexecutive);
-		Thread.sleep(200);
+		Thread.sleep(300);
 		wm.Listandenter("//*[@id='hotelBookingUserName_listbox']/li", Bookingexecutiveindexx);
 		Thread.sleep(200);
 
@@ -255,7 +256,7 @@ public class Hotelpositivecredit {
 
 		wm.stabbyxpath("//input[@aria-owns='HtfdOwnLodgeCardKey_listbox']");
 		Thread.sleep(600);
-
+/*
 		wm.Listandenter("//span[@class='k-icon k-i-add']", "0");
 		Thread.sleep(500);
 
@@ -273,7 +274,7 @@ public class Hotelpositivecredit {
 		Thread.sleep(200);
 		wm.clickbyxpath("//span[@class='k-icon k-i-check']");
 		Thread.sleep(200);
-
+*/
 		// enter the details in service fee
 
 		wm.Listandenter("//span[@class='k-icon k-i-add']", "1");
@@ -294,14 +295,57 @@ public class Hotelpositivecredit {
 		wm.clickbyxpath("//span[@class='k-icon k-i-check']");
 		Thread.sleep(200);
 
-		wm.clickbyxpath("//*[@id='div_Hotel_Header_Details']/div[3]/div/div[1]/div[1]/a/i");
+//		wm.clickbyxpath("//*[@id='div_Hotel_Header_Details']/div[3]/div/div[1]/div[1]/a/i");
 
+
+		wm.Listandenter("//span[@class='k-icon k-i-add']", "0");
+		Thread.sleep(500);
+
+		wm.stabbyxpath(" //span[@class='k-icon k-i-cancel']");
+		Thread.sleep(200);
+
+		// TAX code
+		wm.sendtextbyxvalue("//input[@aria-owns='HotelAtCode_listbox']", Taxcodee);
+		Thread.sleep(100);
+		wm.Listandenter("//*[@id='HotelAtCode_listbox']/li", Commonindex);
+		Thread.sleep(200);
+
+		// TAxamountt
+		wm.sendtextbycssselecotrwithoutclear("#HotelAtAmount", HotelAtAmount);
+		Thread.sleep(200);
+		wm.stabbyxpath("//input[@name='HotelAtAmount']");
+		Thread.sleep(200);
+		wm.clickbyxpath("//span[@class='k-icon k-i-check']");
+		Thread.sleep(200);
+
+
+		
 		// Enter the commissiondetails
 
+		Thread.sleep(90);
+		wm.Selectallbyxpath("//input[@name='hotelFareDiscPercent1']");
+
+		
+		Thread.sleep(90);
+
 		wm.sendtextbycssselecotrwithoutclear("#hotelFareCommPercent1", "" + hotelFareCommPercent1);
+
+		Thread.sleep(90);
+		
+		//wm.Selectallbycsspath("#hotelFareCommPercent2");
+		wm.Selectallbyxpath("//input[@name='hotelFareCommPercent2']");
+
+		Thread.sleep(90);
+
 		wm.sendtextbycssselecotrwithoutclear("#hotelFareCommPercent2", "" + hotelFareCommPercent1);
+
+		Thread.sleep(90);
+		
+		wm.Selectallbycsspath("#hotelFareDiscPercent1");
+		Thread.sleep(90);
+
 		wm.sendtextbycssselecotrwithoutclear("#hotelFareDiscPercent1", "" + hotelFareCommPercent1);
-		Thread.sleep(200);
+		Thread.sleep(90);
 
 		wm.clickbyxpath("//*[@id='div_Hotel_Header_Details']/div[4]/div/div[1]/div[1]/a");
 		Thread.sleep(200);
@@ -350,8 +394,9 @@ public class Hotelpositivecredit {
 		
 		// wm.findbyelementbyxpathandclick(xpath);
 		
-		wm.findbyelementbyxpathandclick("//button[@id='ConformationYes']");
-		Thread.sleep(900);
+		wm.Listandenter("//button[@id='ConformationYes']", "0");
+		
+			Thread.sleep(900);
 		
 		wm.clickbyxpath("//span[@class='k-icon k-i-check']");
 		Thread.sleep(900);
@@ -378,39 +423,97 @@ public class Hotelpositivecredit {
 		
 //wm.clickbyxpath("//*[@id='testData']/i");
 
-		wm.findelementandsendtextbycss("#Project_Number_AP", ProjectNumberAP);
-		Thread.sleep(50);
-		wm.findelementandsendtextbycss("#Department_AP", DepartmentAP);
-		Thread.sleep(50);
-		wm.findelementandsendtextbycss("#Major_Class_AP", MajorClassAP);
-		Thread.sleep(50);
 		
-		wm.findelementandsendtextbycss("#Travel_Status_AP", TravelStatusAP);
-		Thread.sleep(50);
-		wm.findelementandsendtextbycss("#Total_Saving_Code_AP", TotalSavingCodeAP);
-		Thread.sleep(50);
-		wm.findelementandsendtextbycss("#Group_Travel_Indicator_AP", GroupTravelIndicatorAP);
-		Thread.sleep(50);
-		wm.findelementandsendtextbycss("#Tour_Code_AP", TourCodeAP);
-		Thread.sleep(50);
-		wm.findelementandsendtextbycss("#Endorsement_Restrict_AP", EndorsementRestrictAP);
-		Thread.sleep(50);
-		wm.findelementandsendtextbycss("#Fare_Calculation_Area_AP", FareCalculationAreaAP);
-		Thread.sleep(50);
-		wm.clickbyxpath("//span[@aria-owns='Booking_Type_AP_listbox']");
-		Thread.sleep(100);
-		wm.Listandenter("//*[@id='Booking_Type_AP_listbox']/li", Commonindex);
-		Thread.sleep(200);
+
+		wm.Listandenterthevaluesinvisblexpath("//input[@name='Travel_Status_DN']", DepartmentAP);
+//		Thread.sleep(50);
+		wm.Listandenterthevaluesinvisblexpath("//*[@name='Project_Number_AP']", ProjectNumberAP);
+		//Thread.sleep(50);
+		wm.Listandenterthevaluesinvisblexpath("//*[@name='Department_AP']", DepartmentAP);
+		//Thread.sleep(50);
+		wm.Listandenterthevaluesinvisblexpath("//input[@name='Major_Class_AP']", MajorClassAP);
+		//Thread.sleep(50);
+
+		wm.Listandenterthevaluesinvisblexpath("//input[@name='Travel_Status_AP']", TravelStatusAP);
+		//Thread.sleep(50);
+		wm.Listandenterthevaluesinvisblexpath("//input[@name='Total_Saving_Code_AP']", TotalSavingCodeAP);
+		//Thread.sleep(50);
+		wm.Listandenterthevaluesinvisblexpath("//input[@name='Group_Travel_Indicator_AP']", GroupTravelIndicatorAP);
+		//Thread.sleep(50);
+		wm.Listandenterthevaluesinvisblexpath("//input[@name='Tour_Code_AP']", TourCodeAP);
+		//Thread.sleep(50);
+		wm.Listandenterthevaluesinvisblexpath("//input[@name='Endorsement_Restrict_AP']", EndorsementRestrictAP);
+		//Thread.sleep(50);
+		wm.Listandenterthevaluesinvisblexpath("//input[@name='Fare_Calculation_Area_AP']", FareCalculationAreaAP);
+		//Thread.sleep(200);
 
 		
-		wm.findelementandsendtextbycss("#Intl_Sales_Indicator_AP", IntlSalesIndicatorAP);
-		Thread.sleep(50);
-		wm.findbyelementbyxpathandclick("//button[@id='btnhotelsave']");
-		Thread.sleep(50);
+			wm.Listandenter("//span[@aria-owns='Booking_Type_AP_listbox']", "0");
+			
+			Thread.sleep(200);
+			
+			wm.Listandenter("//*[@id='Booking_Type_AP_listbox']/li", Commonindex);
+			Thread.sleep(200);
+
+			wm.Listandenterthevaluesinvisblexpath("//input[@name='Intl_Sales_Indicator_AP']", IntlSalesIndicatorAP);
+			Thread.sleep(500);
+
+			wm.findbyelementbyxpathandclick("//button[@id='btnhotelsave']");
+	
 
 		wm.sleep();
-		Thread.sleep(300);
+		wm.sleep();
+		wm.sleep();
+		wm.sleep();
+  
+		
 
+		 
+		 wm.clickbyxpath("//*[@class='btn btn-danger']");
+			Thread.sleep(500);
+		
+			wm.Listandenterquick("//span[contains(text(),'Leave Page')]", "0");
+			wm.Listandenterquick("//span[contains(text(),'Leave Page')]", "1");
+			wm.Listandenterquick("//span[contains(text(),'Leave Page')]", "2");
+			wm.Listandenterquick("//span[contains(text(),'Leave Page')]", "3");
+		 wm.sleep();
+			/*
+			wm.Listnegativescearios("//*[@id='DktNumber']", "0",
+					"Pass : Sales Refund Hotel   created successfuly" + "",
+					"Fail:  Sales Refund Hotel not created successfuly " + "");
+			*/
+		 
+
+			wm.Verifythedropdownvalues("//input[@name='DktNumber']",
+					"Pass : Sales Refund Hotelpositivecredit   created successfuly" + "",
+					"Fail:  Sales Refund Hotelpositivecredit   not created successfuly " + "");
+		
+			
+			Thread.sleep(2000);
+			
+			//wm.gettext("//*[@id='DktNumber']");
+			
+			wm.storestrign2("//*[@name='DktNumber']");
+			
+			//wm.gettext("//*[@id='DktNumber']");
+			
+			//wm.Gettextbylistandprint("//*[@id='DktNumber']", "Docketnumber is");
+			
+			
+			Thread.sleep(300);
+
+			
+		
+/*		wm.sleep();
+		wm.Mousemoveover("//input[@name='hotelProviderKey_input']");
+		Thread.sleep(200);
+		wm.Listnegativescearios(utility.Constant.Travelogixuitooltipvalidation, "0",
+				"Pass : Sales Refund hotel  created successfuly" + "",
+				"Fail:  Sales Refund hotel  not created successfuly " + "");
+	
+
+		Thread.sleep(300);
+*/
 	}
 
 	@AfterMethod

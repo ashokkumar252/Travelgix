@@ -38,12 +38,12 @@ public class CarPositivecash {
 
 	{
 
-		wm.launchbrowser("chrome", utility.Constant.TRAVELOGIXURL);
+		wm.launchbrowser(utility.Constant.Browsername, utility.Constant.TRAVELOGIXURL);
 
 	}
 
 	@Test(dataProvider = "dp")
-	public void logincheckK(String Username, String Password, String Leftsidemenu, String ActiveFrom1,
+	public void CarPositivecash(String Username, String Password, String Leftsidemenu, String ActiveFrom1,
 			String ActiveFrom2, String ActiveFrom3, String Docktype, String Docktypeindex, String Salesbracnh,
 			String Salesbracnhindex, String Customer, String Customerindex, String Leadpaxnamee,
 			String dktClientReference, String Tickectstatusindex,
@@ -343,14 +343,17 @@ public class CarPositivecash {
 		wm.clickbyxpath("//*[@id='div_Car_Header_Details']/div[4]/div/div[1]/div[1]/a/i");
 
 		// Enter the commissiondetals
-
 		Thread.sleep(200);
 
-		wm.sendtextbycssselecotr("#CtfdCommPercent1", "" + CtfdCommPercent1);
-		wm.sendtextbycssselecotr("#CtfdCommPercent2", "" + CtfdCommPercent2);
-		wm.sendtextbycssselecotr("#CtfdDiscPercent1", "" + CtfdDiscPercent1);
+		wm.Selectallbycsspath("#CtfdCommPercent1");
+		wm.sendtextbycssselecotrwithoutclear("#CtfdCommPercent1", ""+CtfdCommPercent1);
+		wm.Selectallbycsspath("#CtfdCommPercent2");
+		wm.sendtextbycssselecotrwithoutclear("#CtfdCommPercent2", ""+CtfdCommPercent2);
+		wm.Selectallbycsspath("#CtfdDiscPercent1");
+		wm.sendtextbycssselecotrwithoutclear("#CtfdDiscPercent1", ""+CtfdDiscPercent1);
 		Thread.sleep(500);
 		wm.clickbyxpath("//*[@id='div_Car_Header_Details']/div[5]/div/div[1]/div[1]/a/i");
+
 
 		// Enter the agent incetives
 
@@ -369,7 +372,9 @@ public class CarPositivecash {
 		wm.Listandenter("//span[@class='k-icon k-i-add']", "2");
 		Thread.sleep(500);
 
-		wm.findbyelementbyxpathandclick("//button[@id='ConformationYes']");
+		wm.Listandenter("//button[@id='ConformationYes']", "0");
+		
+		//wm.findbyelementbyxpathandclick("//button[@id='ConformationYes']");
 		Thread.sleep(900);
 
 		// ===========================================
@@ -391,6 +396,34 @@ public class CarPositivecash {
 
 		wm.clickbyxpath("//span[@class='k-icon k-i-check']");
 		Thread.sleep(900);
+		
+		wm.Netcollections("//input[@name='CtfdBaseFare']", "//input[@name='TotalTaxAmount']",
+				"//input[@name='TotalServiceFee']", "//input[@name='TotalDiscount']", "//input[@name='TotOutputVat']", 
+				"//input[@name='Amt_NetCollection']", "Net calclaiton done correectly", "Net calclaiton not done correectly");
+
+
+		wm.Publishedfare("//input[@name='CtfdBaseFare']", "//input[@name='TotalTaxAmount']", "//input[@name='salestotcommm']"
+				,"//input[@name='TotInputVat']", "//input[@name='Amt_NetPayable']", "Net payable Calclated successfuly", 
+				"Net payable not Calclated successfuly");
+
+
+
+
+		wm.Netcollectionuisngcancellatiocharges("//input[@name='CtfdBaseFare']", "//input[@name='TotalTaxAmount']", 
+				"//input[@name='TotalServiceFee']", "//input[@name='TotalDiscount']", "//input[@name='TotOutputVat']", 
+				"//input[@name='Amt_NetCollection']", "//input[@name='CtfdAgentCancelCharge']",
+				"//input[@name='CtfdSupplierCancelCharge']", "Net calclaiton done correectly using cancelaltion charges",
+				"Net calclaiton not done correectly using cancelaltion charges");
+
+
+		wm.Publishedfareusingcancelaltionchargeswithoutuccf("//input[@name='CtfdBaseFare']", "//input[@name='TotalTaxAmount']"
+				, "//input[@name='salestotcommm']", "//input[@name='CtfdSupplierCancelCharge']",
+				"//input[@name='TotInputVat']", "//input[@name='Amt_NetPayable']", "payable calculation done successfuly using cancellation charges", 
+				"payable calculation not done successfuly using cancellation charges");
+
+
+		Thread.sleep(200);
+		
 		wm.clickbyxpath("//*[@id='testData']/i");
 		Thread.sleep(500);
 
@@ -407,38 +440,95 @@ public class CarPositivecash {
 
 		// Enter the udid details
 
-		wm.findelementandsendtextbycss("#Project_Number_AP", ProjectNumberAP);
-		Thread.sleep(50);
-		wm.findelementandsendtextbycss("#Department_AP", DepartmentAP);
-		Thread.sleep(50);
-		wm.findelementandsendtextbycss("#Major_Class_AP", MajorClassAP);
-		Thread.sleep(50);
+		
 
-		wm.findelementandsendtextbycss("#Travel_Status_AP", TravelStatusAP);
-		Thread.sleep(50);
-		wm.findelementandsendtextbycss("#Total_Saving_Code_AP", TotalSavingCodeAP);
-		Thread.sleep(50);
-		wm.findelementandsendtextbycss("#Group_Travel_Indicator_AP", GroupTravelIndicatorAP);
-		Thread.sleep(50);
-		wm.findelementandsendtextbycss("#Tour_Code_AP", TourCodeAP);
-		Thread.sleep(50);
-		wm.findelementandsendtextbycss("#Endorsement_Restrict_AP", EndorsementRestrictAP);
-		Thread.sleep(50);
-		wm.findelementandsendtextbycss("#Fare_Calculation_Area_AP", FareCalculationAreaAP);
-		Thread.sleep(200);
-		wm.clickbyxpath("//span[@aria-owns='Booking_Type_AP_listbox']");
-		Thread.sleep(200);
-		wm.Listandenter("//*[@id='Booking_Type_AP_listbox']/li", Commonindex);
-		Thread.sleep(200);
+		wm.Listandenterthevaluesinvisblexpath("//input[@name='Travel_Status_DN']", DepartmentAP);
+//		Thread.sleep(50);
+		wm.Listandenterthevaluesinvisblexpath("//*[@name='Project_Number_AP']", ProjectNumberAP);
+		//Thread.sleep(50);
+		wm.Listandenterthevaluesinvisblexpath("//*[@name='Department_AP']", DepartmentAP);
+		//Thread.sleep(50);
+		wm.Listandenterthevaluesinvisblexpath("//input[@name='Major_Class_AP']", MajorClassAP);
+		//Thread.sleep(50);
 
-		wm.findelementandsendtextbycss("#Intl_Sales_Indicator_AP", IntlSalesIndicatorAP);
+		wm.Listandenterthevaluesinvisblexpath("//input[@name='Travel_Status_AP']", TravelStatusAP);
+		//Thread.sleep(50);
+		wm.Listandenterthevaluesinvisblexpath("//input[@name='Total_Saving_Code_AP']", TotalSavingCodeAP);
+		//Thread.sleep(50);
+		wm.Listandenterthevaluesinvisblexpath("//input[@name='Group_Travel_Indicator_AP']", GroupTravelIndicatorAP);
+		//Thread.sleep(50);
+		wm.Listandenterthevaluesinvisblexpath("//input[@name='Tour_Code_AP']", TourCodeAP);
+		//Thread.sleep(50);
+		wm.Listandenterthevaluesinvisblexpath("//input[@name='Endorsement_Restrict_AP']", EndorsementRestrictAP);
+		//Thread.sleep(50);
+		wm.Listandenterthevaluesinvisblexpath("//input[@name='Fare_Calculation_Area_AP']", FareCalculationAreaAP);
+		//Thread.sleep(200);
+
+		
+			wm.Listandenter("//span[@aria-owns='Booking_Type_AP_listbox']", "0");
+			
+			Thread.sleep(200);
+			
+			wm.Listandenter("//*[@id='Booking_Type_AP_listbox']/li", Commonindex);
+			Thread.sleep(200);
+
+			wm.Listandenterthevaluesinvisblexpath("//input[@name='Intl_Sales_Indicator_AP']", IntlSalesIndicatorAP);
+			Thread.sleep(500);
+
+			
+		
+		wm.doubleclickusingxpath("//button[@id='btncarsave']");
+	
+		wm.sleep();
+
+		wm.sleep();
+		wm.sleep();
+		wm.sleep();
+
+		 wm.clickbyxpath("//*[@class='btn btn-danger']");
+			Thread.sleep(500);
+		
+			wm.Listandenterquick("//span[contains(text(),'Leave Page')]", "0");
+			wm.Listandenterquick("//span[contains(text(),'Leave Page')]", "1");
+			wm.Listandenterquick("//span[contains(text(),'Leave Page')]", "2");
+			wm.Listandenterquick("//span[contains(text(),'Leave Page')]", "3");
+		 wm.sleep();
+		
+
+			wm.Verifythedropdownvalues("//input[@name='DktNumber']",
+					"Pass : Sales Refund CarPositivecash   created successfuly" + "",
+					"Fail:  Sales Refund CarPositivecash   not created successfuly " + "");
+		
+			
+		 /*
+			wm.Listnegativescearios("//*[@id='DktNumber']", "0",
+					"Pass : Sales Refund CAR   created successfuly" + "",
+					"Fail:  Sales Refund CAR   not created successfuly " + "");
+			
+		*/	Thread.sleep(2000);
+			
+			//wm.gettext("//*[@id='DktNumber']");
+			
+			wm.storestrign2("//input[@name='DktNumber']");
+			
+			//wm.gettext("//*[@id='DktNumber']");
+			
+			//wm.Gettextbylistandprint("//*[@id='DktNumber']", "Docketnumber is");
+			
+			
+			Thread.sleep(300);
+		/*
+		wm.doubleclickusingxpath("//button[@id='btncarsave']");
 		Thread.sleep(200);
-		wm.findbyelementbyxpathandclick("//button[@id='btncarsave']");
-		Thread.sleep(50);
-
-		Thread.sleep(16000);
-
-	}
+		
+		
+		wm.Mousemoveover("//input[@name='CcvdSalesExecutiveName_input']");
+		Thread.sleep(200);
+		wm.Listnegativescearios(utility.Constant.Travelogixuitooltipvalidation, "0",
+				"Pass : Sales Refund CAR   created successfuly" + "",
+				"Fail:  Sales Refund CAR   not created successfuly " + "");
+	*/
+  	}
 
 	@AfterMethod
 	public void close()

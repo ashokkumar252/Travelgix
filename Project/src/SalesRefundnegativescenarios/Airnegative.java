@@ -36,13 +36,12 @@ public class Airnegative {
 	public void browesrnstatiation()
 
 	{
-
-		wm.launchbrowser("chrome", utility.Constant.TRAVELOGIXURL);
+		wm.launchbrowser(utility.Constant.Browsername, utility.Constant.TRAVELOGIXURL);
 
 	}
 
 	@Test(dataProvider = "dp")
-	public void logincheckK(String Username, String Password, String Leftsidemenu, String Commonindex,
+	public void Airnegative(String Username, String Password, String Leftsidemenu, String Commonindex,
 			String Notcollectedtick, String Partiallycollectedtick, String Collectedtickects, String Docketinbound,
 			String Docketoutbound, String Salesbranchinactivedata, String Afterselesalesbranchcodereflected,
 			String Acticecustomer, String Inactivecustomer, String Verifydocketinactivestatus,

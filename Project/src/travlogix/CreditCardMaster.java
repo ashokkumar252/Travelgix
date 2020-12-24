@@ -39,12 +39,12 @@ public class CreditCardMaster
 
 	{
 
-		wm.launchbrowser("chrome", utility.Constant.TRAVELOGIXURL);
+		wm.launchbrowser(utility.Constant.Browsername, utility.Constant.TRAVELOGIXURL);
 
 	}
 
 	@Test(dataProvider = "dp")
-	public void logincheckK(String Username, String Password, String Leftsidemenu,String CCcode,String CCdescription,
+	public void CreditCardMaster(String Username, String Password, String Leftsidemenu,String CCcode,String CCdescription,
 			String Creditcardstaus,String Creditcardstausindexx,String Arlinkstatus,String Arlinkstatusindex,
 			String CcServiceFeePercentage,String Onlodgecardstatusindex,String CcOwnLodgeCardNumber,
 			String Aplinkstatus,String Aplinkstatusindex,String CcRemarks,String CActiveFrom1,

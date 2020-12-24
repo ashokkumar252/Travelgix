@@ -37,12 +37,12 @@ public class HotelbookingGift
 
 	{
 
-		wm.launchbrowser("chrome", utility.Constant.TRAVELOGIXURL);
+		wm.launchbrowser(utility.Constant.Browsername, utility.Constant.TRAVELOGIXURL);
 
 	}
 
 	@Test(dataProvider = "dp")
-	public void logincheckK(String Username, String Password, String Leftsidemenu, String ActiveFrom1,
+	public void HotelbookingGift(String Username, String Password, String Leftsidemenu, String ActiveFrom1,
 			String ActiveFrom2, String ActiveFrom3, String Docktype, String Docktypeindex, String Salesbracnh,
 			String Salesbracnhindex, String Customer, String Customerindex, String Leadpaxnamee,
 			String dktClientReference, String Tickectstatusindex,
@@ -256,7 +256,7 @@ public class HotelbookingGift
 
 		wm.stabbyxpath("//input[@aria-owns='HtfdOwnLodgeCardKey_listbox']");
 		Thread.sleep(600);
-
+/*
 		wm.Listandenter("//span[@class='k-icon k-i-add']", "0");
 		Thread.sleep(500);
 
@@ -274,7 +274,7 @@ public class HotelbookingGift
 		Thread.sleep(200);
 		wm.clickbyxpath("//span[@class='k-icon k-i-check']");
 		Thread.sleep(90);
-
+*/
 		// enter the details in service fee
 
 		wm.Listandenter("//span[@class='k-icon k-i-add']", "1");
@@ -295,8 +295,32 @@ public class HotelbookingGift
 		wm.clickbyxpath("//span[@class='k-icon k-i-check']");
 		Thread.sleep(500);
 
-		wm.clickbyxpath("//*[@id='div_Hotel_Header_Details']/div[3]/div/div[1]/div[1]/a/i");
+		//wm.clickbyxpath("//*[@id='div_Hotel_Header_Details']/div[3]/div/div[1]/div[1]/a/i");
 
+
+		wm.Listandenter("//span[@class='k-icon k-i-add']", "0");
+		Thread.sleep(500);
+
+		wm.stabbyxpath(" //span[@class='k-icon k-i-cancel']");
+		Thread.sleep(200);
+
+		// TAX code
+		wm.sendtextbyxvalue("//input[@aria-owns='HotelAtCode_listbox']", Taxcodee);
+		Thread.sleep(100);
+		wm.Listandenter("//*[@id='HotelAtCode_listbox']/li", Commonindex);
+		Thread.sleep(90);
+
+		// TAxamountt
+		wm.sendtextbycssselecotrwithoutclear("#HotelAtAmount", HotelAtAmount);
+		Thread.sleep(200);
+		wm.stabbyxpath("//input[@name='HotelAtAmount']");
+		Thread.sleep(200);
+		wm.clickbyxpath("//span[@class='k-icon k-i-check']");
+		Thread.sleep(200);
+
+
+		
+		
 		// Enter the commissiondetails
 
 		Thread.sleep(90);
@@ -381,6 +405,7 @@ public class HotelbookingGift
 		//enter the uccf detailss
 		
 		//selecte the GL  optionsdetails
+		Thread.sleep(200);
 		
 		wm.Listandenter("//span[@class='k-icon k-i-add']", "3");
 		Thread.sleep(200);
@@ -484,6 +509,43 @@ wm.Publishedfareusingcancelaltionchargeswithoutuccf("//input[@name='hoteltfdBase
 		
 
 		wm.sleep();
+	    wm.sleep();
+	    wm.sleep();
+	    wm.sleep();
+	    wm.clickbyxpath("//*[@class='btn btn-danger']");
+		Thread.sleep(500);
+	
+		wm.Listandenterquick("//span[contains(text(),'Leave Page')]", "0");
+		wm.Listandenterquick("//span[contains(text(),'Leave Page')]", "1");
+		wm.Listandenterquick("//span[contains(text(),'Leave Page')]", "2");
+		wm.Listandenterquick("//span[contains(text(),'Leave Page')]", "3");
+	 wm.sleep();
+	 
+
+		wm.Verifythedropdownvalues("//input[@name='DktNumber']",
+				"Pass : Sales Refund Hotel booking gift   created successfuly" + "",
+				"Fail:  Sales Refund Hotel booking gift   not created successfuly " + "");
+	
+	/*	
+		wm.Listnegativescearios("//*[@id='DktNumber']", "0",
+				"Pass : Sales Refund Hotel   created successfuly" + "",
+				"Fail:  Sales Refund Hotel   not created successfuly " + "");
+	*/	
+		Thread.sleep(2000);
+		
+		//wm.gettext("//*[@id='DktNumber']");
+		
+		wm.storestrign2("//input[@name='DktNumber']");
+		
+		//wm.gettext("//*[@id='DktNumber']");
+		
+		//wm.Gettextbylistandprint("//*[@id='DktNumber']", "Docketnumber is");
+		
+		
+		Thread.sleep(300);
+
+	    /*
+		
 		wm.clickbyxpath("//button[@id='btnhotelsave']");
 		Thread.sleep(500);
 			
@@ -492,7 +554,7 @@ wm.Publishedfareusingcancelaltionchargeswithoutuccf("//input[@name='hoteltfdBase
 		wm.Listnegativescearios(utility.Constant.Travelogixuitooltipvalidation, "0",
 				"Pass : Sales Refund hotel  created successfuly" + "",
 				"Fail:  Sales Refund hotel  not created successfuly " + "");
-	
+	*/
 
 	}
 

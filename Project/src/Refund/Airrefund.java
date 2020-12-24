@@ -1,4 +1,5 @@
 package Refund;
+
 import utility.Constant;
 import java.io.IOException;
 import java.sql.Driver;
@@ -13,9 +14,9 @@ import travlogix.Wrappermethods;
 import atu.testng.reports.listeners.ATUReportsListener;
 import atu.testng.reports.listeners.ConfigurationListener;
 import atu.testng.reports.listeners.MethodListener;
+
 @Listeners({ ATUReportsListener.class, ConfigurationListener.class, MethodListener.class })
-public class Airrefund
-{
+public class Airrefund {
 
 	static {
 
@@ -43,10 +44,12 @@ public class Airrefund
 	}
 
 	@Test(dataProvider = "dp")
-	public void Airpositive(String Username, String Password, String Leftsidemenu, String ActiveFrom1,
-			String ActiveFrom2, String ActiveFrom3, String Docktype, String Docktypeindex, String Salesbracnh,
-			String Salesbracnhindex, String Customer, String Customerindex, String Leadpaxnamee,
-			String dktClientReference,String Tickectstatusindex,String AatdTicketNumber) throws Exception
+	public void Airrefund(String Username, String Password, String Leftsidemenu, String ActiveFrom1, String ActiveFrom2,
+			String ActiveFrom3, String Docktype, String Docktypeindex, String Salesbracnh, String Salesbracnhindex,
+			String Customer, String Customerindex, String Leadpaxnamee, String dktClientReference,
+			String Tickectstatusindex, String AatdTicketNumber, String atdRefundValidity1, String atdRefundValidity2,
+			String atdRefundValidity3, String ESFOUTVAT, String ESFINPVAT, String AtfdAirlineCancelCharge,
+			String AtfdAgentCancelCharge) throws Exception
 
 	{
 
@@ -103,48 +106,129 @@ public class Airrefund
 		wm.Listandenter("//i[@class='fa fa-chevron-down']", "0");
 		Thread.sleep(200);
 		wm.Listandenter("//i[@class='fa fa-plus']", "0");
-		Thread.sleep(2500);
+		Thread.sleep(2000);
 
 		// Ait
 
 		// ===============================================================================
-		//Select the tickectstatus
-		
+		// Select the tickectstatus
+
 		wm.clickbyxpath("//span[@aria-owns='AatdTicketStatus_listbox']");
 		Thread.sleep(90);
-		wm.Listandenter("//*[@id='AatdTicketStatus_listbox']/li",Tickectstatusindex);
+		wm.Listandenter("//*[@id='AatdTicketStatus_listbox']/li", Tickectstatusindex);
 		Thread.sleep(150);
 
 		wm.sendtextbycssselecotrwithoutclear("#AatdTicketNumber", "" + AatdTicketNumber);
 		wm.stabbyxpath("//input[@id='AatdTicketNumber']");
-		
+
+		Thread.sleep(500);
+
+		wm.Listandenterquick("//button[@id='ConformationYes']", "0");
+
 		Thread.sleep(900);
-		
-		
+		wm.sendtextbycssselecotr("#atdRefundValidity",
+				"" + atdRefundValidity1 + "-" + atdRefundValidity2 + "-" + atdRefundValidity3);
+
+		Thread.sleep(500);
 
 		wm.doubleclickusingxpath("//input[@name='AtfdReasonCode']");
 		wm.stabbyxpath("//input[@name='AtfdReasonCode']");
 		Thread.sleep(600);
 
-		wm.clickbyxpath("//*[@id='divAirsectordtls']/div/div[1]/div[1]/a/i");
+		// wm.clickbyxpath("//*[@id='divAirsectordtls']/div/div[1]/div[1]/a/i");
+		// Thread.sleep(500);
+
+		wm.clickbyxpath("//*[@id='divAirCommissDtls']/div/div[1]/div[1]/a/i");
+		Thread.sleep(900);
+
+		// wm.doubleclickusingxpath("//input[@name='AtfdIncentivePaid']");
+		wm.stabbyxpath("//input[@name='AtfdIncentivePaid']");
+		Thread.sleep(90);
+		wm.sendtextbycssselecotrwithoutclear("#ESF_OUTVAT", "" + ESFOUTVAT);
+		Thread.sleep(90);
+
+		wm.stabbyxpath("//input[@name='ESF_OUTVAT']");
+		Thread.sleep(90);
+		wm.sendtextbycssselecotrwithoutclear("#ESF_INPVAT", "" + ESFINPVAT);
+		Thread.sleep(90);
+
+		wm.stabbyxpath("//input[@name='ESF_INPVAT']");
+		Thread.sleep(90);
+		wm.sendtextbycssselecotrwithoutclear("#AtfdAirlineCancelCharge", "" + AtfdAirlineCancelCharge);
+		Thread.sleep(90);
+
+		wm.stabbyxpath("//input[@name='AtfdAirlineCancelCharge']");
+		Thread.sleep(90);
+		wm.sendtextbycssselecotrwithoutclear("#AtfdAgentCancelCharge", "" + AtfdAgentCancelCharge);
+		Thread.sleep(90);
+
+		wm.clickbyxpath("//*[@id='divAirCommissDtls']/div/div[1]/div[1]/a/i");
 		Thread.sleep(500);
 
+		wm.clickbyxpath("//*[@id='acc110']/i");
 
-//Calcualtion amount details
-		
-wm.sendtextbycssselecotrwithoutclear("#AtfdAgentCancelCharge",""+AtfdAgentCancelCharge);
-
-wm.sendtextbycssselecotrwithoutclear("#AtfdAirlineCancelCharge",""+AtfdAirlineCancelCharge);
-
-
-
-
-
-
-				
-		
-		wm.sleep();
 		Thread.sleep(300);
+		// wm.clickbyxpath("//*[@id='acc110']/i");
+
+		wm.doubleclickusingxpath("//*[@id='Travel_Status_DN']");
+
+		Thread.sleep(500);
+
+		wm.storestrign2("//input[@name='Amt_NetCollection']");
+		Thread.sleep(300);
+
+		
+		wm.clickbyxpath("//*[@id='testData']/i");
+		Thread.sleep(500);
+		wm.Listandenterquick("//span[@class='k-icon k-i-edit']", "2");
+		
+		Thread.sleep(500);
+
+		wm.sendtextbyxvalue("//input[@name='MiscFOPAmount']", wm.store2);
+		Thread.sleep(500);
+
+		wm.doubleclickusingxpath("//span[@class='k-icon k-i-check']");
+		Thread.sleep(500);
+
+		wm.Netcollectionsuisngorcandcancellatiocharges("//input[@name='AtfdBaseFare']",
+				"//input[@name='AtfdIncentivePaid']", "//input[@name='TotalTaxAmount']",
+				"//input[@name='TotalServiceFee']", "//input[@name='TotalDiscount']", " //input[@name='TotOutputVat']",
+				"//input[@name='Amt_NetCollection']", "//input[@name='AtfdAgentCancelCharge']",
+				" //input[@name='AtfdAirlineCancelCharge']",
+				"Net collection  done uisng cancelaltion chargescorreectly",
+				"Net collection not done correectly using canelaltion charges");
+		Thread.sleep(200);
+
+		wm.Publishedfareusingcancelaltioncharges("//input[@name='AtfdDealFare']", "//input[@name='TotalTaxAmount']",
+				"//input[@name='salestotcommm']", "//input[@name='AtfdAirlineCancelCharge']",
+				"//input[@name='TotInputVat']", "", "//input[@name='Amt_NetPayable']",
+				"Net publishedfare Calclated successfuly using cancelaltion charges",
+				"Net publishedfare not Calclated successfuly using cancelaltion charges");
+
+		Thread.sleep(200);
+
+		wm.doubleclickusingxpath("//button[@id='btnairsave']");
+
+		Thread.sleep(500);
+
+		wm.Listandenterquick("//button[@id='ConformationYes']", "0");
+
+		wm.sleep();
+		wm.sleep();
+		wm.sleep();
+		wm.sleep();
+
+		wm.doubleclickusingxpath("//button[@id='btnairsave']");
+
+		wm.Mousemoveover("//input[@onchange='onairTicketChange(this)']");
+		Thread.sleep(200);
+		wm.Listnegativescearios(utility.Constant.Travelogixuitooltipvalidation, "0",
+				"Pass : Sales Refund Air Tickect Refund created successfuly" + "",
+				"Fail:  Sales Refund Air Tickect Refund  not created successfuly " + "");
+
+		Thread.sleep(200);
+
+		wm.Printmessages("Air tickect number" + AatdTicketNumber);
 
 	}
 

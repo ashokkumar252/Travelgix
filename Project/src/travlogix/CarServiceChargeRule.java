@@ -39,12 +39,12 @@ public class CarServiceChargeRule {
 
 	{
 
-		wm.launchbrowser("chrome", utility.Constant.TRAVELOGIXURL);
+		wm.launchbrowser(utility.Constant.Browsername, utility.Constant.TRAVELOGIXURL);
 
 	}
 
 	@Test(dataProvider = "dp")
-	public void logincheckK(String Username, String Password, String Leftsidemenu,
+	public void CarServiceChargeRule(String Username, String Password, String Leftsidemenu,
 			String Code,String Vehicletype,String Vehicletypeindex,String ActiveFrom1,String ActiveFrom2,
 			String ActiveFrom3,String ActiveTo1,String ActiveTo2,String ActiveTo3,String Suppliername,
 			String Suppliernameindexx,String Chargename,String Chargenameindexx,String Statusindex

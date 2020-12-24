@@ -39,12 +39,12 @@ public class HotelServiceChargeRule {
 
 	{
 
-		wm.launchbrowser("chrome", utility.Constant.TRAVELOGIXURL);
+		wm.launchbrowser(utility.Constant.Browsername, utility.Constant.TRAVELOGIXURL);
 
 	}
 
 	@Test(dataProvider = "dp")
-	public void logincheckK(String Username, String Password, String Leftsidemenu, String HotelServiceChargeName,
+	public void HotelServiceChargeRule(String Username, String Password, String Leftsidemenu, String HotelServiceChargeName,
 			String Country, String Countryindex, String City, String Cityindexx, String Hotelname,
 			String Hotelnameindex, String Noofrooms, String Noofroomsindex, String Hoteltype, String Hoteltypeindex,
 			String Chargename, String Chargenameindex, String BookingFromDate1, String BookingFromDate2,

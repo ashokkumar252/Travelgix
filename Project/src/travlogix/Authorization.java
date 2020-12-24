@@ -39,12 +39,12 @@ public class Authorization
 
 	{
 
-		wm.launchbrowser("chrome", utility.Constant.TRAVELOGIXURL);
+		wm.launchbrowser(utility.Constant.Browsername, utility.Constant.TRAVELOGIXURL);
 
 	}
 
 	@Test(dataProvider = "dp")
-	public void logincheckK(String Username, String Password, String Leftsidemenu,String Code,
+	public void Authorization(String Username, String Password, String Leftsidemenu,String Code,
 			String authTicketNumber,String authAmount,String authUserName,String Airline,String Airlineindex,
 			String Tickectstatus,String Tickectstatusindex,String Useruser,String Useduserindex,
 			String Statusindexx) throws Exception

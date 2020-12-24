@@ -39,12 +39,12 @@ public class MiscServiceChargeRule {
 
 	{
 
-		wm.launchbrowser("chrome", utility.Constant.TRAVELOGIXURL);
+		wm.launchbrowser(utility.Constant.Browsername, utility.Constant.TRAVELOGIXURL);
 
 	}
 
 	@Test(dataProvider = "dp")
-	public void logincheckK(String Username, String Password, String Leftsidemenu, String mimscrServiceRuleName,
+	public void MiscServiceChargeRule(String Username, String Password, String Leftsidemenu, String mimscrServiceRuleName,
 			String Servicetype, String Servicetypeindex, String Servicecatgeory, String Servicecatgeoryindex,
 			String ActiveFrom1, String ActiveFrom2, String ActiveFrom3, String ActiveTo1, String ActiveTo2,
 			String ActiveTo3, String Chargename, String Chargenameindex, String Country, String Contryindexx,

@@ -1,9 +1,0 @@
-package Refund;
-
-import org.testng.annotations.Test;
-
-public class Airrefund {
-  @Test
-  public void f() {
-  }
-}

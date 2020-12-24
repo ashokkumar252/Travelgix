@@ -38,12 +38,12 @@ public class BussinessPatnernegativescenarios {
 
 	{
 
-		wm.launchbrowser("chrome", utility.Constant.TRAVELOGIXURL);
+		wm.launchbrowser(utility.Constant.Browsername, utility.Constant.TRAVELOGIXURL);
 
 	}
 
 	@Test(dataProvider = "dp")
-	public void logincheckK(String Username, String Password, String Leftsidemenu, String ccdCategory,
+	public void BussinessPatnernegativescenarios(String Username, String Password, String Leftsidemenu, String ccdCategory,
 			String Leftsidemenucurrency, String Code, String name, String currencyLocalizedName,
 			String currencyBaseDescription, String Country, String Countryindex, String currencySymbol,
 			String currencyPastiveFormat, String currencyNegativeFormat, String currencyDecimalDescription,
